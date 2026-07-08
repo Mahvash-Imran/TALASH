@@ -231,6 +231,7 @@ class LLMExtractor:
         api_key: Optional[str] = None,
         model: str = "gpt-4o-mini",
         temperature: float = 0.0,
+        base_url: Optional[str] = None,
     ):
         """
         Parameters
@@ -242,10 +243,13 @@ class LLMExtractor:
             Use gpt-4o for higher accuracy on complex CVs.
         temperature : float
             0.0 means deterministic output (best for structured extraction).
+        base_url : str, optional
+            Custom base URL for alternative providers (like Groq or xAI).
         """
         self.api_key = api_key or os.environ.get("OPENAI_API_KEY", "")
         self.model = model
         self.temperature = temperature
+        self.base_url = base_url or os.environ.get("OPENAI_BASE_URL", None)
 
         if not self.api_key:
             logger.warning(
@@ -344,7 +348,7 @@ class LLMExtractor:
                 "openai package not installed. Run: pip install openai"
             )
 
-        client = OpenAI(api_key=self.api_key)
+        client = OpenAI(api_key=self.api_key, base_url=self.base_url)
         response = client.chat.completions.create(
             model=self.model,
             messages=[

@@ -39,7 +39,12 @@ OUTPUT
 import argparse
 import logging
 import sys
+import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # ── Allow running from the talash/ package root ──────────────────────────────
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -66,7 +71,7 @@ logger = logging.getLogger("talash.preprocessing.main")
 # Main pipeline
 # ---------------------------------------------------------------------------
 
-def run(cv_folder: str, output_dir: str, model: str, api_key: str = ""):
+def run(cv_folder: str, output_dir: str, model: str, api_key: str = "", base_url: str = ""):
     """
     Execute the full pre-processing pipeline.
 
@@ -76,6 +81,7 @@ def run(cv_folder: str, output_dir: str, model: str, api_key: str = ""):
     output_dir : Path to write CSVs and Excel workbook
     model      : OpenAI model name (e.g. gpt-4o-mini, gpt-4o)
     api_key    : OpenAI API key (or set OPENAI_API_KEY env var)
+    base_url   : Custom base URL for alternative providers (e.g. Groq, xAI)
     """
     logger.info("=" * 55)
     logger.info("  TALASH Pre-Processing Module – Starting")
@@ -98,7 +104,7 @@ def run(cv_folder: str, output_dir: str, model: str, api_key: str = ""):
         sys.exit(1)
 
     # ── Initialize downstream components ────────────────────────────────────
-    extractor = LLMExtractor(api_key=api_key, model=model)
+    extractor = LLMExtractor(api_key=api_key, model=model, base_url=base_url if base_url else None)
     normalizer = Normalizer()
     exporter   = Exporter(output_dir=output_dir)
 
@@ -177,13 +183,18 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--model",
-        default="gpt-4o-mini",
+        default=os.environ.get("OPENAI_MODEL", "gpt-4o-mini"),
         help="OpenAI model to use (default: gpt-4o-mini). Use gpt-4o for higher accuracy.",
     )
     parser.add_argument(
         "--api-key",
-        default="",
+        default=os.environ.get("OPENAI_API_KEY", ""),
         help="OpenAI API key (or set OPENAI_API_KEY environment variable)",
+    )
+    parser.add_argument(
+        "--base-url",
+        default=os.environ.get("OPENAI_BASE_URL", ""),
+        help="Custom base URL for alternative providers (like Groq or xAI)",
     )
 
     args = parser.parse_args()
@@ -192,4 +203,5 @@ if __name__ == "__main__":
         output_dir=args.output_dir,
         model=args.model,
         api_key=args.api_key,
+        base_url=args.base_url,
     )
