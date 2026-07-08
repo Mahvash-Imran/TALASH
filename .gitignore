@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+.env.*
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Data and logs (we don't want to commit the extracted data or logs, just the structure)
+data/extracted/*
+!data/extracted/.gitkeep
+data/logs/*
+!data/logs/.gitkeep
+data/cvs/*
+!data/cvs/.gitkeep
+
+# OS specific files
+.DS_Store
+Thumbs.db
