@@ -493,5 +493,9 @@ class LLMExtractor:
                 if boundary != -1 and boundary > start + max_chars // 2:
                     end = boundary + 2
             chunks.append(text[start:end])
+            
+            if end >= len(text):
+                break
+                
             start = end - overlap  # overlap to avoid losing context at boundaries
         return chunks
