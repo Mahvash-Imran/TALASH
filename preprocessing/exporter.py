@@ -295,7 +295,7 @@ class Exporter:
         for name, df in dfs.items():
             csv_path = self.output_dir / f"{name}.csv"
             df.to_csv(csv_path, index=False)
-            logger.info("Wrote %d rows → %s", len(df), csv_path.name)
+            logger.info("Wrote %d rows -> %s", len(df), csv_path.name)
 
         # Write multi-sheet Excel workbook
         workbook_path = self.output_dir / "talash_extracted.xlsx"
@@ -314,7 +314,7 @@ class Exporter:
                         min(max_len + 2, 60)
                     )
 
-        logger.info("Excel workbook written → %s", workbook_path)
+        logger.info("Excel workbook written -> %s", workbook_path)
 
         # Print parsing report to console
         self._print_report(dfs["parsing_report"])
@@ -390,7 +390,7 @@ class Exporter:
         print("-" * 60)
 
         for _, row in report_df.iterrows():
-            status_icon = "✓" if row["status"] == "success" else "✗"
+            status_icon = "OK" if row["status"] == "success" else "FAIL"
             print(f"\n  {status_icon} {row['source_filename']} ({row['candidate_id']})")
             if row["status"] == "success":
                 print(
@@ -406,10 +406,10 @@ class Exporter:
                     f"Patents: {row['patents_count']}"
                 )
                 if row.get("missing_fields") and row["missing_fields"] != "OK":
-                    print(f"     ⚠ Missing: {row['missing_fields']}")
+                    print(f"     [!] Missing: {row['missing_fields']}")
                 if row.get("warnings"):
-                    print(f"     ⚠ Warnings: {row['warnings']}")
+                    print(f"     [!] Warnings: {row['warnings']}")
             else:
-                print(f"     ✗ Error: {row['error_message']}")
+                print(f"     [FAIL] Error: {row['error_message']}")
 
         print("\n" + "=" * 60 + "\n")

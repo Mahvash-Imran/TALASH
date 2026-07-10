@@ -1,0 +1,15 @@
+﻿preprocessing/exporter.py:298: 'ΓåÆ':             logger.info("Wrote %d rows ΓåÆ %s", len(df), csv_path.name)
+preprocessing/exporter.py:317: 'ΓåÆ':         logger.info("Excel workbook written ΓåÆ %s", workbook_path)
+preprocessing/exporter.py:393: 'Γ£ô':             status_icon = "Γ£ô" if row["status"] == "success" else "Γ£ù"
+preprocessing/exporter.py:393: 'Γ£ù':             status_icon = "Γ£ô" if row["status"] == "success" else "Γ£ù"
+preprocessing/exporter.py:393: 'Γ£ô':             status_icon = "Γ£ô" if row["status"] == "success" else "Γ£ù"
+preprocessing/exporter.py:409: 'ΓÜá':                     print(f"     ΓÜá Missing: {row['missing_fields']}")
+preprocessing/exporter.py:411: 'ΓÜá':                     print(f"     ΓÜá Warnings: {row['warnings']}")
+preprocessing/exporter.py:413: 'Γ£ù':                 print(f"     Γ£ù Error: {row['error_message']}")
+run_preprocessing.py:101: 'ΓÜá':             "ΓÜá∩╕Å  DATASET NEEDED: Place candidate CV PDFs in that folder and re-run.",
+run_preprocessing.py:119: 'Γ£ù':                 "  Γ£ù PDF read failed: %s ΓÇô %s", pdf.candidate_filename, pdf.error_message
+run_preprocessing.py:137: 'Γ£ù':                 "  Γ£ù LLM extraction failed: %s ΓÇô %s",
+run_preprocessing.py:158: 'Γ£ô':         logger.info("  Γ£ô Done: %s", pdf.candidate_filename)
+run_preprocessing.py:158: 'Γ£ô':         logger.info("  Γ£ô Done: %s", pdf.candidate_filename)
+run_preprocessing.py:163: 'Γ£à':     logger.info("Γ£à  All done! Workbook: %s", workbook_path)
+run_preprocessing.py:172: 'ΓåÆ':         description="TALASH Module 1 ΓÇô Pre-Processing: CV PDF ΓåÆ structured CSV/Excel"

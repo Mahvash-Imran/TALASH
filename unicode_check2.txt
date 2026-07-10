@@ -1,0 +1,60 @@
+﻿preprocessing/exporter.py:2: 'ΓÇô' in: exporter.py  ΓÇô  Tasks 1.4 & 1.5: Relational Output & Parsing Report
+preprocessing/exporter.py:8: 'ΓÇó' in:   ΓÇó Produce separate CSV files ΓÇö one per entity type (8 tables)
+preprocessing/exporter.py:8: 'ΓÇö' in:   ΓÇó Produce separate CSV files ΓÇö one per entity type (8 tables)
+preprocessing/exporter.py:9: 'ΓÇó' in:   ΓÇó Write all tables to a single multi-sheet Excel workbook
+preprocessing/exporter.py:10: 'ΓÇó' in:   ΓÇó Generate a parsing report: how many CVs processed, fields missing, errors
+preprocessing/exporter.py:14: 'ΓÇô' in:   candidates.csv   ΓÇô one row per candidate
+preprocessing/exporter.py:15: 'ΓÇô' in:   education.csv    ΓÇô one row per degree
+preprocessing/exporter.py:16: 'ΓÇô' in:   experience.csv   ΓÇô one row per job role
+preprocessing/exporter.py:17: 'ΓÇô' in:   skills.csv       ΓÇô one row per skill
+preprocessing/exporter.py:18: 'ΓÇô' in:   publications.csv ΓÇô one row per publication
+preprocessing/exporter.py:19: 'ΓÇô' in:   supervision.csv  ΓÇô one row per supervised student
+preprocessing/exporter.py:20: 'ΓÇô' in:   books.csv        ΓÇô one row per book
+preprocessing/exporter.py:21: 'ΓÇô' in:   patents.csv      ΓÇô one row per patent
+preprocessing/exporter.py:29: 'ΓÇö' in:   both CSV and Excel exports ΓÇö no duplication of logic.
+preprocessing/exporter.py:161: 'ΓÇô' in:             PDF filename stem ΓÇô used as candidate_id (unique key).
+preprocessing/exporter.py:172: 'ΓöÇ' in:         # ΓöÇΓöÇ candidates table ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/exporter.py:172: 'ΓöÇ' in:         # ΓöÇΓöÇ candidates table ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/exporter.py:172: 'ΓöÇ' in:         # ΓöÇΓöÇ candidates table ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/exporter.py:172: 'ΓöÇ' in:         # ΓöÇΓöÇ candidates table ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/exporter.py:172: 'ΓöÇ' in:         # ΓöÇΓöÇ candidates table ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:2: 'ΓÇô' in: run_preprocessing.py  ΓÇô  Main Entry Point for Module 1
+run_preprocessing.py:36: 'ΓåÉ' in:   data/extracted/talash_extracted.xlsx   ΓåÉ multi-sheet workbook
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+run_preprocessing.py:49: 'ΓöÇ' in: # ΓöÇΓöÇ Allow running from the talash/ package root ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:2: 'ΓÇô' in: llm_extractor.py  ΓÇô  Task 1.2: LLM-Based Information Extraction
+preprocessing/llm_extractor.py:8: 'ΓÇó' in:   ΓÇó Design a structured prompt to extract: personal_info, education[],
+preprocessing/llm_extractor.py:10: 'ΓÇó' in:   ΓÇó Use JSON-structured output from the LLM
+preprocessing/llm_extractor.py:11: 'ΓÇó' in:   ΓÇó Validate extracted JSON; flag missing or null fields
+preprocessing/llm_extractor.py:12: 'ΓÇó' in:   ΓÇó For each institution, look up THE and QS world university rankings
+preprocessing/llm_extractor.py:19: 'Γëñ' in:     * If the CV text is Γëñ 24,000 chars (~6000 tokens), one API call extracts eve
+preprocessing/llm_extractor.py:226: 'ΓÇö' in: 4. Rankings change yearly ΓÇö return the most recent ranking you know from your tr
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+preprocessing/llm_extractor.py:350: 'ΓöÇ' in:             # ΓöÇΓöÇ Step 1: Extract structured data from CV text ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ

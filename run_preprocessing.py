@@ -55,12 +55,21 @@ from preprocessing import PDFReader, LLMExtractor, Normalizer, Exporter
 # ---------------------------------------------------------------------------
 # Logging setup
 # ---------------------------------------------------------------------------
+# Force stdout to UTF-8 on Windows so special characters in log messages
+# don't cause UnicodeEncodeError with the default cp1252 encoding.
+import io
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
     datefmt="%H:%M:%S",
     handlers=[
-        logging.StreamHandler(sys.stdout),
+        logging.StreamHandler(
+            io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+            if hasattr(sys.stdout, "buffer") else sys.stdout
+        ),
         logging.FileHandler("data/logs/preprocessing.log", mode="a", encoding="utf-8"),
     ],
 )
@@ -98,7 +107,7 @@ def run(cv_folder: str, output_dir: str, model: str, api_key: str = "", base_url
     if not pdf_results:
         logger.error(
             "No PDF files found in '%s'.\n"
-            "⚠️  DATASET NEEDED: Place candidate CV PDFs in that folder and re-run.",
+            "[!] DATASET NEEDED: Place candidate CV PDFs in that folder and re-run.",
             cv_folder
         )
         sys.exit(1)
@@ -116,7 +125,7 @@ def run(cv_folder: str, output_dir: str, model: str, api_key: str = "", base_url
 
         if not pdf.success:
             logger.error(
-                "  ✗ PDF read failed: %s – %s", pdf.candidate_filename, pdf.error_message
+                "  [FAIL] PDF read failed: %s - %s", pdf.candidate_filename, pdf.error_message
             )
             exporter.add_failure(
                 pdf.candidate_filename,
@@ -134,7 +143,7 @@ def run(cv_folder: str, output_dir: str, model: str, api_key: str = "", base_url
 
         if not extraction.success:
             logger.error(
-                "  ✗ LLM extraction failed: %s – %s",
+                "  [FAIL] LLM extraction failed: %s - %s",
                 pdf.candidate_filename, extraction.error_message
             )
             exporter.add_failure(
@@ -155,12 +164,12 @@ def run(cv_folder: str, output_dir: str, model: str, api_key: str = "", base_url
             validation=extraction.validation,
             pdf_result=pdf,
         )
-        logger.info("  ✓ Done: %s", pdf.candidate_filename)
+        logger.info("  [OK] Done: %s", pdf.candidate_filename)
 
     # ── Task 1.5: Export CSV + Excel + Report ────────────────────────────────
     logger.info("[1.5] Exporting relational tables …")
     workbook_path = exporter.export()
-    logger.info("✅  All done! Workbook: %s", workbook_path)
+    logger.info("[DONE] All done! Workbook: %s", workbook_path)
 
 
 # ---------------------------------------------------------------------------
@@ -169,7 +178,7 @@ def run(cv_folder: str, output_dir: str, model: str, api_key: str = "", base_url
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="TALASH Module 1 – Pre-Processing: CV PDF → structured CSV/Excel"
+        description="TALASH Module 1 - Pre-Processing: CV PDF -> structured CSV/Excel"
     )
     parser.add_argument(
         "--cv-folder",
