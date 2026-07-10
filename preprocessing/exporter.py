@@ -57,10 +57,11 @@ CANDIDATES_COLS = [
 
 EDUCATION_COLS = [
     "row_id", "candidate_id",
-    "level", "degree", "specialization", "institution", "board",
+    "level", "degree", "specialization", "institution", "country", "board",
     "start_year", "end_year",
     "marks_percentage", "marks_percentage_original",
-    "cgpa", "cgpa_scale", "cgpa_normalized_4"
+    "cgpa", "cgpa_scale", "cgpa_normalized_4",
+    "the_rank", "the_rank_range", "qs_rank", "qs_rank_range", "ranking_notes"
 ]
 
 EXPERIENCE_COLS = [
@@ -75,7 +76,7 @@ SKILLS_COLS = [
 
 PUBLICATIONS_COLS = [
     "row_id", "candidate_id",
-    "type", "title", "venue", "year", "authors", "doi", "url"
+    "type", "title", "venue", "year", "authors", "doi", "url", "issn"
 ]
 
 SUPERVISION_COLS = [
