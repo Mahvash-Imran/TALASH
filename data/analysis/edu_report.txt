@@ -15,6 +15,6 @@
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: Candidate 01_MUHAMMAD_SALMAN holds a PhD in Electrical Engineering from International Islamic University, Islamabad. They have a consistent progression in their specialization, with a minor initial drift from Pre-Engineering to Electronics Engineering. Their performance trend is improving, with a strong performance in their PhD.
 
 ======================================================================
