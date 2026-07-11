@@ -1,0 +1,1009 @@
+﻿
+======================================================================
+FILE: 01_MUHAMMAD_SALMAN.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 22-Oct-2025 )'
+"Name MUHAMMAD SALMAN Father's /Guardian QAMAR UZ ZAMAN"
+'QAMAR'
+'Date/Place of 10-Nov-1988 / FatherΓÇÖs Govt Servant'
+'Birth: PAKISTANI Occupation:'
+'Spouse Name: Aamna Bibi Spouse Other'
+'Occupation:'
+'Current Salary: 200000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+"Expected Salary: 200000 Present Associate Professor at Xi'an International University, China ,"
+'Employment: Shaanxi, China since 01/01/2025'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'PhD in Electrical Engineering Communication Systems 3.33 2024 International Islamic university, Islamabad'
+'MS in Electrical Engineering Communication Systems 3.03 2014 COMSATS University, Islamabad, Attock Campus'
+'BSc Electronics Engineering Electronics 69.84 2011 COMSATS University, Islamabad, Abbottabad Campus'
+'HSSC Pre-Engineering 65.45 2006 B.I.S.E Bannu'
+'SSc Science Subjects 71 2004 B.I.S.E Bannu'
+
+======================================================================
+FILE: 03_MUHAMMAD_SHAHWAZ.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 20-Oct-2025 )'
+"Name MUHAMMAD SHAHWAZ Father's /Guardian MUHAMMAD NASEEM SOHAIL"
+'Date/Place of Birth: 23-Feb-1988 / PAKISTANI FatherΓÇÖs Occupation: Govt Servant'
+'Spouse Name: Spouse Occupation: Select Profession'
+'Current Salary: 00 Marital Status: Un-Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 00 Present Employment: Unemployed'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'primary science 70 1988 karachi board'
+'M.ENGG ELECTRONICS 2.97 2017 NED UET KARACHI'
+'BACHELOR OF ELECTRONICS 75 2012 DAWOOD COLEEGE OF ENGINEERING AND'
+'ENGINEERING TECHNOLOGY'
+'FSC PRE- 54 2005 karachi INTER board'
+'ENGINEERING'
+'ssc science 77 2003 karachi matric board'
+
+======================================================================
+FILE: 05_Farhana_Bibi_Spouse_Govt_Servant.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 25-Oct-2025 )'
+"Name Nasir Ali Shah Father's /Guardian Ayub Ali Shah"
+'Date/Place of 06-Apr-1991 / FatherΓÇÖs Govt Servant'
+'Birth: Pakistani Occupation:'
+'Spouse Name: Farhana Bibi Spouse Govt Servant'
+'Occupation:'
+'Current Salary: 350000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 350000 Present Postdoctoral researcher at Orange Innovation , Paris France'
+'Employment: since 10/01/2024'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / Passing Board/University'
+'%age / Year'
+'GPA'
+'FPGA and GPU acceleration of 100 2024 Politecnico di Torino,'
+'complex computational Italy'
+'algorithms'
+'Evaluation of Hardware Embedded Systems 99 2026 ORANGE'
+
+======================================================================
+FILE: 06_Shumaila_Mushtaq_Spouse_Other.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 26-Oct-2025 )'
+"Name Muhammad Farrukh Father's Muhammad Fayyaz Qureshi"
+'Qureshi /Guardian'
+'Date/Place of 15-Dec-1990 / FatherΓÇÖs Govt Servant'
+'Birth: Pakistani Occupation:'
+'Spouse Name: Shumaila Mushtaq Spouse Other'
+'Occupation:'
+'Current Salary: 300000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 300000 Present Assistant Professor (EE) & Senior Researcher (CAID) at Namal'
+'Employment: University Mianwali , Mianwali since 09/01/2024'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PhD in Electrical Engineering Deep Learning, Signal Processing, 3.52 2024 Riphah International University'
+'Hardware AI'
+'MS Electrical Engineering Digital Signal Processing 3.33 2015 Riphah International University'
+'BS in Electronic Engineering Electronic Engineering 2.84 2012 International Islamic University'
+
+======================================================================
+FILE: 08_MUHAMMAD_MAJID.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 21-Oct-2025 )'
+"Name MUHAMMAD MAJID Father's /Guardian NAZAR HUSSAIN KHAN"
+'AZIZ'
+'Date/Place of 02-Aug-1986 / FatherΓÇÖs Other'
+'Birth: PAKISTANI Occupation:'
+'Spouse Name: FOUZIA NAZAR Spouse Other'
+'Occupation:'
+'Current Salary: 180,000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 180,000 Present NETWORK OPTIMIZATION ENGINEER at STC SAUDIA ARABIA ,'
+'Employment: REMOTE since 08/01/2024'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'ELECTRICAL ENGINEERING WIRELESS COMMUNICATION 3.6 2025 INSTITUTE OF SPACE TECHNOLOGY'
+'ELECTRONICS ENGINEERING WIRELESS COMMUNICATION 3.36 2015 MUHAMMAD ALI JINNAH UNIVERSITY'
+'ELECTRONIC ENGINEERING ELECTRONICS 2.5 2011 SSUET, KARACHI'
+'FSc PRE ENGINEERING PRE ENGINEERING 73.54 2006 BISE D.G.KHAN'
+'MATRIC SCIENCE 67.5 2003 BISE D.G.KHAN'
+
+======================================================================
+FILE: 10_Aqqeela_Banu_Spouse_Other.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 19-Oct-2025 )'
+"Name Farman Ali Father's /Guardian Shamsher Ali"
+'Date/Place of 17-Mar-1988 / FatherΓÇÖs Govt Servant'
+'Birth: Pakistan Occupation:'
+'Spouse Name: Aqqeela Banu Spouse Other'
+'Occupation:'
+'Current Salary: 200000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 200000 Present Head of Department at Pearl College of Technology, Peshawar ,'
+'Employment: Peshawra since 11/01/2019'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'Postdoc nil 2025 Nanjing University of Aeronautics and Astronautics'
+'PhD Electrical Nonlinear Optical Fiber 3.2 2019 Iqra National University, Peshawar, Paksitan'
+'Engineering Communication'
+'MS Electrical Electrical 3.14 2014 Sarhad of Science and Information Technology'
+'Engineering'
+
+======================================================================
+FILE: 11_Muhammad_Spouse_Other.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 26-Oct-2025 )'
+"Name Fiza Murtaza Father's Ghulam Murtaza"
+'/Guardian'
+'Date/Place of 14-Jan-1991 / FatherΓÇÖs Businessman'
+'Birth: Pakistani Occupation:'
+'Spouse Name: Muhammad Spouse Other'
+'Ehatisham Ul Haq Occupation:'
+'Current Salary: 370000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 370000 Present Adjunct Faculty at School of IT, Whitecliffe, Wellington, New Zealand ,'
+'Employment: Wellington, New Zealand since 05/01/2024'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PhD in Computer Engineering Computer Vision, Temporal Human 3.83 2019 University of Engineering and Technology'
+'Action Detection Taxila'
+'MS in Computer Engineering Signal and Image Processing 3.62 2015 University of Engineering and Technology'
+'Taxila'
+
+======================================================================
+FILE: 12_Abdu_Rahim_Spouse_Private_Service.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 21-Oct-2025 )'
+"Name tayyaba gull Father's /Guardian sakhi ullah khan tareen"
+'tareen'
+'Date/Place of 05-Apr-1987 / FatherΓÇÖs Govt Servant'
+'Birth: pakistani Occupation:'
+'Spouse Name: Abdu Rahim Spouse Private Service'
+'Wazir Occupation:'
+'Current Salary: 250000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 250000 Present consultant at Supreme Vision Construction And Marketing , B17'
+'Employment: MULTIGARDEN ISLAMABAD since 03/01/2023'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'doctor of philosphy in power electronics power electronics 3.58 2023 IQRA NATIONAL UNIVERSITY'
+'MSc communication 3.13 2013 CECOS UNIVERSITY'
+'engr'
+'BSc Electrical Engineering Electrical Engr 769 2007 University of Engineering and Technology'
+
+======================================================================
+FILE: 13_Faiza_Athar_Spouse_Other.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 20-Oct-2025 )'
+"Name Muhammad Father's /Guardian Qazi Asif Javed"
+'Abubakar'
+'Date/Place of 18-Dec-1988 / FatherΓÇÖs Businessman'
+'Birth: Pakistan Occupation:'
+'Spouse Name: Faiza Athar Spouse Other'
+'Occupation:'
+'Current Salary: 350000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 350000 Present Assistant Professor at Lahore Garrison University, Lahore , Dha phase 6'
+'Employment: block c , lahore since 10/01/2022'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PhD power electronics and power Power quality, machine learning 86 2020 Jiangsu University'
+'drives'
+'MS Electronics Engineering Power electronics and renewable 3.75 2014 International Islamic University'
+'energy Islamabad'
+
+======================================================================
+FILE: 16_Fiza_Murtaza_Spouse_Other.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 26-Oct-2025 )'
+"Name Muhammad Ehatisham Father's /Guardian Raja Muhammadd Sayyab"
+'ul Haq'
+'Date/Place of 22-Oct-1992 / Pakistani FatherΓÇÖs Pakistan Navy'
+'Birth: Occupation:'
+'Spouse Name: Fiza Murtaza Spouse Other'
+'Occupation:'
+'Current Salary: 350000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 350000 Present Research Fellow/PostDoc at University of East London, London,'
+'Employment: UK , since 11/01/2024'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PostDoc Multimodal Data Processing and Machine 0 2026 University of East London'
+'Learning'
+'PhD (Computer Artificial Intelligence and Pervasive 4.00 2020 University of Engineering and Technology'
+'Engineering) Computing (UET), Taxila'
+
+======================================================================
+FILE: 17_Amna_Spouse_Other.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 26-Oct-2025 )'
+"Name Waqas Amin Father's Mohammad Amin Sheikh"
+'/Guardian'
+'Date/Place of 07-Oct-1984 / FatherΓÇÖs Govt Servant'
+'Birth: Paksitan Occupation:'
+'Spouse Name: Amna Spouse Other'
+'Occupation:'
+'Current Salary: 250000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 250000 Present Associate Professor at Southwest University of Science and Technology, China'
+'Employment: , Sichuan, Mianyang, China since 09/01/2023'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PhD Electrical Energy Policy, Energy Trading, Smart 3.6 2020 University of Electronic Science and'
+'Engineering Grid Technology'
+'MBA Human Resource Management 3.03 2012 IBA, Punjab University'
+'MSc Electrical Electronics and Communication 3.25 2016 The University of Lahore'
+
+======================================================================
+FILE: 18_SYED.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 25-Oct-2025 )'
+"Name SYED Father's /Guardian SYED JAMSHED HUSSAIN"
+'TAMOORULHASSAN'
+'Date/Place of 04-Feb-1985 / Pakistan FatherΓÇÖs Govt Servant'
+'Birth: Occupation:'
+'Spouse Name: Shehla Naz Syed Spouse Select Profession'
+'Occupation:'
+'Current Salary: 275000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 275000 Present Senior System Software Engineer at Combitech Sverige , Malmo'
+'Employment: Sweden since 02/01/2025'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'Doctor of Science in Communication Communication Engineering 5.0 2024 University of Oulu'
+'Engineering'
+'Master of Science Communication Systems 4.07 2011 Linkoping University'
+'Engineering'
+
+======================================================================
+FILE: 19_Maryam_Ijaz_Spouse_Other.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 23-Oct-2025 )'
+"Name Manzoor Ellahi Father's /Guardian Inam Ellahi"
+'Date/Place of 19-Dec-1988 / FatherΓÇÖs Other'
+'Birth: Pakistan Occupation:'
+'Spouse Name: Maryam Ijaz Spouse Other'
+'Occupation:'
+'Current Salary: 175,000-200,000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 175,000-200,000 Present Assistant Professor at The superior university, Lahore , Lahore'
+'Employment: Pakistan since 07/01/2023'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age Passing Board/University'
+'/ GPA Year'
+'PhD (Electrical Development of Improved Metaheuristic Optimization Algorithms for Optimal 3.62 2022 The University of'
+'Engineering) Economic Dispatch of Renewable Energy Sources. Lahore'
+'MS (Electrical Power Factor Monitoring and Load Management using Smart Metering 3.2 2014 The University of'
+'Engineering) Techniques. Lahore'
+'BSc (Electrical Online Monitoring of Electricity Data and Wireless Transmission using Radio 2.87 2010 UET, Lahore'
+
+======================================================================
+FILE: 20_Rida_Zafar_Spouse_Select_Profession.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 16-Oct-2025 )'
+"Name Sarosh Tahir Father's /Guardian Tahir Mehmood Mohsin"
+'Date/Place of 08-Feb-1987 / FatherΓÇÖs Businessman'
+'Birth: Pakistan Occupation:'
+'Spouse Name: Rida Zafar Spouse Select Profession'
+'Occupation:'
+'Current Salary: NA Marital Status: Married'
+'Unit / Corps:: SB (TELECOMM) Course: 2019 A'
+'SOD: 15-Sep-2022 SOS: 15-Sep-2022'
+'Expected Salary: NA Present Researcher at Italian National Research Council , Pisa since'
+'Employment: 12/01/2024'
+'Serving/Retired Serving'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'N/A SDON N/A 2024 SEECS NUST'
+'Computer and Control Engineering Next Generation Optical Networks N/A 2017 POLITECNICO DI TORINO'
+'Telecommunication and Networking Communication 2.63 2012 Bahria Islamabad'
+'Electronics Engineering Communication 2.69 2009 COMSATS'
+'FSc Pre-Eng 67 2004 Mirpur BISE'
+'Matric Science 74 2002 FBISE'
+
+======================================================================
+FILE: 21_Anum_Rashad_Spouse_Private_Service.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 24-Oct-2025 )'
+"Name M. Usman Abbasi Father's /Guardian Kaleem Abbasi"
+'Date/Place of 23-Apr-1985 / FatherΓÇÖs Private Service'
+'Birth: Pakistani Occupation:'
+'Spouse Name: Anum Rashad Spouse Private Service'
+'Occupation:'
+'Current Salary: 320,000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 320,000 Present Assistant Professor at National University of Computer and Emerging'
+'Employment: Sciences - FAST , Peshawar since 10/01/2021'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PhD in Electrical Engineering Biomedical Signal 3.56 2021 National University of Computer and Emerging Sciences -'
+'Processing FAST'
+'Electrical Engineering Electrical Engineering 3.13 2015 CECOS University'
+'Bachelors in Electrical Electrical Engineering 3.20 2009 CECOS University'
+'Engineering'
+
+======================================================================
+FILE: 22_Sidra_Muzzamil_Spouse_Other.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 24-Oct-2025 )'
+"Name Muzzamil Ghaffar Father's /Guardian Abdul Ghaffar Aajal"
+'Date/Place of 30-Jul-1987 / FatherΓÇÖs Govt Servant'
+'Birth: Pakistani Occupation:'
+'Spouse Name: Sidra Muzzamil Spouse Other'
+'Occupation:'
+'Current Salary: 175000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 175000 Present Assistant Professor at Barani Institute of Management Sciences-PMAS ,'
+'Employment: Rawalpindi since 09/01/2024'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'Ph D Mechatronics Engineering Mechatronics/ AI 3.74 2023 Air University'
+'MS Mechatronics Engineering Mechatronics/ AI 3.56 2017 Air University'
+'BSc Electrical Engineering Electronics 3.49 2009 Federal Urdu University of Arts, Science and Technology'
+'HSSC Pre Engineering 53 2005 Federal board'
+'SSC Science 76 2003 Rawalpindi board'
+'Professional Qualification'
+
+======================================================================
+FILE: 24_Suhail_Asghar_Spouse_Select_Profession.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 26-Oct-2025 )'
+"Name Suhail Asghar Father's /Guardian Ali Asghar Qureshi"
+'Qureshi'
+'Date/Place of 31-Jul-1995 / FatherΓÇÖs Govt Servant'
+'Birth: Pakistan Occupation:'
+'Spouse Name: Suhail Asghar Spouse Select Profession'
+'Qureshi Occupation:'
+'Current Salary: 170,000 Marital Status: Un-Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 170,000 Present Visiting Faculty at Dawood University Of Engineering & Technology'
+'Employment: Karachi , Karachi since 09/01/2025'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'Doctor of Philosophy in Electrical Telecommunication 94 2025 Universiti Tun Hussein Onn Malaysia (UTHM)'
+'Engineering'
+'Master of Electrical Engineering Telecommunication 91 2022 Universiti Tun Hussein Onn Malaysia (UTHM)'
+'Bachelor of Engineering in Electronic Electronics 81 2018 Quaid e Awam University of Engineering, Sciences &'
+
+======================================================================
+FILE: 25_Fazeelat_BiBi_Spouse_Other.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 22-Oct-2025 )'
+"Name Muhammad Amjad Father's /Guardian Muhammad Iqbal"
+'Date/Place of 12-Feb-1992 / FatherΓÇÖs Other'
+'Birth: Pakistani Occupation:'
+'Spouse Name: Fazeelat BiBi Spouse Other'
+'Occupation:'
+'Current Salary: 500,000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 500,000 Present PostDoc Researcher at University of Parthenope Naples , Italy'
+'Employment: since 12/01/2023'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age Passing Board/University'
+'/ GPA Year'
+'Postdoc Researcher Remote Sensing 80 2024 University Parthenope Naples'
+'Electronics Telecommunication Technology Remote Sensing and Radar 3.80 2023 National University of Science and Technology'
+'Information Engineering Imaging POLITEHNICA Bucharest'
+'Information and Communication Systems Signal Processing 3.50 2020 Nanjing University of Science and Technology'
+'Engineering'
+
+======================================================================
+FILE: 30_Lubna_Hussain_Spouse_Other.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 25-Oct-2025 )'
+"Name Asim Masood Father's Talib Hussain Masood"
+'/Guardian'
+'Date/Place of 10-Feb-1984 / FatherΓÇÖs Pak Army'
+'Birth: Pakistan Occupation:'
+'Spouse Name: Lubna Hussain Spouse Other'
+'Occupation:'
+'Current Salary: 225000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 225000 Present Assistant Professor at Cholistan University of Veterinary and Animal Sciences,'
+'Employment: Bahawalpur , Bahawalpur since 03/01/2024'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / Passing Board/University'
+'%age / GPA Year'
+'PhD Information and Communication Machine Learning, Artificial Intelligence, Speech 3.68 2021 University of Science and'
+'Engineering Processing, Natural Language Processing Technology of China'
+'MSc Microelectronic System and Microelectronic System, Telecommunication, Signal 81 2008 University of Liverpool'
+'Telecommunication Engineering Processing'
+
+======================================================================
+FILE: 31_Spouse_Select_Profession.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 26-Oct-2025 )'
+"Name Syed Fasih Ali Father's /Guardian Syed Qalander Ali Gardazi"
+'Gardazi'
+'Date/Place of 28-Jun-1992 / FatherΓÇÖs NUST Emp'
+'Birth: Pakistan Occupation:'
+'Spouse Name: Spouse Select Profession'
+'Occupation:'
+'Current Salary: 270000 Marital Status: Un-Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 270000 Present Senior Lab Instructor at Lahore University of Management Science ,'
+'Employment: Lahore since 09/01/2024'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'PhD Electrical Engineering Wireless Communication 3.2 2025 Lahore University of Management Science'
+'Electrical Engineering Telecommunication and Networks 3.47 2018 National University of Science and Technology'
+'Computer Engineering Computer Engineering 3.88 2014 Bahauddin Zikriya University'
+'FSc Pre Engineering Pre Engineering 61 2010 Multan board'
+'Matric Science 69 2007 Multan Board'
+
+======================================================================
+FILE: 36_Muhammad_Salik_Spouse_Pak_Air_Force.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 21-Oct-2025 )'
+"Name Saman Fatima Father's /Guardian Muhammad Sartaj Khan"
+'Date/Place of 30-Jan-1992 / FatherΓÇÖs Private Service'
+'Birth: Pakistani Occupation:'
+'Spouse Name: Muhammad Salik Spouse Pak Air Force'
+'Occupation:'
+'Current Salary: 229000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 229000 Present Assistant Professor at NUST Chip Design Centre , NUST, Islamabad'
+'Employment: since 05/01/2024'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'Doctorat Microelectronics - Analog IC 0 2023 University Paris Saclay (CentraleSupelec)'
+'Design'
+'Master E3A -M2 Integration circuits-systemes 70.75 2018 University Paris Saclay (University Paris-Sud,'
+'CentraleSupelec, Telecom Paris-tech)'
+'B.Sc. Engineering Electronics 3.79 2014 Islamia University of Bahawalpur'
+
+======================================================================
+FILE: 39_Spouse_Select_Profession.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 20-Oct-2025 )'
+"Name Zeeshan Father's /Guardian Abdul Hameed"
+'Date/Place of 10-Oct-1989 / FatherΓÇÖs Pakistan Navy'
+'Birth: Pakistan Occupation:'
+'Spouse Name: Spouse Select Profession'
+'Occupation:'
+'Current Salary: 300000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 300000 Present POSTDOCTORAL Researcher at Free University of Bolzano , Italy'
+'Employment: since 01/01/2025'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'Advanced System Engineering Informatics 100 2025 Free University of Bolzano Italy'
+'Electronincs and Communication Machine Learning 86 2020 Chongqing University'
+'Engineering'
+'Electrical (Telecom) Engineering Telecommunication 79.23 2016 The University of Lancaster- COMSATS Dual'
+'degree'
+
+======================================================================
+FILE: 40_Eram_Shafiq_Spouse_Select_Profession.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 26-Oct-2025 )'
+"Name Waqas Tariq Toor Father's Tariq Mahmood Toor"
+'/Guardian'
+'Date/Place of 21-Jan-1986 / FatherΓÇÖs Private Service'
+'Birth: Pakistani Occupation:'
+'Spouse Name: Eram Shafiq Spouse Select Profession'
+'Occupation:'
+'Current Salary: 400000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 400000 Present Associate Professor at University of Engineering and Technology Lahore'
+'Employment: (Narowal Campus) , Narowal since 04/01/2021'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'Electronics and Communication Algorithm development for congestion 4 2018 Hanyang University'
+'Engineering control in IoT'
+'Electrical Engineering Wireless Communication 4 2011 University of Management and'
+'Technology Lahore'
+
+======================================================================
+FILE: 42_Spouse_Select_Profession.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 23-Oct-2025 )'
+"Name Ahmed Naeem Father's Amjad Naeem"
+'/Guardian'
+'Date/Place of 22-Feb-1994 / FatherΓÇÖs Govt Servant'
+'Birth: Pakistan Occupation:'
+'Spouse Name: Spouse Select Profession'
+'Occupation:'
+'Current Salary: 250000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 250000 Present RESEARCH ASSISTANT at Communication, Signal Processing, and Networking'
+'Employment: Center (CoSiNC) Research Group at Istanbul Medipol University , Beykoz since'
+'02/01/2020'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age Passing Board/University'
+'/ GPA Year'
+'Electrical-Electronics Engineering Wireless Communication Technologies 3.29 2025 Istanbul Medipol University'
+'and Cyber Systems and Cyber Security'
+'Electrical Engineering Machine Learning 3.53 2019 National University of Computer and'
+
+======================================================================
+FILE: 43_MUHAMMAD_ADEEL_ALTAF.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 24-Oct-2025 )'
+"Name MUHAMMAD ADEEL ALTAF Father's /Guardian ALTAF HUSSAIN"
+'Date/Place of Birth: 22-Nov-1989 / Pakistan FatherΓÇÖs Occupation: Businessman'
+'Spouse Name: AYESHA KHAN Spouse Occupation: Other'
+'Current Salary: 250000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 250000 Present Employment: Unemployed'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PhD in Electronic and Electrical Intelligent Systems and Control 3.8 2026 Kyungpook National University, Daegu'
+'Engineering Engineering'
+'MS in Electronic Engineering Communications and Networks 3.35 2016 International Islamic University,'
+'Islamabad'
+'Computer Systems Engineering Security system 2.53 2011 Bahauddin Zakariya University, Multan'
+'Fsc in Pre-Engineering Pre-Engineering 61 2006 BISE Multan'
+'Matriculation Science group 60 2004 BISE Multan'
+
+======================================================================
+FILE: candidate_02.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 25-Oct-2025 )'
+"Name Aamina Akbar Father's /Guardian Brig Dr. M. Akbar"
+'Date/Place of Birth: 18-Nov-1987 / US FatherΓÇÖs Occupation: Pak Army'
+'Spouse Name: Abdullah Usman Siddiqui Spouse Occupation: Govt Servant'
+'Current Salary: 200000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 200000 Present Employment: Unemployed'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PhD Electrical (Communication) Wireless Communication, Convex 3.83 2025 Institute of Space Technology'
+'Engg Optimization'
+'MS Electrical (Telecom) Telecommunication 3.90 2013 Center for Advanced Studies in'
+'Engineering Engineering(CASE)'
+'BE Electrical(Telecom) Telecommunication 2.63 2010 NUST'
+'Engineering'
+'HSSC Pre-Engineering 76% 2006 Federal Board'
+
+======================================================================
+FILE: candidate_04.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 24-Oct-2025 )'
+"Name shaheer Father's /Guardian SHAIDA MUHAMMAD DURRANI"
+'Date/Place of Birth: 18-Feb-1978 / pakistani FatherΓÇÖs Occupation: Pak Army'
+'Spouse Name: SHOMAILA SAADAT saadat Spouse Occupation: Private Service'
+'Current Salary: 350000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 350000 Present Employment: at city University , peshawar since 05/01/2023'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PhD POWER ELECTRONICS 4 2021 University Malaysia Pahang'
+'Masters of electrical control systems 4 2006 Hogskolan Dalarna'
+'engineering'
+'MBA Human Resource 64 2012 University of Peshawar'
+'Management'
+'Bachelor of electrical electrical engineering 67 2003 University of engineering and technology,Peshawar'
+'engineering'
+
+======================================================================
+FILE: candidate_07.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 26-Oct-2025 )'
+"Name Idris Khan Father's /Guardian Sher Alam Khan"
+'Date/Place of Birth: 30-Mar-1983 / Pakistan FatherΓÇÖs Occupation: Businessman'
+'Spouse Name: Spouse Occupation: Other'
+'Current Salary: 200000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 200000 Present Employment: Unemployed'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'Renewable Power 87 2018 North China Electric Power University Beijing'
+'Power Systes and Automation 83 2014 North China Electric Power University Beijing'
+'Electrical Engineering 73 2006 UET Peshawar'
+'HSC 74 2001 BISE Peshawar'
+'SSC 80 1999 BISE Swat'
+'Professional Qualification'
+
+======================================================================
+FILE: candidate_09.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 20-Oct-2025 )'
+"Name Muhammad Sarmad Tariq Father's /Guardian Muhammad Tariq"
+'Date/Place of Birth: 23-Oct-1992 / Pakistan FatherΓÇÖs Occupation: Private Service'
+'Spouse Name: NA Spouse Occupation: Select Profession'
+'Current Salary: 180000 Marital Status: Un-Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 180000 Present Employment: Unemployed'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'Electrical Engineering Electrical Engineering 3.1 2015 Lahore University of Management Sciences'
+'PhD in Electrical Engineering Power Systems 3.8 2024 University of North Carolina Charlotte USA'
+'Masters in Electrical Engineering Power Systems 76 2017 University of New South Wales Sydney Australia'
+'Pre Engineering Pre-Engineering 95 2011 Cambridge A Levels'
+'Pre Engineering Pre-Engineering 90 2009 Cambridge O Levels'
+'Professional Qualification'
+
+======================================================================
+FILE: candidate_14.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 27-Oct-2025 )'
+"Name Fahd Sikandar Khan Father's /Guardian Sultan Sikandar Khan"
+'Date/Place of 02-Mar-1987 / FatherΓÇÖs Occupation: Govt Servant'
+'Birth: Pakistani'
+'Spouse Name: Hira Fahd Khan Spouse Occupation: Govt Servant'
+'Current Salary: 275000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 275000 Present Assistant Professor at GIKI , Sawabi, KPK since'
+'Employment: 09/01/2021'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'Doctor of Engineering Interdisciplinary 3.91 2019 University of Tokyo'
+'Masters in Science Thin film fabrication 3.61 2016 University of Tokyo'
+'Electrical Engineering Computers 3.01 2010 UET-Taxila'
+'A-Levels 78.7 2006 Cambridge'
+'O-Levels 81.1 2004 Cambridge'
+'Professional Qualification'
+
+======================================================================
+FILE: candidate_15.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 15-Oct-2025 )'
+"Name Usman Masud Father's /Guardian Mumtaz Masud Ahmad"
+'Date/Place of Birth: 20-Aug-1983 / Pakistan FatherΓÇÖs Occupation: Other'
+'Spouse Name: Spouse Occupation: Select Profession'
+'Current Salary: 250000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 250000 Present Employment: Professor at PIMSAT , since 10/01/2024'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PhD Electrical Engineering Electrical and electronics 4 2014 University of Kassel'
+'engineering'
+'M.Sc. Electrical Engineering Electrical and electronics 4 2010 University of Kassel'
+'engineering'
+'Postgraduate Diploma in Telecommunications Telecommunications 2.67 2007 National University of Sciences and'
+'Engineering Engineering Technology'
+'B.Sc. Electrical Engineering Electrical and electronics 80 2005 University of Engineering and'
+'engineering Technology, Taxila'
+
+======================================================================
+FILE: candidate_23.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 23-Oct-2025 )'
+"Name Qaisar Hussain Alvi Father's /Guardian Mumtaz Hussain Alvi"
+'Date/Place of Birth: 10-Jan-1977 / Pakistani FatherΓÇÖs Occupation: Pak Army'
+'Spouse Name: Aisha Alvi Spouse Occupation: Other'
+'Current Salary: 190,000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 190,000 Present Employment: Unemployed'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'PhD Electrical Engineering Electroics and Communication 3.16 2022 UET, Taxila'
+'MS Electrical Engineering Electronics and Communication 3.41 2010 UET, Taxila'
+'Electronics Engineering Electronics and Communication 76.07 2002 NED UET Karachi'
+'F.Sc Pre-Engineering 74.81 1995 Faisalabad Board'
+'Science Science 81.87 1993 Faisalabad Board'
+'Professional Qualification'
+
+======================================================================
+FILE: candidate_26.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 20-Oct-2025 )'
+"Name Qamar Abbas Father's /Guardian Jaffar Ali Shakir"
+'Date/Place of 01-Mar-1992 / FatherΓÇÖs Occupation: Govt Servant'
+'Birth: Pakistani'
+'Spouse Name: Kousar Ishaq Spouse Occupation: Private Service'
+'Current Salary: 300000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 300000 Present Assistant Professor at GIK Institute , Topi since'
+'Employment: 07/01/2023'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'PhD Internet of thing 3.5 2022 SEECS NUST'
+'MS Internet of thing 3.64 2017 University of Lahore'
+'BS Computer Engineering 73 2013 COMSATS Islamabad'
+'FSC Pre Engineering 69 2008 KIU'
+'SSC Science 69 2006 FBISE'
+'Professional Qualification'
+
+======================================================================
+FILE: candidate_27.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 21-Oct-2025 )'
+"Name Shahzad Father's /Guardian Abdul Qayum"
+'Date/Place of 10-Apr-1991 / FatherΓÇÖs Govt Servant'
+'Birth: Pakistan Occupation:'
+'Spouse Name: Sumbal Saif Spouse Occupation: Other'
+'Current Salary: 280000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 280000 Present Assistant Professor at FAST NUCES , Faisalabad since'
+'Employment: 01/01/2025'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'Intelligent Mechatronics Engineering Computer Networks 4.13 2024 Sejong University'
+'Computer Engineering Computer Networks 4.31 2020 Hongik University'
+'Electrical (Computer) Engineering Computer Architecture, Computer Networks 3.26 2015 Comsats University Islamabad'
+'FSc Pre Engineering 64 2011 BISE D I Khan'
+'Matric Science 74 2008 BISE D I Khan'
+'Professional Qualification'
+
+======================================================================
+FILE: candidate_28.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 26-Oct-2025 )'
+"Name Matiullah Ahsan Father's /Guardian Muhammad Ayub"
+'Date/Place of Birth: 20-Feb-1990 / Pakistan FatherΓÇÖs Occupation: Other'
+'Spouse Name: Spouse Occupation: Other'
+'Current Salary: 150k Marital Status: Un-Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 150k Present Employment: Unemployed'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'Electrical Power System, High Voltage, Artifical 85 2025 Universiti Tun Hussein Onn Malaysia'
+'Engineering Intellegence'
+'Electrical Power Engineering 3.04 2019 CECOS University of IT and Emerging Sciences'
+'Engineering'
+'Electrical communication engineering 2.27 2014 University of Engineering and Technology,'
+'Engineering Peshawar'
+'FSc pre-engineering Pre engineering 72.9 2009 Peshawar board'
+
+======================================================================
+FILE: candidate_29.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 26-Oct-2025 )'
+"Name Samana Batool Father's /Guardian Syed Hamid Iftekhar Naqvi"
+'Date/Place of 13-Aug-1984 / FatherΓÇÖs Govt Servant'
+'Birth: Pakistani Occupation:'
+'Spouse Name: Syed Inam Haider Spouse Occupation: Pak Army'
+'Kazmi'
+'Current Salary: 275000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 275000 Present Instructor at Samsung Innovation Center , Islamabad since'
+'Employment: 09/01/2024'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'PhD (Electrical Engineering) Artificial Intelligence in medical domain 4.00 2024 CUST'
+'MS Computer Engineering Computer Engineerng 3.3 2011 UET'
+'BE Electrical Engineering Electrical Engineering 3.57 2006 NUST'
+'HSSC Pre-Engineering 76 2002 FBISE'
+'SSC Science 77 2000 FBISE'
+'Professional Qualification'
+
+======================================================================
+FILE: candidate_32.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 19-Oct-2025 )'
+"Name Sania Gul Father's /Guardian Khawaja Muhammad Shafiq"
+'Date/Place of Birth: 30-May-1978 / Pakistani FatherΓÇÖs Occupation: Businessman'
+'Spouse Name: Spouse Occupation: Select Profession'
+'Current Salary: 3 lac Marital Status: Un-Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 3 lac Present Employment: Unemployed'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'Ph.D. Electrical Engineering 3.95 2021 UET Peshawar'
+'M.Sc. Electrical Engineering 3.88 2006 UET Peshawar'
+'B.Sc. Electrical Engineering 76 2001 UET'
+'F.Sc. Pre-Engineering 81.18 1996 Peshawar'
+'SSC Science 82.3 1994 Peshawar'
+'Professional Qualification'
+
+======================================================================
+FILE: candidate_33.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 22-Oct-2025 )'
+"Name Muhammad Musadiq Father's /Guardian Syed Mussavir Hussain"
+'Ahmed'
+'Date/Place of 07-Feb-1993 / Pakistan FatherΓÇÖs Occupation: Govt Servant'
+'Birth:'
+'Spouse Name: Dr. Syeda Ushna Zahra Spouse Occupation: Private Service'
+'Current Salary: 200000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 200000 Present Lecturer at University of Gujrat , Gujrat since'
+'Employment: 03/01/2022'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'Electrical Engineering Power Systems 3.95 2025 The Islamia University of Bahawalpur'
+'Electrical Engineering Power Systems 3.9 2019 NUST'
+'Electrical Engineering Power 3.73 2016 The Islamia University of Bahawalpur'
+'Pre-Engineering Pre-Engineering 80 2012 Bahawalpur Board'
+'Science Science 88 2009 BISE Multan'
+'Professional Qualification'
+
+======================================================================
+FILE: candidate_34.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 26-Oct-2025 )'
+"Name Muhammad Saqib Father's /Guardian Waris Khan"
+'Date/Place of Birth: 14-Sep-1995 / Pakistan FatherΓÇÖs Occupation: Pak Army'
+'Spouse Name: Nimra Ayaz Spouse Occupation: Other'
+'Current Salary: 220000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 220000 Present Employment: Unemployed'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PhD Electronic Energy Harvesting and Self-Powered 4.33 2025 Jeju National University'
+'Engineering Sensor'
+'MS Electronic MS Electronic Engineering 4.38 2021 Jeju National University South Korea'
+'Engineering'
+'BS Electronic Electronic Engineering 3.55 2018 International Islamic University Islamabad (IIUI)'
+'Engineering'
+'F.Sc Pre-Engineering Pre-Engineering 71.27 2013 Board of Intermediate and Secondary Education'
+'Rawalpindi'
+
+======================================================================
+FILE: candidate_35.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 26-Oct-2025 )'
+"Name Abdur Rehman Father's /Guardian Muhammad Siddique"
+'Date/Place of Birth: 22-May-1992 / Pakistan FatherΓÇÖs Occupation: Govt Servant'
+'Spouse Name: Tayyaba Khalil Spouse Occupation: Select Profession'
+'Current Salary: 200000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 200000 Present Employment: Unemployed'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PhD in Electrical Engineering Design of PM Machines, especially flux 4.29 2023 Kunsan National University'
+'modulation machines'
+'MS Electrical Engineering Design of Electric Machines 4.25 2019 Kunsan National University'
+'B.Sc Electrical Engineering Electrical Engineering 3.13 2015 Federal Urdu University of Arts Science and'
+'(Electronics) Technology'
+'Higher Secondary School Pre-Engineering 68.45 2010 Federal Board of Intermediate and'
+'Certificate Secondary Education'
+
+======================================================================
+FILE: candidate_37.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 24-Oct-2025 )'
+"Name Muhammad Aqeel Father's /Guardian Abdul Shakoor"
+'Date/Place of Birth: 15-Apr-1994 / Pakistan FatherΓÇÖs Occupation: NUST Emp'
+'Spouse Name: Muhammad Aqeel Spouse Occupation: Select Profession'
+'Current Salary: 220000 Marital Status: Un-Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 220000 Present Employment: Unemployed'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / Passing Board/University'
+'GPA Year'
+'PhD computer Engineering Computer Engineering 3.34 2025 KFUEIT'
+'MS Electronics Engineering Advance Electronics and Control System 3.47 2020 The Islamia University of'
+'Engineering Bahawalpur'
+'Telecommunication Telecommunication Engineering 3.15 2017 The Islamia University of'
+'Engineering Bahawalpur'
+'ICS Phy, Math, Computer 65 2013 BISE Bahawalpur'
+'Matric Phy, Math, Ch, Bio 67 2010 BISE Bahawalpur'
+
+======================================================================
+FILE: candidate_38.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 20-Oct-2025 )'
+"Name Saqib Jamil Father's /Guardian Qaiser Jamil Khan"
+'Date/Place of 21-Feb-1987 / FatherΓÇÖs Govt Servant'
+'Birth: Pakistan Occupation:'
+'Spouse Name: Saqib Jamil Saqib Spouse Occupation: Select Profession'
+'Jamil'
+'Current Salary: 350,000 Marital Status: Divorced'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 350,000 Present Senior TV Engineer at Pakistan Television , Peshawar since'
+'Employment: 01/01/2013'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'Electrical Engineering Plasmonics 3.42 2023 Sarhad University Peshawar'
+'Electrical Engineering Communication and Electronics 3.49 2015 UET Peshawar'
+'Electrical Engineering Communication 2.35 2010 UET Peshawar'
+'Pre-Engineering Pre-Engineering 64 2005 BISEP'
+'Science Science 64 2003 FBISE'
+'Professional Qualification'
+
+======================================================================
+FILE: candidate_41.pdf
+======================================================================
+'Candidate for the Post of Assistant Professor - Electrical & Computer Engineering - SEECS (Apply Date: 25-Oct-2025 )'
+"Name Ammara Nasim Father's /Guardian Muhammad Nasim Javed"
+'Date/Place of 06-Dec-1990 / FatherΓÇÖs Private Service'
+'Birth: Pakistan Occupation:'
+'Spouse Name: Nabeel Naeem Spouse Occupation: Other'
+'Current Salary: 250,000 Marital Status: Married'
+'Unit / Corps:: Course:'
+'SOD: SOS:'
+'Expected Salary: 250,000 Present Assistant Professor at Bahria University , Islamabad since'
+'Employment: 10/01/2021'
+'Serving/Retired'
+'Education'
+'Name of Degree Specialization Grade / %age / GPA Passing Year Board/University'
+'PhD(Computer Engineering) Computer Vision, AI, Deep Learning 3.92 2025 NUST,CEME'
+'MSEE Telecommunication and Signal Processing 3.5 2016 UET Taxila'
+'BEE electronics, Signal Processing, Image Processing ,FPGA 3.03 2012 NUST,SEECS'
+'FSC Pre-Engineering 80.3 2008 Federal'
+'Matric Science 89.5 2008 Federal'
+'Professional Qualification'
