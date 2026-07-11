@@ -138,13 +138,6 @@ def split_pdf(input_path: str, output_dir: str, limit: int = 0):
 
         out_path = output_dir / f"{out_stem}.pdf"
 
-        # Skip if already exists
-        if out_path.exists():
-            logger.info("  [%d/%d] Already exists, skipping: %s",
-                        idx + 1, len(candidate_start_pages), out_path.name)
-            written += 1
-            continue
-
         writer = pypdf.PdfWriter()
         for page_num in range(start_page, end_page):
             writer.add_page(reader.pages[page_num])

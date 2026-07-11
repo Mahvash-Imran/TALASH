@@ -1,0 +1,47 @@
+﻿Total split files: 43
+
+Filename                                             Pages  First line of content
+------------------------------------------------------------------------------------------------------------------------
+01_MUHAMMAD_SALMAN.pdf                                   4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+03_MUHAMMAD_SHAHWAZ.pdf                                243  Candidate for the Post of Assistant Professor - Electrical & Computer 
+05_Farhana_Bibi_Spouse_Govt_Servant.pdf                  5  Candidate for the Post of Assistant Professor - Electrical & Computer 
+06_Shumaila_Mushtaq_Spouse_Other.pdf                    10  Candidate for the Post of Assistant Professor - Electrical & Computer 
+08_MUHAMMAD_MAJID.pdf                                    4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+10_Aqqeela_Banu_Spouse_Other.pdf                         4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+11_Muhammad_Spouse_Other.pdf                             7  Candidate for the Post of Assistant Professor - Electrical & Computer 
+12_Abdu_Rahim_Spouse_Private_Service.pdf                 5  Candidate for the Post of Assistant Professor - Electrical & Computer 
+13_Faiza_Athar_Spouse_Other.pdf                          8  Candidate for the Post of Assistant Professor - Electrical & Computer 
+16_Fiza_Murtaza_Spouse_Other.pdf                         4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+17_Amna_Spouse_Other.pdf                                10  Candidate for the Post of Assistant Professor - Electrical & Computer 
+18_SYED.pdf                                              5  Candidate for the Post of Assistant Professor - Electrical & Computer 
+19_Maryam_Ijaz_Spouse_Other.pdf                          9  Candidate for the Post of Assistant Professor - Electrical & Computer 
+20_Rida_Zafar_Spouse_Select_Profession.pdf               6  Candidate for the Post of Assistant Professor - Electrical & Computer 
+21_Anum_Rashad_Spouse_Private_Service.pdf                4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+22_Sidra_Muzzamil_Spouse_Other.pdf                       5  Candidate for the Post of Assistant Professor - Electrical & Computer 
+24_Suhail_Asghar_Spouse_Select_Profession.pdf            6  Candidate for the Post of Assistant Professor - Electrical & Computer 
+25_Fazeelat_BiBi_Spouse_Other.pdf                        7  Candidate for the Post of Assistant Professor - Electrical & Computer 
+30_Lubna_Hussain_Spouse_Other.pdf                        5  Candidate for the Post of Assistant Professor - Electrical & Computer 
+31_Spouse_Select_Profession.pdf                          4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+36_Muhammad_Salik_Spouse_Pak_Air_Force.pdf               4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+39_Spouse_Select_Profession.pdf                          6  Candidate for the Post of Assistant Professor - Electrical & Computer 
+40_Eram_Shafiq_Spouse_Select_Profession.pdf              9  Candidate for the Post of Assistant Professor - Electrical & Computer 
+42_Spouse_Select_Profession.pdf                          7  Candidate for the Post of Assistant Professor - Electrical & Computer 
+43_MUHAMMAD_ADEEL_ALTAF.pdf                              4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_02.pdf                                         4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_04.pdf                                         4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_07.pdf                                         5  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_09.pdf                                         5  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_14.pdf                                         6  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_15.pdf                                        18  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_23.pdf                                         4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_26.pdf                                         4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_27.pdf                                         5  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_28.pdf                                         7  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_29.pdf                                         4  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_32.pdf                                         7  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_33.pdf                                         5  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_34.pdf                                         8  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_35.pdf                                         5  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_37.pdf                                         6  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_38.pdf                                         3  Candidate for the Post of Assistant Professor - Electrical & Computer 
+candidate_41.pdf                                         6  Candidate for the Post of Assistant Professor - Electrical & Computer 
