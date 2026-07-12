@@ -291,9 +291,22 @@ class Exporter:
         # Build DataFrames
         dfs = self._build_dataframes()
 
-        # Write individual CSVs
+        # Write/Merge individual CSVs
         for name, df in dfs.items():
             csv_path = self.output_dir / f"{name}.csv"
+            if csv_path.exists():
+                try:
+                    old_df = pd.read_csv(csv_path)
+                    new_cids = df['candidate_id'].dropna().unique()
+                    old_df_filtered = old_df[~old_df['candidate_id'].isin(new_cids)]
+                    combined_df = pd.concat([old_df_filtered, df], ignore_index=True)
+                    if 'row_id' in combined_df.columns:
+                        combined_df['row_id'] = range(1, len(combined_df) + 1)
+                    df = combined_df
+                    dfs[name] = df
+                except Exception as e:
+                    logger.warning("Could not merge with existing CSV %s: %s", csv_path.name, e)
+
             df.to_csv(csv_path, index=False)
             logger.info("Wrote %d rows -> %s", len(df), csv_path.name)
 

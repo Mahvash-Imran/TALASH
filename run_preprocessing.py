@@ -80,7 +80,7 @@ logger = logging.getLogger("talash.preprocessing.main")
 # Main pipeline
 # ---------------------------------------------------------------------------
 
-def run(cv_folder: str, output_dir: str, model: str, api_key: str = "", base_url: str = ""):
+def run(cv_folder: str, output_dir: str, model: str, api_key: str = "", base_url: str = "", candidate: str = "", limit: int = 0):
     """
     Execute the full pre-processing pipeline.
 
@@ -91,6 +91,8 @@ def run(cv_folder: str, output_dir: str, model: str, api_key: str = "", base_url
     model      : OpenAI model name (e.g. gpt-4o-mini, gpt-4o)
     api_key    : OpenAI API key (or set OPENAI_API_KEY env var)
     base_url   : Custom base URL for alternative providers (e.g. Groq, xAI)
+    candidate  : Filename filter (substring match)
+    limit      : Limit count of PDFs processed
     """
     logger.info("=" * 55)
     logger.info("  TALASH Pre-Processing Module – Starting")
@@ -104,10 +106,17 @@ def run(cv_folder: str, output_dir: str, model: str, api_key: str = "", base_url
     reader   = PDFReader(cv_folder=cv_folder)
     pdf_results = reader.read_all()
 
+    if candidate:
+        pdf_results = [r for r in pdf_results if candidate.lower() in r.candidate_filename.lower()]
+        logger.info("Filtered to candidate '%s', remaining: %d file(s)", candidate, len(pdf_results))
+
+    if limit > 0:
+        pdf_results = pdf_results[:limit]
+        logger.info("Limited to first %d candidate(s)", limit)
+
     if not pdf_results:
         logger.error(
-            "No PDF files found in '%s'.\n"
-            "[!] DATASET NEEDED: Place candidate CV PDFs in that folder and re-run.",
+            "No PDF files found matching filter in '%s'.",
             cv_folder
         )
         sys.exit(1)
@@ -205,6 +214,17 @@ if __name__ == "__main__":
         default=os.environ.get("OPENAI_BASE_URL", ""),
         help="Custom base URL for alternative providers (like Groq or xAI)",
     )
+    parser.add_argument(
+        "--candidate",
+        default="",
+        help="Filter candidates matching this substring (default: all)",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=0,
+        help="Limit the number of candidates processed (default: 0 = all)",
+    )
 
     args = parser.parse_args()
     run(
@@ -213,4 +233,6 @@ if __name__ == "__main__":
         model=args.model,
         api_key=args.api_key,
         base_url=args.base_url,
+        candidate=args.candidate,
+        limit=args.limit,
     )
