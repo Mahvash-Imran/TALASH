@@ -222,6 +222,16 @@ class EducationalProfileAnalyser:
     ) -> Dict[str, Path]:
         paths = {}
 
+        # Sort profiles from strongest to weakest, then alphabetically by candidate_id
+        strength_ranks = {"Strong": 1, "Moderate": 2, "Weak": 3}
+        profiles = sorted(
+            profiles,
+            key=lambda x: (
+                strength_ranks.get(x.get("educational_strength"), 99),
+                x.get("candidate_id", "")
+            )
+        )
+
         # 1. Educational profiles summary
         if profiles:
             p = self.output_dir / "educational_profiles.csv"
