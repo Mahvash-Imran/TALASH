@@ -420,6 +420,7 @@ class LLMExtractor:
                 {"role": "user", "content": user},
             ],
             temperature=self.temperature,
+            max_tokens=4096,
             # NOTE: We intentionally do NOT pass response_format={"type": "json_object"}
             # because Groq-hosted open-source models (llama, mixtral) do not all support
             # that parameter. Instead, the prompt explicitly instructs JSON-only output.

@@ -31,6 +31,17 @@ def load_processed_candidates() -> set:
         return set()
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="TALASH Batch Processor")
+    parser.add_argument(
+        "--model",
+        type=str,
+        default="llama-3.3-70b-versatile",
+        help="LLM model name to use"
+    )
+    args = parser.parse_args()
+    model = args.model
+
     split_dir = Path("data/cvs/split")
     if not split_dir.exists():
         print(f"Error: Split directory does not exist at {split_dir}")
@@ -54,7 +65,7 @@ def main():
     if not to_process:
         print("All candidates have been successfully processed!")
         # Run module 2 to be safe
-        subprocess.run(["python", "run_educational_profile.py"])
+        subprocess.run(["python", "run_educational_profile.py", "--model", model])
         return
 
     print(f"Remaining to process: {len(to_process)}")
@@ -75,7 +86,7 @@ def main():
             "--cv-folder", str(split_dir),
             "--output-dir", "data/extracted",
             "--candidate", cid,
-            "--model", "llama-3.3-70b-versatile"
+            "--model", model
         ]
         
         result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
@@ -92,7 +103,14 @@ def main():
             print(f"[FAIL] Candidate {cid} was not successfully processed.")
             # Check if rate limited only when this candidate failed
             output_lower = (result.stdout + "\n" + result.stderr).lower()
-            if "rate_limit_exceeded" in output_lower or "rate limit reached" in output_lower or "429" in output_lower:
+            fail_prefix = f"[fail] llm extraction failed: {cid.lower()}"
+            is_rate_limit = False
+            for line in output_lower.split("\n"):
+                if fail_prefix in line:
+                    if "429" in line or "rate_limit" in line or "rate limit" in line:
+                        is_rate_limit = True
+                        break
+            if is_rate_limit:
                 print(f"\n[!] Rate limit reached at candidate {cid}. Stopping batch.")
                 rate_limited = True
                 break
@@ -101,7 +119,7 @@ def main():
     
     # Run Module 2 analysis on all successful candidates
     print("\nRunning Module 2 (Educational Profile Analysis)...")
-    subprocess.run(["python", "run_educational_profile.py"])
+    subprocess.run(["python", "run_educational_profile.py", "--model", model])
 
     if rate_limited:
         print("\n[!] Processing stopped because the Groq API rate limit was reached.")
