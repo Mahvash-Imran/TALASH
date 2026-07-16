@@ -60,6 +60,7 @@ class ValidationReport:
     missing_top_level: List[str] = field(default_factory=list)   # e.g. "education"
     missing_personal_fields: List[str] = field(default_factory=list)
     empty_arrays: List[str] = field(default_factory=list)         # arrays with 0 items
+    flags: List[Dict[str, Any]] = field(default_factory=list)     # data quality flags
     notes: List[str] = field(default_factory=list)
 
     def has_issues(self) -> bool:
@@ -67,6 +68,7 @@ class ValidationReport:
             self.missing_top_level
             or self.missing_personal_fields
             or self.empty_arrays
+            or self.flags
         )
 
     def summary(self) -> str:
@@ -77,6 +79,9 @@ class ValidationReport:
             parts.append(f"Missing personal fields: {self.missing_personal_fields}")
         if self.empty_arrays:
             parts.append(f"Empty arrays: {self.empty_arrays}")
+        if self.flags:
+            flags_summary = [f"{f['entry_ref']}:{f['flag_type']} ({f['explanation']})" for f in self.flags]
+            parts.append(f"Flags: [{'; '.join(flags_summary)}]")
         if self.notes:
             parts.append(f"Notes: {self.notes}")
         return " | ".join(parts) if parts else "OK"
@@ -600,6 +605,63 @@ class LLMExtractor:
             val = data.get(key)
             if isinstance(val, list) and len(val) == 0:
                 report.empty_arrays.append(key)
+
+        # Check individual education entries for data quality
+        education = data.get("education") or []
+        for idx, edu in enumerate(education):
+            ref = f"education[{idx}]"
+            deg_title = edu.get("degree") or "Unknown Degree"
+
+            if not edu.get("institution"):
+                report.flags.append({
+                    "entry_ref": ref,
+                    "flag_type": "MISSING_INSTITUTION",
+                    "explanation": f"Institution name is missing for '{deg_title}'."
+                })
+            if not edu.get("degree"):
+                report.flags.append({
+                    "entry_ref": ref,
+                    "flag_type": "MISSING_DEGREE_TITLE",
+                    "explanation": f"Degree title is missing at index {idx}."
+                })
+            
+            # Check years
+            start_yr = edu.get("start_year")
+            end_yr = edu.get("end_year")
+            if not start_yr and not end_yr:
+                report.flags.append({
+                    "entry_ref": ref,
+                    "flag_type": "MISSING_YEARS",
+                    "explanation": f"Both start and end years are missing for '{deg_title}'."
+                })
+            elif start_yr and end_yr:
+                try:
+                    s_val = int(float(start_yr))
+                    e_val = int(float(end_yr))
+                    if s_val > e_val:
+                        report.flags.append({
+                            "entry_ref": ref,
+                            "flag_type": "INVALID_YEAR_RANGE",
+                            "explanation": f"Start year ({start_yr}) is after end year ({end_yr}) for '{deg_title}'."
+                        })
+                except (ValueError, TypeError):
+                    pass
+
+            # Check grades
+            if not edu.get("cgpa") and not edu.get("marks_percentage"):
+                report.flags.append({
+                    "entry_ref": ref,
+                    "flag_type": "MISSING_GRADES",
+                    "explanation": f"Academic score (CGPA or marks percentage) is missing for '{deg_title}'."
+                })
+
+            # Check specialization
+            if not edu.get("specialization"):
+                report.flags.append({
+                    "entry_ref": ref,
+                    "flag_type": "MISSING_SPECIALIZATION",
+                    "explanation": f"Specialization/discipline is missing for '{deg_title}'."
+                })
 
         return report
 
