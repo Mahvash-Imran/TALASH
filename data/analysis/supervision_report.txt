@@ -1,0 +1,186 @@
+======================================================================
+  TALASH Module 4 – Student Supervision Analysis Report
+======================================================================
+  Candidates analysed           : 43
+  Candidates with NO data (flagged for email) : 43
+
+  Supervisory Strength Distribution:
+    Needs Clarification      : 43
+
+----------------------------------------------------------------------
+  Per-Candidate Supervision Summaries
+----------------------------------------------------------------------
+
+  [Needs Clarification] 01_MUHAMMAD_SALMAN
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 01_MUHAMMAD_SALMAN. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 02_MUHAMMAD_SHAHWAZ
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 02_MUHAMMAD_SHAHWAZ. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 03_NASIR_ALI_SHAH
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 03_NASIR_ALI_SHAH. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 04_MUHAMMAD_FARRUKH
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 04_MUHAMMAD_FARRUKH. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 05_MUHAMMAD_MAJID
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 05_MUHAMMAD_MAJID. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 06_FARMAN_ALI
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 06_FARMAN_ALI. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 07_FIZA_MURTAZA
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 07_FIZA_MURTAZA. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 08_TAYYABA_GULL
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 08_TAYYABA_GULL. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 09_MUHAMMAD_ABUBAKAR
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 09_MUHAMMAD_ABUBAKAR. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 10_MUHAMMAD_EHATISHAM
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 10_MUHAMMAD_EHATISHAM. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 11_WAQAS_AMIN
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 11_WAQAS_AMIN. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 12_SYED_TAMOORULHASSAN
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 12_SYED_TAMOORULHASSAN. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 13_MANZOOR_ELLAHI
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 13_MANZOOR_ELLAHI. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 14_SAROSH_TAHIR
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 14_SAROSH_TAHIR. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 15_M_USMAN_ABBASI
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 15_M_USMAN_ABBASI. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 16_MUZZAMIL_GHAFFAR
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 16_MUZZAMIL_GHAFFAR. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 17_SUHAIL_ASGHAR
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 17_SUHAIL_ASGHAR. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 18_MUHAMMAD_AMJAD
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 18_MUHAMMAD_AMJAD. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 19_ASIM_MASOOD
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 19_ASIM_MASOOD. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 20_SYED_FASIH_ALI
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 20_SYED_FASIH_ALI. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 21_SAMAN_FATIMA
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 21_SAMAN_FATIMA. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 22_ZEESHAN
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 22_ZEESHAN. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 23_WAQAS_TARIQ_TOOR
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 23_WAQAS_TARIQ_TOOR. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 24_AHMED_NAEEM
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 24_AHMED_NAEEM. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 25_MUHAMMAD_ADEEL_ALTAF
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 25_MUHAMMAD_ADEEL_ALTAF. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 26_AAMINA_AKBAR
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 26_AAMINA_AKBAR. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 27_SHAHEER
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 27_SHAHEER. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 28_IDRIS_KHAN
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 28_IDRIS_KHAN. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 29_MUHAMMAD_SARMAD_TARIQ
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 29_MUHAMMAD_SARMAD_TARIQ. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 30_FAHD_SIKANDAR_KHAN
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 30_FAHD_SIKANDAR_KHAN. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 31_USMAN_MASUD
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 31_USMAN_MASUD. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 32_QAISAR_HUSSAIN_ALVI
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 32_QAISAR_HUSSAIN_ALVI. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 33_QAMAR_ABBAS
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 33_QAMAR_ABBAS. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 34_SHAHZAD
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 34_SHAHZAD. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 35_MATIULLAH_AHSAN
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 35_MATIULLAH_AHSAN. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 36_SAMANA_BATOOL
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 36_SAMANA_BATOOL. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 37_SANIA_GUL
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 37_SANIA_GUL. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 38_MUHAMMAD_MUSADIQ
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 38_MUHAMMAD_MUSADIQ. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 39_MUHAMMAD_SAQIB
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 39_MUHAMMAD_SAQIB. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 40_ABDUR_REHMAN
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 40_ABDUR_REHMAN. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 41_MUHAMMAD_AQEEL
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 41_MUHAMMAD_AQEEL. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 42_SAQIB_JAMIL
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 42_SAQIB_JAMIL. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 43_AMMARA_NASIM
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 43_AMMARA_NASIM. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+======================================================================
