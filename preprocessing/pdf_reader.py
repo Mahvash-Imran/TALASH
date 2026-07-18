@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 class PDFReadResult:
     """Holds the result of attempting to read one PDF file."""
     file_path: str          # Absolute path to the PDF
-    candidate_filename: str # Basename (used as a temporary candidate_id)
+    candidate_filename: str  # Basename (used as a temporary candidate_id)
     success: bool           # True if text was extracted
     text: Optional[str]     # Full concatenated text of all pages (or None)
     page_count: int         # Number of pages detected
@@ -224,7 +224,8 @@ class PDFReader:
 
             # Warn if the PDF is encrypted (pypdf may still read it if no password needed)
             if reader.is_encrypted:
-                warnings.append("PDF is encrypted; extraction may be incomplete.")
+                warnings.append(
+                    "PDF is encrypted; extraction may be incomplete.")
 
             for i, page in enumerate(reader.pages):
                 try:
@@ -232,7 +233,8 @@ class PDFReader:
                     if text:
                         pages_text.append(text)
                     else:
-                        warnings.append(f"pypdf: Page {i + 1} yielded no text.")
+                        warnings.append(
+                            f"pypdf: Page {i + 1} yielded no text.")
                 except Exception as e:
                     warnings.append(f"pypdf: Page {i + 1} error: {e}")
 

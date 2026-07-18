@@ -1,0 +1,360 @@
+======================================================================
+  TALASH Module 3 - Research Profile Report
+======================================================================
+  Candidates analysed : 43
+
+  Research Strength Distribution:
+    Moderate                 : 18
+    Needs Clarification      : 5
+    Strong                   : 13
+    Weak                     : 7
+
+----------------------------------------------------------------------
+  Per-Candidate Research Summaries
+----------------------------------------------------------------------
+
+  [Strong] 03_NASIR_ALI_SHAH
+  Publications  : 4 journal, 0 conference
+  Scopus/WoS    : 4 / 3
+  Quartiles     : Q1=2 Q2=1 Q3=1 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=2 Corr=1 Co=1
+  Summary: Candidate 03_NASIR_ALI_SHAH has published 4 journal papers, with 3 of them indexed in Web of Science and 4 in Scopus. The candidate has 2 Q1 papers and 3 high-impact papers. They have also published 2 first-author papers and 1 co-author paper.
+
+  [Strong] 04_MUHAMMAD_FARRUKH
+  Publications  : 15 journal, 8 conference
+  Scopus/WoS    : 14 / 6
+  Quartiles     : Q1=5 Q2=3 Q3=4 Q4=2
+  CORE ranks    : A*=0 A=1 B=0 C=0 Unranked=7
+  Authorship    : 1st=4 Corr=2 Co=17
+  Summary: Candidate 04_MUHAMMAD_FARRUKH has published 15 journal papers and 8 conference papers, with 14 of them indexed in Scopus and 6 in WoS. The candidate has a notable number of high-impact papers (8) and Q1 papers (5). They have also demonstrated a good balance of first-author and co-author papers.
+
+  [Strong] 07_FIZA_MURTAZA
+  Publications  : 7 journal, 5 conference
+  Scopus/WoS    : 6 / 5
+  Quartiles     : Q1=3 Q2=1 Q3=2 Q4=0
+  CORE ranks    : A*=0 A=1 B=2 C=0 Unranked=2
+  Authorship    : 1st=9 Corr=0 Co=3
+  Summary: Candidate 07_FIZA_MURTAZA has published 7 journal papers and 5 conference papers. Their publications are indexed in Scopus and WoS, with 6 and 5 indexed journals respectively. They have a strong presence in top-tier journals with 3 Q1 papers and 4 high-impact papers.
+
+  [Strong] 09_MUHAMMAD_ABUBAKAR
+  Publications  : 22 journal, 0 conference
+  Scopus/WoS    : 11 / 10
+  Quartiles     : Q1=7 Q2=3 Q3=1 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=6 Corr=6 Co=10
+  Summary: Candidate 09_MUHAMMAD_ABUBAKAR has published 22 journal papers, with 11 Scopus-indexed and 10 WoS-indexed journals. They have a notable 7 Q1 papers and 10 high-impact papers. The candidate has a balanced first-author and co-author publication record.
+
+  [Strong] 11_WAQAS_AMIN
+  Publications  : 25 journal, 0 conference
+  Scopus/WoS    : 13 / 11
+  Quartiles     : Q1=7 Q2=5 Q3=1 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=24 Corr=0 Co=1
+  Summary: Candidate 11_WAQAS_AMIN has published 25 journal papers, with 13 in Scopus-indexed journals and 11 in WoS-indexed journals. They have a strong presence in top-tier journals, with 7 Q1 papers and 12 high-impact papers. The candidate's publication record is predominantly as a first author, with 24 first-author papers and only 1 co-author paper.
+
+  [Strong] 15_M_USMAN_ABBASI
+  Publications  : 3 journal, 0 conference
+  Scopus/WoS    : 3 / 2
+  Quartiles     : Q1=2 Q2=1 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=3 Corr=0 Co=0
+  Summary: Candidate 15_M_USMAN_ABBASI has published 3 journal papers, all of which are Scopus-indexed. Two of these papers are categorized as Q1, indicating a high level of research quality. The candidate has also published 3 high-impact papers, further demonstrating their research capabilities.
+
+  [Strong] 18_MUHAMMAD_AMJAD
+  Publications  : 8 journal, 8 conference
+  Scopus/WoS    : 6 / 6
+  Quartiles     : Q1=6 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=8
+  Authorship    : 1st=14 Corr=1 Co=1
+  Summary: Candidate 18_MUHAMMAD_AMJAD has published 8 journal papers and 8 conference papers, with 6 of them indexed in Scopus and WoS. They have a strong presence in high-impact publications with 6 Q1 papers. The candidate has also demonstrated a significant number of first-author papers, indicating their ability to lead research projects.
+
+  [Strong] 23_WAQAS_TARIQ_TOOR
+  Publications  : 20 journal, 9 conference
+  Scopus/WoS    : 19 / 8
+  Quartiles     : Q1=6 Q2=7 Q3=5 Q4=1
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=9
+  Authorship    : 1st=6 Corr=2 Co=21
+  Summary: Candidate 23_WAQAS_TARIQ_TOOR has published 20 journal papers and 9 conference papers, with 19 of them indexed in Scopus and 8 in WoS. The candidate has a notable number of high-impact papers (13) and Q1 papers (6). They have also demonstrated a good balance between first-author and co-author papers.
+
+  [Strong] 34_SHAHZAD
+  Publications  : 6 journal, 3 conference
+  Scopus/WoS    : 6 / 4
+  Quartiles     : Q1=2 Q2=3 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=1 B=0 C=0 Unranked=2
+  Authorship    : 1st=6 Corr=0 Co=3
+  Summary: Candidate 34_SHAHZAD has published 9 papers in total, with 6 journal papers and 3 conference papers. The candidate has a strong presence in Scopus-indexed journals with 6 publications. Additionally, they have 5 high-impact papers and 2 Q1 papers in their publication record.
+
+  [Strong] 37_SANIA_GUL
+  Publications  : 15 journal, 2 conference
+  Scopus/WoS    : 14 / 10
+  Quartiles     : Q1=5 Q2=6 Q3=1 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=2
+  Authorship    : 1st=13 Corr=0 Co=3
+  Summary: Candidate 37_SANIA_GUL has published 15 journal papers and 2 conference papers. The majority of their publications are indexed in Scopus and WoS, with 14 and 10 papers respectively. They have a notable number of high-impact papers, with 11 papers classified as such.
+
+  [Strong] 38_MUHAMMAD_MUSADIQ
+  Publications  : 4 journal, 3 conference
+  Scopus/WoS    : 4 / 3
+  Quartiles     : Q1=3 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=3
+  Authorship    : 1st=7 Corr=0 Co=0
+  Summary: Candidate 38_MUHAMMAD_MUSADIQ has published 7 journal papers, with 4 of them indexed in Scopus and 3 in WoS. They have also presented 3 conference papers. The candidate has a strong publication record, with 3 high-impact papers and 3 Q1 papers.
+
+  [Strong] 41_MUHAMMAD_AQEEL
+  Publications  : 11 journal, 4 conference
+  Scopus/WoS    : 9 / 3
+  Quartiles     : Q1=3 Q2=1 Q3=3 Q4=2
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=4
+  Authorship    : 1st=15 Corr=0 Co=0
+  Summary: Candidate 41_MUHAMMAD_AQEEL has published 11 journal papers and 4 conference papers. Their publications are indexed in Scopus and WoS, with 9 and 3 indexed journals respectively. The candidate has a total of 4 high-impact papers and has not published in any potential predatory journals.
+
+  [Strong] 43_AMMARA_NASIM
+  Publications  : 17 journal, 0 conference
+  Scopus/WoS    : 9 / 8
+  Quartiles     : Q1=5 Q2=2 Q3=1 Q4=1
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=8 Corr=4 Co=5
+  Summary: Candidate 43_AMMARA_NASIM has published 17 journal papers, with 9 in Scopus-indexed journals and 8 in WoS-indexed journals. The candidate has a strong presence in high-impact papers with 7 publications. Additionally, they have 8 first-author papers and 5 co-author papers, indicating a significant level of research productivity.
+
+  [Moderate] 12_SYED_TAMOORULHASSAN
+  Publications  : 3 journal, 4 conference
+  Scopus/WoS    : 3 / 2
+  Quartiles     : Q1=2 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=4
+  Authorship    : 1st=5 Corr=0 Co=2
+  Summary: Candidate 12_SYED_TAMOORULHASSAN has published 7 research papers, including 3 journal papers and 4 conference papers. Two of their papers are indexed in WoS and one is indexed in Scopus. They have also published 2 high-impact papers and 5 first-author papers.
+
+  [Moderate] 13_MANZOOR_ELLAHI
+  Publications  : 13 journal, 10 conference
+  Scopus/WoS    : 4 / 1
+  Quartiles     : Q1=1 Q2=2 Q3=1 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=10
+  Authorship    : 1st=6 Corr=3 Co=8
+  Summary: Candidate 13_MANZOOR_ELLAHI has published 13 journal papers and 10 conference papers. Their publications include 4 Scopus-indexed and 1 WoS-indexed journals. They have also published 3 high-impact papers and 1 Q1 paper, indicating a moderate level of research productivity and impact.
+
+  [Moderate] 14_SAROSH_TAHIR
+  Publications  : 2 journal, 8 conference
+  Scopus/WoS    : 2 / 1
+  Quartiles     : Q1=0 Q2=1 Q3=1 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=8
+  Authorship    : 1st=0 Corr=0 Co=0
+  Summary: Candidate 14_SAROSH_TAHIR has published a total of 10 papers, with 2 in Scopus-indexed journals and 1 in a WoS-indexed journal. They have 1 high-impact paper and 1 Q2 paper. The candidate has not published any first-author or co-author papers.
+
+  [Moderate] 16_MUZZAMIL_GHAFFAR
+  Publications  : 3 journal, 3 conference
+  Scopus/WoS    : 2 / 2
+  Quartiles     : Q1=1 Q2=1 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=2 B=0 C=0 Unranked=1
+  Authorship    : 1st=6 Corr=0 Co=0
+  Summary: Candidate 16_MUZZAMIL_GHAFFAR has published 6 journal papers, with 3 of them being conference papers. The candidate has a total of 2 Scopus-indexed and 2 WoS-indexed journals. Additionally, they have 1 Q1 and 1 Q2 paper, indicating a moderate level of research productivity and quality.
+
+  [Moderate] 17_SUHAIL_ASGHAR
+  Publications  : 8 journal, 0 conference
+  Scopus/WoS    : 6 / 6
+  Quartiles     : Q1=2 Q2=4 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=0 Corr=0 Co=1
+  Summary: Candidate 17_SUHAIL_ASGHAR has published 8 journal papers, with 6 of them indexed in Scopus and WoS. They have authored 2 Q1 papers and 4 Q2 papers, indicating a moderate level of research productivity. The candidate has also published 6 high-impact papers, which suggests a focus on impactful research.
+
+  [Moderate] 19_ASIM_MASOOD
+  Publications  : 5 journal, 3 conference
+  Scopus/WoS    : 4 / 2
+  Quartiles     : Q1=0 Q2=1 Q3=1 Q4=1
+  CORE ranks    : A*=0 A=2 B=0 C=0 Unranked=1
+  Authorship    : 1st=8 Corr=0 Co=0
+  Summary: Candidate 19_ASIM_MASOOD has published 5 journal papers and 3 conference papers. The candidate's publications are indexed in Scopus and WoS, with 4 and 2 indexed journals respectively. The candidate has published 1 high-impact paper and 1 Q2 paper.
+
+  [Moderate] 20_SYED_FASIH_ALI
+  Publications  : 3 journal, 1 conference
+  Scopus/WoS    : 1 / 1
+  Quartiles     : Q1=1 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=1 B=0 C=0 Unranked=0
+  Authorship    : 1st=3 Corr=0 Co=1
+  Summary: Candidate 20_SYED_FASIH_ALI has published 4 papers, with 1 in a Scopus-indexed journal and 1 in a WoS-indexed journal. They have 1 Q1 paper and 1 paper in a CORE A conference. The candidate has 3 first-author papers and 1 co-author paper.
+
+  [Moderate] 22_ZEESHAN
+  Publications  : 8 journal, 2 conference
+  Scopus/WoS    : 7 / 1
+  Quartiles     : Q1=1 Q2=3 Q3=3 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=2
+  Authorship    : 1st=5 Corr=2 Co=3
+  Summary: Candidate 22_ZEESHAN has published 10 research papers, including 8 journal papers and 2 conference papers. The candidate has a mix of publications in Scopus-indexed and WoS-indexed journals, with 1 paper in the top quartile (Q1). The candidate has also published 4 high-impact papers and has a balanced number of first-author and co-author papers.
+
+  [Moderate] 24_AHMED_NAEEM
+  Publications  : 7 journal, 4 conference
+  Scopus/WoS    : 1 / 1
+  Quartiles     : Q1=1 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=2 B=0 C=0 Unranked=2
+  Authorship    : 1st=6 Corr=0 Co=5
+  Summary: Candidate 24_AHMED_NAEEM has published 7 journal papers and 4 conference papers. Their publications include 1 Scopus-indexed journal, 1 WoS-indexed journal, and 1 high-impact paper. They have presented their research at 2 CORE A conferences.
+
+  [Moderate] 25_MUHAMMAD_ADEEL_ALTAF
+  Publications  : 3 journal, 2 conference
+  Scopus/WoS    : 3 / 1
+  Quartiles     : Q1=1 Q2=1 Q3=1 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=2
+  Authorship    : 1st=5 Corr=0 Co=0
+  Summary: Candidate 25_MUHAMMAD_ADEEL_ALTAF has published 5 journal papers, with 3 of them indexed in Scopus and 1 in Web of Science. They have also presented 2 conference papers. The candidate has authored 1 paper in Q1 and 1 in Q2, indicating a moderate level of research impact.
+
+  [Moderate] 28_IDRIS_KHAN
+  Publications  : 5 journal, 5 conference
+  Scopus/WoS    : 2 / 0
+  Quartiles     : Q1=0 Q2=1 Q3=1 Q4=0
+  CORE ranks    : A*=0 A=1 B=0 C=0 Unranked=4
+  Authorship    : 1st=3 Corr=0 Co=7
+  Summary: Candidate 28_IDRIS_KHAN has published 10 papers, with 2 of them indexed in Scopus. They have 1 Q2 paper and 1 CORE A conference presentation. The candidate has a mix of first-author and co-author papers, indicating some level of research independence and collaboration.
+
+  [Moderate] 29_MUHAMMAD_SARMAD_TARIQ
+  Publications  : 3 journal, 4 conference
+  Scopus/WoS    : 3 / 2
+  Quartiles     : Q1=1 Q2=1 Q3=1 Q4=0
+  CORE ranks    : A*=0 A=0 B=2 C=0 Unranked=2
+  Authorship    : 1st=7 Corr=0 Co=0
+  Summary: Candidate 29_MUHAMMAD_SARMAD_TARIQ has published a total of 7 journal papers and 4 conference papers. Among these, 3 are Scopus-indexed and 2 are WoS-indexed. The candidate has also published 2 high-impact papers and 1 paper in a Q1 journal.
+
+  [Moderate] 30_FAHD_SIKANDAR_KHAN
+  Publications  : 7 journal, 2 conference
+  Scopus/WoS    : 5 / 1
+  Quartiles     : Q1=1 Q2=1 Q3=2 Q4=1
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=2
+  Authorship    : 1st=0 Corr=0 Co=0
+  Summary: Candidate 30_FAHD_SIKANDAR_KHAN has published 7 journal papers and 2 conference papers. The candidate's publications are indexed in Scopus and WoS, with 1 paper in Q1 and 2 papers in Q2. However, the candidate has no first-author or co-author papers, indicating limited leadership and collaboration in research.
+
+  [Moderate] 31_USMAN_MASUD
+  Publications  : 3 journal, 0 conference
+  Scopus/WoS    : 2 / 1
+  Quartiles     : Q1=1 Q2=1 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=3 Corr=0 Co=0
+  Summary: Candidate 31_USMAN_MASUD has published 3 journal papers, with 2 of them indexed in Scopus and 1 in Web of Science. The candidate has 1 Q1 and 1 Q2 paper, indicating a moderate level of research impact. They have also published 2 high-impact papers.
+
+  [Moderate] 32_QAISAR_HUSSAIN_ALVI
+  Publications  : 4 journal, 0 conference
+  Scopus/WoS    : 3 / 2
+  Quartiles     : Q1=0 Q2=2 Q3=0 Q4=1
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=0 Corr=0 Co=0
+  Summary: Candidate 32_QAISAR_HUSSAIN_ALVI has published 4 journal papers, with 3 of them indexed in Scopus and 2 in Web of Science. The candidate has 2 papers classified as Q2 and 1 as Q4. They have also published 2 high-impact papers.
+
+  [Moderate] 33_QAMAR_ABBAS
+  Publications  : 5 journal, 2 conference
+  Scopus/WoS    : 2 / 2
+  Quartiles     : Q1=2 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=1 B=0 C=0 Unranked=1
+  Authorship    : 1st=5 Corr=0 Co=2
+  Summary: Candidate 33_QAMAR_ABBAS has published 5 journal papers and 2 conference papers. Two of their journal papers are indexed in Scopus and WoS, and two are classified as high-impact papers. They have also presented their research at a CORE A conference.
+
+  [Moderate] 35_MATIULLAH_AHSAN
+  Publications  : 4 journal, 1 conference
+  Scopus/WoS    : 2 / 2
+  Quartiles     : Q1=1 Q2=1 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=1
+  Authorship    : 1st=3 Corr=2 Co=0
+  Summary: Candidate 35_MATIULLAH_AHSAN has published 4 journal papers and 1 conference paper. Two of their journal papers are indexed in Scopus and WoS. They have authored 1 Q1 and 1 Q2 paper, indicating a moderate level of research impact.
+
+  [Moderate] 36_SAMANA_BATOOL
+  Publications  : 3 journal, 0 conference
+  Scopus/WoS    : 2 / 1
+  Quartiles     : Q1=0 Q2=1 Q3=1 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=3 Corr=0 Co=0
+  Summary: Candidate 36_SAMANA_BATOOL has published 3 journal papers, with 2 of them indexed in Scopus and 1 in WoS. They have 1 Q2 paper and 1 Q3 paper, indicating a moderate level of research output. Their publication record suggests a focus on journal papers with a single high-impact paper.
+
+  [Weak] 01_MUHAMMAD_SALMAN
+  Publications  : 4 journal, 1 conference
+  Scopus/WoS    : 0 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=1
+  Authorship    : 1st=5 Corr=0 Co=0
+  Summary: Candidate 01_MUHAMMAD_SALMAN has published a total of 5 papers, with 4 being journal papers and 1 conference paper. None of the publications are indexed in Scopus or WoS, and there are no high-impact papers. The candidate has published as a first author in 5 papers, but has no co-author papers.
+
+  [Weak] 05_MUHAMMAD_MAJID
+  Publications  : 2 journal, 1 conference
+  Scopus/WoS    : 2 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=1
+  Authorship    : 1st=3 Corr=0 Co=0
+  Summary: Candidate 05_MUHAMMAD_MAJID has published a total of 3 papers, with 2 of them being in Scopus-indexed journals. The candidate has no publications in top-tier Q1 journals or high-impact papers. They have also not participated in CORE A* or A conferences.
+
+  [Weak] 08_TAYYABA_GULL
+  Publications  : 5 journal, 0 conference
+  Scopus/WoS    : 4 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=4 Corr=0 Co=0
+  Summary: Candidate 08_TAYYABA_GULL has published 5 journal papers, with 4 of them being Scopus-indexed. They have no conference papers or high-impact papers. The candidate has 4 first-author papers, indicating some level of independence in their research.
+
+  [Weak] 21_SAMAN_FATIMA
+  Publications  : 0 journal, 1 conference
+  Scopus/WoS    : 0 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=1
+  Authorship    : 1st=1 Corr=0 Co=0
+  Summary: Candidate 21_SAMAN_FATIMA has published one conference paper. They have no journal papers or high-impact papers. Their publication record is limited, indicating a need for further research experience.
+
+  [Weak] 26_AAMINA_AKBAR
+  Publications  : 3 journal, 1 conference
+  Scopus/WoS    : 3 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=1
+  Authorship    : 1st=3 Corr=0 Co=1
+  Summary: Candidate 26_AAMINA_AKBAR has published 4 papers, with 3 as first-author and 1 as co-author. The publications are spread across 3 journal papers and 1 conference paper. None of the publications are indexed in WoS or categorized as high-impact or Q1 papers.
+
+  [Weak] 39_MUHAMMAD_SAQIB
+  Publications  : 17 journal, 0 conference
+  Scopus/WoS    : 0 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=17 Corr=0 Co=0
+  Summary: Candidate 39_MUHAMMAD_SAQIB has published 17 journal papers, with no conference papers, Scopus- or WoS-indexed journals, or high-impact papers. Their publication record is primarily composed of first-author papers. Further research is needed to assess the candidate's research impact and quality.
+
+  [Weak] 40_ABDUR_REHMAN
+  Publications  : 2 journal, 3 conference
+  Scopus/WoS    : 0 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=3 B=0 C=0 Unranked=0
+  Authorship    : 1st=5 Corr=0 Co=0
+  Summary: Candidate 40_ABDUR_REHMAN has published a total of 5 papers, with 2 journal papers and 3 conference papers. The candidate has not published any papers in Scopus- or WoS-indexed journals, nor have they published any high-impact or Q1 papers. They have presented their research at CORE A conferences.
+
+  [Needs Clarification] 02_MUHAMMAD_SHAHWAZ
+  Publications  : 0 journal, 0 conference
+  Scopus/WoS    : 0 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=0 Corr=0 Co=0
+  Summary: Candidate 02_MUHAMMAD_SHAHWAZ has no publications in their research profile. This suggests a lack of research output, which may indicate a need for further clarification on their research activities and achievements.
+
+  [Needs Clarification] 06_FARMAN_ALI
+  Publications  : 0 journal, 0 conference
+  Scopus/WoS    : 0 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=0 Corr=0 Co=0
+  Summary: Candidate 06_FARMAN_ALI has no publications in indexed journals or conferences, indicating a lack of research output. Further evaluation is required to determine their research capabilities. The candidate's research profile is currently incomplete and does not provide sufficient information for a comprehensive assessment.
+
+  [Needs Clarification] 10_MUHAMMAD_EHATISHAM
+  Publications  : 0 journal, 0 conference
+  Scopus/WoS    : 0 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=0 Corr=0 Co=0
+  Summary: Candidate 10_MUHAMMAD_EHATISHAM has no publications in their research profile. This suggests a lack of research output, which may indicate a need for further investigation into their research activities and productivity. Further evaluation is required to determine the candidate's research capabilities and potential.
+
+  [Needs Clarification] 27_SHAHEER
+  Publications  : 0 journal, 0 conference
+  Scopus/WoS    : 0 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=0 Corr=0 Co=0
+  Summary: Candidate 27_SHAHEER has no publications in any category, including journal papers, conference papers, and high-impact papers. This suggests a lack of research output. Further evaluation is required to determine the candidate's research potential. The current data does not provide a clear indication of the candidate's research abilities.
+
+  [Needs Clarification] 42_SAQIB_JAMIL
+  Publications  : 0 journal, 0 conference
+  Scopus/WoS    : 0 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=0 Corr=0 Co=0
+  Summary: Candidate 42_SAQIB_JAMIL has no publications in indexed journals or conferences, indicating a lack of research output. Further evaluation is required to determine their research capabilities. The candidate's research profile is currently incomplete, and more information is needed to assess their strengths and weaknesses.
+
+======================================================================

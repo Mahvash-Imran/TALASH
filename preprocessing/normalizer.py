@@ -44,7 +44,7 @@ logger = logging.getLogger(__name__)
 _SCALE_BOUNDARIES = [
     (4.0, 4.0),   # if max raw CGPA ≤ 4.0  → scale 4.0
     (5.0, 5.0),   # if max raw CGPA ≤ 5.0  → scale 5.0
-    (10.0, 10.0), # if max raw CGPA ≤ 10.0 → scale 10.0 (rare but used in India)
+    (10.0, 10.0),  # if max raw CGPA ≤ 10.0 → scale 10.0 (rare but used in India)
     (100.0, 100.0),  # percentage disguised as CGPA
 ]
 
@@ -66,8 +66,8 @@ _LIGATURE_MAP = {
     "\ufb01": "fi",  # ﬁ
     "\ufb02": "fl",  # ﬂ
     "\ufb00": "ff",  # ﬀ
-    "\ufb03": "ffi", # ﬃ
-    "\ufb04": "ffl", # ﬄ
+    "\ufb03": "ffi",  # ﬃ
+    "\ufb04": "ffl",  # ﬄ
     "\u2013": "-",   # en-dash
     "\u2014": "-",   # em-dash
     "\u2018": "'",   # left single quote
@@ -180,25 +180,28 @@ class Normalizer:
 
         # Normalize years
         entry["start_year"] = self._normalize_year(entry.get("start_year"))
-        entry["end_year"]   = self._normalize_year(entry.get("end_year"))
+        entry["end_year"] = self._normalize_year(entry.get("end_year"))
 
         # Normalize CGPA
-        raw_cgpa  = self._parse_float(entry.get("cgpa"))
+        raw_cgpa = self._parse_float(entry.get("cgpa"))
         raw_scale = self._parse_float(entry.get("cgpa_scale"))
         if raw_cgpa is not None:
-            detected_scale, normalized_cgpa = self._normalize_cgpa(raw_cgpa, raw_scale)
-            entry["cgpa"]              = raw_cgpa          # keep original
-            entry["cgpa_scale"]        = detected_scale    # detected / confirmed scale
-            entry["cgpa_normalized_4"] = round(normalized_cgpa, 3)  # /4.0 equivalent
+            detected_scale, normalized_cgpa = self._normalize_cgpa(
+                raw_cgpa, raw_scale)
+            entry["cgpa"] = raw_cgpa          # keep original
+            # detected / confirmed scale
+            entry["cgpa_scale"] = detected_scale
+            entry["cgpa_normalized_4"] = round(
+                normalized_cgpa, 3)  # /4.0 equivalent
         else:
-            entry["cgpa"]              = None
-            entry["cgpa_scale"]        = None
+            entry["cgpa"] = None
+            entry["cgpa_scale"] = None
             entry["cgpa_normalized_4"] = None
 
         # Normalize percentage
         raw_pct = self._parse_float(entry.get("marks_percentage"))
         if raw_pct is not None:
-            entry["marks_percentage"]          = raw_pct
+            entry["marks_percentage"] = raw_pct
             entry["marks_percentage_original"] = raw_pct  # preserved
         else:
             entry["marks_percentage"] = None
@@ -209,7 +212,7 @@ class Normalizer:
     def _normalize_experience_entry(self, entry: Dict) -> Dict:
         entry = self._clean_dict_strings(entry)
         entry["start_date"] = self._normalize_date(entry.get("start_date"))
-        entry["end_date"]   = self._normalize_date(entry.get("end_date"))
+        entry["end_date"] = self._normalize_date(entry.get("end_date"))
         return entry
 
     def _normalize_publication_entry(self, entry: Dict) -> Dict:
@@ -307,8 +310,8 @@ class Normalizer:
         )
         if m:
             month_name = (m.group(1) or m.group(4)).lower()
-            year       = m.group(2) or m.group(3)
-            month_num  = _MONTHS.get(month_name[:3])
+            year = m.group(2) or m.group(3)
+            month_num = _MONTHS.get(month_name[:3])
             if month_num:
                 return f"{year}-{month_num}"
 

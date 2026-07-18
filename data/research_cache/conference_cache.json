@@ -1,0 +1,295 @@
+{
+  "conf::international conference": {},
+  "reconstruct_conf::International Conference on En": "International Conference on Engineering",
+  "reconstruct_conf::2nd International Conference o": "2nd International Conference on Computer Vision and Image Processing",
+  "reconstruct_conf::International Conference on Em": "International Conference on Electromyography and Signal Processing",
+  "reconstruct_conf::19th International Bhurban Con": "19th International Bhurban Conference on Applied Sciences and Technology",
+  "reconstruct_conf::8th International Conference o": null,
+  "conf::19th international bhurban conference on applied sciences and technology": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::ieee sensors journal": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "conf::8th international conference o": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::international conference on engineering": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::2nd international conference on computer vision and image processing": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::international conference on electromyography and signal processing": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::ieee 21st international confer": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::nan": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "reconstruct_conf::15th International Conference on Co": "15th International Conference on Computer Vision",
+  "conf::13th ieee international conference": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "conf::2016 ieee canadian conference on electrical and computer engineering": {
+    "core_rank": "B",
+    "known_publisher": "IEEE"
+  },
+  "conf::25th ieee international conference": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": "IEEE"
+  },
+  "conf::iet computer vision": {
+    "core_rank": "B",
+    "known_publisher": "IET"
+  },
+  "conf::15th international conference on computer vision": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": "Other"
+  },
+  "conf::ieee international symposium on wireless communication": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": "IEEE"
+  },
+  "conf::ieee 14th international conference": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": "IEEE"
+  },
+  "conf::ieee ifip wireless days": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": "IEEE"
+  },
+  "conf::european conference and exhibition": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::ieee-ifip international conference": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": "IEEE"
+  },
+  "conf::italian national conference on phot": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::ieee international conference on transparent optical networks": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": "IEEE"
+  },
+  "conf::ieee international conference on communications": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": "IEEE"
+  },
+  "reconstruct_conf::International Conference on Ro": "International Conference on Robotics and Automation",
+  "reconstruct_conf::International Conference on Ar": "International Conference on Artificial Intelligence",
+  "conf::european conference on sustainability": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::international conference on robotics and automation": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "conf::international conference on artificial intelligence": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "conf::eusar 2024": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::2024 ieee international": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": "IEEE"
+  },
+  "conf::international conference on machine": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::eleventh international conference": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::metrosea2024": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::cbmi 2023": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::ieee 5th international conference": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "conf::proceedings of the 1.00": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::15th ieee international conference": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "reconstruct_conf::IEEE Wireless communication and net": "IEEE Wireless Communications and Networking Conference",
+  "conf::ieee wireless communications and networking conference": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "reconstruct_conf::IEEE International Conference on El": "IEEE International Conference on Electron Devices",
+  "conf::ieee international conference on electron devices": {
+    "core_rank": "Unranked",
+    "known_publisher": "IEEE"
+  },
+  "conf::eighth international conference": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::9th international conference": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::3rd international conference": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::horizons of information technology": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::1st international conference": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::proceedings of the twenty-first international conference": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "reconstruct_conf::15th International Conference on Em": "15th International Conference on Emerging Trends in Engineering, Science and Technology",
+  "conf::ieee 33rd annual international symp": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "conf::15th international conference on emerging trends in engineering, science and technology": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::wireless communication signals": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::2021 ieee 94th vehicular technology": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "reconstruct_conf::15th International Conference on In": "15th International Conference on Information and Systems for Safety of Society (SafeSoc)",
+  "conf::15th international conference on information and systems for safety of society (safesoc)": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::the 7th international conference on artificial intelligence in information and communication": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "reconstruct_conf::7th international conference on": "7th International Conference on Artificial Intelligence and Applications",
+  "reconstruct_conf::International conference on Em": "International Conference on Emerging Nanotechnology",
+  "conf::8th ieee international conference": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "conf::international conference on computi 2018": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::international conference on emerging nanotechnology": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::7th international conference on artificial intelligence and applications": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::international conference on co 2018": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::southeastcon": {
+    "core_rank": "B",
+    "known_publisher": "IEEE"
+  },
+  "conf::north american power symposium": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::ieee industry applications society": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": "IEEE"
+  },
+  "reconstruct_conf::22nd International conference on ph": "22nd International Conference on Photovoltaic Science and Engineering",
+  "conf::nanoscience meet": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::22nd international conference on photovoltaic science and engineering": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "reconstruct_conf::16th International Symposium on": "16th International Symposium on Wireless Systems and Networks",
+  "conf::91st vehicular technology conference": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "conf::16th international symposium on wireless systems and networks": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::international conference on green and sustainable computing": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::20th ieee/acm international symposium on cluster, cloud and grid computing": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "conf::2022 international conference": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::2019 15th international conference": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::international conference on applied": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::international conference on energy": {
+    "core_rank": "Cannot Verify",
+    "known_publisher": null
+  },
+  "conf::ieee energy conversion congress and exposition": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "conf::international conference on power electronics": {
+    "core_rank": "A",
+    "known_publisher": "Other"
+  },
+  "conf::ieee 21st biennial conference on industrial electronics": {
+    "core_rank": "A",
+    "known_publisher": "IEEE"
+  },
+  "conf::international multitopic conference": {
+    "core_rank": "Unranked",
+    "known_publisher": null
+  }
+}

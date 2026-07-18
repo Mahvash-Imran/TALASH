@@ -1,0 +1,987 @@
+{
+  "journal::international journal": {},
+  "journal::cybernetics and systems": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": true,
+    "impact_factor": 1.4,
+    "predatory_suspected": false
+  },
+  "journal::electronics": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": false,
+    "impact_factor": 2.7,
+    "predatory_suspected": false
+  },
+  "journal::ieee access": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 3.2,
+    "predatory_suspected": false
+  },
+  "reconstruct::2nd International Conference o": "2nd International Conference on Optics in Precision Engineering and Optomechatronics",
+  "journal::multimedia tools and applications": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 3.4,
+    "predatory_suspected": false
+  },
+  "journal::healthcare": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": false,
+    "impact_factor": 3.1,
+    "predatory_suspected": false
+  },
+  "journal::aims mathematical biosciences and engineering": {
+    "scopus_indexed": true,
+    "quartile": "Q4",
+    "wos_indexed": false,
+    "impact_factor": 1.1,
+    "predatory_suspected": false
+  },
+  "journal::2nd international conference on optics in precision engineering and optomechatronics": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::frontiers in computational neuroscience": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": false,
+    "impact_factor": 4.3,
+    "predatory_suspected": false
+  },
+  "journal::ieee sensors journal": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 3.9,
+    "predatory_suspected": false
+  },
+  "journal::electronics letters": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 6.1,
+    "predatory_suspected": false
+  },
+  "journal::applied sciences": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 2.4,
+    "predatory_suspected": false
+  },
+  "journal::mdpi animal": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 2.1,
+    "predatory_suspected": true
+  },
+  "journal::computers, materials & continua": {
+    "scopus_indexed": true,
+    "quartile": "Q4",
+    "wos_indexed": false,
+    "impact_factor": 1.5,
+    "predatory_suspected": false
+  },
+  "journal::aquacultural engineering": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 2.4,
+    "predatory_suspected": false
+  },
+  "journal::aims mathematics": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 1.4,
+    "predatory_suspected": false
+  },
+  "journal::journal": {
+    "scopus_indexed": true,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::computer vision and image understanding": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 6.4,
+    "predatory_suspected": false
+  },
+  "journal::computers and electrical engineering": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": true,
+    "impact_factor": 2.4,
+    "predatory_suspected": false
+  },
+  "journal::arabian journal for science and engineering": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 1.4,
+    "predatory_suspected": false
+  },
+  "journal::ned university journal of research": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::ieee signal processing letters": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 6.4,
+    "predatory_suspected": false
+  },
+  "journal::advanced engineering informatics": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 4.4,
+    "predatory_suspected": false
+  },
+  "journal::journals": {},
+  "reconstruct::UMT AIR": "University of Manchester Transactions on Artificial Intelligence and Robotics",
+  "reconstruct::Journal of Computing & Biomedical I": "Journal of Computing and Biomedical Informatics",
+  "reconstruct::International Journal of Recent Tec": "International Journal of Recent Trends in Engineering & Technology",
+  "journal::connection science": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 2.5,
+    "predatory_suspected": false
+  },
+  "journal::international journal of recent trends in engineering & technology": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::international journal of renewable": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::int j bioautomation": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::electric power components and systems": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": true,
+    "impact_factor": 1.5,
+    "predatory_suspected": false
+  },
+  "journal::kurdish studies": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::university of manchester transactions on artificial intelligence and robotics": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::journal of computing and biomedical informatics": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::foods": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": false,
+    "impact_factor": 3.5,
+    "predatory_suspected": false
+  },
+  "journal::energies": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 3.8,
+    "predatory_suspected": false
+  },
+  "journal::ucp journal of engineering": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::international journal of scientific": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::electric power systems and research": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 4.5,
+    "predatory_suspected": false
+  },
+  "journal::scientific reports": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 4.1,
+    "predatory_suspected": false
+  },
+  "journal::energy reports": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 8.4,
+    "predatory_suspected": false
+  },
+  "journal::intl journal": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::internet of things": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": null,
+    "impact_factor": 6.4,
+    "predatory_suspected": false
+  },
+  "journal::ieee transactions": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 14.9,
+    "predatory_suspected": false
+  },
+  "journal::applied energy": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 8.1,
+    "predatory_suspected": false
+  },
+  "journal::ain shams engineering journal": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": null,
+    "impact_factor": 2.4,
+    "predatory_suspected": false
+  },
+  "journal::transactions on emerging telecommunications technologies": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 2.4,
+    "predatory_suspected": false
+  },
+  "journal::intl conference": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::sustainable energy technologies": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::journal of transportation technology": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::ieee communication letters": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 2.333,
+    "predatory_suspected": false
+  },
+  "journal::ieee transactions on green computing": {
+    "scopus_indexed": true,
+    "quartile": "Not Ranked",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::journal of innovative computing and informatics": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 4.7,
+    "predatory_suspected": false
+  },
+  "journal::nan": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": null
+  },
+  "journal::applied sciences (mdpi)": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": false,
+    "impact_factor": 3.3,
+    "predatory_suspected": true
+  },
+  "journal::ieee journal of biomedical and health informatics": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 8.3,
+    "predatory_suspected": false
+  },
+  "journal::international journal of electrical": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 2.4,
+    "predatory_suspected": false
+  },
+  "journal::international journal of communication systems": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 2.4,
+    "predatory_suspected": false
+  },
+  "reconstruct::Biomedical Signal Processing and Co": "Biomedical Signal Processing and Control",
+  "journal::biomedical signal processing and control": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": false,
+    "impact_factor": 4.4,
+    "predatory_suspected": false
+  },
+  "journal::journal of engineering and applied": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::sensors": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 3.441,
+    "predatory_suspected": false
+  },
+  "reconstruct::Plos one": "PLOS ONE",
+  "journal::plos one": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 3.234,
+    "predatory_suspected": false
+  },
+  "journal::aeu-international journal of electr": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 1.456,
+    "predatory_suspected": false
+  },
+  "journal::ieee open journal of antennas and propagation": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 3.123,
+    "predatory_suspected": false
+  },
+  "journal::progress in electromagnetics research": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 2.456,
+    "predatory_suspected": false
+  },
+  "journal::international journal of integrated": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::international journal of antennas": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::ieee": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 0.0,
+    "predatory_suspected": false
+  },
+  "journal::the international archives of the photogrammetry": {},
+  "journal::remote sensing letters": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 3.0,
+    "predatory_suspected": false
+  },
+  "journal::ieee geoscience and remote sensing": {},
+  "journal::ieee instrumentation and measurement": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 2.4,
+    "predatory_suspected": false
+  },
+  "journal::international journal of speech technology": {
+    "scopus_indexed": true,
+    "quartile": "Q4",
+    "wos_indexed": false,
+    "impact_factor": 1.4,
+    "predatory_suspected": false
+  },
+  "journal::chinese journal of acoustics": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::circuits, systems & signal processing": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": true,
+    "impact_factor": 1.7,
+    "predatory_suspected": false
+  },
+  "journal::transaction on emerging telecommuni": {},
+  "journal::journal of intelligent systems": {},
+  "journal::mathematics": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": false,
+    "impact_factor": 0.73,
+    "predatory_suspected": false
+  },
+  "journal::cluster computing": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 2.17,
+    "predatory_suspected": false
+  },
+  "journal::diagnostics": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 1.83,
+    "predatory_suspected": false
+  },
+  "journal::journal for control, measurement, and diagnostics": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::ieee transactions on vehicular technology": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 7.1,
+    "predatory_suspected": false
+  },
+  "journal::ieee transactions on communications": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 7.1,
+    "predatory_suspected": false
+  },
+  "journal::symmetry": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": false,
+    "impact_factor": 2.4,
+    "predatory_suspected": false
+  },
+  "journal::sustainable cities and society": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 4.4,
+    "predatory_suspected": false
+  },
+  "journal::human-centric computing and information sciences": {
+    "scopus_indexed": true,
+    "quartile": "Q4",
+    "wos_indexed": false,
+    "impact_factor": 1.4,
+    "predatory_suspected": true
+  },
+  "journal::ieee communications letters": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 5.1,
+    "predatory_suspected": false
+  },
+  "journal::sustainability": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 3.4,
+    "predatory_suspected": false
+  },
+  "journal::results in optics": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 1.9,
+    "predatory_suspected": false
+  },
+  "journal::alexandria engineering journal": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 2.9,
+    "predatory_suspected": false
+  },
+  "journal::engineering journal": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::ieee transactions on mobile computing": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 6.444,
+    "predatory_suspected": false
+  },
+  "journal::physical communications": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::ieee transactions on green communic": {},
+  "journal::ieee open journal of vehicular tech": {},
+  "journal::ieee wireless communications letter": {},
+  "journal::ieee transactions on vehicular tech": {},
+  "journal::physical layer security for wireles": {},
+  "journal::ict express": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": false,
+    "impact_factor": 4.5,
+    "predatory_suspected": false
+  },
+  "journal::advanced intelligent systems": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 3.5,
+    "predatory_suspected": false
+  },
+  "journal::journal of renewable and sustainabl": {},
+  "journal::science of advanced materials": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::power electronics and motion contro": {},
+  "journal::international journal of photoenerg": {},
+  "journal::microelectronics reliability": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 3.4,
+    "predatory_suspected": false
+  },
+  "journal::power generation": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::rsc advances": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 3.444,
+    "predatory_suspected": false
+  },
+  "journal::arab journal of science & engineering": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 1.143,
+    "predatory_suspected": false
+  },
+  "journal::glass physics & chemistry": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 0.714,
+    "predatory_suspected": false
+  },
+  "journal::heliyon": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": false,
+    "impact_factor": 2.051,
+    "predatory_suspected": true
+  },
+  "journal::asian journal of nanoscience and nanotechnology": {
+    "scopus_indexed": true,
+    "quartile": "Q4",
+    "wos_indexed": false,
+    "impact_factor": 1.143,
+    "predatory_suspected": false
+  },
+  "journal::advances in nanoscience and nanotechnology": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::zamm - journal of applied mathematic": {},
+  "journal::telecommunication systems": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 1.4,
+    "predatory_suspected": false
+  },
+  "journal::radioengineering journal": {
+    "scopus_indexed": true,
+    "quartile": "Q4",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::new horizons": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::wireless personal communication": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 1.1,
+    "predatory_suspected": false
+  },
+  "journal::computer communications": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 4.444,
+    "predatory_suspected": false
+  },
+  "journal::ieee transactions on intelligent transportation systems": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 8.333,
+    "predatory_suspected": false
+  },
+  "journal::wireless-powered backscatter commun": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::journal of the institute of electronics and information engineers": {
+    "scopus_indexed": true,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "reconstruct::Measurement Part E": "Measurement Science and Technology, Part E",
+  "journal::journal of electrostatics": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 2.4,
+    "predatory_suspected": false
+  },
+  "journal::electric power systems research": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 6.4,
+    "predatory_suspected": false
+  },
+  "journal::measurement science and technology, part e": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::physica medica": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 2.4,
+    "predatory_suspected": false
+  },
+  "journal::international journal of innovation": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::applied acoustics": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 2.4,
+    "predatory_suspected": false
+  },
+  "journal::computer speech & language": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 4.4,
+    "predatory_suspected": false
+  },
+  "journal::plos-one": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 3.2,
+    "predatory_suspected": false
+  },
+  "journal::cureus": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 2.1,
+    "predatory_suspected": true
+  },
+  "journal::international journal of communication": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": false,
+    "impact_factor": 2.8,
+    "predatory_suspected": false
+  },
+  "journal::ieee 23rd international multitopic conference": {
+    "scopus_indexed": true,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::2017 international conference on renewable and sustainable energy": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::ieee canadian journal of electrical": {},
+  "reconstruct::International Journal of Advanced N": "International Journal of Advanced Natural Sciences",
+  "reconstruct::Pakistan Journal of Engineering and": "Pakistan Journal of Engineering and Technology",
+  "reconstruct::Current Research in Food S": "Current Research in Food Science",
+  "journal::smart agricultural technology": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::international journal of intelligen": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::journal of dairy science": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 3.4,
+    "predatory_suspected": false
+  },
+  "journal::international journal of information": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": false,
+    "impact_factor": 2.5,
+    "predatory_suspected": false
+  },
+  "journal::international journal of advanced natural sciences": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 1.8,
+    "predatory_suspected": false
+  },
+  "journal::intelligent technologies and applications": {
+    "scopus_indexed": true,
+    "quartile": "Q4",
+    "wos_indexed": false,
+    "impact_factor": 1.2,
+    "predatory_suspected": false
+  },
+  "journal::current research in food science": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 6.8,
+    "predatory_suspected": false
+  },
+  "journal::pakistan journal of engineering and technology": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": false,
+    "impact_factor": 1.5,
+    "predatory_suspected": false
+  },
+  "journal::ieee acess": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 14.9,
+    "predatory_suspected": false
+  },
+  "journal::future of information and communication technology": {
+    "scopus_indexed": true,
+    "quartile": "Q4",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::international conference on image processing": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::ieee international conference": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": false
+  },
+  "journal::future information and communication technology": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::3rd ieee international conference": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::14th international conference": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::biomed research international": {
+    "scopus_indexed": true,
+    "quartile": "Q3",
+    "wos_indexed": true,
+    "impact_factor": 2.1,
+    "predatory_suspected": false
+  },
+  "journal::international conference on computer vision": {
+    "scopus_indexed": true,
+    "quartile": "Q1",
+    "wos_indexed": true,
+    "impact_factor": 7.9,
+    "predatory_suspected": false
+  },
+  "journal::16th international conference": {
+    "scopus_indexed": null,
+    "quartile": "Cannot Verify",
+    "wos_indexed": null,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::20th international conference on bhurban": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  },
+  "journal::engineering applications of artificial intelligence": {
+    "scopus_indexed": true,
+    "quartile": "Q2",
+    "wos_indexed": true,
+    "impact_factor": 4.5,
+    "predatory_suspected": false
+  },
+  "journal::17th ieee international multi topic conference": {
+    "scopus_indexed": false,
+    "quartile": "Cannot Verify",
+    "wos_indexed": false,
+    "impact_factor": null,
+    "predatory_suspected": true
+  }
+}
