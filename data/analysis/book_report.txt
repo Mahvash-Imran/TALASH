@@ -1,0 +1,229 @@
+======================================================================
+  TALASH Module 5 – Books Authored / Co-Authored Report
+======================================================================
+  Candidates analysed           : 43
+  Total books extracted         : 0
+
+  Scholarly Dissemination Label Distribution:
+    No Books Listed          : 43
+
+----------------------------------------------------------------------
+  Per-Candidate Book Summaries
+----------------------------------------------------------------------
+
+  [No Books Listed] 01_MUHAMMAD_SALMAN
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 01_MUHAMMAD_SALMAN has no books listed in their CV.
+
+  [No Books Listed] 02_MUHAMMAD_SHAHWAZ
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 02_MUHAMMAD_SHAHWAZ has no books listed in their CV.
+
+  [No Books Listed] 03_NASIR_ALI_SHAH
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 03_NASIR_ALI_SHAH has no books listed in their CV.
+
+  [No Books Listed] 04_MUHAMMAD_FARRUKH
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 04_MUHAMMAD_FARRUKH has no books listed in their CV.
+
+  [No Books Listed] 05_MUHAMMAD_MAJID
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 05_MUHAMMAD_MAJID has no books listed in their CV.
+
+  [No Books Listed] 06_FARMAN_ALI
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 06_FARMAN_ALI has no books listed in their CV.
+
+  [No Books Listed] 07_FIZA_MURTAZA
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 07_FIZA_MURTAZA has no books listed in their CV.
+
+  [No Books Listed] 08_TAYYABA_GULL
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 08_TAYYABA_GULL has no books listed in their CV.
+
+  [No Books Listed] 09_MUHAMMAD_ABUBAKAR
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 09_MUHAMMAD_ABUBAKAR has no books listed in their CV.
+
+  [No Books Listed] 10_MUHAMMAD_EHATISHAM
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 10_MUHAMMAD_EHATISHAM has no books listed in their CV.
+
+  [No Books Listed] 11_WAQAS_AMIN
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 11_WAQAS_AMIN has no books listed in their CV.
+
+  [No Books Listed] 12_SYED_TAMOORULHASSAN
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 12_SYED_TAMOORULHASSAN has no books listed in their CV.
+
+  [No Books Listed] 13_MANZOOR_ELLAHI
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 13_MANZOOR_ELLAHI has no books listed in their CV.
+
+  [No Books Listed] 14_SAROSH_TAHIR
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 14_SAROSH_TAHIR has no books listed in their CV.
+
+  [No Books Listed] 15_M_USMAN_ABBASI
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 15_M_USMAN_ABBASI has no books listed in their CV.
+
+  [No Books Listed] 16_MUZZAMIL_GHAFFAR
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 16_MUZZAMIL_GHAFFAR has no books listed in their CV.
+
+  [No Books Listed] 17_SUHAIL_ASGHAR
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 17_SUHAIL_ASGHAR has no books listed in their CV.
+
+  [No Books Listed] 18_MUHAMMAD_AMJAD
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 18_MUHAMMAD_AMJAD has no books listed in their CV.
+
+  [No Books Listed] 19_ASIM_MASOOD
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 19_ASIM_MASOOD has no books listed in their CV.
+
+  [No Books Listed] 20_SYED_FASIH_ALI
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 20_SYED_FASIH_ALI has no books listed in their CV.
+
+  [No Books Listed] 21_SAMAN_FATIMA
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 21_SAMAN_FATIMA has no books listed in their CV.
+
+  [No Books Listed] 22_ZEESHAN
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 22_ZEESHAN has no books listed in their CV.
+
+  [No Books Listed] 23_WAQAS_TARIQ_TOOR
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 23_WAQAS_TARIQ_TOOR has no books listed in their CV.
+
+  [No Books Listed] 24_AHMED_NAEEM
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 24_AHMED_NAEEM has no books listed in their CV.
+
+  [No Books Listed] 25_MUHAMMAD_ADEEL_ALTAF
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 25_MUHAMMAD_ADEEL_ALTAF has no books listed in their CV.
+
+  [No Books Listed] 26_AAMINA_AKBAR
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 26_AAMINA_AKBAR has no books listed in their CV.
+
+  [No Books Listed] 27_SHAHEER
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 27_SHAHEER has no books listed in their CV.
+
+  [No Books Listed] 28_IDRIS_KHAN
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 28_IDRIS_KHAN has no books listed in their CV.
+
+  [No Books Listed] 29_MUHAMMAD_SARMAD_TARIQ
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 29_MUHAMMAD_SARMAD_TARIQ has no books listed in their CV.
+
+  [No Books Listed] 30_FAHD_SIKANDAR_KHAN
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 30_FAHD_SIKANDAR_KHAN has no books listed in their CV.
+
+  [No Books Listed] 31_USMAN_MASUD
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 31_USMAN_MASUD has no books listed in their CV.
+
+  [No Books Listed] 32_QAISAR_HUSSAIN_ALVI
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 32_QAISAR_HUSSAIN_ALVI has no books listed in their CV.
+
+  [No Books Listed] 33_QAMAR_ABBAS
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 33_QAMAR_ABBAS has no books listed in their CV.
+
+  [No Books Listed] 34_SHAHZAD
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 34_SHAHZAD has no books listed in their CV.
+
+  [No Books Listed] 35_MATIULLAH_AHSAN
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 35_MATIULLAH_AHSAN has no books listed in their CV.
+
+  [No Books Listed] 36_SAMANA_BATOOL
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 36_SAMANA_BATOOL has no books listed in their CV.
+
+  [No Books Listed] 37_SANIA_GUL
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 37_SANIA_GUL has no books listed in their CV.
+
+  [No Books Listed] 38_MUHAMMAD_MUSADIQ
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 38_MUHAMMAD_MUSADIQ has no books listed in their CV.
+
+  [No Books Listed] 39_MUHAMMAD_SAQIB
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 39_MUHAMMAD_SAQIB has no books listed in their CV.
+
+  [No Books Listed] 40_ABDUR_REHMAN
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 40_ABDUR_REHMAN has no books listed in their CV.
+
+  [No Books Listed] 41_MUHAMMAD_AQEEL
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 41_MUHAMMAD_AQEEL has no books listed in their CV.
+
+  [No Books Listed] 42_SAQIB_JAMIL
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 42_SAQIB_JAMIL has no books listed in their CV.
+
+  [No Books Listed] 43_AMMARA_NASIM
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate 43_AMMARA_NASIM has no books listed in their CV.
+
+======================================================================
