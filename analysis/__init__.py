@@ -8,6 +8,7 @@ Exports the main orchestrators for:
   Module 5: Books Authored / Co-Authored Analysis
   Module 6: Patents Analysis
   Module 7: Topic Variability & Research Breadth Analysis
+  Module 8: Co-Author Collaboration Analysis
 """
 
 from .educational_profile  import EducationalProfileAnalyser
@@ -16,6 +17,7 @@ from .supervision_analyser import SupervisionAnalyser
 from .book_analyser        import BookProfileAnalyser
 from .patent_analyser      import PatentProfileAnalyser
 from .topic_analyser       import TopicBreadthAnalyser
+from .collaboration_analyser import CollaborationAnalyser
 
 __all__ = [
     "EducationalProfileAnalyser",
@@ -24,4 +26,5 @@ __all__ = [
     "BookProfileAnalyser",
     "PatentProfileAnalyser",
     "TopicBreadthAnalyser",
+    "CollaborationAnalyser",
 ]
