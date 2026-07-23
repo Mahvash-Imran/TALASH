@@ -1,0 +1,353 @@
+candidate_id,event_type,title,organization,start_date,end_date,is_current
+01_MUHAMMAD_SALMAN,education,nan,nan,2002-01,2004-12,False
+01_MUHAMMAD_SALMAN,education,nan,nan,2004-01,2006-12,False
+01_MUHAMMAD_SALMAN,education,Electronics Engineering,"COMSATS University, Islamabad, Abbottabad Campus",2009-01,2011-12,False
+01_MUHAMMAD_SALMAN,education,Electrical Engineering,"COMSATS University, Islamabad, Attock Campus",2012-01,2014-12,False
+01_MUHAMMAD_SALMAN,experience,Support Engineer,"Al-Rehman enterprises, Islamabad",2012-01,2015-08,False
+01_MUHAMMAD_SALMAN,experience,Lecturer,"Qurtuba University, D.I.Khan",2015-08,2018-03,False
+01_MUHAMMAD_SALMAN,experience,Program Coordinator,"Qurtuba University, D.I.Khan",2017-09,2023-08,False
+01_MUHAMMAD_SALMAN,experience,Assistant Professor,"Qurtuba University, D.I.Khan",2018-03,2023-08,False
+01_MUHAMMAD_SALMAN,education,Electrical Engineering,"International Islamic university, Islamabad",2022-01,2024-12,False
+01_MUHAMMAD_SALMAN,experience,Associate Professor,"Xi'an International University, China",2025-01,Present,False
+02_MUHAMMAD_SHAHWAZ,education,science,karachi board,1990-01,1988-12,False
+02_MUHAMMAD_SHAHWAZ,education,science,karachi matric board,2001-01,2003-12,False
+02_MUHAMMAD_SHAHWAZ,education,FSC,karachi inter board,2003-01,2005-12,False
+02_MUHAMMAD_SHAHWAZ,education,BACHELOR OF ELECTRONICS,DAWOOD COLEEGE OF ENGINEERING AND ENGINEERING TECHNOLOGY,2010-01,2012-12,False
+02_MUHAMMAD_SHAHWAZ,experience,INTERNEE,PIA AIRPORT ENGG DEPT KARACHI,2010-06,2010-08,False
+02_MUHAMMAD_SHAHWAZ,experience,INTERNEE,PTCL SWITCHING AND TRANSMISSION NETWORK,2011-01,2011-02,False
+02_MUHAMMAD_SHAHWAZ,experience,trainee engineer,tuwairqi steel mill,2014-07,2014-12,False
+02_MUHAMMAD_SHAHWAZ,education,M.ENGG,NED UET KARACHI,2015-01,2017-12,False
+03_NASIR_ALI_SHAH,education,nan,BISE Bannu,2006-01,2008-12,False
+03_NASIR_ALI_SHAH,education,nan,BISE BANNU,2008-01,2010-12,False
+03_NASIR_ALI_SHAH,education,nan,Hamdard University,2012-01,2014-12,False
+03_NASIR_ALI_SHAH,experience,Internee Engineer,Softech Microsystems,2015-04,2015-08,False
+03_NASIR_ALI_SHAH,education,nan,Politecnico di Torino,2017-01,2019-12,False
+03_NASIR_ALI_SHAH,education,nan,Politecnico di Torino,2021-01,2023-12,False
+03_NASIR_ALI_SHAH,education,FPGA and GPU acceleration of complex computational algorithms,Politecnico di Torino,2022-01,2024-12,False
+03_NASIR_ALI_SHAH,experience,Postdoctoral researcher,Politecnico di Torino,2023-12,2024-10,False
+03_NASIR_ALI_SHAH,education,Evaluation of Hardware Embedded Systems acceleration for ORAN/5G,ORANGE INNOVATION,2024-01,2026-12,False
+03_NASIR_ALI_SHAH,experience,Postdoctoral researcher,Orange Innovation,2024-10,Present,False
+04_MUHAMMAD_FARRUKH,education,nan,BISE Abbottabad,2004-01,2006-12,False
+04_MUHAMMAD_FARRUKH,education,nan,BISE Abbottabad,2006-01,2008-12,False
+04_MUHAMMAD_FARRUKH,education,Electronic Engineering,International Islamic University,2010-01,2012-12,False
+04_MUHAMMAD_FARRUKH,education,Electrical Engineering,Riphah International University,2013-01,2015-12,False
+04_MUHAMMAD_FARRUKH,experience,Lecturer & Senior Lecturer,Riphah International University,2015-05,2024-09,False
+04_MUHAMMAD_FARRUKH,education,Electrical Engineering,Riphah International University,2022-01,2024-12,False
+04_MUHAMMAD_FARRUKH,experience,Assistant Professor (EE) & Senior Researcher (CAID),Namal University Mianwali,2024-09,Present,False
+05_MUHAMMAD_MAJID,education,MATRIC,nan,2001-01,2003-12,False
+05_MUHAMMAD_MAJID,education,FSc,nan,2004-01,2006-12,False
+05_MUHAMMAD_MAJID,education,ELECTRONIC ENGINEERING,"SSUET, KARACHI",2009-01,2011-12,False
+05_MUHAMMAD_MAJID,education,ELECTRONICS ENGINEERING,MUHAMMAD ALI JINNAH UNIVERSITY,2013-01,2015-12,False
+05_MUHAMMAD_MAJID,experience,RESEARCH ASSISTANT,INSTITUTE OF SPACE TECHNOLOGY,2019-04,2022-04,False
+05_MUHAMMAD_MAJID,education,ELECTRICAL ENGINEERING,INSTITUTE OF SPACE TECHNOLOGY,2023-01,2025-12,False
+05_MUHAMMAD_MAJID,experience,NETWORK OPTIMIZATION ENGINEER,STC SAUDIA ARABIA,2024-08,Present,False
+06_FARMAN_ALI,education,nan,BISE Mardan,2002-01,2004-12,False
+06_FARMAN_ALI,education,nan,BTE Peshawar,2005-01,2007-12,False
+06_FARMAN_ALI,education,nan,Sarhad University of Science and Information Technology,2010-01,2012-12,False
+06_FARMAN_ALI,education,nan,Sarhad University of Science and Information Technology,2012-01,2014-12,False
+06_FARMAN_ALI,education,nan,"Iqra National University, Peshawar, Pakistan",2017-01,2019-12,False
+06_FARMAN_ALI,experience,Head of Department,"Pearl College of Technology, Peshawar",2019-11,Present,False
+06_FARMAN_ALI,experience,nan,"Qurtuba University of Science and IT, Dera Ismail Khan",2019-12,2023-03,False
+06_FARMAN_ALI,education,nan,Nanjing University of Aeronautics and Astronautics,2023-01,2025-12,False
+06_FARMAN_ALI,experience,Postdoc,Nanjing University of Aeronautics and Astronautics,2023-04,2025-04,False
+07_FIZA_MURTAZA,education,nan,BISE Abbottabad,2005-01,2007-12,False
+07_FIZA_MURTAZA,education,nan,BISE Abbottabad,2007-01,2009-12,False
+07_FIZA_MURTAZA,education,BS in Electrical (Computer) Engineering,"COMSATS Institute of Information Technology, Abbottabad",2009-01,2013-12,False
+07_FIZA_MURTAZA,education,MS in Computer Engineering,University of Engineering and Technology Taxila,2013-01,2015-12,False
+07_FIZA_MURTAZA,experience,Full-Time MS Research Scholar/ Graduate Teaching Assistant (TA),"University of Engineering and Technology Taxila, Pakistan",2013-08,2015-02,False
+07_FIZA_MURTAZA,education,PhD in Computer Engineering,University of Engineering and Technology Taxila,2015-01,2019-12,False
+07_FIZA_MURTAZA,experience,Full-Time PhD Research Scholar/ Graduate Teaching Assistant (TA),"University of Engineering and Technology Taxila, Pakistan",2015-10,2018-10,False
+07_FIZA_MURTAZA,experience,Visiting Research Scholar,Cortexixa Vision System Ltd. London UK and Queen Mary University of London UK,2019-03,2019-08,False
+07_FIZA_MURTAZA,experience,Visiting Lecturer,"University of Haripur, Pakistan",2019-08,2019-12,False
+07_FIZA_MURTAZA,experience,Assistant Professor,"Women University Swabi, Pakistan",2019-12,2020-08,False
+07_FIZA_MURTAZA,experience,Assistant Professor,"PAF-IAST, Haripur, Pakistan",2020-08,2021-09,False
+07_FIZA_MURTAZA,experience,Assistant Professor,"Air University, Islamabad, Pakistan",2021-09,2024-11,False
+07_FIZA_MURTAZA,experience,Adjunct Faculty,"School of IT, Whitecliffe, Wellington, New Zealand",2024-05,Present,False
+07_FIZA_MURTAZA,experience,Research Associate/Research Fellow,"University of East London, UK",2025-01,Present,False
+08_TAYYABA_GULL,education,Matric,Federal Board of Education/Army Public School,1998-01,2000-12,False
+08_TAYYABA_GULL,education,Intermediate,Peshawar Board,2001-01,2003-12,False
+08_TAYYABA_GULL,education,BSc Electrical Engineering,University of Engineering and Technology Peshawar,2005-01,2007-12,False
+08_TAYYABA_GULL,education,MSc,Cecos University,2011-01,2013-12,False
+08_TAYYABA_GULL,experience,Lecturer,Peshawar College of Engr,2013-02,2015-05,False
+08_TAYYABA_GULL,experience,CEO,Little Step's Kindergarten,2017-09,2019-03,False
+08_TAYYABA_GULL,education,Doctor of Philosphy in Power Electronics,Iqra National University,2021-01,2023-12,False
+08_TAYYABA_GULL,experience,Consultant,Supreme Vision Construction And Marketing,2023-03,Present,False
+08_TAYYABA_GULL,experience,Visiting Assistant Professor,National Skills University,2025-09,Present,False
+09_MUHAMMAD_ABUBAKAR,education,Matric,nan,2000-01,2002-12,False
+09_MUHAMMAD_ABUBAKAR,education,Fsc,nan,2002-01,2004-12,False
+09_MUHAMMAD_ABUBAKAR,education,BS,The University of Faisalabad,2007-01,2009-12,False
+09_MUHAMMAD_ABUBAKAR,experience,Trainee,Electrical Engineering Prosperity Weaving mill,2009-06,2010-08,False
+09_MUHAMMAD_ABUBAKAR,education,MS,International Islamic University,2012-01,2014-12,False
+09_MUHAMMAD_ABUBAKAR,experience,Automation Engineer,Electrical Engineering Solutions,2013-02,2013-08,False
+09_MUHAMMAD_ABUBAKAR,experience,Lecturer,Ata institute of Engineering and Technology,2014-11,2015-07,False
+09_MUHAMMAD_ABUBAKAR,experience,Lecturer,The University of Faisalabad,2015-07,2016-08,False
+09_MUHAMMAD_ABUBAKAR,education,PhD,Jiangsu University,2018-01,2020-12,False
+09_MUHAMMAD_ABUBAKAR,experience,Assistant Professor,The University of Faisalabad,2020-11,2021-08,False
+09_MUHAMMAD_ABUBAKAR,experience,Assistant Professor,Quaid e Azam College of Engineering and Technology,2021-08,2022-10,False
+09_MUHAMMAD_ABUBAKAR,experience,Assistant Professor,Lahore Garrison University,2022-10,Present,False
+10_MUHAMMAD_EHATISHAM,education,nan,BISE Rawalpindi,2006-01,2008-12,False
+10_MUHAMMAD_EHATISHAM,education,nan,"FBISE, Islamabad",2008-01,2010-12,False
+10_MUHAMMAD_EHATISHAM,education,Computer Engineering,"University of Engineering and Technology (UET), Taxila",2012-01,2014-12,False
+10_MUHAMMAD_EHATISHAM,education,Computer Engineering,"University of Engineering and Technology (UET), Taxila",2015-01,2017-12,False
+10_MUHAMMAD_EHATISHAM,experience,Teaching Assistant,"University of Engineering and Technology (UET), Taxila",2015-08,2017-02,False
+10_MUHAMMAD_EHATISHAM,experience,Research Associate,"University of Engineering and Technology (UET), Taxila",2017-10,2020-10,False
+10_MUHAMMAD_EHATISHAM,education,Computer Engineering,"University of Engineering and Technology (UET), Taxila",2018-01,2020-12,False
+10_MUHAMMAD_EHATISHAM,experience,Assistant Professor,"PAF-IAST, Mang, Haripur, Pakistan",2021-01,2021-08,False
+10_MUHAMMAD_EHATISHAM,experience,Assistant Professor,"Air University, Islamabad",2021-09,2024-11,False
+10_MUHAMMAD_EHATISHAM,education,Multimodal Data Processing and Machine Learning,University of East London,2024-01,2026-12,False
+10_MUHAMMAD_EHATISHAM,experience,Research Fellow/PostDoc,"University of East London, London, UK",2024-11,Present,False
+11_WAQAS_AMIN,education,nan,nan,1998-01,2000-12,False
+11_WAQAS_AMIN,education,nan,nan,2000-01,2002-12,False
+11_WAQAS_AMIN,experience,Field Engineer,Myson Engineering System,2008-01,2010-01,False
+11_WAQAS_AMIN,education,Electrical Engineering,The University of Lahore,2009-01,2011-12,False
+11_WAQAS_AMIN,education,Human Resource Management,"IBA, Punjab University",2010-01,2012-12,False
+11_WAQAS_AMIN,experience,Lecturer/ Assistant Professor,The University of Lahore,2010-01,2017-09,False
+11_WAQAS_AMIN,education,Electrical Electronics and Communication Engineering,The University of Lahore,2014-01,2016-12,False
+11_WAQAS_AMIN,education,"Electrical Energy Policy, Energy Trading, Smart Grid Technology",University of Electronic Science and Technology,2018-01,2020-12,False
+11_WAQAS_AMIN,experience,Assistant Professor,"NUST PNEC, Karachi",2022-02,2023-08,False
+11_WAQAS_AMIN,experience,Associate Professor,"Southwest University of Science and Technology, China",2023-09,Present,False
+12_SYED_TAMOORULHASSAN,education,Secondary School Certificate,Federal Board of Intermediate and Secondary Education,1999-01,2001-12,False
+12_SYED_TAMOORULHASSAN,education,Higher Secondary School Certificate,Federal Board of Intermediate and Secondary Education,2001-01,2003-12,False
+12_SYED_TAMOORULHASSAN,education,Bachelor of Science in Telecommunication Engineering,National University of Computer and Emerging Sciences,2005-01,2007-12,False
+12_SYED_TAMOORULHASSAN,experience,Embedded Software Engineer,4MWireless (uBlox),2009-01,2009-07,False
+12_SYED_TAMOORULHASSAN,education,Master of Science in Communication Systems Engineering,Linkoping University,2009-01,2011-12,False
+12_SYED_TAMOORULHASSAN,experience,Project and Development Engineer,NOMOR Research GmBH,2011-08,2012-07,False
+12_SYED_TAMOORULHASSAN,experience,Doctoral Researcher,"Center for Wireless Communications, University of Oulu",2012-09,2017-09,False
+12_SYED_TAMOORULHASSAN,experience,PD Baseband Developer,Ericsson AB,2017-09,2025-02,False
+12_SYED_TAMOORULHASSAN,education,Doctor of Science in Communication Engineering,University of Oulu,2022-01,2024-12,False
+12_SYED_TAMOORULHASSAN,experience,Senior System Software Engineer,Combitech Sverige,2025-02,Present,False
+13_MANZOOR_ELLAHI,education,nan,BISE Gujranwala,2002-01,2004-12,False
+13_MANZOOR_ELLAHI,education,nan,"BISE, Gujranwala",2004-01,2006-12,False
+13_MANZOOR_ELLAHI,education,Electrical Engineering,"UET, Lahore",2008-01,2010-12,False
+13_MANZOOR_ELLAHI,experience,Faculty Member,University of South Asia,2010-10,2014-08,False
+13_MANZOOR_ELLAHI,education,Electrical Engineering,The University of Lahore,2012-01,2014-12,False
+13_MANZOOR_ELLAHI,experience,Electrical In-charge,Stylo pvt. ltd.,2014-09,2015-03,False
+13_MANZOOR_ELLAHI,experience,Lecturer,"The Superior University, Lahore",2015-03,2023-06,False
+13_MANZOOR_ELLAHI,education,Electrical Engineering,The University of Lahore,2020-01,2022-12,False
+13_MANZOOR_ELLAHI,experience,Assistant Professor,"The superior university, Lahore",2023-07,Present,False
+13_MANZOOR_ELLAHI,experience,Program Leader Research Degrees (FET),The superior university,2024-05,Present,False
+14_SAROSH_TAHIR,education,Matric,FBISE,2000-01,2002-12,False
+14_SAROSH_TAHIR,education,FSc,Mirpur BISE,2002-01,2004-12,False
+14_SAROSH_TAHIR,education,Electronics Engineering,COMSATS,2007-01,2009-12,False
+14_SAROSH_TAHIR,experience,Support Engineer,Higher Education Commission,2009-09,2013-09,False
+14_SAROSH_TAHIR,experience,Network Engineer,Bank of Azad Jammu & Kashmir,2013-09,2014-03,False
+14_SAROSH_TAHIR,experience,Researcher,POLITECNICO DI TORINO,2014-04,2017-10,False
+14_SAROSH_TAHIR,education,Computer and Control Engineering,POLITECNICO DI TORINO,2015-01,2017-12,False
+14_SAROSH_TAHIR,education,Telecommunication and Networking,POLITECNICO DI TORINO,2015-01,2017-12,False
+14_SAROSH_TAHIR,experience,Assistant Professor,University of Azad Jammu and Kashmir,2017-11,2019-10,False
+14_SAROSH_TAHIR,experience,Lt Cdr,Pakistan Navy,2019-11,2022-09,False
+14_SAROSH_TAHIR,experience,Post-Doctorate,NUST,2022-09,2024-10,False
+14_SAROSH_TAHIR,experience,Researcher,Italian National Research Council,2024-01,Present,False
+15_M_USMAN_ABBASI,education,Secondary School Certificate,"Board of Intermediate and Secondary Education, Peshawar",2000-01,2002-12,False
+15_M_USMAN_ABBASI,education,Higher Secondary School Certificate,"Board of Intermediate and Secondary Education, Peshawar",2002-01,2004-12,False
+15_M_USMAN_ABBASI,education,Bachelors in Electrical Engineering,CECOS University,2007-01,2009-12,False
+15_M_USMAN_ABBASI,experience,Lab Engineer,FAST - National University of Computer and Emerging Sciences,2009-10,2021-09,False
+15_M_USMAN_ABBASI,education,Electrical Engineering,CECOS University,2013-01,2015-12,False
+15_M_USMAN_ABBASI,education,PhD in Electrical Engineering,National University of Computer and Emerging Sciences - FAST,2019-01,2021-12,False
+15_M_USMAN_ABBASI,experience,Assistant Professor,National University of Computer and Emerging Sciences - FAST,2021-10,2026-07,True
+16_MUZZAMIL_GHAFFAR,education,SSC,Rawalpindi board,2001-01,2003-12,False
+16_MUZZAMIL_GHAFFAR,education,HSSC,Federal board,2003-01,2005-12,False
+16_MUZZAMIL_GHAFFAR,education,BSc,"Federal Urdu University of Arts, Science and Technology",2007-01,2009-12,False
+16_MUZZAMIL_GHAFFAR,experience,Trainee Engineer,National Highway Authority,2009-12,2010-08,False
+16_MUZZAMIL_GHAFFAR,experience,Lab Engineer,National University f Modern Languages,2011-09,2015-07,False
+16_MUZZAMIL_GHAFFAR,education,MS,Air University,2015-01,2017-12,False
+16_MUZZAMIL_GHAFFAR,experience,Research Assistant,Air University,2015-08,2023-08,False
+16_MUZZAMIL_GHAFFAR,education,Ph D,Air University,2021-01,2023-12,False
+16_MUZZAMIL_GHAFFAR,experience,Assistant Professor,Barani Institute of Management Sciences-PMAS,2024-09,Present,False
+17_SUHAIL_ASGHAR,education,Secondary School Certificate,Board of Intermediate and Secondary Education Hyderabad (BISEH),2009-01,2011-12,False
+17_SUHAIL_ASGHAR,education,Higher Secondary Certificate,Board of Intermediate and Secondary Education Hyderabad (BISEH),2011-01,2013-12,False
+17_SUHAIL_ASGHAR,education,Bachelor of Engineering in Electronic Engineering,"Quaid e Awam University of Engineering, Sciences & Technology (Nawabshah)",2016-01,2018-12,False
+17_SUHAIL_ASGHAR,education,Master of Electrical Engineering,Universiti Tun Hussein Onn Malaysia (UTHM),2020-01,2022-12,False
+17_SUHAIL_ASGHAR,education,Doctor of Philosophy in Electrical Engineering,Universiti Tun Hussein Onn Malaysia (UTHM),2023-01,2025-12,False
+17_SUHAIL_ASGHAR,experience,Visiting Faculty,Dawood University Of Engineering & Technology,2025-09,Present,False
+18_MUHAMMAD_AMJAD,education,nan,nan,2006-01,2008-12,False
+18_MUHAMMAD_AMJAD,education,nan,nan,2008-01,2010-12,False
+18_MUHAMMAD_AMJAD,education,nan,Government College University Faisalabad,2013-01,2015-12,False
+18_MUHAMMAD_AMJAD,experience,Lab Engineer,"Bahauddin Zakariya University, Multan",2017-02,2017-09,False
+18_MUHAMMAD_AMJAD,education,nan,Nanjing University of Science and Technology,2018-01,2020-12,False
+18_MUHAMMAD_AMJAD,experience,Software Test Engineer,CIENET Technologies,2019-07,2019-12,False
+18_MUHAMMAD_AMJAD,education,nan,POLITEHNICA Bucharest,2021-01,2023-12,False
+18_MUHAMMAD_AMJAD,experience,Scientific Researcher,National University of Science and Technology,2021-01,2024-01,False
+18_MUHAMMAD_AMJAD,experience,Visiting Researcher,University of Siegen,2023-01,2023-07,False
+18_MUHAMMAD_AMJAD,education,Researcher,University Parthenope Naples,2023-01,2024-12,False
+18_MUHAMMAD_AMJAD,experience,PostDoc Researcher,University of Parthenope Naples,2023-12,Present,False
+18_MUHAMMAD_AMJAD,experience,PostDoc Researcher,Eratosthenes Centre of Excellence,2024-09,Present,False
+19_ASIM_MASOOD,education,nan,FBISE,1998-01,2000-12,False
+19_ASIM_MASOOD,education,nan,FBISE,2000-01,2002-12,False
+19_ASIM_MASOOD,education,Electrical Engineering,NUST,2004-01,2006-12,False
+19_ASIM_MASOOD,education,Microelectronic System and Telecommunication Engineering,University of Liverpool,2006-01,2008-12,False
+19_ASIM_MASOOD,experience,Research Student,University of Liverpool,2008-05,2008-09,False
+19_ASIM_MASOOD,experience,Research Assistant,Victoria University of Wellington,2009-08,2013-07,False
+19_ASIM_MASOOD,experience,Lecturer,Riphah International University,2014-02,2016-03,False
+19_ASIM_MASOOD,experience,Lecturer,University of Lahore,2016-04,2017-08,False
+19_ASIM_MASOOD,education,Information and Communication Engineering,University of Science and Technology of China,2019-01,2021-12,False
+19_ASIM_MASOOD,experience,Visiting Faculty Member,CISCOM,2022-02,2023-03,False
+19_ASIM_MASOOD,experience,General Manager / Principal Machine Learning Engineer,WUWI Inc,2023-03,2024-03,False
+19_ASIM_MASOOD,experience,Assistant Professor,"Cholistan University of Veterinary and Animal Sciences, Bahawalpur",2024-03,Present,False
+20_SYED_FASIH_ALI,education,nan,nan,2005-01,2007-12,False
+20_SYED_FASIH_ALI,education,nan,nan,2008-01,2010-12,False
+20_SYED_FASIH_ALI,education,Computer Engineering,Bahauddin Zikriya University,2012-01,2014-12,False
+20_SYED_FASIH_ALI,education,Electrical Engineering,National University of Science and Technology,2016-01,2018-12,False
+20_SYED_FASIH_ALI,education,Electrical Engineering,Lahore University of Management Science,2023-01,2025-12,False
+20_SYED_FASIH_ALI,experience,Permanent Lecturer (Computer Science),University of management and technology,2024-02,2024-09,False
+20_SYED_FASIH_ALI,experience,Senior Lab Instructor,Lahore University of Management Science,2024-09,Present,False
+21_SAMAN_FATIMA,education,nan,nan,2006-01,2008-12,False
+21_SAMAN_FATIMA,education,nan,nan,2008-01,2010-12,False
+21_SAMAN_FATIMA,education,B.Sc.,Islamia University of Bahawalpur,2012-01,2014-12,False
+21_SAMAN_FATIMA,experience,Lecturer Physics,"Mashal Degree College, University of Wah",2015-01,2015-03,False
+21_SAMAN_FATIMA,experience,Internee,Wah Nobel Group of Companies,2015-07,2016-01,False
+21_SAMAN_FATIMA,experience,Lab Engineer,"COMSATS University Islamabad, Wah Campus",2016-01,2017-10,False
+21_SAMAN_FATIMA,education,Master,"University Paris Saclay (University Paris-Sud, CentraleSupelec, Telecom Paris-tech)",2016-01,2018-12,False
+21_SAMAN_FATIMA,experience,Internee,"Sorbonne University Paris, France",2018-04,2018-10,False
+21_SAMAN_FATIMA,education,Doctorat,University Paris Saclay (CentraleSupelec),2021-01,2023-12,False
+21_SAMAN_FATIMA,experience,Assistant Professor,NUST Chip Design Centre,2024-05,Present,False
+22_ZEESHAN,education,Matric,Faisalabad,2007-01,2009-12,False
+22_ZEESHAN,education,FSc,Superior College,2009-01,2011-12,False
+22_ZEESHAN,education,Electrical (Telecom) Engineering,The University of Lancaster- COMSATS Dual degree,2014-01,2016-12,False
+22_ZEESHAN,education,Electronics and Communication,Chongqing University,2018-01,2020-12,False
+22_ZEESHAN,education,Advanced System Engineering,Free University of Bolzano,2023-01,2025-12,False
+22_ZEESHAN,experience,POSTDOCTORAL Researcher,Free University of Bolzano,2025-01,Present,False
+23_WAQAS_TARIQ_TOOR,education,Matric,BISE BWP,1998-01,2000-12,False
+23_WAQAS_TARIQ_TOOR,education,FSc,BISE BWP,1999-01,2001-12,False
+23_WAQAS_TARIQ_TOOR,education,Electrical Engineering,University of Engineering and Technology Lahore,2005-01,2007-12,False
+23_WAQAS_TARIQ_TOOR,experience,Technical Expert,Alcatel-Lucent,2008-04,2009-06,False
+23_WAQAS_TARIQ_TOOR,education,Electrical Engineering,University of Management and Technology Lahore,2009-01,2011-12,False
+23_WAQAS_TARIQ_TOOR,experience,Assistant Professor,University of Management and Technology Lahore,2009-10,2014-02,False
+23_WAQAS_TARIQ_TOOR,experience,PhD Candidate,"Hanyang University, South Korea",2014-09,2018-02,False
+23_WAQAS_TARIQ_TOOR,education,Electronics and Communication Engineering,Hanyang University,2016-01,2018-12,False
+23_WAQAS_TARIQ_TOOR,experience,Assistant Professor,Khwaja Fareed University of Engineering and IT,2018-01,2021-04,False
+23_WAQAS_TARIQ_TOOR,experience,Associate Professor,University of Engineering and Technology Lahore (Narowal Campus),2021-04,Present,False
+24_AHMED_NAEEM,education,GCE O-level,"University of Cambridge, UK",2007-01,2009-12,False
+24_AHMED_NAEEM,education,Intermediate,Peshawar Board,2010-01,2012-12,False
+24_AHMED_NAEEM,education,Electrical Engineering,National University of Computer and Emerging Sciences (FAST),2012-01,2016-12,False
+24_AHMED_NAEEM,education,Electrical Engineering,National University of Computer and Emerging Sciences (FAST),2016-01,2019-12,False
+24_AHMED_NAEEM,education,Electrical-Electronics Engineering,Istanbul Medipol University,2020-01,2025-12,False
+24_AHMED_NAEEM,experience,RESEARCH ASSISTANT,"Communication, Signal Processing, and Networking Center (CoSiNC) Research Group at Istanbul Medipol University",2020-01,Present,False
+25_MUHAMMAD_ADEEL_ALTAF,education,Matriculation,BISE Multan,2002-01,2004-12,False
+25_MUHAMMAD_ADEEL_ALTAF,education,Fsc,BISE Multan,2004-01,2006-12,False
+25_MUHAMMAD_ADEEL_ALTAF,education,Computer Systems Engineering,"Bahauddin Zakariya University, Multan",2009-01,2011-12,False
+25_MUHAMMAD_ADEEL_ALTAF,education,MS in Electronic Engineering,"International Islamic University, Islamabad",2014-01,2016-12,False
+25_MUHAMMAD_ADEEL_ALTAF,experience,Assistant Lecturer,"Times University, Multan",2014-09,2015-03,False
+25_MUHAMMAD_ADEEL_ALTAF,experience,System Support Engineer,"University of Central Punjab, Lahore",2015-11,2016-04,False
+25_MUHAMMAD_ADEEL_ALTAF,experience,Assistant Network Administrator,NFC (Institute of Engineering and Technology),2016-05,2020-02,False
+25_MUHAMMAD_ADEEL_ALTAF,education,PhD in Electronic and Electrical Engineering,"Kyungpook National University, Daegu",2024-01,2026-12,False
+26_AAMINA_AKBAR,education,nan,nan,2002-01,2004-12,False
+26_AAMINA_AKBAR,education,nan,nan,2004-01,2006-12,False
+26_AAMINA_AKBAR,education,Electrical (Telecom),NUST,2008-01,2010-12,False
+26_AAMINA_AKBAR,education,Electrical (Telecom),Center for Advanced Studies in Engineering (CASE),2011-01,2013-12,False
+26_AAMINA_AKBAR,experience,Lecturer,Foundation University,2014-02,2024-09,False
+26_AAMINA_AKBAR,experience,Research Associate,Institute of Space Technology,2019-10,2021-03,False
+26_AAMINA_AKBAR,education,Electrical (Communication),Institute of Space Technology,2023-01,2025-12,False
+27_SHAHEER,education,nan,nan,1992-01,1994-12,False
+27_SHAHEER,education,nan,nan,1994-01,1996-12,False
+27_SHAHEER,education,electrical engineering,"University of engineering and technology,Peshawar",2001-01,2003-12,False
+27_SHAHEER,experience,Research Engineer,khyber lamps pekan,2003-07,2005-08,False
+27_SHAHEER,education,electrical control systems,Hogskolan Dalarna,2004-01,2006-12,False
+27_SHAHEER,experience,Assistant Professor,uet peshawar,2007-01,2008-09,False
+27_SHAHEER,experience,asst professor,cecos university peshawar,2007-09,2012-08,False
+27_SHAHEER,education,nan,University of Peshawar,2010-01,2012-12,False
+27_SHAHEER,experience,Teaching Assistant,"ump pekan, malaysia",2016-04,2021-04,False
+27_SHAHEER,education,nan,University Malaysia Pahang,2019-01,2021-12,False
+27_SHAHEER,experience,assistant professor,city university,2021-05,2026-07,True
+27_SHAHEER,experience,assistant professor,city University,2023-05,2026-07,True
+28_IDRIS_KHAN,education,nan,BISE Swat,1997-01,1999-12,False
+28_IDRIS_KHAN,education,nan,BISE Peshawar,1999-01,2001-12,False
+28_IDRIS_KHAN,education,Electrical Engineering,UET Peshawar,2004-01,2006-12,False
+28_IDRIS_KHAN,education,Power Systems and Automation,North China Electric Power University Beijing,2012-01,2014-12,False
+28_IDRIS_KHAN,education,Renewable Power,North China Electric Power University Beijing,2016-01,2018-12,False
+29_MUHAMMAD_SARMAD_TARIQ,education,Pre-Engineering,Cambridge,2007-01,2009-12,False
+29_MUHAMMAD_SARMAD_TARIQ,education,Pre-Engineering,Cambridge,2009-01,2011-12,False
+29_MUHAMMAD_SARMAD_TARIQ,education,Electrical Engineering,Lahore University of Management Sciences,2013-01,2015-12,False
+29_MUHAMMAD_SARMAD_TARIQ,education,Masters in Electrical Engineering,University of New South Wales,2015-01,2017-12,False
+29_MUHAMMAD_SARMAD_TARIQ,experience,External RA/TA,Lahore University of Management Sciences,2018-01,2019-08,False
+29_MUHAMMAD_SARMAD_TARIQ,education,PhD in Electrical Engineering,University of North Carolina Charlotte,2022-01,2024-12,False
+30_FAHD_SIKANDAR_KHAN,education,O-Levels,Cambridge,2002-01,2004-12,False
+30_FAHD_SIKANDAR_KHAN,education,A-Levels,Cambridge,2004-01,2006-12,False
+30_FAHD_SIKANDAR_KHAN,education,nan,UET-Taxila,2008-01,2010-12,False
+30_FAHD_SIKANDAR_KHAN,experience,Research Internee,"Center for Micro- and Nano-electronics Devices (CNMD), COMSATS, Islamabad",2009-06,2009-08,False
+30_FAHD_SIKANDAR_KHAN,experience,Research Student,National Center for Physics,2009-09,2010-05,False
+30_FAHD_SIKANDAR_KHAN,experience,Network Support Engineer,Premier Systems,2010-12,2011-05,False
+30_FAHD_SIKANDAR_KHAN,experience,Research Associate,COMSATS University,2011-06,2013-03,False
+30_FAHD_SIKANDAR_KHAN,experience,Research Student,University of Tokyo,2013-04,2014-03,False
+30_FAHD_SIKANDAR_KHAN,education,Masters in Science,University of Tokyo,2014-01,2016-12,False
+30_FAHD_SIKANDAR_KHAN,education,Doctor of Engineering,University of Tokyo,2017-01,2019-12,False
+30_FAHD_SIKANDAR_KHAN,experience,Doctoral Research Student,JXTG Nippon Oil,2018-04,2019-03,False
+30_FAHD_SIKANDAR_KHAN,experience,Assistant Professor,GIKI,2021-09,Present,False
+31_USMAN_MASUD,education,nan,nan,1997-01,1999-12,False
+31_USMAN_MASUD,education,nan,nan,1999-01,2001-12,False
+31_USMAN_MASUD,education,Electrical Engineering,"University of Engineering and Technology, Taxila",2003-01,2005-12,False
+31_USMAN_MASUD,education,Telecommunications,National University of Sciences and Engineering Technology,2005-01,2007-12,False
+31_USMAN_MASUD,education,Electrical Engineering,University of Kassel,2008-01,2010-12,False
+31_USMAN_MASUD,education,Electrical Engineering,University of Kassel,2012-01,2014-12,False
+32_QAISAR_HUSSAIN_ALVI,experience,Lecturer,"Pakistan Nave Engineering College, Karachi",2002-08,2004-09,False
+32_QAISAR_HUSSAIN_ALVI,experience,Lecturer,"NFCIET, Multan",2004-10,2007-07,False
+32_QAISAR_HUSSAIN_ALVI,experience,Assistant Professor,"Riphah International University, islamabad",2007-07,2022-09,False
+32_QAISAR_HUSSAIN_ALVI,experience,Assistant Professor (Visiting),"Swedish college of engineering and technology, wah",2023-09,2024-12,False
+33_QAMAR_ABBAS,experience,Research Associate,NUST Islamabad,2018-07,2022-04,False
+33_QAMAR_ABBAS,experience,Assistant Professor,CUST Islamabad,2022-04,2023-07,False
+33_QAMAR_ABBAS,experience,Assistant Professor,GIK Institute,2023-07,Present,False
+34_SHAHZAD,education,nan,nan,2006-01,2008-12,False
+34_SHAHZAD,education,FSc Pre Engineering,nan,2009-01,2011-12,False
+34_SHAHZAD,education,Electrical (Computer) Engineering,Comsats University Islamabad,2013-01,2015-12,False
+34_SHAHZAD,experience,Lab Engineer,Comsats University Islamabad,2016-02,2018-09,False
+34_SHAHZAD,education,Computer Engineering,Hongik University,2018-01,2020-12,False
+34_SHAHZAD,experience,Research fellow,Hongik University,2018-09,2020-07,False
+34_SHAHZAD,experience,Research Fellow,Sejong University,2020-09,2024-02,False
+34_SHAHZAD,education,Intelligent Mechatronics Engineering,Sejong University,2022-01,2024-12,False
+34_SHAHZAD,experience,Assistant Professor,"FAST NUCES, Faisalabad",2025-01,Present,False
+35_MATIULLAH_AHSAN,education,Science,nan,2004-01,2006-12,False
+35_MATIULLAH_AHSAN,education,Pre-engineering,nan,2007-01,2009-12,False
+35_MATIULLAH_AHSAN,education,Electrical Communication Engineering,"University of Engineering and Technology, Peshawar",2012-01,2014-12,False
+35_MATIULLAH_AHSAN,education,Electrical Power Engineering,CECOS University of IT and Emerging Sciences,2017-01,2019-12,False
+35_MATIULLAH_AHSAN,experience,Graduate Research Assistance,FKEE UTHM Malaysia,2022-06,2023-09,False
+35_MATIULLAH_AHSAN,education,Electrical Engineering,Universiti Tun Hussein Onn Malaysia,2023-01,2025-12,False
+35_MATIULLAH_AHSAN,experience,Teacher Assistant,Universiti Tun Hussein Onn Malaysia,2024-02,2025-01,False
+36_SAMANA_BATOOL,experience,Assistant Manager,SUPARCO Islamabad,2006-09,2009-01,False
+36_SAMANA_BATOOL,experience,Research Assistant,"NUST CEME, Rawalpindi",2021-01,2022-10,False
+36_SAMANA_BATOOL,experience,Assistant Professor,Air University,2024-01,Present,False
+36_SAMANA_BATOOL,experience,Instructor,Samsung Innovation Center,2024-09,Present,False
+37_SANIA_GUL,education,Science,nan,1992-01,1994-12,False
+37_SANIA_GUL,education,Pre-Engineering,nan,1994-01,1996-12,False
+37_SANIA_GUL,education,Electrical Engineering,UET,1999-01,2001-12,False
+37_SANIA_GUL,experience,Junior Engineer,NTDC (Wapda),2002-06,2004-06,False
+37_SANIA_GUL,education,Electrical Engineering,UET Peshawar,2004-01,2006-12,False
+37_SANIA_GUL,experience,Assistant Divisional Engineer,PTCL,2004-07,2008-02,False
+37_SANIA_GUL,experience,Assistant Professor,Iqra National University,2008-02,2014-06,False
+37_SANIA_GUL,education,Electrical Engineering,UET Peshawar,2019-01,2021-12,False
+37_SANIA_GUL,experience,Researcher,UET Peshawar,2021-03,2021-12,False
+37_SANIA_GUL,experience,Researcher,NCAI Peshawar,2022-01,2022-08,False
+37_SANIA_GUL,experience,Researcher,"Qatar University, Qatar",2022-09,2025-06,False
+39_MUHAMMAD_SAQIB,education,Matric,nan,2008-01,2010-12,False
+39_MUHAMMAD_SAQIB,education,F.Sc,nan,2011-01,2013-12,False
+39_MUHAMMAD_SAQIB,education,BS,International Islamic University Islamabad (IIUI),2016-01,2018-12,False
+39_MUHAMMAD_SAQIB,education,MS,Jeju National University,2019-01,2021-12,False
+39_MUHAMMAD_SAQIB,education,PhD,Jeju National University,2023-01,2025-12,False
+40_ABDUR_REHMAN,education,nan,nan,2006-01,2008-12,False
+40_ABDUR_REHMAN,education,nan,nan,2008-01,2010-12,False
+40_ABDUR_REHMAN,education,Electrical Engineering (Electronics),Federal Urdu University of Arts Science and Technology,2013-01,2015-12,False
+40_ABDUR_REHMAN,experience,Workshop Instructor,Federal Urdu University of Arts Science and Technology,2016-02,2017-08,False
+40_ABDUR_REHMAN,education,Electrical Engineering,Kunsan National University,2017-01,2019-12,False
+40_ABDUR_REHMAN,education,Electrical Engineering,Kunsan National University,2021-01,2023-12,False
+40_ABDUR_REHMAN,experience,Postdoctoral Researcher,Kunsan National University,2023-01,2023-06,False
+40_ABDUR_REHMAN,experience,Post-Doctoral Fellow,Inha University,2023-09,2025-10,False
+41_MUHAMMAD_AQEEL,education,Matric,BISE Bahawalpur,2008-01,2010-12,False
+41_MUHAMMAD_AQEEL,education,HSSC,BISE Bahawalpur,2011-01,2013-12,False
+41_MUHAMMAD_AQEEL,education,BS,The Islamia University of Bahawalpur,2015-01,2017-12,False
+41_MUHAMMAD_AQEEL,education,MS,The Islamia University of Bahawalpur,2018-01,2020-12,False
+41_MUHAMMAD_AQEEL,experience,Visiting Lecturer,KFUEIT,2021-02,2025-05,False
+41_MUHAMMAD_AQEEL,education,PhD,KFUEIT,2023-01,2025-12,False
+42_SAQIB_JAMIL,education,Science,nan,2001-01,2003-12,False
+42_SAQIB_JAMIL,education,Pre-Engineering,nan,2003-01,2005-12,False
+42_SAQIB_JAMIL,education,Electrical Engineering,UET Peshawar,2008-01,2010-12,False
+42_SAQIB_JAMIL,education,Electrical Engineering,UET Peshawar,2013-01,2015-12,False
+42_SAQIB_JAMIL,experience,Senior TV Engineer,Pakistan Television,2013-01,Present,False
+42_SAQIB_JAMIL,education,Electrical Engineering,Sarhad University Peshawar,2021-01,2023-12,False
+43_AMMARA_NASIM,education,Pre-Engineering,nan,2006-01,2008-12,False
+43_AMMARA_NASIM,education,Science,nan,2006-01,2008-12,False
+43_AMMARA_NASIM,education,nan,"NUST,SEECS",2010-01,2012-12,False
+43_AMMARA_NASIM,education,Telecommunication and Signal Processing,UET Taxila,2014-01,2016-12,False
+43_AMMARA_NASIM,experience,Lab Engineer,Bahria University Islamabad,2014-01,2017-01,False
+43_AMMARA_NASIM,experience,Lecturer,Bahria University Islamabad,2017-01,2021-10,False
+43_AMMARA_NASIM,experience,Assistant Professor,Bahria University Islamabad,2021-10,2026-07,True
+43_AMMARA_NASIM,education,Computer Engineering,"NUST,CEME",2023-01,2025-12,False
+43_AMMARA_NASIM,experience,Wing Head (Applied AI Lab),"Center of Excellence in AI, Bahria University",2025-04,2026-07,True
