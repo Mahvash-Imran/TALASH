@@ -28,6 +28,10 @@ class CandidateSummary(BaseModel):
     total_experience_years: Optional[float] = 0.0
     scholarly_label: Optional[str] = "N/A"
     educational_strength_label: Optional[str] = "N/A"
+    # Dashboard integration fields
+    status: Optional[str] = "done"          # done | processing | pending | error
+    missing_info_count: Optional[int] = 0   # flagged missing fields count
+    uploaded_at: Optional[str] = None       # ISO date string
 
 
 class CompareRequest(BaseModel):

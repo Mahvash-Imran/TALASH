@@ -87,26 +87,60 @@ def analyze_candidate(candidate_id: str, background_tasks: BackgroundTasks):
 @router.get("/candidates", response_model=List[CandidateSummary])
 def list_candidates():
     """
-    Returns a summary list of all evaluated candidates with composite scores and tiers.
+    Returns a summary list of all evaluated candidates with composite scores, tiers,
+    processing status, missing-info count, and upload timestamp.
     """
+    import datetime
+
     comp_file = DATA_DIR / "composite_evaluations.csv"
     if not comp_file.exists():
-        # Fallback: compute if not yet generated
         pipeline = MasterPipeline(skip_llm=True)
         pipeline.run_full_pipeline()
 
     if not comp_file.exists():
         raise HTTPException(status_code=404, detail="No candidate evaluations found.")
 
+    # Load missing info counts from email drafter analysis (if available)
+    missing_counts: dict = {}
+    for module_csv in ["edu_gaps.csv", "supervision_profiles.csv"]:
+        mf = DATA_DIR / module_csv
+        if mf.exists():
+            try:
+                mdf = pd.read_csv(mf, dtype=str).fillna("")
+                for _, mr in mdf.iterrows():
+                    cid = str(mr.get("candidate_id", "")).strip()
+                    if cid:
+                        # Count columns that look empty / flagged
+                        empties = sum(1 for v in mr.values if str(v).strip() in ("", "nan", "N/A", "MISSING", "unknown"))
+                        missing_counts[cid] = missing_counts.get(cid, 0) + max(0, empties - 3)
+            except Exception:
+                pass
+
+    # CV upload timestamps
+    cv_dir = Path("data/cvs")
+    cv_mtimes: dict = {}
+    if cv_dir.exists():
+        for pdf in cv_dir.glob("*.pdf"):
+            stem = pdf.stem  # e.g. 04_MUHAMMAD_FARRUKH
+            mtime = pdf.stat().st_mtime
+            cv_mtimes[stem] = datetime.datetime.fromtimestamp(mtime).strftime("%Y-%m-%dT%H:%M:%S")
+
     df = pd.read_csv(comp_file, dtype=str)
     res = []
     for _, r in df.iterrows():
+        cid = r.get("candidate_id", "")
+        uploaded_at = cv_mtimes.get(cid) or comp_file.stat().st_mtime
+        if not isinstance(uploaded_at, str):
+            uploaded_at = datetime.datetime.fromtimestamp(uploaded_at).strftime("%Y-%m-%dT%H:%M:%S")
         res.append(CandidateSummary(
-            candidate_id=r.get("candidate_id", ""),
-            candidate_name=r.get("candidate_name", r.get("candidate_id", "")),
+            candidate_id=cid,
+            candidate_name=r.get("candidate_name", cid),
             overall_composite_score=float(r.get("overall_composite_score") or 0.0),
             candidate_tier=r.get("candidate_tier", "Unclassified"),
             total_experience_years=float(r.get("experience_score") or 0.0),
+            status="done",
+            missing_info_count=min(missing_counts.get(cid, 0), 9),
+            uploaded_at=uploaded_at,
         ))
     return res
 
