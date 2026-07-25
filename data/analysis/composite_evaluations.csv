@@ -1,0 +1,44 @@
+candidate_id,overall_composite_score,candidate_tier,education_score,research_score,supervision_score,innovation_score,breadth_score,collaboration_score,experience_score,candidate_name
+04_MUHAMMAD_FARRUKH,53.0,Tier 3: Moderate Candidate,10.0,5.0,2.0,8.0,3.0,10.0,15.0,Muhammad Farrukh Qureshi
+24_AHMED_NAEEM,50.0,Tier 3: Moderate Candidate,10.0,5.0,2.0,8.0,3.0,10.0,12.0,Ahmed Naeem
+01_MUHAMMAD_SALMAN,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,MUHAMMAD SALMAN
+11_WAQAS_AMIN,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Waqas Amin
+12_SYED_TAMOORULHASSAN,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,SYED TAMOORULHASSAN
+13_MANZOOR_ELLAHI,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Manzoor Ellahi
+14_SAROSH_TAHIR,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Sarosh Tahir
+16_MUZZAMIL_GHAFFAR,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Muzzamil Ghaffar
+23_WAQAS_TARIQ_TOOR,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Waqas Tariq Toor
+32_QAISAR_HUSSAIN_ALVI,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Qaisar Hussain Alvi
+43_AMMARA_NASIM,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Ammara Nasim
+07_FIZA_MURTAZA,44.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,15.0,Fiza Murtaza
+15_M_USMAN_ABBASI,44.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,15.0,M. Usman Abbasi
+19_ASIM_MASOOD,44.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,15.0,Asim Masood
+26_AAMINA_AKBAR,44.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,15.0,Aamina Akbar
+37_SANIA_GUL,44.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,15.0,Sania Gul
+08_TAYYABA_GULL,44.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,12.0,Tayyaba Gull
+09_MUHAMMAD_ABUBAKAR,44.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,12.0,Muhammad Abubakar
+18_MUHAMMAD_AMJAD,44.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,12.0,Muhammad Amjad
+21_SAMAN_FATIMA,44.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,12.0,Saman Fatima
+30_FAHD_SIKANDAR_KHAN,44.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,12.0,Fahd Sikandar Khan
+33_QAMAR_ABBAS,41.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,12.0,Qamar Abbas
+34_SHAHZAD,41.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,12.0,Shahzad
+03_NASIR_ALI_SHAH,40.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,8.0,Nasir Ali Shah
+20_SYED_FASIH_ALI,40.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,8.0,Syed Fasih Ali
+40_ABDUR_REHMAN,40.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,8.0,Abdur Rehman
+41_MUHAMMAD_AQEEL,40.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,8.0,Muhammad Aqeel
+06_FARMAN_ALI,39.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,2.5,15.0,Farman Ali
+27_SHAHEER,39.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,2.5,15.0,Shaheer
+42_SAQIB_JAMIL,39.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,2.5,15.0,Saqib Jamil
+36_SAMANA_BATOOL,39.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,5.0,12.0,Samana Batool
+35_MATIULLAH_AHSAN,37.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,8.0,Matiullah Ahsan
+10_MUHAMMAD_EHATISHAM,36.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,2.5,12.0,Muhammad Ehatisham
+17_SUHAIL_ASGHAR,36.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,4.0,Suhail Asghar Qureshi
+22_ZEESHAN,36.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,4.0,Zeeshan
+28_IDRIS_KHAN,36.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,4.0,Idris Khan
+29_MUHAMMAD_SARMAD_TARIQ,36.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,4.0,Muhammad Sarmad Tariq
+31_USMAN_MASUD,36.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,4.0,Usman Masud
+39_MUHAMMAD_SAQIB,36.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,4.0,Muhammad Saqib
+05_MUHAMMAD_MAJID,35.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,5.0,8.0,MUHAMMAD MAJID
+25_MUHAMMAD_ADEEL_ALTAF,35.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,5.0,8.0,MUHAMMAD ADEEL ALTAF
+38_MUHAMMAD_MUSADIQ,33.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,4.0,Muhammad Musadiq Ahmed
+02_MUHAMMAD_SHAHWAZ,28.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,2.5,4.0,MUHAMMAD SHAHWAZ

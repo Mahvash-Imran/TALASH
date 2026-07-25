@@ -5,242 +5,242 @@
   Total publications classified : 379
 
   Research Profile Type Distribution:
-    Focused Researcher       : 14
+    Focused Researcher       : 16
     Interdisciplinary        : 9
     No Publications          : 5
-    Specialist               : 15
+    Specialist               : 13
 
 ----------------------------------------------------------------------
   Per-Candidate Research Breadth Summaries
 ----------------------------------------------------------------------
 
-  [Specialist] 07_FIZA_MURTAZA
-  Total Publications: 12 | Dominant Theme: Computer Vision & Image Processing (91.7%)
-  Diversity Score (Shannon Entropy): 0.41 | Trend Pattern: Stable Focus
-  Theme Breakdown: {"Computer Vision & Image Processing": 91.7, "Machine Learning & Artificial Intelligence": 8.3}
-  Summary: Candidate 07_FIZA_MURTAZA has a research profile characterized by a high degree of specialization in Computer Vision & Image Processing, with a dominant theme of 91.7% and only one publication in a related field, Machine Learning & Artificial Intelligence. The Shannon Entropy Diversity score of 0.414 indicates a relatively focused research scope. The temporal trend pattern is stable, indicating consistent focus over time.
+  [Specialist] 03_NASIR_ALI_SHAH
+  Total Publications: 4 | Dominant Theme: Wireless Networks & IoT (75.0%)
+  Diversity Score (Shannon Entropy): 0.81 | Trend Pattern: Evolving Focus
+  Theme Breakdown: {"Wireless Networks & IoT": 75.0, "Machine Learning & Artificial Intelligence": 25.0}
+  Summary: Candidate Nasir Ali Shah has authored 4 publication(s) across 2 research theme(s). The primary research concentration is in Wireless Networks & IoT, accounting for 75.0% of all publications. With a normalized diversity score of 0.81, the overall research profile is classified as Specialist.
+
+  [Specialist] 05_MUHAMMAD_MAJID
+  Total Publications: 3 | Dominant Theme: Machine Learning & Artificial Intelligence (100.0%)
+  Diversity Score (Shannon Entropy): 0.00 | Trend Pattern: Stable Focus
+  Theme Breakdown: {"Machine Learning & Artificial Intelligence": 100.0}
+  Summary: Candidate MUHAMMAD MAJID has authored 3 publication(s) across 1 research theme(s). The primary research concentration is in Machine Learning & Artificial Intelligence, accounting for 100.0% of all publications. With a normalized diversity score of 0.00, the overall research profile is classified as Specialist.
+
+  [Specialist] 08_TAYYABA_GULL
+  Total Publications: 5 | Dominant Theme: General Computer Science / Other (80.0%)
+  Diversity Score (Shannon Entropy): 0.72 | Trend Pattern: Stable Focus
+  Theme Breakdown: {"General Computer Science / Other": 80.0, "Energy & Renewable Systems": 20.0}
+  Summary: Candidate Tayyaba Gull has authored 5 publication(s) across 2 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 80.0% of all publications. With a normalized diversity score of 0.72, the overall research profile is classified as Specialist.
 
   [Specialist] 12_SYED_TAMOORULHASSAN
   Total Publications: 7 | Dominant Theme: Wireless Networks & IoT (100.0%)
   Diversity Score (Shannon Entropy): 0.00 | Trend Pattern: Stable Focus
   Theme Breakdown: {"Wireless Networks & IoT": 100.0}
-  Summary: Candidate 12_SYED_TAMOORULHASSAN has a narrow research focus, with 7 publications exclusively in Wireless Networks & IoT. The Shannon Entropy Diversity score of 0.0 indicates a highly focused research profile. The temporal trend pattern is stable, indicating consistent research interest in this area.
+  Summary: Candidate SYED TAMOORULHASSAN has authored 7 publication(s) across 1 research theme(s). The primary research concentration is in Wireless Networks & IoT, accounting for 100.0% of all publications. With a normalized diversity score of 0.00, the overall research profile is classified as Specialist.
 
-  [Specialist] 14_SAROSH_TAHIR
-  Total Publications: 10 | Dominant Theme: Energy & Renewable Systems (80.0%)
-  Diversity Score (Shannon Entropy): 0.58 | Trend Pattern: Evolving Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 80.0, "Cybersecurity & Privacy": 10.0, "Software Engineering & Web Technologies": 10.0}
-  Summary: The candidate, 14_SAROSH_TAHIR, has a research profile characterized by a strong focus on Energy & Renewable Systems, with 80% of their publications falling within this theme. Their research breadth is relatively narrow, with a Shannon Entropy Diversity score of 0.582, indicating a focused research approach. The candidate's research theme has shown an evolving focus over time, with a temporal trend pattern of Evolving Focus.
-
-  [Specialist] 19_ASIM_MASOOD
-  Total Publications: 8 | Dominant Theme: Machine Learning & Artificial Intelligence (75.0%)
-  Diversity Score (Shannon Entropy): 0.81 | Trend Pattern: Evolving Focus
-  Theme Breakdown: {"Machine Learning & Artificial Intelligence": 75.0, "Biomedical & Health Informatics": 25.0}
-  Summary: Candidate 19_ASIM_MASOOD has a research profile characterized by a strong focus on Machine Learning & Artificial Intelligence, with 75% of their publications falling within this theme. They have a relatively low number of publications (8) and a moderate level of diversity in their research, as indicated by a Shannon Entropy Diversity score of 0.811. The temporal trend pattern suggests that their research focus has been evolving over time.
-
-  [Specialist] 20_SYED_FASIH_ALI
-  Total Publications: 4 | Dominant Theme: Wireless Networks & IoT (75.0%)
-  Diversity Score (Shannon Entropy): 0.81 | Trend Pattern: Evolving Focus
-  Theme Breakdown: {"Wireless Networks & IoT": 75.0, "Machine Learning & Artificial Intelligence": 25.0}
-  Summary: Syed Fasih Ali has a research profile focused on Wireless Networks & IoT, with a significant majority of their publications (75.0%) falling within this theme. Their research has a moderate level of diversity, with a Shannon Entropy Diversity score of 0.811. The temporal trend pattern indicates an evolving focus, suggesting that their research interests have shifted over time.
-
-  [Specialist] 21_SAMAN_FATIMA
-  Total Publications: 1 | Dominant Theme: Energy & Renewable Systems (100.0%)
-  Diversity Score (Shannon Entropy): 0.00 | Trend Pattern: Stable Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 100.0}
-  Summary: Candidate 21_SAMAN_FATIMA has a research profile characterized by a single dominant theme in Energy & Renewable Systems, with a total of one publication. The Shannon Entropy Diversity score of 0.0 indicates a focused research scope. The temporal trend pattern is stable, indicating consistent focus on this theme.
-
-  [Specialist] 26_AAMINA_AKBAR
-  Total Publications: 4 | Dominant Theme: Wireless Networks & IoT (100.0%)
-  Diversity Score (Shannon Entropy): 0.00 | Trend Pattern: Stable Focus
-  Theme Breakdown: {"Wireless Networks & IoT": 100.0}
-  Summary: Candidate 26_AAMINA_AKBAR has a research profile characterized by a narrow focus on Wireless Networks & IoT, with a total of 4 publications. The Shannon Entropy Diversity score of 0.0 indicates a highly focused research scope. The temporal trend pattern is stable, suggesting consistent research interest in this area.
-
-  [Specialist] 29_MUHAMMAD_SARMAD_TARIQ
-  Total Publications: 7 | Dominant Theme: Energy & Renewable Systems (100.0%)
-  Diversity Score (Shannon Entropy): 0.00 | Trend Pattern: Stable Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 100.0}
-  Summary: Candidate 29_MUHAMMAD_SARMAD_TARIQ has a narrow research focus, with 100% of their publications falling under the theme of Energy & Renewable Systems. Their Shannon Entropy Diversity score of 0.0 indicates a highly focused research profile. The temporal trend pattern suggests a stable focus over time.
-
-  [Specialist] 30_FAHD_SIKANDAR_KHAN
-  Total Publications: 9 | Dominant Theme: Energy & Renewable Systems (77.8%)
-  Diversity Score (Shannon Entropy): 0.62 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 77.8, "Software Engineering & Web Technologies": 11.1, "General Computer Science / Other": 11.1}
-  Summary: Candidate 30_FAHD_SIKANDAR_KHAN has a research profile characterized by a dominant focus on Energy & Renewable Systems, with 77.8% of their publications falling within this theme. Their research output is relatively limited, with a total of 9 publications. The candidate's research appears to have shifted towards an interdisciplinary focus over time.
-
-  [Specialist] 32_QAISAR_HUSSAIN_ALVI
-  Total Publications: 4 | Dominant Theme: Wireless Networks & IoT (100.0%)
-  Diversity Score (Shannon Entropy): 0.00 | Trend Pattern: Stable Focus
-  Theme Breakdown: {"Wireless Networks & IoT": 100.0}
-  Summary: Candidate 32_QAISAR_HUSSAIN_ALVI has a narrow research focus, with 100% of their publications falling under the theme of Wireless Networks & IoT. Their Shannon Entropy Diversity score of 0.0 indicates a highly focused research profile. The temporal trend pattern is stable, indicating consistent research interest in this area.
-
-  [Specialist] 35_MATIULLAH_AHSAN
-  Total Publications: 5 | Dominant Theme: Energy & Renewable Systems (80.0%)
-  Diversity Score (Shannon Entropy): 0.72 | Trend Pattern: Stable Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 80.0, "Computer Vision & Image Processing": 20.0}
-  Summary: Candidate 35_MATIULLAH_AHSAN has a research profile characterized by a stable focus on a single dominant theme, Energy & Renewable Systems, with a high percentage of publications (80.0%) and a relatively low Shannon Entropy Diversity score (0.722). This suggests a strong specialization in the field. Their research output consists of 5 publications, with a notable contribution in Energy & Renewable Systems.
-
-  [Specialist] 36_SAMANA_BATOOL
+  [Specialist] 15_M_USMAN_ABBASI
   Total Publications: 3 | Dominant Theme: Biomedical & Health Informatics (100.0%)
   Diversity Score (Shannon Entropy): 0.00 | Trend Pattern: Stable Focus
   Theme Breakdown: {"Biomedical & Health Informatics": 100.0}
-  Summary: Candidate 36_SAMANA_BATOOL has a research profile focused on Biomedical & Health Informatics, with 3 publications in this area. Their research theme is highly concentrated, indicating a specialist approach. The candidate's research has maintained a stable focus over time.
+  Summary: Candidate M. Usman Abbasi has authored 3 publication(s) across 1 research theme(s). The primary research concentration is in Biomedical & Health Informatics, accounting for 100.0% of all publications. With a normalized diversity score of 0.00, the overall research profile is classified as Specialist.
+
+  [Specialist] 18_MUHAMMAD_AMJAD
+  Total Publications: 16 | Dominant Theme: General Computer Science / Other (93.8%)
+  Diversity Score (Shannon Entropy): 0.34 | Trend Pattern: Stable Focus
+  Theme Breakdown: {"General Computer Science / Other": 93.8, "Computer Vision & Image Processing": 6.2}
+  Summary: Candidate Muhammad Amjad has authored 16 publication(s) across 2 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 93.8% of all publications. With a normalized diversity score of 0.34, the overall research profile is classified as Specialist.
+
+  [Specialist] 19_ASIM_MASOOD
+  Total Publications: 8 | Dominant Theme: General Computer Science / Other (75.0%)
+  Diversity Score (Shannon Entropy): 0.81 | Trend Pattern: Evolving Focus
+  Theme Breakdown: {"General Computer Science / Other": 75.0, "Machine Learning & Artificial Intelligence": 25.0}
+  Summary: Candidate Asim Masood has authored 8 publication(s) across 2 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 75.0% of all publications. With a normalized diversity score of 0.81, the overall research profile is classified as Specialist.
+
+  [Specialist] 21_SAMAN_FATIMA
+  Total Publications: 1 | Dominant Theme: General Computer Science / Other (100.0%)
+  Diversity Score (Shannon Entropy): 0.00 | Trend Pattern: Stable Focus
+  Theme Breakdown: {"General Computer Science / Other": 100.0}
+  Summary: Candidate Saman Fatima has authored 1 publication(s) across 1 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 100.0% of all publications. With a normalized diversity score of 0.00, the overall research profile is classified as Specialist.
+
+  [Specialist] 30_FAHD_SIKANDAR_KHAN
+  Total Publications: 9 | Dominant Theme: General Computer Science / Other (88.9%)
+  Diversity Score (Shannon Entropy): 0.50 | Trend Pattern: Stable Focus
+  Theme Breakdown: {"General Computer Science / Other": 88.9, "Energy & Renewable Systems": 11.1}
+  Summary: Candidate Fahd Sikandar Khan has authored 9 publication(s) across 2 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 88.9% of all publications. With a normalized diversity score of 0.50, the overall research profile is classified as Specialist.
+
+  [Specialist] 33_QAMAR_ABBAS
+  Total Publications: 7 | Dominant Theme: Wireless Networks & IoT (100.0%)
+  Diversity Score (Shannon Entropy): 0.00 | Trend Pattern: Stable Focus
+  Theme Breakdown: {"Wireless Networks & IoT": 100.0}
+  Summary: Candidate Qamar Abbas has authored 7 publication(s) across 1 research theme(s). The primary research concentration is in Wireless Networks & IoT, accounting for 100.0% of all publications. With a normalized diversity score of 0.00, the overall research profile is classified as Specialist.
 
   [Specialist] 37_SANIA_GUL
-  Total Publications: 17 | Dominant Theme: Natural Language Processing (88.2%)
-  Diversity Score (Shannon Entropy): 0.40 | Trend Pattern: Stable Focus
-  Theme Breakdown: {"Natural Language Processing": 88.2, "Biomedical & Health Informatics": 5.9, "Machine Learning & Artificial Intelligence": 5.9}
-  Summary: Candidate 37_SANIA_GUL has a research profile characterized by a high degree of specialization in Natural Language Processing, with 88.2% of their publications falling within this theme. Their research output is relatively stable over time, indicating a consistent focus on this area. With 17 total publications, their research profile demonstrates a moderate level of productivity.
+  Total Publications: 17 | Dominant Theme: General Computer Science / Other (82.4%)
+  Diversity Score (Shannon Entropy): 0.53 | Trend Pattern: Evolving Focus
+  Theme Breakdown: {"General Computer Science / Other": 82.4, "Machine Learning & Artificial Intelligence": 11.8, "Wireless Networks & IoT": 5.9}
+  Summary: Candidate Sania Gul has authored 17 publication(s) across 3 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 82.4% of all publications. With a normalized diversity score of 0.53, the overall research profile is classified as Specialist.
 
   [Specialist] 38_MUHAMMAD_MUSADIQ
-  Total Publications: 7 | Dominant Theme: Energy & Renewable Systems (100.0%)
-  Diversity Score (Shannon Entropy): 0.00 | Trend Pattern: Stable Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 100.0}
-  Summary: Candidate 38_MUHAMMAD_MUSADIQ has a narrow research focus, with 100% of their publications falling under the theme of Energy & Renewable Systems. Their Shannon Entropy Diversity score of 0.0 indicates a highly focused research profile. The temporal trend pattern suggests a stable research direction over time.
+  Total Publications: 7 | Dominant Theme: General Computer Science / Other (71.4%)
+  Diversity Score (Shannon Entropy): 0.86 | Trend Pattern: Evolving Focus
+  Theme Breakdown: {"General Computer Science / Other": 71.4, "Energy & Renewable Systems": 28.6}
+  Summary: Candidate Muhammad Musadiq Ahmed has authored 7 publication(s) across 2 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 71.4% of all publications. With a normalized diversity score of 0.86, the overall research profile is classified as Specialist.
 
-  [Specialist] 40_ABDUR_REHMAN
-  Total Publications: 5 | Dominant Theme: Energy & Renewable Systems (100.0%)
-  Diversity Score (Shannon Entropy): 0.00 | Trend Pattern: Stable Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 100.0}
-  Summary: Candidate 40_ABDUR_REHMAN has a narrow research focus, with 100% of their publications falling under the theme of Energy & Renewable Systems. Their Shannon Entropy Diversity score of 0.0 indicates a highly focused research profile. The temporal trend pattern suggests a stable focus over time.
+  [Specialist] 39_MUHAMMAD_SAQIB
+  Total Publications: 17 | Dominant Theme: General Computer Science / Other (94.1%)
+  Diversity Score (Shannon Entropy): 0.32 | Trend Pattern: Stable Focus
+  Theme Breakdown: {"General Computer Science / Other": 94.1, "Wireless Networks & IoT": 5.9}
+  Summary: Candidate Muhammad Saqib has authored 17 publication(s) across 2 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 94.1% of all publications. With a normalized diversity score of 0.32, the overall research profile is classified as Specialist.
 
   [Focused Researcher] 01_MUHAMMAD_SALMAN
-  Total Publications: 5 | Dominant Theme: Wireless Networks & IoT (60.0%)
-  Diversity Score (Shannon Entropy): 0.86 | Trend Pattern: Evolving Focus
-  Theme Breakdown: {"Wireless Networks & IoT": 60.0, "Machine Learning & Artificial Intelligence": 20.0, "General Computer Science / Other": 20.0}
-  Summary: Muhammad Salman has a focused research profile with a dominant theme in Wireless Networks & IoT, accounting for 60% of their publications. Their research scope is limited to three distinct areas, indicating a specialized expertise. The Shannon Entropy Diversity score of 0.865 suggests a moderate level of diversity in their research themes. Their research focus has been evolving over time.
+  Total Publications: 5 | Dominant Theme: Machine Learning & Artificial Intelligence (60.0%)
+  Diversity Score (Shannon Entropy): 0.86 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"Machine Learning & Artificial Intelligence": 60.0, "Wireless Networks & IoT": 20.0, "Energy & Renewable Systems": 20.0}
+  Summary: Candidate MUHAMMAD SALMAN has authored 5 publication(s) across 3 research theme(s). The primary research concentration is in Machine Learning & Artificial Intelligence, accounting for 60.0% of all publications. With a normalized diversity score of 0.86, the overall research profile is classified as Focused Researcher.
 
-  [Focused Researcher] 05_MUHAMMAD_MAJID
-  Total Publications: 3 | Dominant Theme: Wireless Networks & IoT (66.7%)
+  [Focused Researcher] 07_FIZA_MURTAZA
+  Total Publications: 12 | Dominant Theme: Computer Vision & Image Processing (66.7%)
   Diversity Score (Shannon Entropy): 0.92 | Trend Pattern: Evolving Focus
-  Theme Breakdown: {"Wireless Networks & IoT": 66.7, "Machine Learning & Artificial Intelligence": 33.3}
-  Summary: Muhammad Majid has a focused research profile with a dominant theme in Wireless Networks & IoT, accounting for 66.7% of their publications. Their research is primarily concentrated in two areas: Wireless Networks & IoT and Machine Learning & Artificial Intelligence. With a Shannon Entropy Diversity score of 0.918, their research shows a moderate level of diversity. Their research trend pattern indicates an evolving focus over time.
+  Theme Breakdown: {"Computer Vision & Image Processing": 66.7, "General Computer Science / Other": 33.3}
+  Summary: Candidate Fiza Murtaza has authored 12 publication(s) across 2 research theme(s). The primary research concentration is in Computer Vision & Image Processing, accounting for 66.7% of all publications. With a normalized diversity score of 0.92, the overall research profile is classified as Focused Researcher.
 
   [Focused Researcher] 09_MUHAMMAD_ABUBAKAR
   Total Publications: 22 | Dominant Theme: Machine Learning & Artificial Intelligence (63.6%)
   Diversity Score (Shannon Entropy): 0.71 | Trend Pattern: Shifting / Interdisciplinary Focus
   Theme Breakdown: {"Machine Learning & Artificial Intelligence": 63.6, "General Computer Science / Other": 22.7, "Biomedical & Health Informatics": 9.1, "Energy & Renewable Systems": 4.5}
-  Summary: Muhammad Abubakar has a focused research profile with a dominant theme in Machine Learning & Artificial Intelligence, accounting for 63.6% of their total 22 publications. Their research is characterized by a moderate level of diversity, as indicated by a Shannon Entropy Diversity score of 0.709. The temporal trend pattern suggests a shifting focus towards interdisciplinary research.
+  Summary: Candidate Muhammad Abubakar has authored 22 publication(s) across 4 research theme(s). The primary research concentration is in Machine Learning & Artificial Intelligence, accounting for 63.6% of all publications. With a normalized diversity score of 0.71, the overall research profile is classified as Focused Researcher.
 
-  [Focused Researcher] 15_M_USMAN_ABBASI
-  Total Publications: 3 | Dominant Theme: Biomedical & Health Informatics (66.7%)
-  Diversity Score (Shannon Entropy): 0.92 | Trend Pattern: Evolving Focus
-  Theme Breakdown: {"Biomedical & Health Informatics": 66.7, "Machine Learning & Artificial Intelligence": 33.3}
-  Summary: Candidate 15_M_USMAN_ABBASI has a focused research profile with a dominant theme in Biomedical & Health Informatics, accounting for 66.7% of their publications. Their research is characterized by a moderate level of diversity, as indicated by a Shannon Entropy Diversity score of 0.918. The candidate's research has shown an evolving focus over time, suggesting a gradual development of their research interests.
-
-  [Focused Researcher] 16_MUZZAMIL_GHAFFAR
-  Total Publications: 6 | Dominant Theme: Energy & Renewable Systems (66.7%)
-  Diversity Score (Shannon Entropy): 0.79 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 66.7, "General Computer Science / Other": 16.7, "Robotics & Automation": 16.7}
-  Summary: Muzzamil Ghaffar has a focused research profile with a dominant theme in Energy & Renewable Systems, accounting for 66.7% of their publications. Their research output is concentrated in three areas, with a moderate level of diversity. The temporal trend pattern suggests a shifting focus, potentially indicating an interdisciplinary approach.
+  [Focused Researcher] 14_SAROSH_TAHIR
+  Total Publications: 10 | Dominant Theme: Energy & Renewable Systems (60.0%)
+  Diversity Score (Shannon Entropy): 0.82 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"Energy & Renewable Systems": 60.0, "General Computer Science / Other": 30.0, "Cybersecurity & Privacy": 10.0}
+  Summary: Candidate Sarosh Tahir has authored 10 publication(s) across 3 research theme(s). The primary research concentration is in Energy & Renewable Systems, accounting for 60.0% of all publications. With a normalized diversity score of 0.82, the overall research profile is classified as Focused Researcher.
 
   [Focused Researcher] 17_SUHAIL_ASGHAR
-  Total Publications: 8 | Dominant Theme: Energy & Renewable Systems (50.0%)
-  Diversity Score (Shannon Entropy): 1.00 | Trend Pattern: Evolving Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 50.0, "Biomedical & Health Informatics": 50.0}
-  Summary: Candidate 17_SUHAIL_ASGHAR has a focused research profile with a dominant theme in Energy & Renewable Systems, accounting for 50% of their total 8 publications. Their research is concentrated in two main areas, with a balanced distribution between Energy & Renewable Systems and Biomedical & Health Informatics. The Shannon Entropy Diversity score of 1.0 indicates a diverse research profile, but the temporal trend pattern suggests an evolving focus over time.
+  Total Publications: 8 | Dominant Theme: General Computer Science / Other (50.0%)
+  Diversity Score (Shannon Entropy): 0.89 | Trend Pattern: Evolving Focus
+  Theme Breakdown: {"General Computer Science / Other": 50.0, "Wireless Networks & IoT": 37.5, "Biomedical & Health Informatics": 12.5}
+  Summary: Candidate Suhail Asghar Qureshi has authored 8 publication(s) across 3 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 50.0% of all publications. With a normalized diversity score of 0.89, the overall research profile is classified as Focused Researcher.
 
-  [Focused Researcher] 18_MUHAMMAD_AMJAD
-  Total Publications: 16 | Dominant Theme: Computer Vision & Image Processing (62.5%)
-  Diversity Score (Shannon Entropy): 0.95 | Trend Pattern: Evolving Focus
-  Theme Breakdown: {"Computer Vision & Image Processing": 62.5, "Machine Learning & Artificial Intelligence": 37.5}
-  Summary: Muhammad Amjad has a focused research profile with a strong emphasis on Computer Vision & Image Processing, accounting for 62.5% of their total 16 publications. Their research also explores Machine Learning & Artificial Intelligence, with a total of 6 publications. The Shannon Entropy Diversity score of 0.954 indicates a high level of diversity within their research themes. Their research focus has been evolving over time.
+  [Focused Researcher] 20_SYED_FASIH_ALI
+  Total Publications: 4 | Dominant Theme: Energy & Renewable Systems (50.0%)
+  Diversity Score (Shannon Entropy): 0.95 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"Energy & Renewable Systems": 50.0, "General Computer Science / Other": 25.0, "Wireless Networks & IoT": 25.0}
+  Summary: Candidate Syed Fasih Ali has authored 4 publication(s) across 3 research theme(s). The primary research concentration is in Energy & Renewable Systems, accounting for 50.0% of all publications. With a normalized diversity score of 0.95, the overall research profile is classified as Focused Researcher.
+
+  [Focused Researcher] 22_ZEESHAN
+  Total Publications: 10 | Dominant Theme: General Computer Science / Other (60.0%)
+  Diversity Score (Shannon Entropy): 0.79 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"General Computer Science / Other": 60.0, "Machine Learning & Artificial Intelligence": 20.0, "Biomedical & Health Informatics": 10.0, "Cybersecurity & Privacy": 10.0}
+  Summary: Candidate Zeeshan has authored 10 publication(s) across 4 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 60.0% of all publications. With a normalized diversity score of 0.79, the overall research profile is classified as Focused Researcher.
 
   [Focused Researcher] 24_AHMED_NAEEM
-  Total Publications: 11 | Dominant Theme: Wireless Networks & IoT (54.5%)
-  Diversity Score (Shannon Entropy): 0.80 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Wireless Networks & IoT": 54.5, "Machine Learning & Artificial Intelligence": 18.2, "Cybersecurity & Privacy": 9.1, "Biomedical & Health Informatics": 9.1, "General Computer Science / Other": 9.1}
-  Summary: Candidate 24_AHMED_NAEEM has a focused research profile with a dominant theme in Wireless Networks & IoT, accounting for 54.5% of their publications. Their research interests are primarily concentrated in this area, with a moderate level of diversity across other themes. The shifting temporal trend pattern suggests a possible evolution in their research focus over time.
+  Total Publications: 11 | Dominant Theme: Wireless Networks & IoT (63.6%)
+  Diversity Score (Shannon Entropy): 0.72 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"Wireless Networks & IoT": 63.6, "Cybersecurity & Privacy": 9.1, "General Computer Science / Other": 9.1, "Machine Learning & Artificial Intelligence": 9.1, "Energy & Renewable Systems": 9.1}
+  Summary: Candidate Ahmed Naeem has authored 11 publication(s) across 5 research theme(s). The primary research concentration is in Wireless Networks & IoT, accounting for 63.6% of all publications. With a normalized diversity score of 0.72, the overall research profile is classified as Focused Researcher.
 
-  [Focused Researcher] 25_MUHAMMAD_ADEEL_ALTAF
-  Total Publications: 5 | Dominant Theme: Machine Learning & Artificial Intelligence (60.0%)
-  Diversity Score (Shannon Entropy): 0.86 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Machine Learning & Artificial Intelligence": 60.0, "Computer Vision & Image Processing": 20.0, "Biomedical & Health Informatics": 20.0}
-  Summary: Candidate 25_MUHAMMAD_ADEEL_ALTAF has a focused research profile with a dominant theme in Machine Learning & Artificial Intelligence, accounting for 60% of their publications. Their research themes are relatively concentrated, with a Shannon Entropy Diversity score of 0.865, indicating a moderate level of diversity. The candidate's research focus has shifted towards interdisciplinary topics over time.
+  [Focused Researcher] 26_AAMINA_AKBAR
+  Total Publications: 4 | Dominant Theme: General Computer Science / Other (50.0%)
+  Diversity Score (Shannon Entropy): 0.95 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"General Computer Science / Other": 50.0, "Energy & Renewable Systems": 25.0, "Wireless Networks & IoT": 25.0}
+  Summary: Candidate Aamina Akbar has authored 4 publication(s) across 3 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 50.0% of all publications. With a normalized diversity score of 0.95, the overall research profile is classified as Focused Researcher.
 
   [Focused Researcher] 28_IDRIS_KHAN
-  Total Publications: 10 | Dominant Theme: Energy & Renewable Systems (50.0%)
-  Diversity Score (Shannon Entropy): 0.84 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 50.0, "Machine Learning & Artificial Intelligence": 30.0, "Materials Science & Nanotechnology": 10.0, "Electrical Engineering": 10.0}
-  Summary: Dr. Idris Khan has a focused research profile with a dominant theme in Energy & Renewable Systems, accounting for 50% of their publications. Their research interests span across three additional themes, including Machine Learning & Artificial Intelligence, Materials Science & Nanotechnology, and Electrical Engineering. The Shannon Entropy Diversity score of 0.843 indicates a moderate level of diversity in their research themes. Their temporal trend pattern suggests a shifting focus towards interdisciplinary research.
+  Total Publications: 10 | Dominant Theme: Energy & Renewable Systems (60.0%)
+  Diversity Score (Shannon Entropy): 0.82 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"Energy & Renewable Systems": 60.0, "Machine Learning & Artificial Intelligence": 30.0, "General Computer Science / Other": 10.0}
+  Summary: Candidate Idris Khan has authored 10 publication(s) across 3 research theme(s). The primary research concentration is in Energy & Renewable Systems, accounting for 60.0% of all publications. With a normalized diversity score of 0.82, the overall research profile is classified as Focused Researcher.
+
+  [Focused Researcher] 29_MUHAMMAD_SARMAD_TARIQ
+  Total Publications: 7 | Dominant Theme: General Computer Science / Other (57.1%)
+  Diversity Score (Shannon Entropy): 0.98 | Trend Pattern: Evolving Focus
+  Theme Breakdown: {"General Computer Science / Other": 57.1, "Energy & Renewable Systems": 42.9}
+  Summary: Candidate Muhammad Sarmad Tariq has authored 7 publication(s) across 2 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 57.1% of all publications. With a normalized diversity score of 0.98, the overall research profile is classified as Focused Researcher.
 
   [Focused Researcher] 31_USMAN_MASUD
   Total Publications: 3 | Dominant Theme: General Computer Science / Other (66.7%)
   Diversity Score (Shannon Entropy): 0.92 | Trend Pattern: Stable Focus
   Theme Breakdown: {"General Computer Science / Other": 66.7, "Machine Learning & Artificial Intelligence": 33.3}
-  Summary: Candidate 31_USMAN_MASUD has a focused research profile with a stable focus over time. Their research primarily falls under the theme of General Computer Science / Other, with a smaller contribution to Machine Learning & Artificial Intelligence. With a total of 3 publications, their research output is limited, but they demonstrate a clear area of specialization.
+  Summary: Candidate Usman Masud has authored 3 publication(s) across 2 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 66.7% of all publications. With a normalized diversity score of 0.92, the overall research profile is classified as Focused Researcher.
 
-  [Focused Researcher] 33_QAMAR_ABBAS
-  Total Publications: 7 | Dominant Theme: Wireless Networks & IoT (57.1%)
-  Diversity Score (Shannon Entropy): 0.87 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Wireless Networks & IoT": 57.1, "Machine Learning & Artificial Intelligence": 28.6, "Data Science & Big Data": 14.3}
-  Summary: Candidate 33_QAMAR_ABBAS has a focused research profile with a dominant theme in Wireless Networks & IoT, accounting for 57.1% of their total 7 publications. They have also explored Machine Learning & Artificial Intelligence and Data Science & Big Data, indicating some interdisciplinary focus. The Shannon Entropy Diversity score of 0.87 suggests a relatively focused research profile.
+  [Focused Researcher] 32_QAISAR_HUSSAIN_ALVI
+  Total Publications: 4 | Dominant Theme: General Computer Science / Other (50.0%)
+  Diversity Score (Shannon Entropy): 1.00 | Trend Pattern: Evolving Focus
+  Theme Breakdown: {"General Computer Science / Other": 50.0, "Wireless Networks & IoT": 50.0}
+  Summary: Candidate Qaisar Hussain Alvi has authored 4 publication(s) across 2 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 50.0% of all publications. With a normalized diversity score of 1.00, the overall research profile is classified as Focused Researcher.
 
-  [Focused Researcher] 39_MUHAMMAD_SAQIB
-  Total Publications: 17 | Dominant Theme: Energy & Renewable Systems (52.9%)
-  Diversity Score (Shannon Entropy): 0.87 | Trend Pattern: Evolving Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 52.9, "Biomedical & Health Informatics": 35.3, "General Computer Science / Other": 11.8}
-  Summary: Muhammad Saqib has a focused research profile with a dominant theme in Energy & Renewable Systems, accounting for 52.9% of their total 17 publications. Their research is also represented in Biomedical & Health Informatics and General Computer Science / Other. The Shannon Entropy Diversity score of 0.87 indicates a moderate level of diversity in their research themes.
+  [Focused Researcher] 35_MATIULLAH_AHSAN
+  Total Publications: 5 | Dominant Theme: General Computer Science / Other (60.0%)
+  Diversity Score (Shannon Entropy): 0.86 | Trend Pattern: Evolving Focus
+  Theme Breakdown: {"General Computer Science / Other": 60.0, "Natural Language Processing": 20.0, "Energy & Renewable Systems": 20.0}
+  Summary: Candidate Matiullah Ahsan has authored 5 publication(s) across 3 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 60.0% of all publications. With a normalized diversity score of 0.86, the overall research profile is classified as Focused Researcher.
 
-  [Focused Researcher] 43_AMMARA_NASIM
-  Total Publications: 17 | Dominant Theme: Biomedical & Health Informatics (58.8%)
-  Diversity Score (Shannon Entropy): 0.98 | Trend Pattern: Evolving Focus
-  Theme Breakdown: {"Biomedical & Health Informatics": 58.8, "Computer Vision & Image Processing": 41.2}
-  Summary: Candidate 43_AMMARA_NASIM has a focused research profile with a dominant theme in Biomedical & Health Informatics, accounting for 58.8% of their total 17 publications. Their research is primarily concentrated in two areas: Biomedical & Health Informatics and Computer Vision & Image Processing. The Shannon Entropy Diversity score of 0.977 indicates a high level of diversity in their research themes. The temporal trend pattern suggests an evolving focus over time.
+  [Focused Researcher] 36_SAMANA_BATOOL
+  Total Publications: 3 | Dominant Theme: General Computer Science / Other (66.7%)
+  Diversity Score (Shannon Entropy): 0.92 | Trend Pattern: Evolving Focus
+  Theme Breakdown: {"General Computer Science / Other": 66.7, "Computer Vision & Image Processing": 33.3}
+  Summary: Candidate Samana Batool has authored 3 publication(s) across 2 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 66.7% of all publications. With a normalized diversity score of 0.92, the overall research profile is classified as Focused Researcher.
 
-  [Interdisciplinary] 03_NASIR_ALI_SHAH
-  Total Publications: 4 | Dominant Theme: Cybersecurity & Privacy (25.0%)
-  Diversity Score (Shannon Entropy): 1.00 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Cybersecurity & Privacy": 25.0, "Machine Learning & Artificial Intelligence": 25.0, "Computer Vision & Image Processing": 25.0, "Wireless Networks & IoT": 25.0}
-  Summary: The research profile of Candidate 03_NASIR_ALI_SHAH is characterized by a diverse range of topics, including Cybersecurity & Privacy, Machine Learning & Artificial Intelligence, Computer Vision & Image Processing, and Wireless Networks & IoT. With a total of 4 publications, the candidate demonstrates a broad scope of research interests. The shifting temporal trend pattern suggests an evolution in research focus over time.
+  [Focused Researcher] 40_ABDUR_REHMAN
+  Total Publications: 5 | Dominant Theme: Energy & Renewable Systems (60.0%)
+  Diversity Score (Shannon Entropy): 0.97 | Trend Pattern: Evolving Focus
+  Theme Breakdown: {"Energy & Renewable Systems": 60.0, "General Computer Science / Other": 40.0}
+  Summary: Candidate Abdur Rehman has authored 5 publication(s) across 2 research theme(s). The primary research concentration is in Energy & Renewable Systems, accounting for 60.0% of all publications. With a normalized diversity score of 0.97, the overall research profile is classified as Focused Researcher.
 
   [Interdisciplinary] 04_MUHAMMAD_FARRUKH
   Total Publications: 23 | Dominant Theme: Machine Learning & Artificial Intelligence (47.8%)
   Diversity Score (Shannon Entropy): 0.81 | Trend Pattern: Evolving Focus
   Theme Breakdown: {"Machine Learning & Artificial Intelligence": 47.8, "Computer Vision & Image Processing": 17.4, "General Computer Science / Other": 17.4, "Biomedical & Health Informatics": 8.7, "Energy & Renewable Systems": 4.3, "Robotics & Automation": 4.3}
-  Summary: Candidate 04_MUHAMMAD_FARRUKH has a diverse research portfolio with 23 publications across multiple themes, including Machine Learning & Artificial Intelligence, Computer Vision & Image Processing, and Biomedical & Health Informatics. Their research themes show a moderate level of diversity, as indicated by a Shannon Entropy Diversity score of 0.807. The temporal trend pattern suggests an evolving focus in their research. Overall, their research profile exhibits characteristics of an interdisciplinary researcher.
-
-  [Interdisciplinary] 08_TAYYABA_GULL
-  Total Publications: 5 | Dominant Theme: Energy & Renewable Systems (40.0%)
-  Diversity Score (Shannon Entropy): 0.96 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 40.0, "Machine Learning & Artificial Intelligence": 20.0, "Computer Vision & Image Processing": 20.0, "Wireless Networks & IoT": 20.0}
-  Summary: Candidate 08_TAYYABA_GULL has a research profile characterized by a diverse range of themes, with a dominant focus on Energy & Renewable Systems. Their publication record spans multiple areas, including Machine Learning & Artificial Intelligence, Computer Vision & Image Processing, and Wireless Networks & IoT. The shifting temporal trend pattern suggests an evolving research focus.
+  Summary: Candidate Muhammad Farrukh Qureshi has authored 23 publication(s) across 6 research theme(s). The primary research concentration is in Machine Learning & Artificial Intelligence, accounting for 47.8% of all publications. With a normalized diversity score of 0.81, the overall research profile is classified as Interdisciplinary.
 
   [Interdisciplinary] 11_WAQAS_AMIN
   Total Publications: 25 | Dominant Theme: Energy & Renewable Systems (44.0%)
   Diversity Score (Shannon Entropy): 0.80 | Trend Pattern: Evolving Focus
   Theme Breakdown: {"Energy & Renewable Systems": 44.0, "Cybersecurity & Privacy": 28.0, "Machine Learning & Artificial Intelligence": 12.0, "General Computer Science / Other": 8.0, "Natural Language Processing": 4.0, "Wireless Networks & IoT": 4.0}
-  Summary: Candidate 11_WAQAS_AMIN has a diverse research profile with 25 publications across multiple themes, including Energy & Renewable Systems, Cybersecurity & Privacy, and Machine Learning & Artificial Intelligence. Their research has an evolving focus over time, indicating a willingness to explore different areas. The Shannon Entropy Diversity score of 0.799 suggests a moderate level of diversity in their research themes.
+  Summary: Candidate Waqas Amin has authored 25 publication(s) across 6 research theme(s). The primary research concentration is in Energy & Renewable Systems, accounting for 44.0% of all publications. With a normalized diversity score of 0.80, the overall research profile is classified as Interdisciplinary.
 
   [Interdisciplinary] 13_MANZOOR_ELLAHI
-  Total Publications: 23 | Dominant Theme: Energy & Renewable Systems (47.8%)
-  Diversity Score (Shannon Entropy): 0.79 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Energy & Renewable Systems": 47.8, "Wireless Networks & IoT": 17.4, "General Computer Science / Other": 13.0, "Data Science & Big Data": 8.7, "Machine Learning & Artificial Intelligence": 4.3, "Robotics & Automation": 4.3, "Cybersecurity & Privacy": 4.3}
-  Summary: Candidate 13_MANZOOR_ELLAHI has a diverse research portfolio with 23 publications across multiple themes, including Energy & Renewable Systems, Wireless Networks & IoT, and Data Science & Big Data. Their research focus has shifted over time, indicating an interdisciplinary approach. The candidate's publication distribution suggests a broad range of interests, with no single theme dominating their work.
+  Total Publications: 23 | Dominant Theme: General Computer Science / Other (39.1%)
+  Diversity Score (Shannon Entropy): 0.83 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"General Computer Science / Other": 39.1, "Energy & Renewable Systems": 30.4, "Machine Learning & Artificial Intelligence": 13.0, "Wireless Networks & IoT": 8.7, "Biomedical & Health Informatics": 4.3, "Natural Language Processing": 4.3}
+  Summary: Candidate Manzoor Ellahi has authored 23 publication(s) across 6 research theme(s). The primary research concentration is in General Computer Science / Other, accounting for 39.1% of all publications. With a normalized diversity score of 0.83, the overall research profile is classified as Interdisciplinary.
 
-  [Interdisciplinary] 22_ZEESHAN
-  Total Publications: 10 | Dominant Theme: Cybersecurity & Privacy (30.0%)
-  Diversity Score (Shannon Entropy): 0.97 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Cybersecurity & Privacy": 30.0, "Robotics & Automation": 20.0, "Biomedical & Health Informatics": 20.0, "Wireless Networks & IoT": 20.0, "Energy & Renewable Systems": 10.0}
-  Summary: Candidate 22_ZEESHAN has a diverse research profile with 10 publications across multiple themes, including Cybersecurity & Privacy, Energy & Renewable Systems, Robotics & Automation, Biomedical & Health Informatics, and Wireless Networks & IoT. The Shannon Entropy Diversity score of 0.967 indicates a high level of diversity in their research themes. The temporal trend pattern suggests a shifting focus across different areas of research.
+  [Interdisciplinary] 16_MUZZAMIL_GHAFFAR
+  Total Publications: 6 | Dominant Theme: Machine Learning & Artificial Intelligence (33.3%)
+  Diversity Score (Shannon Entropy): 0.96 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"Machine Learning & Artificial Intelligence": 33.3, "Energy & Renewable Systems": 33.3, "General Computer Science / Other": 16.7, "Biomedical & Health Informatics": 16.7}
+  Summary: Candidate Muzzamil Ghaffar has authored 6 publication(s) across 4 research theme(s). The primary research concentration is in Machine Learning & Artificial Intelligence, accounting for 33.3% of all publications. With a normalized diversity score of 0.96, the overall research profile is classified as Interdisciplinary.
 
   [Interdisciplinary] 23_WAQAS_TARIQ_TOOR
-  Total Publications: 29 | Dominant Theme: Wireless Networks & IoT (44.8%)
-  Diversity Score (Shannon Entropy): 0.78 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Wireless Networks & IoT": 44.8, "Biomedical & Health Informatics": 24.1, "Energy & Renewable Systems": 13.8, "Computer Vision & Image Processing": 6.9, "Software Engineering & Web Technologies": 3.4, "Machine Learning & Artificial Intelligence": 3.4, "Cybersecurity & Privacy": 3.4}
-  Summary: Candidate 23_WAQAS_TARIQ_TOOR has a diverse research portfolio with 29 publications across multiple themes. The dominant theme is Wireless Networks & IoT, but the candidate also has notable contributions in Biomedical & Health Informatics, Energy & Renewable Systems, and other areas. The shifting temporal trend pattern suggests an evolving research focus. The Shannon Entropy Diversity score of 0.775 indicates a moderate level of diversity in their research themes.
+  Total Publications: 29 | Dominant Theme: Wireless Networks & IoT (41.4%)
+  Diversity Score (Shannon Entropy): 0.81 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"Wireless Networks & IoT": 41.4, "Machine Learning & Artificial Intelligence": 24.1, "General Computer Science / Other": 20.7, "Energy & Renewable Systems": 6.9, "Biomedical & Health Informatics": 3.4, "Computer Vision & Image Processing": 3.4}
+  Summary: Candidate Waqas Tariq Toor has authored 29 publication(s) across 6 research theme(s). The primary research concentration is in Wireless Networks & IoT, accounting for 41.4% of all publications. With a normalized diversity score of 0.81, the overall research profile is classified as Interdisciplinary.
+
+  [Interdisciplinary] 25_MUHAMMAD_ADEEL_ALTAF
+  Total Publications: 5 | Dominant Theme: Machine Learning & Artificial Intelligence (40.0%)
+  Diversity Score (Shannon Entropy): 0.96 | Trend Pattern: Evolving Focus
+  Theme Breakdown: {"Machine Learning & Artificial Intelligence": 40.0, "General Computer Science / Other": 40.0, "Computer Vision & Image Processing": 20.0}
+  Summary: Candidate MUHAMMAD ADEEL ALTAF has authored 5 publication(s) across 3 research theme(s). The primary research concentration is in Machine Learning & Artificial Intelligence, accounting for 40.0% of all publications. With a normalized diversity score of 0.96, the overall research profile is classified as Interdisciplinary.
 
   [Interdisciplinary] 34_SHAHZAD
-  Total Publications: 9 | Dominant Theme: Wireless Networks & IoT (44.4%)
-  Diversity Score (Shannon Entropy): 0.88 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Wireless Networks & IoT": 44.4, "Machine Learning & Artificial Intelligence": 44.4, "Data Science & Big Data": 11.1}
-  Summary: Candidate 34_SHAHZAD has authored 9 publication(s) across 3 research theme(s). The primary research concentration is in Wireless Networks & IoT, accounting for 44.4% of all publications. With a normalized diversity score of 0.88, the overall research profile is classified as Interdisciplinary.
+  Total Publications: 9 | Dominant Theme: Machine Learning & Artificial Intelligence (44.4%)
+  Diversity Score (Shannon Entropy): 0.92 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"Machine Learning & Artificial Intelligence": 44.4, "Wireless Networks & IoT": 22.2, "General Computer Science / Other": 22.2, "Energy & Renewable Systems": 11.1}
+  Summary: Candidate Shahzad has authored 9 publication(s) across 4 research theme(s). The primary research concentration is in Machine Learning & Artificial Intelligence, accounting for 44.4% of all publications. With a normalized diversity score of 0.92, the overall research profile is classified as Interdisciplinary.
 
   [Interdisciplinary] 41_MUHAMMAD_AQEEL
-  Total Publications: 15 | Dominant Theme: Computer Vision & Image Processing (26.7%)
-  Diversity Score (Shannon Entropy): 0.94 | Trend Pattern: Shifting / Interdisciplinary Focus
-  Theme Breakdown: {"Computer Vision & Image Processing": 26.7, "Machine Learning & Artificial Intelligence": 20.0, "Biomedical & Health Informatics": 20.0, "Wireless Networks & IoT": 20.0, "Software Engineering & Web Technologies": 6.7, "General Computer Science / Other": 6.7}
-  Summary: Candidate 41_MUHAMMAD_AQEEL has a diverse research portfolio with 15 publications across multiple themes, including Computer Vision & Image Processing, Machine Learning & Artificial Intelligence, and Biomedical & Health Informatics. Their research focus has shifted over time, indicating an interdisciplinary approach. The candidate's publication distribution suggests a broad range of interests and expertise.
+  Total Publications: 15 | Dominant Theme: Machine Learning & Artificial Intelligence (46.7%)
+  Diversity Score (Shannon Entropy): 0.83 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"Machine Learning & Artificial Intelligence": 46.7, "Computer Vision & Image Processing": 20.0, "Wireless Networks & IoT": 13.3, "Biomedical & Health Informatics": 6.7, "General Computer Science / Other": 6.7, "Energy & Renewable Systems": 6.7}
+  Summary: Candidate Muhammad Aqeel has authored 15 publication(s) across 6 research theme(s). The primary research concentration is in Machine Learning & Artificial Intelligence, accounting for 46.7% of all publications. With a normalized diversity score of 0.83, the overall research profile is classified as Interdisciplinary.
+
+  [Interdisciplinary] 43_AMMARA_NASIM
+  Total Publications: 17 | Dominant Theme: Computer Vision & Image Processing (47.1%)
+  Diversity Score (Shannon Entropy): 0.86 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"Computer Vision & Image Processing": 47.1, "General Computer Science / Other": 17.6, "Biomedical & Health Informatics": 17.6, "Machine Learning & Artificial Intelligence": 11.8, "Natural Language Processing": 5.9}
+  Summary: Candidate Ammara Nasim has authored 17 publication(s) across 5 research theme(s). The primary research concentration is in Computer Vision & Image Processing, accounting for 47.1% of all publications. With a normalized diversity score of 0.86, the overall research profile is classified as Interdisciplinary.
 
   [No Publications] 02_MUHAMMAD_SHAHWAZ
   Total Publications: 0 | Dominant Theme: N/A (0.0%)

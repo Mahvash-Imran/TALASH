@@ -103,6 +103,7 @@ class CollaborationAnalyser:
         self.api_key          = api_key or os.environ.get("OPENAI_API_KEY", "")
         self.model            = model
         self.base_url         = base_url or os.environ.get("OPENAI_BASE_URL")
+        self.skip_llm         = skip_llm or not bool(self.api_key and not str(self.api_key).startswith("your_") and len(str(self.api_key).strip()) > 20)
 
         self.output_dir.mkdir(parents=True, exist_ok=True)
 

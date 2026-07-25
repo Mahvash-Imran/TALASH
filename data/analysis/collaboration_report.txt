@@ -18,229 +18,229 @@
   Total Publications: 5 | Unique Co-Authors: 16 | Recurring: 3 | 1-Time: 13
   Team Size Profile: Medium-Group Researcher (avg 5.0 authors/paper) | Diversity Score: 0.81
   Top Collaborators: [{"name": "Muhammad Fahad Munir", "paper_count": 3}, {"name": "Athar Waseem", "paper_count": 2}, {"name": "Ihsan Ul Haq", "paper_count": 2}]
-  Summary: Candidate 01_MUHAMMAD_SALMAN has a diverse research collaboration network with 16 unique co-authors across 5 publications. The network includes both recurring and one-time collaborators, with a top collaborator count of 3. The average number of authors per paper is 5.0, indicating a collaborative research approach.
+  Summary: Candidate MUHAMMAD SALMAN has collaborated with 16 unique co-author(s) across 5 publication(s). They operate as a Medium-Group Researcher with an average of 5.0 authors per paper. The candidate has 3 recurring collaborator(s) (top co-authors: Muhammad Fahad Munir (3 papers), Athar Waseem (2 papers), Ihsan Ul Haq (2 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 03_NASIR_ALI_SHAH
   Total Publications: 4 | Unique Co-Authors: 14 | Recurring: 3 | 1-Time: 11
   Team Size Profile: Large-Group Researcher (avg 5.2 authors/paper) | Diversity Score: 0.79
-  Top Collaborators: [{"name": "Mihai T Lazarescu", "paper_count": 2}, {"name": "Roberto Quasso", "paper_count": 2}, {"name": "Luciano Lavagno", "paper_count": 2}]
-  Summary: The candidate, 03_NASIR_ALI_SHAH, has a broad research collaboration network with 14 unique co-authors across 4 publications. They have a diverse collaboration profile with 11 one-time collaborators and 3 recurring collaborators. The average number of authors per paper is 5.2, indicating a collaborative research style.
+  Top Collaborators: [{"name": "Roberto Quasso", "paper_count": 2}, {"name": "Luciano Lavagno", "paper_count": 2}, {"name": "Mihai T Lazarescu", "paper_count": 2}]
+  Summary: Candidate Nasir Ali Shah has collaborated with 14 unique co-author(s) across 4 publication(s). They operate as a Large-Group Researcher with an average of 5.2 authors per paper. The candidate has 3 recurring collaborator(s) (top co-authors: Roberto Quasso (2 papers), Luciano Lavagno (2 papers), Mihai T Lazarescu (2 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 04_MUHAMMAD_FARRUKH
   Total Publications: 23 | Unique Co-Authors: 83 | Recurring: 15 | 1-Time: 68
   Team Size Profile: Large-Group Researcher (avg 6.4 authors/paper) | Diversity Score: 0.82
   Top Collaborators: [{"name": "Zohaib Mushtaq", "paper_count": 17}, {"name": "Muhammad Zia Ur Rehman", "paper_count": 7}, {"name": "Faisal Amin", "paper_count": 6}, {"name": "Saad Arif", "paper_count": 3}, {"name": "Sohail Khalid", "paper_count": 2}]
-  Summary: The candidate, Muhammad Farrukh, has a diverse research collaboration network with 23 publications and 83 unique co-authors. The network includes both recurring and one-time collaborators, with a high average of 6.4 authors per paper. The collaboration diversity index of 0.82 indicates a strong presence of one-time co-authors, suggesting a broad network of collaborations.
+  Summary: Candidate Muhammad Farrukh Qureshi has collaborated with 83 unique co-author(s) across 23 publication(s). They operate as a Large-Group Researcher with an average of 6.4 authors per paper. The candidate has 15 recurring collaborator(s) (top co-authors: Zohaib Mushtaq (17 papers), Muhammad Zia Ur Rehman (7 papers), Faisal Amin (6 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 08_TAYYABA_GULL
   Total Publications: 5 | Unique Co-Authors: 13 | Recurring: 3 | 1-Time: 10
   Team Size Profile: Medium-Group Researcher (avg 4.6 authors/paper) | Diversity Score: 0.77
   Top Collaborators: [{"name": "Tayyaba Gul Tareen", "paper_count": 4}, {"name": "Jehanzeb Khan", "paper_count": 2}, {"name": "Muhammad Aamir", "paper_count": 2}]
-  Summary: The candidate, 08_TAYYABA_GULL, has a broad research collaboration network with 13 unique co-authors across 5 publications. They have a mix of recurring and one-time collaborators, with 3 recurring and 10 one-time collaborators. The average number of authors per paper is 4.6, indicating a collaborative research style.
+  Summary: Candidate Tayyaba Gull has collaborated with 13 unique co-author(s) across 5 publication(s). They operate as a Medium-Group Researcher with an average of 4.6 authors per paper. The candidate has 3 recurring collaborator(s) (top co-authors: Tayyaba Gul Tareen (4 papers), Jehanzeb Khan (2 papers), Muhammad Aamir (2 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 09_MUHAMMAD_ABUBAKAR
   Total Publications: 22 | Unique Co-Authors: 78 | Recurring: 13 | 1-Time: 65
   Team Size Profile: Large-Group Researcher (avg 5.5 authors/paper) | Diversity Score: 0.83
   Top Collaborators: [{"name": "Arfan Ali Nagra", "paper_count": 6}, {"name": "Fida Hussain", "paper_count": 4}, {"name": "Muhammad Shahzad", "paper_count": 3}, {"name": "Muhammad Yousif", "paper_count": 2}, {"name": "Zain Ali", "paper_count": 2}]
-  Summary: The candidate, 09_MUHAMMAD_ABUBAKAR, has a diverse research collaboration network with 22 publications and 78 unique co-authors. They have a mix of recurring and one-time collaborators, with 13 recurring and 65 one-time collaborators. The candidate's top collaborators are Arfan Ali Nagra, Fida Hussain, Muhammad Shahzad, Muhammad Yousif, and Zain Ali, with whom they have co-authored multiple papers.
+  Summary: Candidate Muhammad Abubakar has collaborated with 78 unique co-author(s) across 22 publication(s). They operate as a Large-Group Researcher with an average of 5.5 authors per paper. The candidate has 13 recurring collaborator(s) (top co-authors: Arfan Ali Nagra (6 papers), Fida Hussain (4 papers), Muhammad Shahzad (3 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 11_WAQAS_AMIN
   Total Publications: 25 | Unique Co-Authors: 56 | Recurring: 30 | 1-Time: 26
   Team Size Profile: Large-Group Researcher (avg 5.8 authors/paper) | Diversity Score: 0.46
   Top Collaborators: [{"name": "Qi Huang", "paper_count": 9}, {"name": "Muhammad Afzal", "paper_count": 6}, {"name": "Abdullah Aman Khan", "paper_count": 5}, {"name": "M Afzal", "paper_count": 5}, {"name": "Syed Adrees Ahmed", "paper_count": 4}]
-  Summary: Candidate 11_WAQAS_AMIN has a broad research collaboration network with 25 publications and 56 unique co-authors. They have a diverse team size profile, categorized as a Large-Group Researcher, and a moderate collaboration diversity index of 0.46. The candidate's top collaborators include Qi Huang, Muhammad Afzal, Abdullah Aman Khan, M Afzal, and Syed Adrees Ahmed.
+  Summary: Candidate Waqas Amin has collaborated with 56 unique co-author(s) across 25 publication(s). They operate as a Large-Group Researcher with an average of 5.8 authors per paper. The candidate has 30 recurring collaborator(s) (top co-authors: Qi Huang (9 papers), Muhammad Afzal (6 papers), Abdullah Aman Khan (5 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 12_SYED_TAMOORULHASSAN
   Total Publications: 7 | Unique Co-Authors: 18 | Recurring: 6 | 1-Time: 12
   Team Size Profile: Large-Group Researcher (avg 5.6 authors/paper) | Diversity Score: 0.67
   Top Collaborators: [{"name": "S Tamoor Ul Hassan", "paper_count": 6}, {"name": "M Bennis", "paper_count": 4}, {"name": "M Latva Aho", "paper_count": 4}, {"name": "Ashraf", "paper_count": 2}, {"name": "S Samarakoon", "paper_count": 2}]
-  Summary: The candidate, Syed Tamoorul Hassan, has a broad research collaboration network with 18 unique co-authors across 7 publications. The network includes both recurring and one-time collaborators, with a diverse team size profile indicating involvement in large-group research projects. The average number of authors per paper is 5.6, suggesting a collaborative research approach.
+  Summary: Candidate SYED TAMOORULHASSAN has collaborated with 18 unique co-author(s) across 7 publication(s). They operate as a Large-Group Researcher with an average of 5.6 authors per paper. The candidate has 6 recurring collaborator(s) (top co-authors: S Tamoor Ul Hassan (6 papers), M Bennis (4 papers), M Latva Aho (4 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 13_MANZOOR_ELLAHI
   Total Publications: 23 | Unique Co-Authors: 74 | Recurring: 14 | 1-Time: 60
   Team Size Profile: Large-Group Researcher (avg 5.3 authors/paper) | Diversity Score: 0.81
   Top Collaborators: [{"name": "Waheed Aftab Khan", "paper_count": 5}, {"name": "W A Khan", "paper_count": 4}, {"name": "G Abbas", "paper_count": 4}, {"name": "Hafiz Fuad Usman", "paper_count": 3}, {"name": "Ali Raza", "paper_count": 3}]
-  Summary: Candidate 13_MANZOOR_ELLAHI has a diverse research collaboration network with 23 publications and 74 unique co-authors. They have a mix of recurring and one-time collaborators, with 14 recurring and 60 one-time collaborators. The candidate's average authors per paper is 5.3, indicating a collaborative research style.
+  Summary: Candidate Manzoor Ellahi has collaborated with 74 unique co-author(s) across 23 publication(s). They operate as a Large-Group Researcher with an average of 5.3 authors per paper. The candidate has 14 recurring collaborator(s) (top co-authors: Waheed Aftab Khan (5 papers), W A Khan (4 papers), G Abbas (4 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 14_SAROSH_TAHIR
   Total Publications: 10 | Unique Co-Authors: 16 | Recurring: 6 | 1-Time: 10
   Team Size Profile: Large-Group Researcher (avg 6.2 authors/paper) | Diversity Score: 0.62
-  Top Collaborators: [{"name": "G Marchetto", "paper_count": 9}, {"name": "A Bianco", "paper_count": 8}, {"name": "V Curri", "paper_count": 8}, {"name": "A Ahmad", "paper_count": 8}, {"name": "H Chouman", "paper_count": 7}]
-  Summary: Candidate 14_SAROSH_TAHIR has a broad research collaboration network with 10 publications and 16 unique co-authors. They have a mix of recurring and one-time collaborators, with 6 recurring and 10 one-time collaborators. The candidate's top collaborators are G Marchetto, A Bianco, V Curri, A Ahmad, and H Chouman, with whom they have published multiple papers.
+  Top Collaborators: [{"name": "G Marchetto", "paper_count": 9}, {"name": "V Curri", "paper_count": 8}, {"name": "A Ahmad", "paper_count": 8}, {"name": "A Bianco", "paper_count": 8}, {"name": "H Chouman", "paper_count": 7}]
+  Summary: Candidate Sarosh Tahir has collaborated with 16 unique co-author(s) across 10 publication(s). They operate as a Large-Group Researcher with an average of 6.2 authors per paper. The candidate has 6 recurring collaborator(s) (top co-authors: G Marchetto (9 papers), V Curri (8 papers), A Ahmad (8 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 16_MUZZAMIL_GHAFFAR
   Total Publications: 6 | Unique Co-Authors: 23 | Recurring: 7 | 1-Time: 16
   Team Size Profile: Large-Group Researcher (avg 6.7 authors/paper) | Diversity Score: 0.70
-  Top Collaborators: [{"name": "Shakil Rehman", "paper_count": 3}, {"name": "Sheikh", "paper_count": 3}, {"name": "Shakil R Sheikh", "paper_count": 3}, {"name": "Noman Naseer", "paper_count": 3}, {"name": "Nouman", "paper_count": 2}]
-  Summary: Candidate 16_MUZZAMIL_GHAFFAR has a broad research collaboration network with 23 unique co-authors across 6 publications. They have a mix of recurring and one-time collaborators, with 7 recurring and 16 one-time collaborators. The candidate's average authors per paper is 6.7, indicating a collaborative research style.
+  Top Collaborators: [{"name": "Sheikh", "paper_count": 3}, {"name": "Shakil Rehman", "paper_count": 3}, {"name": "Noman Naseer", "paper_count": 3}, {"name": "Shakil R Sheikh", "paper_count": 3}, {"name": "Ghafoor", "paper_count": 2}]
+  Summary: Candidate Muzzamil Ghaffar has collaborated with 23 unique co-author(s) across 6 publication(s). They operate as a Large-Group Researcher with an average of 6.7 authors per paper. The candidate has 7 recurring collaborator(s) (top co-authors: Sheikh (3 papers), Shakil Rehman (3 papers), Noman Naseer (3 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 17_SUHAIL_ASGHAR
   Total Publications: 8 | Unique Co-Authors: 23 | Recurring: 7 | 1-Time: 16
   Team Size Profile: Large-Group Researcher (avg 5.8 authors/paper) | Diversity Score: 0.70
-  Top Collaborators: [{"name": "Zz Abidin", "paper_count": 5}, {"name": "Kamarudin", "paper_count": 4}, {"name": "Ha Majid", "paper_count": 3}, {"name": "Ayi Ashyap", "paper_count": 3}, {"name": "Mh Dahri", "paper_count": 2}]
-  Summary: Candidate 17_SUHAIL_ASGHAR has a broad research collaboration network with 23 unique co-authors across 8 publications. They have a mix of recurring and one-time collaborators, with 7 recurring and 16 one-time collaborators. The average number of authors per paper is 5.8, indicating a collaborative research style.
+  Top Collaborators: [{"name": "Zz Abidin", "paper_count": 5}, {"name": "Kamarudin", "paper_count": 4}, {"name": "Ayi Ashyap", "paper_count": 3}, {"name": "Ha Majid", "paper_count": 3}, {"name": "Mi Abbasi", "paper_count": 2}]
+  Summary: Candidate Suhail Asghar Qureshi has collaborated with 23 unique co-author(s) across 8 publication(s). They operate as a Large-Group Researcher with an average of 5.8 authors per paper. The candidate has 7 recurring collaborator(s) (top co-authors: Zz Abidin (5 papers), Kamarudin (4 papers), Ayi Ashyap (3 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 18_MUHAMMAD_AMJAD
   Total Publications: 16 | Unique Co-Authors: 23 | Recurring: 9 | 1-Time: 14
   Team Size Profile: Medium-Group Researcher (avg 4.1 authors/paper) | Diversity Score: 0.61
-  Top Collaborators: [{"name": "Andrei Anghel", "paper_count": 10}, {"name": "Mihai Datcu", "paper_count": 10}, {"name": "Eleftheria Kalogirou", "paper_count": 3}, {"name": "Despina Makri", "paper_count": 2}, {"name": "M Tzouvaras", "paper_count": 2}]
-  Summary: The candidate, Muhammad Amjad, has a broad research collaboration network with 23 unique co-authors across 16 publications. The network includes both recurring and one-time collaborators, with a team size profile indicating medium-group researcher behavior. The collaboration diversity index suggests a moderate level of collaboration with diverse co-authors.
+  Top Collaborators: [{"name": "Mihai Datcu", "paper_count": 10}, {"name": "Andrei Anghel", "paper_count": 10}, {"name": "Eleftheria Kalogirou", "paper_count": 3}, {"name": "Despina Makri", "paper_count": 2}, {"name": "M Tzouvaras", "paper_count": 2}]
+  Summary: Candidate Muhammad Amjad has collaborated with 23 unique co-author(s) across 16 publication(s). They operate as a Medium-Group Researcher with an average of 4.1 authors per paper. The candidate has 9 recurring collaborator(s) (top co-authors: Mihai Datcu (10 papers), Andrei Anghel (10 papers), Eleftheria Kalogirou (3 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 20_SYED_FASIH_ALI
   Total Publications: 4 | Unique Co-Authors: 11 | Recurring: 1 | 1-Time: 10
   Team Size Profile: Medium-Group Researcher (avg 4.0 authors/paper) | Diversity Score: 0.91
   Top Collaborators: [{"name": "Momin Uppal", "paper_count": 2}]
-  Summary: The candidate, 20_SYED_FASIH_ALI, has a broad research collaboration network with 11 unique co-authors across 4 publications. They have a mix of recurring and one-time collaborators, with 10 one-time collaborators and 1 recurring collaborator. Their average authors per paper is 4.0, indicating a collaborative research style.
+  Summary: Candidate Syed Fasih Ali has collaborated with 11 unique co-author(s) across 4 publication(s). They operate as a Medium-Group Researcher with an average of 4.0 authors per paper. The candidate has 1 recurring collaborator(s) (top co-authors: Momin Uppal (2 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 21_SAMAN_FATIMA
   Total Publications: 1 | Unique Co-Authors: 5 | Recurring: 0 | 1-Time: 5
   Team Size Profile: Large-Group Researcher (avg 6.0 authors/paper) | Diversity Score: 1.00
   Top Collaborators: []
-  Summary: Candidate 21_SAMAN_FATIMA has a broad research collaboration network with 5 unique co-authors across 1 publication. The average number of authors per paper is 6.0, indicating a collaborative research style. The collaboration diversity index of 1.0 suggests that all co-authors have collaborated with the candidate only once.
+  Summary: Candidate Saman Fatima has collaborated with 5 unique co-author(s) across 1 publication(s). They operate as a Large-Group Researcher with an average of 6.0 authors per paper. The candidate has 0 recurring collaborator(s) (top co-authors: none). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 22_ZEESHAN
   Total Publications: 10 | Unique Co-Authors: 26 | Recurring: 6 | 1-Time: 20
   Team Size Profile: Large-Group Researcher (avg 5.2 authors/paper) | Diversity Score: 0.77
-  Top Collaborators: [{"name": "Claus Pahl", "paper_count": 5}, {"name": "Waheed Ur Rehman", "paper_count": 3}, {"name": "Hamid R Barzegar", "paper_count": 3}, {"name": "Nabil El Ioini", "paper_count": 3}, {"name": "Ibe Van Thillo", "paper_count": 2}]
-  Summary: Candidate 22_ZEESHAN has a diverse research collaboration network with 26 unique co-authors across 10 publications. They have a mix of recurring and one-time collaborators, with 6 recurring and 20 one-time collaborators. The average number of authors per paper is 5.2, indicating a collaborative research style.
+  Top Collaborators: [{"name": "Claus Pahl", "paper_count": 5}, {"name": "Waheed Ur Rehman", "paper_count": 3}, {"name": "Nabil El Ioini", "paper_count": 3}, {"name": "Hamid R Barzegar", "paper_count": 3}, {"name": "Ibe Van Thillo", "paper_count": 2}]
+  Summary: Candidate Zeeshan has collaborated with 26 unique co-author(s) across 10 publication(s). They operate as a Large-Group Researcher with an average of 5.2 authors per paper. The candidate has 6 recurring collaborator(s) (top co-authors: Claus Pahl (5 papers), Waheed Ur Rehman (3 papers), Nabil El Ioini (3 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 23_WAQAS_TARIQ_TOOR
   Total Publications: 29 | Unique Co-Authors: 83 | Recurring: 15 | 1-Time: 68
   Team Size Profile: Large-Group Researcher (avg 5.1 authors/paper) | Diversity Score: 0.82
-  Top Collaborators: [{"name": "Muhammad Saadi", "paper_count": 7}, {"name": "Hu Jin", "paper_count": 6}, {"name": "Jun Bae Seo", "paper_count": 6}, {"name": "Lunchakorn Wuttisittikulkij", "paper_count": 3}, {"name": "Naeem Maroof", "paper_count": 3}]
-  Summary: Candidate 23_WAQAS_TARIQ_TOOR has a broad research collaboration network with 29 publications and 83 unique co-authors. The network includes 15 recurring collaborators and 68 one-time collaborators, with an average of 5.1 authors per paper. The collaboration diversity index is 0.82, indicating a diverse network.
+  Top Collaborators: [{"name": "Muhammad Saadi", "paper_count": 7}, {"name": "Jun Bae Seo", "paper_count": 6}, {"name": "Hu Jin", "paper_count": 6}, {"name": "Lunchakorn Wuttisittikulkij", "paper_count": 3}, {"name": "Naeem Maroof", "paper_count": 3}]
+  Summary: Candidate Waqas Tariq Toor has collaborated with 83 unique co-author(s) across 29 publication(s). They operate as a Large-Group Researcher with an average of 5.1 authors per paper. The candidate has 15 recurring collaborator(s) (top co-authors: Muhammad Saadi (7 papers), Jun Bae Seo (6 papers), Hu Jin (6 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 24_AHMED_NAEEM
   Total Publications: 11 | Unique Co-Authors: 16 | Recurring: 3 | 1-Time: 13
   Team Size Profile: Medium-Group Researcher (avg 3.4 authors/paper) | Diversity Score: 0.81
   Top Collaborators: [{"name": "H Arslan", "paper_count": 8}, {"name": "S Rafique", "paper_count": 3}, {"name": "E M Amhoud", "paper_count": 2}]
-  Summary: Candidate 24_AHMED_NAEEM has a broad research collaboration network with 11 publications and 16 unique co-authors. The network includes 3 recurring collaborators and 13 one-time collaborators, with a top collaborator 'H Arslan' appearing in 8 papers. The average authors per paper is 3.4, indicating a collaborative research style.
+  Summary: Candidate Ahmed Naeem has collaborated with 16 unique co-author(s) across 11 publication(s). They operate as a Medium-Group Researcher with an average of 3.4 authors per paper. The candidate has 3 recurring collaborator(s) (top co-authors: H Arslan (8 papers), S Rafique (3 papers), E M Amhoud (2 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 28_IDRIS_KHAN
   Total Publications: 10 | Unique Co-Authors: 24 | Recurring: 11 | 1-Time: 13
   Team Size Profile: Large-Group Researcher (avg 5.5 authors/paper) | Diversity Score: 0.54
-  Top Collaborators: [{"name": "Danish Khan", "paper_count": 7}, {"name": "Manoj Kumar Panjwani", "paper_count": 4}, {"name": "Tahir Iqbal", "paper_count": 3}, {"name": "Honglu Zhu", "paper_count": 3}, {"name": "Zulfiqar Ali", "paper_count": 2}]
-  Summary: Candidate 28_IDRIS_KHAN has a broad research collaboration network with 10 publications and 24 unique co-authors. They have a mix of recurring and one-time collaborators, with 11 recurring and 13 one-time collaborators. The candidate's average authors per paper is 5.5, indicating a collaborative research style.
+  Top Collaborators: [{"name": "Danish Khan", "paper_count": 7}, {"name": "Manoj Kumar Panjwani", "paper_count": 4}, {"name": "Tahir Iqbal", "paper_count": 3}, {"name": "Honglu Zhu", "paper_count": 3}, {"name": "Qiang Lu", "paper_count": 2}]
+  Summary: Candidate Idris Khan has collaborated with 24 unique co-author(s) across 10 publication(s). They operate as a Large-Group Researcher with an average of 5.5 authors per paper. The candidate has 11 recurring collaborator(s) (top co-authors: Danish Khan (7 papers), Manoj Kumar Panjwani (4 papers), Tahir Iqbal (3 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 29_MUHAMMAD_SARMAD_TARIQ
   Total Publications: 7 | Unique Co-Authors: 10 | Recurring: 0 | 1-Time: 10
   Team Size Profile: Medium-Group Researcher (avg 3.0 authors/paper) | Diversity Score: 1.00
   Top Collaborators: []
-  Summary: Candidate 29_MUHAMMAD_SARMAD_TARIQ has a broad research collaboration network, with 7 publications and 10 unique co-authors. The average number of authors per paper is 3.0, indicating a collaborative research style. The candidate's collaboration diversity index is 1.0, suggesting a diverse range of one-time co-authors.
+  Summary: Candidate Muhammad Sarmad Tariq has collaborated with 10 unique co-author(s) across 7 publication(s). They operate as a Medium-Group Researcher with an average of 3.0 authors per paper. The candidate has 0 recurring collaborator(s) (top co-authors: none). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 30_FAHD_SIKANDAR_KHAN
   Total Publications: 9 | Unique Co-Authors: 32 | Recurring: 10 | 1-Time: 22
   Team Size Profile: Large-Group Researcher (avg 9.0 authors/paper) | Diversity Score: 0.69
-  Top Collaborators: [{"name": "F S", "paper_count": 9}, {"name": "M", "paper_count": 6}, {"name": "Y", "paper_count": 5}, {"name": "Fujii", "paper_count": 5}, {"name": "K", "paper_count": 5}]
-  Summary: The candidate, 30_FAHD_SIKANDAR_KHAN, has a research collaboration network with 32 unique co-authors across 9 publications. They have a diverse collaboration profile with a high number of one-time collaborators (22) and a moderate collaboration diversity index (0.69). The candidate's average authors per paper is 9.0, indicating a collaborative research style.
+  Top Collaborators: [{"name": "F S", "paper_count": 9}, {"name": "M", "paper_count": 6}, {"name": "Sugiyama", "paper_count": 5}, {"name": "Y", "paper_count": 5}, {"name": "K", "paper_count": 5}]
+  Summary: Candidate Fahd Sikandar Khan has collaborated with 32 unique co-author(s) across 9 publication(s). They operate as a Large-Group Researcher with an average of 9.0 authors per paper. The candidate has 10 recurring collaborator(s) (top co-authors: F S (9 papers), M (6 papers), Sugiyama (5 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 31_USMAN_MASUD
   Total Publications: 3 | Unique Co-Authors: 10 | Recurring: 0 | 1-Time: 10
   Team Size Profile: Medium-Group Researcher (avg 4.3 authors/paper) | Diversity Score: 1.00
   Top Collaborators: []
-  Summary: Candidate 31_USMAN_MASUD has a broad research collaboration network, with 10 unique co-authors across 3 publications. The average number of authors per paper is 4.3, indicating a collaborative research style. The candidate's collaboration diversity index is 1.0, suggesting a diverse range of one-time co-authors.
+  Summary: Candidate Usman Masud has collaborated with 10 unique co-author(s) across 3 publication(s). They operate as a Medium-Group Researcher with an average of 4.3 authors per paper. The candidate has 0 recurring collaborator(s) (top co-authors: none). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 32_QAISAR_HUSSAIN_ALVI
   Total Publications: 4 | Unique Co-Authors: 4 | Recurring: 0 | 1-Time: 4
   Team Size Profile: Solo/Small-Group Researcher (avg 2.2 authors/paper) | Diversity Score: 1.00
   Top Collaborators: []
-  Summary: The candidate has a total of 4 publications with 4 unique co-authors, indicating a diverse collaboration network. The average number of authors per paper is 2.2, suggesting a moderate level of collaboration. The team size profile categorizes the candidate as a solo/small-group researcher.
+  Summary: Candidate Qaisar Hussain Alvi has collaborated with 4 unique co-author(s) across 4 publication(s). They operate as a Solo/Small-Group Researcher with an average of 2.2 authors per paper. The candidate has 0 recurring collaborator(s) (top co-authors: none). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 39_MUHAMMAD_SAQIB
   Total Publications: 17 | Unique Co-Authors: 27 | Recurring: 9 | 1-Time: 18
   Team Size Profile: Large-Group Researcher (avg 6.1 authors/paper) | Diversity Score: 0.67
   Top Collaborators: [{"name": "Woo Young Kim", "paper_count": 16}, {"name": "Muhammad Muqeet Rehman", "paper_count": 12}, {"name": "Shenawar Ali Khan", "paper_count": 10}, {"name": "Maryam Khan", "paper_count": 7}, {"name": "Sheik Abdur Rahman", "paper_count": 6}]
-  Summary: Candidate 39_MUHAMMAD_SAQIB has a broad research collaboration network with 17 publications and 27 unique co-authors. They have a diverse collaboration profile with 9 recurring and 18 one-time collaborators. The top collaborators include Woo Young Kim, Muhammad Muqeet Rehman, Shenawar Ali Khan, Maryam Khan, and Sheik Abdur Rahman.
+  Summary: Candidate Muhammad Saqib has collaborated with 27 unique co-author(s) across 17 publication(s). They operate as a Large-Group Researcher with an average of 6.1 authors per paper. The candidate has 9 recurring collaborator(s) (top co-authors: Woo Young Kim (16 papers), Muhammad Muqeet Rehman (12 papers), Shenawar Ali Khan (10 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 40_ABDUR_REHMAN
   Total Publications: 5 | Unique Co-Authors: 8 | Recurring: 2 | 1-Time: 6
   Team Size Profile: Medium-Group Researcher (avg 3.0 authors/paper) | Diversity Score: 0.75
   Top Collaborators: [{"name": "Gilsu Choi", "paper_count": 2}, {"name": "Byungtaek Kim", "paper_count": 2}]
-  Summary: Candidate 40_ABDUR_REHMAN has a broad research collaboration network with 5 publications and 8 unique co-authors. They have a mix of recurring and one-time collaborators, with 2 top collaborators contributing to 2 papers each. The candidate's average authors per paper is 3.0, indicating a collaborative research style.
+  Summary: Candidate Abdur Rehman has collaborated with 8 unique co-author(s) across 5 publication(s). They operate as a Medium-Group Researcher with an average of 3.0 authors per paper. The candidate has 2 recurring collaborator(s) (top co-authors: Gilsu Choi (2 papers), Byungtaek Kim (2 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 41_MUHAMMAD_AQEEL
   Total Publications: 15 | Unique Co-Authors: 25 | Recurring: 11 | 1-Time: 14
   Team Size Profile: Medium-Group Researcher (avg 4.6 authors/paper) | Diversity Score: 0.56
   Top Collaborators: [{"name": "Muhammad Iqbal", "paper_count": 6}, {"name": "Muhammad Adeel Azam", "paper_count": 4}, {"name": "Hammad Shahab", "paper_count": 4}, {"name": "Fawwad Hassan Jaskani", "paper_count": 3}, {"name": "Ahmed Sohaib", "paper_count": 3}]
-  Summary: Candidate 41_MUHAMMAD_AQEEL has a diverse research collaboration network with 25 unique co-authors across 15 publications. The top collaborators include Muhammad Iqbal, Muhammad Adeel Azam, and Hammad Shahab, with whom they have co-authored multiple papers. The candidate's average authors per paper is 4.6, indicating a collaborative research style.
+  Summary: Candidate Muhammad Aqeel has collaborated with 25 unique co-author(s) across 15 publication(s). They operate as a Medium-Group Researcher with an average of 4.6 authors per paper. The candidate has 11 recurring collaborator(s) (top co-authors: Muhammad Iqbal (6 papers), Muhammad Adeel Azam (4 papers), Hammad Shahab (4 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Broad Network] 43_AMMARA_NASIM
   Total Publications: 17 | Unique Co-Authors: 47 | Recurring: 10 | 1-Time: 37
   Team Size Profile: Large-Group Researcher (avg 5.1 authors/paper) | Diversity Score: 0.79
   Top Collaborators: [{"name": "Taimur Hassan", "paper_count": 10}, {"name": "Muhammad Usman Akram", "paper_count": 5}, {"name": "M Usman Akram", "paper_count": 3}, {"name": "Kashif Rajpoot", "paper_count": 2}, {"name": "Bilal Hassan", "paper_count": 2}]
-  Summary: Candidate 43_AMMARA_NASIM has a broad research collaboration network with 17 publications and 47 unique co-authors. They have a diverse collaboration profile with 10 recurring and 37 one-time collaborators. The average number of authors per paper is 5.1, indicating a collaborative research approach.
+  Summary: Candidate Ammara Nasim has collaborated with 47 unique co-author(s) across 17 publication(s). They operate as a Large-Group Researcher with an average of 5.1 authors per paper. The candidate has 10 recurring collaborator(s) (top co-authors: Taimur Hassan (10 papers), Muhammad Usman Akram (5 papers), M Usman Akram (3 papers)). Overall research collaboration network is categorized as Broad Network.
 
   [Balanced Network] 07_FIZA_MURTAZA
   Total Publications: 12 | Unique Co-Authors: 10 | Recurring: 4 | 1-Time: 6
   Team Size Profile: Medium-Group Researcher (avg 3.6 authors/paper) | Diversity Score: 0.60
   Top Collaborators: [{"name": "Muhammad Haroon Yousaf", "paper_count": 12}, {"name": "Sergio A Velastin", "paper_count": 9}, {"name": "Yu Qian", "paper_count": 2}, {"name": "Kanza Azhar", "paper_count": 2}]
-  Summary: The candidate, 07_FIZA_MURTAZA, has a balanced research collaboration network with 12 publications and 10 unique co-authors. They have a mix of recurring and one-time collaborators, with 4 recurring and 6 one-time collaborators. The candidate's average authors per paper is 3.6, indicating a collaborative research style.
+  Summary: Candidate Fiza Murtaza has collaborated with 10 unique co-author(s) across 12 publication(s). They operate as a Medium-Group Researcher with an average of 3.6 authors per paper. The candidate has 4 recurring collaborator(s) (top co-authors: Muhammad Haroon Yousaf (12 papers), Sergio A Velastin (9 papers), Yu Qian (2 papers)). Overall research collaboration network is categorized as Balanced Network.
 
   [Balanced Network] 15_M_USMAN_ABBASI
   Total Publications: 3 | Unique Co-Authors: 5 | Recurring: 2 | 1-Time: 3
   Team Size Profile: Medium-Group Researcher (avg 3.7 authors/paper) | Diversity Score: 0.60
   Top Collaborators: [{"name": "M Tariq", "paper_count": 3}, {"name": "A Rashad", "paper_count": 2}]
-  Summary: Candidate 15_M_USMAN_ABBASI has a balanced research collaboration network with 3 total publications and 5 unique co-authors. The network includes 2 recurring and 3 one-time collaborators, with top collaborators being M Tariq and A Rashad. The average number of authors per paper is 3.7.
+  Summary: Candidate M. Usman Abbasi has collaborated with 5 unique co-author(s) across 3 publication(s). They operate as a Medium-Group Researcher with an average of 3.7 authors per paper. The candidate has 2 recurring collaborator(s) (top co-authors: M Tariq (3 papers), A Rashad (2 papers)). Overall research collaboration network is categorized as Balanced Network.
 
   [Balanced Network] 19_ASIM_MASOOD
   Total Publications: 8 | Unique Co-Authors: 13 | Recurring: 4 | 1-Time: 9
   Team Size Profile: Medium-Group Researcher (avg 3.2 authors/paper) | Diversity Score: 0.69
   Top Collaborators: [{"name": "Zhongfu Ye", "paper_count": 3}, {"name": "C Hollitt", "paper_count": 2}, {"name": "Z Ye", "paper_count": 2}, {"name": "Md Imran Hossain", "paper_count": 2}]
-  Summary: The candidate, 19_ASIM_MASOOD, has a balanced research collaboration network with 8 publications and 13 unique co-authors. They have a mix of recurring and one-time collaborators, with 4 recurring and 9 one-time collaborators. The candidate's average authors per paper is 3.2, indicating a collaborative research style.
+  Summary: Candidate Asim Masood has collaborated with 13 unique co-author(s) across 8 publication(s). They operate as a Medium-Group Researcher with an average of 3.2 authors per paper. The candidate has 4 recurring collaborator(s) (top co-authors: Zhongfu Ye (3 papers), C Hollitt (2 papers), Z Ye (2 papers)). Overall research collaboration network is categorized as Balanced Network.
 
   [Balanced Network] 26_AAMINA_AKBAR
   Total Publications: 4 | Unique Co-Authors: 7 | Recurring: 3 | 1-Time: 4
   Team Size Profile: Medium-Group Researcher (avg 4.0 authors/paper) | Diversity Score: 0.57
-  Top Collaborators: [{"name": "Sobia Jangsher", "paper_count": 4}, {"name": "Ashfaq Ahmed", "paper_count": 2}, {"name": "Adnan Zafar", "paper_count": 2}]
-  Summary: Candidate 26_AAMINA_AKBAR has a balanced research collaboration network, with 7 unique co-authors across 4 publications. The top collaborators include Sobia Jangsher, Ashfaq Ahmed, and Adnan Zafar, who have co-authored papers with the candidate. The collaboration diversity index of 0.57 indicates a moderate level of collaboration with one-time co-authors.
+  Top Collaborators: [{"name": "Sobia Jangsher", "paper_count": 4}, {"name": "Adnan Zafar", "paper_count": 2}, {"name": "Ashfaq Ahmed", "paper_count": 2}]
+  Summary: Candidate Aamina Akbar has collaborated with 7 unique co-author(s) across 4 publication(s). They operate as a Medium-Group Researcher with an average of 4.0 authors per paper. The candidate has 3 recurring collaborator(s) (top co-authors: Sobia Jangsher (4 papers), Adnan Zafar (2 papers), Ashfaq Ahmed (2 papers)). Overall research collaboration network is categorized as Balanced Network.
 
   [Balanced Network] 33_QAMAR_ABBAS
   Total Publications: 7 | Unique Co-Authors: 12 | Recurring: 7 | 1-Time: 5
   Team Size Profile: Medium-Group Researcher (avg 4.7 authors/paper) | Diversity Score: 0.42
-  Top Collaborators: [{"name": "Syed Ali Hassan", "paper_count": 7}, {"name": "Shah Zeb", "paper_count": 4}, {"name": "Aamir Mahmood", "paper_count": 2}, {"name": "Mikael Gidlund", "paper_count": 2}, {"name": "Rafia Mumtaz", "paper_count": 2}]
-  Summary: Candidate 33_QAMAR_ABBAS has a balanced research collaboration network with 7 total publications and 12 unique co-authors. The network includes 7 recurring collaborators and 5 one-time collaborators, with a top collaborator being Syed Ali Hassan, who co-authored 7 papers. The average number of authors per paper is 4.7.
+  Top Collaborators: [{"name": "Syed Ali Hassan", "paper_count": 7}, {"name": "Shah Zeb", "paper_count": 4}, {"name": "Aamir Mahmood", "paper_count": 2}, {"name": "Mikael Gidlund", "paper_count": 2}, {"name": "Syed Ali Raza Zaidi", "paper_count": 2}]
+  Summary: Candidate Qamar Abbas has collaborated with 12 unique co-author(s) across 7 publication(s). They operate as a Medium-Group Researcher with an average of 4.7 authors per paper. The candidate has 7 recurring collaborator(s) (top co-authors: Syed Ali Hassan (7 papers), Shah Zeb (4 papers), Aamir Mahmood (2 papers)). Overall research collaboration network is categorized as Balanced Network.
 
   [Balanced Network] 34_SHAHZAD
   Total Publications: 9 | Unique Co-Authors: 8 | Recurring: 5 | 1-Time: 3
   Team Size Profile: Medium-Group Researcher (avg 3.6 authors/paper) | Diversity Score: 0.38
-  Top Collaborators: [{"name": "Eun Sung Jung", "paper_count": 5}, {"name": "Hyung Seok Kim", "paper_count": 5}, {"name": "Rashid Ali", "paper_count": 4}, {"name": "Amir Haider", "paper_count": 4}, {"name": "M Zubair Islam", "paper_count": 2}]
-  Summary: Candidate 34_SHAHZAD has a balanced research collaboration network with 9 publications and 8 unique co-authors. They have a mix of recurring and one-time collaborators, with 5 top collaborators contributing to 5 papers each. The average number of authors per paper is 3.6.
+  Top Collaborators: [{"name": "Eun Sung Jung", "paper_count": 5}, {"name": "Hyung Seok Kim", "paper_count": 5}, {"name": "Amir Haider", "paper_count": 4}, {"name": "Rashid Ali", "paper_count": 4}, {"name": "M Zubair Islam", "paper_count": 2}]
+  Summary: Candidate Shahzad has collaborated with 8 unique co-author(s) across 9 publication(s). They operate as a Medium-Group Researcher with an average of 3.6 authors per paper. The candidate has 5 recurring collaborator(s) (top co-authors: Eun Sung Jung (5 papers), Hyung Seok Kim (5 papers), Amir Haider (4 papers)). Overall research collaboration network is categorized as Balanced Network.
 
   [Balanced Network] 35_MATIULLAH_AHSAN
   Total Publications: 5 | Unique Co-Authors: 8 | Recurring: 3 | 1-Time: 5
   Team Size Profile: Medium-Group Researcher (avg 3.8 authors/paper) | Diversity Score: 0.62
   Top Collaborators: [{"name": "Ihsan Ullah Khalil", "paper_count": 4}, {"name": "Zainab Zainal", "paper_count": 3}, {"name": "Md Nor Ramdon Baharom", "paper_count": 2}]
-  Summary: The candidate, 35_MATIULLAH_AHSAN, has a balanced research collaboration network with 5 publications and 8 unique co-authors. They have a mix of recurring and one-time collaborators, with 3 recurring and 5 one-time collaborators. The candidate's average authors per paper is 3.8, indicating a collaborative research style.
+  Summary: Candidate Matiullah Ahsan has collaborated with 8 unique co-author(s) across 5 publication(s). They operate as a Medium-Group Researcher with an average of 3.8 authors per paper. The candidate has 3 recurring collaborator(s) (top co-authors: Ihsan Ullah Khalil (4 papers), Zainab Zainal (3 papers), Md Nor Ramdon Baharom (2 papers)). Overall research collaboration network is categorized as Balanced Network.
 
   [Balanced Network] 37_SANIA_GUL
   Total Publications: 17 | Unique Co-Authors: 13 | Recurring: 4 | 1-Time: 9
   Team Size Profile: Medium-Group Researcher (avg 3.1 authors/paper) | Diversity Score: 0.69
   Top Collaborators: [{"name": "Muhammad Salman Khan", "paper_count": 14}, {"name": "Syed Waqar Shah", "paper_count": 8}, {"name": "Ata Ur Rehman", "paper_count": 3}, {"name": "Muhammad Sheryar", "paper_count": 2}]
-  Summary: Candidate 37_SANIA_GUL has a balanced research collaboration network, with 17 total publications and 13 unique co-authors. They have a mix of recurring and one-time collaborators, with 4 recurring and 9 one-time collaborators. The candidate's average authors per paper is 3.1, indicating a collaborative research style.
+  Summary: Candidate Sania Gul has collaborated with 13 unique co-author(s) across 17 publication(s). They operate as a Medium-Group Researcher with an average of 3.1 authors per paper. The candidate has 4 recurring collaborator(s) (top co-authors: Muhammad Salman Khan (14 papers), Syed Waqar Shah (8 papers), Ata Ur Rehman (3 papers)). Overall research collaboration network is categorized as Balanced Network.
 
   [Balanced Network] 38_MUHAMMAD_MUSADIQ
   Total Publications: 7 | Unique Co-Authors: 12 | Recurring: 5 | 1-Time: 7
   Team Size Profile: Medium-Group Researcher (avg 4.3 authors/paper) | Diversity Score: 0.58
-  Top Collaborators: [{"name": "Muhammad Amjad", "paper_count": 4}, {"name": "Muhammad Ali Qureshi", "paper_count": 4}, {"name": "Kashif Imran", "paper_count": 3}, {"name": "Zunaib Maqsood Haider", "paper_count": 3}, {"name": "Omer Khan", "paper_count": 2}]
-  Summary: The candidate, Muhammad Musadiq, has a balanced research collaboration network with 7 publications and 12 unique co-authors. The network includes both recurring and one-time collaborators, with 5 recurring and 7 one-time collaborators. The average number of authors per paper is 4.3, indicating a collaborative research style.
+  Top Collaborators: [{"name": "Muhammad Ali Qureshi", "paper_count": 4}, {"name": "Muhammad Amjad", "paper_count": 4}, {"name": "Kashif Imran", "paper_count": 3}, {"name": "Zunaib Maqsood Haider", "paper_count": 3}, {"name": "Omer Khan", "paper_count": 2}]
+  Summary: Candidate Muhammad Musadiq Ahmed has collaborated with 12 unique co-author(s) across 7 publication(s). They operate as a Medium-Group Researcher with an average of 4.3 authors per paper. The candidate has 5 recurring collaborator(s) (top co-authors: Muhammad Ali Qureshi (4 papers), Muhammad Amjad (4 papers), Kashif Imran (3 papers)). Overall research collaboration network is categorized as Balanced Network.
 
   [Closed Network] 05_MUHAMMAD_MAJID
   Total Publications: 3 | Unique Co-Authors: 4 | Recurring: 3 | 1-Time: 1
   Team Size Profile: Medium-Group Researcher (avg 3.7 authors/paper) | Diversity Score: 0.25
   Top Collaborators: [{"name": "A Habib", "paper_count": 3}, {"name": "A Zafar", "paper_count": 2}, {"name": "Arm Maud", "paper_count": 2}]
-  Summary: The candidate, Muhammad Majid, has a relatively small research collaboration network with 4 unique co-authors, indicating a limited scope of research collaborations. The majority of their collaborations are with recurring co-authors, suggesting a close-knit research group. The average number of authors per paper is 3.7, which is slightly above the average.
+  Summary: Candidate MUHAMMAD MAJID has collaborated with 4 unique co-author(s) across 3 publication(s). They operate as a Medium-Group Researcher with an average of 3.7 authors per paper. The candidate has 3 recurring collaborator(s) (top co-authors: A Habib (3 papers), A Zafar (2 papers), Arm Maud (2 papers)). Overall research collaboration network is categorized as Closed Network.
 
   [Closed Network] 25_MUHAMMAD_ADEEL_ALTAF
   Total Publications: 5 | Unique Co-Authors: 1 | Recurring: 1 | 1-Time: 0
   Team Size Profile: Solo/Small-Group Researcher (avg 2.0 authors/paper) | Diversity Score: 0.00
   Top Collaborators: [{"name": "Min Young Kim", "paper_count": 5}]
-  Summary: Candidate 25_MUHAMMAD_ADEEL_ALTAF has a limited research collaboration network with only 1 unique co-author across 5 publications. The majority of their collaborations are with Min Young Kim, indicating a strong reliance on a single collaborator. The candidate's team size profile is consistent with a solo or small-group researcher.
+  Summary: Candidate MUHAMMAD ADEEL ALTAF has collaborated with 1 unique co-author(s) across 5 publication(s). They operate as a Solo/Small-Group Researcher with an average of 2.0 authors per paper. The candidate has 1 recurring collaborator(s) (top co-authors: Min Young Kim (5 papers)). Overall research collaboration network is categorized as Closed Network.
 
   [Closed Network] 36_SAMANA_BATOOL
   Total Publications: 3 | Unique Co-Authors: 4 | Recurring: 2 | 1-Time: 2
   Team Size Profile: Medium-Group Researcher (avg 3.3 authors/paper) | Diversity Score: 0.50
   Top Collaborators: [{"name": "Mubeen Ghafoor", "paper_count": 3}, {"name": "Imtiaz Ahmad Taj", "paper_count": 2}]
-  Summary: Candidate 36_SAMANA_BATOOL has a relatively small research collaboration network with 3 publications and 4 unique co-authors. The network is characterized by a high level of recurrence among co-authors, with 2 recurring collaborators and 2 one-time collaborators. The average number of authors per paper is 3.3, indicating a collaborative research style.
+  Summary: Candidate Samana Batool has collaborated with 4 unique co-author(s) across 3 publication(s). They operate as a Medium-Group Researcher with an average of 3.3 authors per paper. The candidate has 2 recurring collaborator(s) (top co-authors: Mubeen Ghafoor (3 papers), Imtiaz Ahmad Taj (2 papers)). Overall research collaboration network is categorized as Closed Network.
 
   [No Publications] 02_MUHAMMAD_SHAHWAZ
   Total Publications: 0 | Unique Co-Authors: 0 | Recurring: 0 | 1-Time: 0

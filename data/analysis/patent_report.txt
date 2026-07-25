@@ -16,216 +16,216 @@
   [Strong] 24_AHMED_NAEEM
   Total Patents: 10 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=10, National=0
-  Summary: Candidate 24_AHMED_NAEEM has a total of 10 patents listed. All of these patents are verifiable and international in scope. The candidate has not been listed as a sole, lead, or co-inventor on any of these patents, but has been credited as an unknown inventor role on all of them.
+  Summary: Candidate Ahmed Naeem holds 10 patent(s). 10 international patent(s). Overall applied innovation and IP profile is assessed as Strong.
 
   [Moderate] 04_MUHAMMAD_FARRUKH
   Total Patents: 1 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=1
-  Summary: The candidate has a total of 1 patent listed in their record. This patent is from Pakistan and is verifiable. The candidate's role in the patent is unknown.
+  Summary: Candidate Muhammad Farrukh Qureshi holds 1 patent(s). 1 national (Pakistani) patent(s). Overall applied innovation and IP profile is assessed as Moderate.
 
   [No Patents Listed] 01_MUHAMMAD_SALMAN
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 01_MUHAMMAD_SALMAN has no patents listed in their CV.
+  Summary: Candidate MUHAMMAD SALMAN has no patents listed in their CV.
 
   [No Patents Listed] 02_MUHAMMAD_SHAHWAZ
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 02_MUHAMMAD_SHAHWAZ has no patents listed in their CV.
+  Summary: Candidate MUHAMMAD SHAHWAZ has no patents listed in their CV.
 
   [No Patents Listed] 03_NASIR_ALI_SHAH
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 03_NASIR_ALI_SHAH has no patents listed in their CV.
+  Summary: Candidate Nasir Ali Shah has no patents listed in their CV.
 
   [No Patents Listed] 05_MUHAMMAD_MAJID
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 05_MUHAMMAD_MAJID has no patents listed in their CV.
+  Summary: Candidate MUHAMMAD MAJID has no patents listed in their CV.
 
   [No Patents Listed] 06_FARMAN_ALI
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 06_FARMAN_ALI has no patents listed in their CV.
+  Summary: Candidate Farman Ali has no patents listed in their CV.
 
   [No Patents Listed] 07_FIZA_MURTAZA
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 07_FIZA_MURTAZA has no patents listed in their CV.
+  Summary: Candidate Fiza Murtaza has no patents listed in their CV.
 
   [No Patents Listed] 08_TAYYABA_GULL
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 08_TAYYABA_GULL has no patents listed in their CV.
+  Summary: Candidate Tayyaba Gull has no patents listed in their CV.
 
   [No Patents Listed] 09_MUHAMMAD_ABUBAKAR
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 09_MUHAMMAD_ABUBAKAR has no patents listed in their CV.
+  Summary: Candidate Muhammad Abubakar has no patents listed in their CV.
 
   [No Patents Listed] 10_MUHAMMAD_EHATISHAM
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 10_MUHAMMAD_EHATISHAM has no patents listed in their CV.
+  Summary: Candidate Muhammad Ehatisham has no patents listed in their CV.
 
   [No Patents Listed] 11_WAQAS_AMIN
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 11_WAQAS_AMIN has no patents listed in their CV.
+  Summary: Candidate Waqas Amin has no patents listed in their CV.
 
   [No Patents Listed] 12_SYED_TAMOORULHASSAN
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 12_SYED_TAMOORULHASSAN has no patents listed in their CV.
+  Summary: Candidate SYED TAMOORULHASSAN has no patents listed in their CV.
 
   [No Patents Listed] 13_MANZOOR_ELLAHI
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 13_MANZOOR_ELLAHI has no patents listed in their CV.
+  Summary: Candidate Manzoor Ellahi has no patents listed in their CV.
 
   [No Patents Listed] 14_SAROSH_TAHIR
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 14_SAROSH_TAHIR has no patents listed in their CV.
+  Summary: Candidate Sarosh Tahir has no patents listed in their CV.
 
   [No Patents Listed] 15_M_USMAN_ABBASI
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 15_M_USMAN_ABBASI has no patents listed in their CV.
+  Summary: Candidate M. Usman Abbasi has no patents listed in their CV.
 
   [No Patents Listed] 16_MUZZAMIL_GHAFFAR
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 16_MUZZAMIL_GHAFFAR has no patents listed in their CV.
+  Summary: Candidate Muzzamil Ghaffar has no patents listed in their CV.
 
   [No Patents Listed] 17_SUHAIL_ASGHAR
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 17_SUHAIL_ASGHAR has no patents listed in their CV.
+  Summary: Candidate Suhail Asghar Qureshi has no patents listed in their CV.
 
   [No Patents Listed] 18_MUHAMMAD_AMJAD
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 18_MUHAMMAD_AMJAD has no patents listed in their CV.
+  Summary: Candidate Muhammad Amjad has no patents listed in their CV.
 
   [No Patents Listed] 19_ASIM_MASOOD
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 19_ASIM_MASOOD has no patents listed in their CV.
+  Summary: Candidate Asim Masood has no patents listed in their CV.
 
   [No Patents Listed] 20_SYED_FASIH_ALI
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 20_SYED_FASIH_ALI has no patents listed in their CV.
+  Summary: Candidate Syed Fasih Ali has no patents listed in their CV.
 
   [No Patents Listed] 21_SAMAN_FATIMA
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 21_SAMAN_FATIMA has no patents listed in their CV.
+  Summary: Candidate Saman Fatima has no patents listed in their CV.
 
   [No Patents Listed] 22_ZEESHAN
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 22_ZEESHAN has no patents listed in their CV.
+  Summary: Candidate Zeeshan has no patents listed in their CV.
 
   [No Patents Listed] 23_WAQAS_TARIQ_TOOR
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 23_WAQAS_TARIQ_TOOR has no patents listed in their CV.
+  Summary: Candidate Waqas Tariq Toor has no patents listed in their CV.
 
   [No Patents Listed] 25_MUHAMMAD_ADEEL_ALTAF
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 25_MUHAMMAD_ADEEL_ALTAF has no patents listed in their CV.
+  Summary: Candidate MUHAMMAD ADEEL ALTAF has no patents listed in their CV.
 
   [No Patents Listed] 26_AAMINA_AKBAR
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 26_AAMINA_AKBAR has no patents listed in their CV.
+  Summary: Candidate Aamina Akbar has no patents listed in their CV.
 
   [No Patents Listed] 27_SHAHEER
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 27_SHAHEER has no patents listed in their CV.
+  Summary: Candidate Shaheer has no patents listed in their CV.
 
   [No Patents Listed] 28_IDRIS_KHAN
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 28_IDRIS_KHAN has no patents listed in their CV.
+  Summary: Candidate Idris Khan has no patents listed in their CV.
 
   [No Patents Listed] 29_MUHAMMAD_SARMAD_TARIQ
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 29_MUHAMMAD_SARMAD_TARIQ has no patents listed in their CV.
+  Summary: Candidate Muhammad Sarmad Tariq has no patents listed in their CV.
 
   [No Patents Listed] 30_FAHD_SIKANDAR_KHAN
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 30_FAHD_SIKANDAR_KHAN has no patents listed in their CV.
+  Summary: Candidate Fahd Sikandar Khan has no patents listed in their CV.
 
   [No Patents Listed] 31_USMAN_MASUD
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 31_USMAN_MASUD has no patents listed in their CV.
+  Summary: Candidate Usman Masud has no patents listed in their CV.
 
   [No Patents Listed] 32_QAISAR_HUSSAIN_ALVI
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 32_QAISAR_HUSSAIN_ALVI has no patents listed in their CV.
+  Summary: Candidate Qaisar Hussain Alvi has no patents listed in their CV.
 
   [No Patents Listed] 33_QAMAR_ABBAS
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 33_QAMAR_ABBAS has no patents listed in their CV.
+  Summary: Candidate Qamar Abbas has no patents listed in their CV.
 
   [No Patents Listed] 34_SHAHZAD
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 34_SHAHZAD has no patents listed in their CV.
+  Summary: Candidate Shahzad has no patents listed in their CV.
 
   [No Patents Listed] 35_MATIULLAH_AHSAN
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 35_MATIULLAH_AHSAN has no patents listed in their CV.
+  Summary: Candidate Matiullah Ahsan has no patents listed in their CV.
 
   [No Patents Listed] 36_SAMANA_BATOOL
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 36_SAMANA_BATOOL has no patents listed in their CV.
+  Summary: Candidate Samana Batool has no patents listed in their CV.
 
   [No Patents Listed] 37_SANIA_GUL
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 37_SANIA_GUL has no patents listed in their CV.
+  Summary: Candidate Sania Gul has no patents listed in their CV.
 
   [No Patents Listed] 38_MUHAMMAD_MUSADIQ
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 38_MUHAMMAD_MUSADIQ has no patents listed in their CV.
+  Summary: Candidate Muhammad Musadiq Ahmed has no patents listed in their CV.
 
   [No Patents Listed] 39_MUHAMMAD_SAQIB
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 39_MUHAMMAD_SAQIB has no patents listed in their CV.
+  Summary: Candidate Muhammad Saqib has no patents listed in their CV.
 
   [No Patents Listed] 40_ABDUR_REHMAN
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 40_ABDUR_REHMAN has no patents listed in their CV.
+  Summary: Candidate Abdur Rehman has no patents listed in their CV.
 
   [No Patents Listed] 41_MUHAMMAD_AQEEL
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 41_MUHAMMAD_AQEEL has no patents listed in their CV.
+  Summary: Candidate Muhammad Aqeel has no patents listed in their CV.
 
   [No Patents Listed] 42_SAQIB_JAMIL
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 42_SAQIB_JAMIL has no patents listed in their CV.
+  Summary: Candidate Saqib Jamil has no patents listed in their CV.
 
   [No Patents Listed] 43_AMMARA_NASIM
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
-  Summary: Candidate 43_AMMARA_NASIM has no patents listed in their CV.
+  Summary: Candidate Ammara Nasim has no patents listed in their CV.
 
 ======================================================================
