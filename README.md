@@ -416,16 +416,12 @@ All module outputs are written to `data/analysis/`.
 
 ## Development Status
 
-The system has completed its initial evaluation cycle against a cohort of 43 faculty applicants. All ten pipeline modules are operational. The REST API exposes candidate data, email generation, and file upload endpoints. The frontend dashboard is functional in both offline (embedded data) and online (live API) modes.
-
 Planned additions for subsequent development cycles include WebSocket-based real-time pipeline progress streaming, persistent candidate storage using a relational database backend, export functionality for ranked reports in PDF and Excel formats, and role-based access control for multi-user institutional deployment.
 
 ---
 
 ## License
 
-This project was developed for internal use by the Higher Education Commission of Pakistan. Distribution and reproduction outside the commissioning institution require explicit written authorisation.
+This project was developed for internal use. Distribution and reproduction outside the commissioning institution require explicit written authorisation.
 
----
 
-*TALASH is maintained by the TALASH Development Team. For queries related to deployment or integration, raise an issue in this repository.*
