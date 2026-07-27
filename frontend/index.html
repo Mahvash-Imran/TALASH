@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TALASH — AI Faculty Hiring Intelligence</title>
+  <meta name="description" content="AI-powered faculty candidate evaluation, scoring, and recommendations for the Higher Education Commission." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+/* ══════════════════════════════════════
+   DESIGN TOKENS
+══════════════════════════════════════ */
+:root {
+  /* ── Cloud Infrastructure palette ── */
+  /* Primary: #0F2027  #203A43          */
+  /* Secondary: #2C5364  #3E6680        */
+  /* Accent: #00B4D8 (cyan)             */
+  /* Neutral: #FFFFFF  #E8F4F8  #071013 */
+
+  --bg:         #E8F4F8;
+  --surface:    #ffffff;
+  --surface-2:  #f0f7fa;
+  --border:     #c8dde6;
+  --border-2:   #a8c8d8;
+
+  /* Cyan accent (interactive) */
+  --primary:        #00B4D8;
+  --primary-light:  #00cff7;
+  --primary-dim:    rgba(0,180,216,.1);
+  --primary-ring:   rgba(0,180,216,.28);
+
+  /* Sidebar navy tones (used inline too) */
+  --navy-900:  #0F2027;
+  --navy-800:  #203A43;
+  --navy-700:  #2C5364;
+  --navy-600:  #3E6680;
+
+  /* Semantic */
+  --success:     #10b981;
+  --success-dim: rgba(16,185,129,.12);
+  --warning:     #f59e0b;
+  --warning-dim: rgba(245,158,11,.12);
+  --danger:      #ef4444;
+  --danger-dim:  rgba(239,68,68,.12);
+  --info:        #0077a8;
+  --info-dim:    rgba(0,119,168,.12);
+  --purple:      #00B4D8;
+  --purple-dim:  rgba(0,180,216,.12);
+
+  --fg:     #071013;
+  --fg-2:   #2C5364;
+  --fg-3:   #6b8fa0;
+  --fg-inv: #ffffff;
+
+  --sidebar-w:        230px;
+  --sidebar-collapsed: 58px;
+  --topbar-h:    58px;
+  --r:           8px;
+  --r-sm:        6px;
+  --r-lg:        14px;
+  --r-xl:        20px;
+  --ease:        cubic-bezier(.4,0,.2,1);
+  --dur:         180ms;
+  --shadow-sm:   0 1px 3px rgba(7,16,19,.07), 0 1px 2px rgba(7,16,19,.05);
+  --shadow:      0 4px 14px rgba(7,16,19,.1), 0 1px 4px rgba(7,16,19,.06);
+  --shadow-lg:   0 12px 32px rgba(7,16,19,.15), 0 4px 8px rgba(7,16,19,.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 14px; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+  display: flex;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+
+/* ══════════════════════════════════════
+   SIDEBAR — Manatal-style left rail
+══════════════════════════════════════ */
+.sidebar {
+  position: fixed; top: 0; left: 0;
+  width: var(--sidebar-w);
+  height: 100vh;          /* always full viewport */
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0F2027 0%, #203A43 60%, #2C5364 100%);
+  display: flex; flex-direction: column;
+  z-index: 100;
+  overflow: hidden;
+  transition: width .28s var(--ease);
+  will-change: width;
+}
+.sidebar.collapsed { width: var(--sidebar-collapsed); }
+.sidebar.collapsed .brand-name,
+.sidebar.collapsed .brand-tag,
+.sidebar.collapsed .nav-item span,
+.sidebar.collapsed .nav-badge,
+.sidebar.collapsed .nav-section-label,
+.sidebar.collapsed .status-label,
+.sidebar.collapsed .status-sub,
+.sidebar.collapsed .sidebar-footer > *:not(.collapse-btn-wrap) {
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.sidebar.collapsed .nav-item {
+  justify-content: center;
+  padding: 9px 0;
+}
+.sidebar.collapsed .sidebar-header {
+  justify-content: center;
+  padding: 18px 0 16px;
+}
+.sidebar.collapsed .status-card {
+  justify-content: center;
+  padding: 10px 0;
+}
+/* subtle gradient stripe */
+.sidebar::before {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 1px; height: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02) 60%, transparent);
+}
+
+.sidebar-header {
+  padding: 20px 16px 16px;
+  display: flex; align-items: center; gap: 10px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.brand-icon {
+  width: 34px; height: 34px;
+  background: linear-gradient(135deg, #00cff7, #00B4D8);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,180,216,.45);
+  flex-shrink: 0;
+}
+.brand-icon svg { width: 18px; height: 18px; color: white; }
+.brand-name { font-size: 16px; font-weight: 800; color: white; letter-spacing: -.02em; }
+.brand-tag  { font-size: 9.5px; font-weight: 500; color: rgba(255,255,255,.4); letter-spacing: .05em; text-transform: uppercase; margin-top: 1px; }
+
+.sidebar-nav { flex: 1; padding: 14px 10px; overflow-y: auto; }
+.nav-section-label {
+  font-size: 9.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .1em; color: rgba(255,255,255,.25);
+  padding: 8px 8px 4px;
+}
+.nav-item {
+  display: flex; align-items: center; gap: 9px;
+  padding: 8.5px 10px;
+  border-radius: 9px;
+  font-size: 13px; font-weight: 500;
+  color: rgba(255,255,255,.55);
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+  margin-bottom: 1px;
+  user-select: none;
+  position: relative;
+}
+.nav-item:hover { color: rgba(255,255,255,.9); background: rgba(255,255,255,.06); }
+.nav-item.active {
+  color: white;
+  background: rgba(0,180,216,.18);
+  font-weight: 600;
+}
+.nav-item.active::before {
+  content: '';
+  position: absolute; left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 3px; height: 20px;
+  background: #00B4D8;
+  border-radius: 0 3px 3px 0;
+}
+.nav-item svg { width: 16px; height: 16px; flex-shrink: 0; opacity: .7; }
+.nav-item.active svg { opacity: 1; }
+.nav-badge {
+  margin-left: auto; min-width: 20px; text-align: center;
+  padding: 2px 6px; border-radius: 20px;
+  background: rgba(255,255,255,.1); color: rgba(255,255,255,.7);
+  font-size: 10px; font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+}
+.nav-item.active .nav-badge { background: #00B4D8; color: #071013; font-weight: 700; }
+
+.sidebar-footer {
+  padding: 12px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  flex-shrink: 0;
+}
+
+/* Collapse toggle */
+.collapse-btn-wrap {
+  display: flex; justify-content: flex-end; margin-bottom: 8px;
+}
+.sidebar.collapsed .collapse-btn-wrap { justify-content: center; }
+.collapse-btn {
+  width: 28px; height: 28px; border-radius: 6px;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12);
+  color: rgba(255,255,255,.6); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all var(--dur); flex-shrink: 0;
+}
+.collapse-btn:hover { background: rgba(0,180,216,.2); color: #00B4D8; border-color: rgba(0,180,216,.3); }
+.collapse-btn svg { width: 14px; height: 14px; transition: transform .28s var(--ease); }
+.sidebar.collapsed .collapse-btn svg { transform: rotate(180deg); }
+.status-card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--r);
+  padding: 10px 12px;
+  display: flex; align-items: center; gap: 9px;
+}
+.status-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 8px var(--success);
+  animation: pulse-dot 2.5s ease-in-out infinite;
+  flex-shrink: 0;
+}
+.status-dot.offline { background: #f87171; box-shadow: 0 0 8px #f87171; }
+@keyframes pulse-dot { 0%,100%{opacity:1}50%{opacity:.4} }
+.status-label { font-size: 11.5px; font-weight: 600; color: white; }
+.status-sub   { font-size: 10px; color: rgba(255,255,255,.35); }
+
+/* ══════════════════════════════════════
+   MAIN LAYOUT
+══════════════════════════════════════ */
+.main { margin-left: var(--sidebar-w); flex: 1; display: flex; flex-direction: column; min-height: 100vh; transition: margin-left .28s var(--ease); }
+.sidebar.collapsed ~ .main { margin-left: var(--sidebar-collapsed); }
+
+/* Topbar */
+.topbar {
+  height: var(--topbar-h);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 50;
+  box-shadow: var(--shadow-sm);
+}
+.topbar-left { display: flex; align-items: center; gap: 10px; }
+.breadcrumb { display: flex; align-items: center; gap: 6px; }
+.breadcrumb-root { font-size: 11.5px; color: var(--fg-3); font-weight: 500; }
+.breadcrumb-sep  { color: var(--border-2); font-size: 14px; }
+.breadcrumb-cur  { font-size: 14px; font-weight: 700; color: var(--fg); }
+
+.topbar-right { display: flex; align-items: center; gap: 8px; }
+
+/* Search */
+.search-box {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--bg); border: 1.5px solid var(--border);
+  border-radius: var(--r); padding: 7px 12px;
+  width: 220px; transition: all var(--dur);
+}
+.search-box:focus-within { border-color: var(--primary); width: 280px; box-shadow: 0 0 0 3px var(--primary-ring); }
+.search-box svg { width: 14px; height: 14px; color: var(--fg-3); flex-shrink: 0; }
+.search-box input { background: transparent; border: none; outline: none; font: inherit; font-size: 13px; color: var(--fg); width: 100%; }
+.search-box input::placeholder { color: var(--fg-3); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 14px; border-radius: var(--r);
+  font: inherit; font-size: 13px; font-weight: 500;
+  cursor: pointer; transition: all var(--dur);
+  border: 1.5px solid var(--border);
+  background: var(--surface); color: var(--fg-2);
+}
+.btn:hover { border-color: var(--border-2); color: var(--fg); background: var(--surface-2); }
+.btn svg { width: 14px; height: 14px; }
+.btn.primary {
+  background: linear-gradient(135deg, #00cff7, #00B4D8);
+  border-color: #00B4D8;
+  color: #071013; font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0,180,216,.35);
+}
+.btn.primary:hover { box-shadow: 0 4px 18px rgba(0,180,216,.5); transform: translateY(-1px); }
+.btn.ghost { border-color: transparent; background: transparent; }
+.btn.ghost:hover { background: var(--surface-2); border-color: var(--border); }
+.btn.sm { padding: 5px 10px; font-size: 12px; }
+
+/* Icon button */
+.icon-btn {
+  width: 34px; height: 34px; border-radius: var(--r);
+  display: flex; align-items: center; justify-content: center;
+  border: 1.5px solid var(--border); background: var(--surface);
+  cursor: pointer; color: var(--fg-2);
+  transition: all var(--dur); position: relative;
+}
+.icon-btn:hover { background: var(--surface-2); color: var(--primary); border-color: var(--primary-ring); }
+.icon-btn svg { width: 15px; height: 15px; }
+.icon-btn .notif-dot {
+  position: absolute; top: 6px; right: 6px;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--danger); border: 2px solid white;
+}
+
+/* Avatar */
+.user-avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: linear-gradient(135deg, #00cff7, #00B4D8);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: #071013;
+  cursor: pointer;
+}
+
+/* Content area */
+.content { flex: 1; padding: 24px; overflow-y: auto; height: calc(100vh - var(--topbar-h)); }
+.page { display: none; }
+.page.active { display: block; animation: slideUp .22s var(--ease); }
+@keyframes slideUp { from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none} }
+
+/* ══════════════════════════════════════
+   PAGE HEADER — Manatal style
+══════════════════════════════════════ */
+.page-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 22px; gap: 16px;
+}
+.page-header-left h1 { font-size: 20px; font-weight: 800; letter-spacing: -.025em; color: var(--fg); }
+.page-header-left p  { font-size: 13px; color: var(--fg-3); margin-top: 3px; max-width: 500px; line-height: 1.6; }
+.page-header-right { display: flex; gap: 8px; flex-shrink: 0; }
+
+/* ══════════════════════════════════════
+   STAT / KPI CARDS
+══════════════════════════════════════ */
+.kpi-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 20px; }
+.kpi-card {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--r-lg); padding: 18px 20px;
+  display: flex; gap: 14px; align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--dur);
+  position: relative; overflow: hidden;
+}
+.kpi-card::after {
+  content: ''; position: absolute;
+  bottom: 0; left: 0; right: 0; height: 3px;
+  border-radius: 0 0 var(--r-lg) var(--r-lg);
+  opacity: 0; transition: opacity var(--dur);
+}
+.kpi-card:hover { box-shadow: var(--shadow); transform: translateY(-1px); }
+.kpi-card:hover::after { opacity: 1; }
+.kpi-card.k-purple::after { background: #00B4D8; }
+.kpi-card.k-blue::after   { background: #3E6680; }
+.kpi-card.k-green::after  { background: var(--success); }
+.kpi-card.k-amber::after  { background: var(--warning); }
+
+.kpi-icon {
+  width: 42px; height: 42px; border-radius: var(--r);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.kpi-icon svg { width: 20px; height: 20px; }
+.k-purple .kpi-icon { background: rgba(0,180,216,.12);  color: #00B4D8; }
+.k-blue   .kpi-icon { background: rgba(62,102,128,.12); color: #3E6680; }
+.k-green  .kpi-icon { background: var(--success-dim);   color: var(--success); }
+.k-amber  .kpi-icon { background: var(--warning-dim);   color: var(--warning); }
+
+.kpi-body { flex: 1; min-width: 0; }
+.kpi-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--fg-3); }
+.kpi-val   { font-size: 28px; font-weight: 800; letter-spacing: -.04em; line-height: 1.1; margin-top: 4px; color: var(--fg); }
+.kpi-sub   { font-size: 11.5px; color: var(--fg-3); margin-top: 4px; display: flex; align-items: center; gap: 4px; }
+.kpi-sub svg { width: 11px; height: 11px; }
+
+/* ══════════════════════════════════════
+   CARDS
+══════════════════════════════════════ */
+.card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.card-head {
+  padding: 16px 20px 14px;
+  display: flex; align-items: flex-start; justify-content: space-between;
+  border-bottom: 1px solid var(--border); gap: 12px;
+}
+.card-title { font-size: 14px; font-weight: 700; color: var(--fg); }
+.card-desc  { font-size: 12px; color: var(--fg-3); margin-top: 2px; }
+.card-body  { padding: 18px 20px; }
+
+/* ══════════════════════════════════════
+   LAYOUT GRIDS
+══════════════════════════════════════ */
+.two-col   { display: grid; grid-template-columns: 1fr 320px; gap: 16px; margin-bottom: 18px; }
+.right-col { display: flex; flex-direction: column; gap: 16px; }
+
+/* ══════════════════════════════════════
+   BADGES — Manatal semantic style
+══════════════════════════════════════ */
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 9px; border-radius: 20px;
+  font-size: 11.5px; font-weight: 600; white-space: nowrap;
+}
+.badge .dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+.badge.success { background: var(--success-dim); color: var(--success); }
+.badge.warning { background: var(--warning-dim); color: var(--warning); }
+.badge.danger  { background: var(--danger-dim);  color: var(--danger); }
+.badge.info    { background: var(--info-dim);     color: var(--info); }
+.badge.purple  { background: var(--purple-dim);   color: var(--purple); }
+.badge.neutral { background: var(--surface-2);    color: var(--fg-3); }
+
+/* ══════════════════════════════════════
+   MATCH SCORE — Manatal-style %  
+══════════════════════════════════════ */
+.match-score {
+  display: flex; align-items: center; gap: 8px;
+}
+.match-ring {
+  position: relative; width: 42px; height: 42px; flex-shrink: 0;
+}
+.match-ring svg { transform: rotate(-90deg); }
+.match-ring-val {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 800; font-family: 'JetBrains Mono', monospace;
+}
+.match-label  { font-size: 11px; color: var(--fg-3); }
+.match-pct    { font-size: 14px; font-weight: 700; }
+
+/* ══════════════════════════════════════
+   TABLE
+══════════════════════════════════════ */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th {
+  padding: 10px 14px; text-align: left;
+  font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .07em; color: var(--fg-3);
+  background: var(--bg); border-bottom: 1.5px solid var(--border);
+  white-space: nowrap; cursor: pointer; user-select: none;
+}
+thead th:first-child { padding-left: 20px; }
+thead th:last-child  { padding-right: 20px; }
+thead th.sorted { color: var(--primary); }
+thead th:hover { color: var(--fg); }
+.th-arrow { margin-left: 4px; opacity: .4; }
+.sorted .th-arrow { opacity: 1; }
+
+tbody tr { border-bottom: 1px solid var(--border); transition: background var(--dur); cursor: pointer; }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: #fafbff; }
+tbody td { padding: 12px 14px; vertical-align: middle; }
+tbody td:first-child { padding-left: 20px; }
+tbody td:last-child  { padding-right: 20px; }
+
+/* Candidate cell */
+.cand-cell { display: flex; align-items: center; gap: 10px; }
+.avatar {
+  width: 36px; height: 36px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: #071013; flex-shrink: 0;
+  background: linear-gradient(135deg, #00cff7, #00B4D8);
+}
+.cand-name { font-size: 13.5px; font-weight: 700; color: var(--fg); line-height: 1.2; }
+.cand-sub  { font-size: 11.5px; color: var(--fg-3); margin-top: 1px; }
+
+/* Score bar */
+.score-bar-wrap { display: flex; align-items: center; gap: 8px; min-width: 120px; }
+.score-bar-bg { flex: 1; height: 5px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+.score-bar-fill { height: 100%; border-radius: 3px; transition: width 1.2s var(--ease); }
+.score-num { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 700; color: var(--fg); width: 32px; text-align: right; }
+
+/* Rank badge */
+.rank-badge {
+  width: 28px; height: 28px; border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800; font-family: 'JetBrains Mono', monospace;
+}
+.rank-1 { background: linear-gradient(135deg, #00cff7, #00B4D8); color: #071013; }
+.rank-2 { background: linear-gradient(135deg, #3E6680, #2C5364); color: white; }
+.rank-3 { background: linear-gradient(135deg, #203A43, #0F2027); color: white; }
+.rank-n { background: var(--surface-2); color: var(--fg-3); }
+
+/* Missing */
+.missing-val { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 700; }
+.missing-val.flagged { color: var(--warning); }
+.missing-val.ok      { color: var(--fg-3); }
+
+.row-action { font-size: 12px; font-weight: 600; color: var(--primary); opacity: 0; transition: opacity var(--dur); }
+tbody tr:hover .row-action { opacity: 1; }
+
+/* ══════════════════════════════════════
+   FILTER BAR
+══════════════════════════════════════ */
+.filter-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.filter-search {
+  flex: 1; min-width: 200px;
+  display: flex; align-items: center; gap: 8px;
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--r); padding: 8px 12px;
+  transition: all var(--dur);
+}
+.filter-search:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-ring); }
+.filter-search svg { width: 14px; height: 14px; color: var(--fg-3); }
+.filter-search input { background: transparent; border: none; outline: none; font: inherit; font-size: 13px; color: var(--fg); width: 100%; }
+.filter-search input::placeholder { color: var(--fg-3); }
+.filter-sel {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--r); padding: 8px 12px;
+  font: inherit; font-size: 13px; color: var(--fg-2); outline: none; cursor: pointer;
+  transition: border-color var(--dur);
+}
+.filter-sel:focus { border-color: var(--primary); color: var(--fg); }
+.res-count { font-size: 12px; color: var(--fg-3); white-space: nowrap; font-weight: 500; }
+
+/* ══════════════════════════════════════
+   RECOMMENDATION SCORE RING
+══════════════════════════════════════ */
+.score-ring-lg {
+  position: relative; width: 80px; height: 80px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.score-ring-lg svg { position: absolute; inset: 0; transform: rotate(-90deg); }
+.score-ring-inner { text-align: center; position: relative; z-index: 1; }
+.score-ring-num { font-size: 20px; font-weight: 800; font-family: 'JetBrains Mono', monospace; line-height: 1; }
+.score-ring-lbl { font-size: 9px; color: var(--fg-3); }
+
+/* ══════════════════════════════════════
+   SLIDE PANEL (Profile Detail)
+══════════════════════════════════════ */
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(17,24,39,.5);
+  backdrop-filter: blur(6px);
+  z-index: 200; display: none;
+}
+.overlay.open { display: block; animation: fadeIn .2s var(--ease); }
+@keyframes fadeIn { from{opacity:0}to{opacity:1} }
+
+.slide-panel {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: 100%; max-width: 540px;
+  background: var(--surface);
+  border-left: 1.5px solid var(--border);
+  z-index: 201; overflow-y: auto;
+  display: flex; flex-direction: column;
+  animation: slideIn .28s var(--ease);
+  box-shadow: var(--shadow-lg);
+}
+@keyframes slideIn { from{transform:translateX(100%)}to{transform:none} }
+
+.panel-topbar {
+  padding: 18px 22px 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-start; justify-content: space-between;
+  position: sticky; top: 0; background: var(--surface); z-index: 5;
+}
+.panel-cand { display: flex; align-items: center; gap: 12px; }
+.panel-avatar {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: linear-gradient(135deg, #00cff7, #00B4D8);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; font-weight: 800; color: #071013;
+}
+.panel-name { font-size: 17px; font-weight: 800; color: var(--fg); }
+.panel-id   { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--fg-3); margin-top: 2px; }
+
+.close-btn {
+  width: 32px; height: 32px; border-radius: var(--r);
+  border: 1.5px solid var(--border); background: var(--bg);
+  color: var(--fg-3); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all var(--dur); flex-shrink: 0;
+}
+.close-btn:hover { border-color: var(--danger); color: var(--danger); background: var(--danger-dim); }
+.close-btn svg { width: 14px; height: 14px; }
+
+.panel-body { padding: 22px; flex: 1; }
+
+/* Score hero (panel) */
+.score-hero {
+  display: flex; align-items: center; gap: 18px;
+  background: linear-gradient(135deg, #e0f7fb, #cceef7);
+  border: 1.5px solid #a0d8ec;
+  border-radius: var(--r-lg); padding: 18px 20px;
+  margin-bottom: 20px;
+}
+.score-hero-details h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+.score-hero-details p  { font-size: 12px; color: var(--fg-3); line-height: 1.5; }
+
+/* Dimension grid */
+.dim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.dim-card {
+  background: var(--bg); border: 1.5px solid var(--border);
+  border-radius: var(--r); padding: 12px 14px;
+}
+.dim-card-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--fg-3); margin-bottom: 6px; }
+.dim-card-bar-wrap { display: flex; align-items: center; gap: 7px; margin-bottom: 3px; }
+.dim-card-bar-bg { flex: 1; height: 5px; background: var(--border-2); border-radius: 3px; overflow: hidden; }
+.dim-card-bar-fill { height: 100%; border-radius: 3px; transition: width 1.2s var(--ease); }
+.dim-card-val { font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--fg); white-space: nowrap; }
+.dim-card-max { font-size: 10px; color: var(--fg-3); }
+
+/* Justification — Manatal "line-by-line" insight */
+.insight-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.insight-item {
+  display: flex; align-items: flex-start; gap: 9px;
+  padding: 9px 12px; border-radius: var(--r);
+  background: var(--bg); border: 1px solid var(--border);
+  font-size: 12.5px; line-height: 1.5;
+}
+.insight-icon { width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.insight-icon svg { width: 10px; height: 10px; }
+.insight-item.pos .insight-icon { background: var(--success-dim); color: var(--success); }
+.insight-item.neg .insight-icon { background: var(--warning-dim); color: var(--warning); }
+.insight-item.neu .insight-icon { background: var(--info-dim);    color: var(--info); }
+.insight-text { color: var(--fg-2); }
+
+/* Radar */
+.radar-wrap { position: relative; height: 230px; margin-bottom: 20px; }
+
+/* ══════════════════════════════════════
+   COMPARE PAGE
+══════════════════════════════════════ */
+.compare-selectors { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.compare-pick-card {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--r-lg); padding: 18px; box-shadow: var(--shadow-sm);
+}
+.compare-pick-label { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--fg-3); margin-bottom: 10px; }
+.compare-pick-card select { width: 100%; background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--r); padding: 9px 12px; font: inherit; font-size: 13px; color: var(--fg); outline: none; cursor: pointer; }
+.compare-pick-card select:focus { border-color: #00B4D8; box-shadow: 0 0 0 3px var(--primary-ring); }
+.compare-action { text-align: center; margin-bottom: 20px; }
+.compare-result { display: none; }
+.compare-result.shown { display: block; }
+
+/* ══════════════════════════════════════
+   EMAIL PAGE
+══════════════════════════════════════ */
+.email-chrome {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-sm);
+}
+.email-chrome-bar {
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  padding: 10px 16px; display: flex; align-items: center; gap: 10px;
+}
+.chrome-dots { display: flex; gap: 5px; }
+.chrome-dot { width: 10px; height: 10px; border-radius: 50%; }
+.email-chrome-title { flex: 1; text-align: center; font-size: 11px; font-weight: 600; color: var(--fg-3); }
+.email-field { padding: 11px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: baseline; gap: 12px; }
+.ef-key { font-size: 11px; font-weight: 700; color: var(--fg-3); min-width: 52px; }
+.ef-val { font-size: 13px; color: var(--fg-2); }
+.ef-subject { font-size: 14px; font-weight: 700; color: var(--fg); }
+.email-body { padding: 20px; font-size: 13.5px; line-height: 1.9; color: var(--fg-2); white-space: pre-wrap; min-height: 200px; }
+.email-actions { padding: 12px 20px; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: 8px; }
+
+/* ══════════════════════════════════════
+   UPLOAD PAGE
+══════════════════════════════════════ */
+.drop-zone {
+  border: 2px dashed var(--border-2);
+  border-radius: var(--r-xl); padding: 52px 24px; text-align: center;
+  cursor: pointer; transition: all var(--dur); margin-bottom: 18px;
+  background: var(--surface);
+}
+.drop-zone:hover, .drop-zone.dragging { border-color: var(--primary); background: var(--primary-dim); }
+.drop-icon {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--primary-dim); color: var(--primary);
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+}
+.drop-icon svg { width: 28px; height: 28px; }
+.drop-zone h2 { font-size: 17px; font-weight: 800; margin-bottom: 8px; color: var(--fg); }
+.drop-zone p  { font-size: 13px; color: var(--fg-3); max-width: 400px; margin: 0 auto 18px; line-height: 1.7; }
+.upload-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.upload-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 11px 16px; background: var(--surface);
+  border: 1.5px solid var(--border); border-radius: var(--r);
+  box-shadow: var(--shadow-sm);
+}
+.upload-row svg { width: 16px; height: 16px; color: var(--primary); flex-shrink: 0; }
+.upload-row-name { flex: 1; font-size: 13px; font-weight: 600; color: var(--fg); }
+.upload-row-size { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--fg-3); }
+
+/* ══════════════════════════════════════
+   PIPELINE STAGE
+══════════════════════════════════════ */
+.pipeline-stages { display: flex; gap: 0; margin-bottom: 20px; overflow-x: auto; }
+.stage-item {
+  flex: 1; min-width: 100px;
+  padding: 10px 14px; text-align: center;
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-right: none; position: relative;
+  transition: all var(--dur);
+}
+.stage-item:first-child { border-radius: var(--r) 0 0 var(--r); }
+.stage-item:last-child  { border-radius: 0 var(--r) var(--r) 0; border-right: 1.5px solid var(--border); }
+.stage-item.active { background: var(--primary-dim); border-color: var(--primary-ring); z-index: 1; }
+.stage-name { font-size: 11px; font-weight: 600; color: var(--fg-3); }
+.stage-count { font-size: 20px; font-weight: 800; color: var(--fg); font-family: 'JetBrains Mono', monospace; }
+.stage-item.active .stage-name  { color: var(--primary); }
+.stage-item.active .stage-count { color: var(--primary); }
+
+/* ══════════════════════════════════════
+   MISC
+══════════════════════════════════════ */
+.spinner { width: 22px; height: 22px; border: 2px solid var(--border-2); border-top-color: var(--primary); border-radius: 50%; animation: spin .65s linear infinite; }
+@keyframes spin { to{transform:rotate(360deg)} }
+.loading-cell { padding: 40px; }
+.loading-center { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--fg-3); }
+.empty-cell { padding: 52px 24px; text-align: center; color: var(--fg-3); }
+
+.mono { font-family: 'JetBrains Mono', monospace; }
+.fw7  { font-weight: 700; }
+.text-sm   { font-size: 12px; }
+.text-muted { color: var(--fg-3); }
+.text-primary { color: var(--primary); }
+hr.divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+
+/* ══════════════════════════════════════
+   LEGEND
+══════════════════════════════════════ */
+.legend-rows { display: flex; flex-direction: column; gap: 9px; }
+.legend-row  { display: flex; align-items: center; gap: 9px; font-size: 12.5px; }
+.legend-swatch { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+.legend-lbl  { flex: 1; color: var(--fg-2); }
+.legend-cnt  { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; color: var(--fg); }
+.legend-pct  { font-size: 11px; color: var(--fg-3); min-width: 34px; text-align: right; }
+
+/* Tooltip override */
+.chart-tooltip {
+  background: var(--fg) !important; border: none !important;
+  border-radius: var(--r) !important; color: white !important;
+  font-family: 'Inter', sans-serif !important; font-size: 12px !important;
+  box-shadow: var(--shadow) !important;
+}
+
+/* Notification toast */
+.toast {
+  position: fixed; bottom: 24px; right: 24px;
+  background: var(--fg); color: white;
+  padding: 12px 18px; border-radius: var(--r);
+  font-size: 13px; font-weight: 500;
+  z-index: 999; box-shadow: var(--shadow-lg);
+  animation: toastIn .3s var(--ease);
+  display: flex; align-items: center; gap: 8px;
+}
+@keyframes toastIn { from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none} }
+
+/* Weight Slider — smart weighting feature */
+.weight-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.weight-label { font-size: 12px; color: var(--fg-2); width: 100px; flex-shrink: 0; }
+.weight-slider { flex: 1; accent-color: var(--primary); height: 4px; cursor: pointer; }
+.weight-val { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; color: var(--primary); min-width: 32px; text-align: right; }
+  </style>
+</head>
+<body>
+
+<!-- ════════════ SIDEBAR ════════════ -->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="brand-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/>
+      </svg>
+    </div>
+    <div>
+      <div class="brand-name">TALASH</div>
+      <div class="brand-tag">AI Hiring Intelligence</div>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Main</div>
+    <div class="nav-item active" data-page="dashboard">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      Dashboard
+    </div>
+    <div class="nav-item" data-page="recommendations">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      AI Recommendations
+      <span class="nav-badge" id="nb-recs">43</span>
+    </div>
+    <div class="nav-item" data-page="candidates">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      Candidates
+      <span class="nav-badge" id="nb-cands">43</span>
+    </div>
+    <div class="nav-section-label" style="margin-top:10px">Tools</div>
+    <div class="nav-item" data-page="compare">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+      Compare
+    </div>
+    <div class="nav-item" data-page="email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Email Center
+      <span class="nav-badge" id="nb-email" style="display:none"></span>
+    </div>
+    <div class="nav-item" data-page="upload">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
+      Upload CVs
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    <!-- Collapse toggle -->
+    <div class="collapse-btn-wrap">
+      <button class="collapse-btn" id="collapse-btn" onclick="toggleSidebar()" title="Collapse sidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+    </div>
+    <div class="status-card">
+      <div class="status-dot offline" id="api-dot"></div>
+      <div>
+        <div class="status-label" id="api-label">Checking API…</div>
+        <div class="status-sub">localhost:8000</div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ════════════ MAIN ════════════ -->
+<div class="main">
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="breadcrumb">
+        <span class="breadcrumb-root">TALASH</span>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-cur" id="tb-cur">Dashboard</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="global-search" type="text" placeholder="Search candidates…" />
+      </div>
+      <div class="icon-btn" title="Notifications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        <span class="notif-dot"></span>
+      </div>
+      <button class="btn primary sm" onclick="navigate('upload')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
+        Upload CVs
+      </button>
+      <div class="user-avatar" title="HEC Admin">HA</div>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- ══ DASHBOARD ══ -->
+    <div class="page active" id="page-dashboard">
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1>Recruitment Overview</h1>
+          <p>AI-powered analysis complete for your active faculty search cycle. Review recommendations, track pipeline progress, and act on flagged profiles.</p>
+        </div>
+        <div class="page-header-right">
+          <button class="btn ghost sm" onclick="navigate('recommendations')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            AI Recommendations
+          </button>
+          <button class="btn primary sm" onclick="navigate('upload')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
+            Upload CVs
+          </button>
+        </div>
+      </div>
+
+      <!-- Pipeline stage bar -->
+      <div class="pipeline-stages" id="pipeline-stages">
+        <div class="stage-item"><div class="stage-name">Total</div><div class="stage-count" id="ps-total">—</div></div>
+        <div class="stage-item active"><div class="stage-name">Completed</div><div class="stage-count" id="ps-done">—</div></div>
+        <div class="stage-item"><div class="stage-name">Processing</div><div class="stage-count" id="ps-proc">—</div></div>
+        <div class="stage-item"><div class="stage-name">Flagged</div><div class="stage-count" id="ps-flag">—</div></div>
+        <div class="stage-item"><div class="stage-name">Tier 1 Elite</div><div class="stage-count" id="ps-t1">—</div></div>
+      </div>
+
+      <!-- KPI cards -->
+      <div class="kpi-row">
+        <div class="kpi-card k-purple">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="kpi-body"><div class="kpi-label">Total Candidates</div><div class="kpi-val" id="kpi-total">—</div><div class="kpi-sub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>All-time intake</div></div>
+        </div>
+        <div class="kpi-card k-green">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div class="kpi-body"><div class="kpi-label">Evaluations Complete</div><div class="kpi-val" id="kpi-done">—</div><div class="kpi-sub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Ready for review</div></div>
+        </div>
+        <div class="kpi-card k-blue">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div class="kpi-body"><div class="kpi-label">Avg Match Score</div><div class="kpi-val" id="kpi-avg">—</div><div class="kpi-sub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Across all candidates</div></div>
+        </div>
+        <div class="kpi-card k-amber">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div class="kpi-body"><div class="kpi-label">Needs Attention</div><div class="kpi-val" id="kpi-flagged">—</div><div class="kpi-sub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Missing information</div></div>
+        </div>
+      </div>
+
+      <!-- Charts + recent -->
+      <div class="two-col">
+        <div class="card">
+          <div class="card-head">
+            <div><div class="card-title">Recent Candidates</div><div class="card-desc">Latest profiles added — click any row to open full AI analysis</div></div>
+            <button class="btn ghost sm" onclick="navigate('candidates')">All candidates →</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr>
+                <th>Candidate</th><th>Status</th><th class="sorted">Match <span class="th-arrow">↓</span></th><th>Suitability</th><th>Missing</th><th>Uploaded</th><th></th>
+              </tr></thead>
+              <tbody id="recent-tbody"><tr><td colspan="7" class="loading-cell"><div class="loading-center"><div class="spinner"></div>Loading…</div></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="right-col">
+          <div class="card">
+            <div class="card-head"><div><div class="card-title">By Suitability</div><div class="card-desc">Distribution across tiers</div></div></div>
+            <div class="card-body">
+              <div style="position:relative;height:155px;margin-bottom:12px"><canvas id="suit-chart"></canvas></div>
+              <div class="legend-rows" id="suit-legend"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><div class="card-title">Score Distribution</div><div class="card-desc">Candidates by score bracket</div></div></div>
+            <div class="card-body">
+              <div style="position:relative;height:120px"><canvas id="dist-chart"></canvas></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top 3 highlight -->
+      <div class="card">
+        <div class="card-head">
+          <div><div class="card-title">Top Recommended Candidates</div><div class="card-desc">Highest-scoring profiles across all 7 evaluated dimensions</div></div>
+          <button class="btn ghost sm" onclick="navigate('recommendations')">View AI recommendations →</button>
+        </div>
+        <div class="card-body" id="top3-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px"></div>
+      </div>
+    </div>
+
+    <!-- ══ AI RECOMMENDATIONS ══ -->
+    <div class="page" id="page-recommendations">
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1>AI Recommendations</h1>
+          <p>Candidates ranked by our 7-dimension composite model. Adjust scoring weights to re-rank results in real time — similar to Manatal's smart weighting engine.</p>
+        </div>
+      </div>
+
+      <!-- Smart Weighting panel -->
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-head">
+          <div><div class="card-title">⚖ Precision Control — Smart Weighting</div><div class="card-desc">Adjust dimension importance to re-rank candidates instantly</div></div>
+          <button class="btn sm" onclick="resetWeights()">Reset</button>
+        </div>
+        <div class="card-body">
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:6px 28px">
+            <div class="weight-row"><span class="weight-label">Research</span><input class="weight-slider" type="range" min="0" max="40" value="25" id="w-research" oninput="onWeightChange()"><span class="weight-val" id="wv-research">25</span></div>
+            <div class="weight-row"><span class="weight-label">Education</span><input class="weight-slider" type="range" min="0" max="40" value="20" id="w-education" oninput="onWeightChange()"><span class="weight-val" id="wv-education">20</span></div>
+            <div class="weight-row"><span class="weight-label">Experience</span><input class="weight-slider" type="range" min="0" max="30" value="15" id="w-experience" oninput="onWeightChange()"><span class="weight-val" id="wv-experience">15</span></div>
+            <div class="weight-row"><span class="weight-label">Supervision</span><input class="weight-slider" type="range" min="0" max="25" value="10" id="w-supervision" oninput="onWeightChange()"><span class="weight-val" id="wv-supervision">10</span></div>
+            <div class="weight-row"><span class="weight-label">Innovation</span><input class="weight-slider" type="range" min="0" max="25" value="10" id="w-innovation" oninput="onWeightChange()"><span class="weight-val" id="wv-innovation">10</span></div>
+            <div class="weight-row"><span class="weight-label">Breadth</span><input class="weight-slider" type="range" min="0" max="25" value="10" id="w-breadth" oninput="onWeightChange()"><span class="weight-val" id="wv-breadth">10</span></div>
+            <div class="weight-row"><span class="weight-label">Collaboration</span><input class="weight-slider" type="range" min="0" max="25" value="10" id="w-collab" oninput="onWeightChange()"><span class="weight-val" id="wv-collab">10</span></div>
+          </div>
+          <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:flex;align-items:center;gap:8px;font-size:12px;color:var(--fg-3)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Rankings update in real-time as you adjust weights. Total weight: <strong id="total-weight" style="color:var(--primary)">100</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sorted recommendation list -->
+      <div class="card">
+        <div class="card-head">
+          <div><div class="card-title">Ranked Candidates</div><div class="card-desc" id="rec-desc">Sorted by weighted composite score</div></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr>
+              <th style="width:50px">Rank</th>
+              <th>Candidate</th>
+              <th class="sorted">Match Score <span class="th-arrow">↓</span></th>
+              <th>Suitability</th>
+              <th>Education</th>
+              <th>Research</th>
+              <th>Experience</th>
+              <th></th>
+            </tr></thead>
+            <tbody id="rec-tbody"><tr><td colspan="8" class="loading-cell"><div class="loading-center"><div class="spinner"></div>Computing…</div></td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ ALL CANDIDATES ══ -->
+    <div class="page" id="page-candidates">
+      <div class="page-header">
+        <div class="page-header-left"><h1>All Candidates</h1><p>Browse, filter, and search all evaluated profiles. Click any row to open the full AI analysis with dimension scores and justifications.</p></div>
+      </div>
+      <div class="filter-row">
+        <div class="filter-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input id="cand-search" type="text" placeholder="Search by name or ID…" />
+        </div>
+        <select class="filter-sel" id="tier-filter">
+          <option value="">All Tiers</option>
+          <option value="Tier 1">Tier 1 — Exceptional</option>
+          <option value="Tier 2">Tier 2 — Strong</option>
+          <option value="Tier 3">Tier 3 — Moderate</option>
+          <option value="Tier 4">Tier 4 — Needs Review</option>
+        </select>
+        <select class="filter-sel" id="sort-sel">
+          <option value="score-desc">Score ↓</option>
+          <option value="score-asc">Score ↑</option>
+          <option value="name-asc">Name A–Z</option>
+          <option value="missing-desc">Most flags ↓</option>
+        </select>
+        <span class="res-count" id="cand-count">43 candidates</span>
+      </div>
+      <div class="card">
+        <div class="table-wrap">
+          <table>
+            <thead><tr>
+              <th>#</th><th>Candidate</th><th class="sorted">Score <span class="th-arrow">↓</span></th>
+              <th>Education</th><th>Research</th><th>Experience</th>
+              <th>Suitability</th><th>Missing</th><th></th>
+            </tr></thead>
+            <tbody id="all-tbody"><tr><td colspan="9" class="loading-cell"><div class="loading-center"><div class="spinner"></div>Loading candidates…</div></td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ COMPARE ══ -->
+    <div class="page" id="page-compare">
+      <div class="page-header">
+        <div class="page-header-left"><h1>Side-by-Side Compare</h1><p>Select any two candidates to compare across all 7 AI-evaluated dimensions. Instantly see who leads in each area.</p></div>
+      </div>
+      <div class="compare-selectors">
+        <div class="compare-pick-card"><div class="compare-pick-label">Candidate A</div><select id="pick-a"><option value="">Select candidate A…</option></select></div>
+        <div class="compare-pick-card"><div class="compare-pick-label">Candidate B</div><select id="pick-b"><option value="">Select candidate B…</option></select></div>
+      </div>
+      <div class="compare-action">
+        <button class="btn primary" style="padding:9px 32px;font-size:14px" onclick="runCompare()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+          Run Comparison
+        </button>
+      </div>
+      <div class="compare-result" id="compare-out"></div>
+    </div>
+
+    <!-- ══ EMAIL ══ -->
+    <div class="page" id="page-email">
+      <div class="page-header">
+        <div class="page-header-left"><h1>Email Center</h1><p>Auto-generate AI follow-up emails for candidates with missing information. Each email is personalised and ready to send.</p></div>
+      </div>
+      <div style="max-width:700px">
+        <div class="filter-row" style="margin-bottom:16px">
+          <select id="email-sel" class="filter-sel" style="flex:1;font-size:13px;padding:9px 14px">
+            <option value="">Select a candidate to generate a personalised follow-up email…</option>
+          </select>
+        </div>
+        <div id="email-out">
+          <div style="text-align:center;padding:56px 24px;color:var(--fg-3)">
+            <div style="font-size:44px;margin-bottom:14px">📬</div>
+            <div style="font-size:15px;font-weight:700;color:var(--fg-2);margin-bottom:8px">Select a candidate above</div>
+            <div style="font-size:13px;max-width:380px;margin:0 auto;line-height:1.7">The AI will generate a personalised follow-up email highlighting any missing information needed to complete their profile evaluation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ UPLOAD ══ -->
+    <div class="page" id="page-upload">
+      <div class="page-header">
+        <div class="page-header-left"><h1>Upload &amp; Processing</h1><p>Upload candidate CVs in PDF format. TALASH's 9-module AI pipeline automatically extracts, analyses, and scores each profile.</p></div>
+      </div>
+      <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-in').click()">
+        <div class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg></div>
+        <h2>Drop CV files here or click to browse</h2>
+        <p>Upload PDF CV files and the 9-module TALASH pipeline will extract, analyse, and score each candidate automatically. Results appear in the dashboard once complete.</p>
+        <button class="btn primary" onclick="event.stopPropagation();document.getElementById('file-in').click()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Browse Files
+        </button>
+        <input type="file" id="file-in" accept=".pdf" multiple style="display:none" onchange="handleFiles(this.files)" />
+      </div>
+      <ul class="upload-list" id="upload-list"></ul>
+    </div>
+
+  </main>
+</div>
+
+<!-- ════════════ SLIDE PANEL ════════════ -->
+<div class="overlay" id="overlay" onclick="closePanel()"></div>
+<div class="slide-panel" id="slide-panel" style="display:none">
+  <div class="panel-topbar">
+    <div class="panel-cand">
+      <div class="panel-avatar" id="pn-av">—</div>
+      <div>
+        <div class="panel-name" id="pn-name">—</div>
+        <div class="panel-id" id="pn-id">—</div>
+      </div>
+    </div>
+    <button class="close-btn" onclick="closePanel()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="panel-body">
+    <!-- Score hero -->
+    <div class="score-hero" id="pn-hero">
+      <div class="score-ring-lg" id="pn-ring"></div>
+      <div class="score-hero-details">
+        <div id="pn-tier"></div>
+        <h3 id="pn-summary-head" style="margin-top:8px">—</h3>
+        <p id="pn-summary">Loading analysis…</p>
+      </div>
+    </div>
+
+    <!-- AI Justifications — Manatal "line-by-line" style -->
+    <div style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--fg-3);margin-bottom:10px">AI Justifications</div>
+    <ul class="insight-list" id="pn-insights"></ul>
+
+    <hr class="divider"/>
+
+    <!-- Radar -->
+    <div style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--fg-3);margin-bottom:10px">Radar Profile</div>
+    <div class="radar-wrap"><canvas id="radar-canvas"></canvas></div>
+
+    <!-- Dimension breakdown -->
+    <div style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--fg-3);margin-bottom:10px">Dimension Scores</div>
+    <div class="dim-grid" id="pn-dims"></div>
+
+    <div style="display:flex;gap:8px;margin-top:16px">
+      <button class="btn" style="flex:1" onclick="draftEmail(currentPanel)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Draft Follow-up Email
+      </button>
+      <button class="btn primary" style="flex:1" onclick="closePanel();navigate('compare')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+        Compare Candidates
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ═══════════════════════════════════
+   DATA
+═══════════════════════════════════ */
+const RAW=[
+  {candidate_id:"04_MUHAMMAD_FARRUKH",candidate_name:"Muhammad Farrukh Qureshi",overall_composite_score:53,candidate_tier:"Tier 3: Moderate Candidate",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:15,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T10:00:00"},
+  {candidate_id:"24_AHMED_NAEEM",candidate_name:"Ahmed Naeem",overall_composite_score:50,candidate_tier:"Tier 3: Moderate Candidate",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:12,status:"done",missing_info_count:3,uploaded_at:"2026-07-19T10:05:00"},
+  {candidate_id:"01_MUHAMMAD_SALMAN",candidate_name:"Muhammad Salman",overall_composite_score:47,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:15,status:"done",missing_info_count:4,uploaded_at:"2026-07-19T10:10:00"},
+  {candidate_id:"11_WAQAS_AMIN",candidate_name:"Waqas Amin",overall_composite_score:47,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:15,status:"done",missing_info_count:4,uploaded_at:"2026-07-19T10:12:00"},
+  {candidate_id:"12_SYED_TAMOORULHASSAN",candidate_name:"Syed Tamoorulhassan",overall_composite_score:47,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:15,status:"done",missing_info_count:3,uploaded_at:"2026-07-19T10:14:00"},
+  {candidate_id:"13_MANZOOR_ELLAHI",candidate_name:"Manzoor Ellahi",overall_composite_score:47,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:15,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T10:16:00"},
+  {candidate_id:"14_SAROSH_TAHIR",candidate_name:"Sarosh Tahir",overall_composite_score:47,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:15,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T10:18:00"},
+  {candidate_id:"16_MUZZAMIL_GHAFFAR",candidate_name:"Muzzamil Ghaffar",overall_composite_score:47,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:15,status:"done",missing_info_count:1,uploaded_at:"2026-07-19T10:20:00"},
+  {candidate_id:"23_WAQAS_TARIQ_TOOR",candidate_name:"Waqas Tariq Toor",overall_composite_score:47,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:15,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T10:22:00"},
+  {candidate_id:"32_QAISAR_HUSSAIN_ALVI",candidate_name:"Qaisar Hussain Alvi",overall_composite_score:47,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:15,status:"done",missing_info_count:3,uploaded_at:"2026-07-19T10:24:00"},
+  {candidate_id:"43_AMMARA_NASIM",candidate_name:"Ammara Nasim",overall_composite_score:47,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:15,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T10:26:00"},
+  {candidate_id:"07_FIZA_MURTAZA",candidate_name:"Fiza Murtaza",overall_composite_score:44.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:7.5,experience_score:15,status:"done",missing_info_count:3,uploaded_at:"2026-07-19T10:28:00"},
+  {candidate_id:"15_M_USMAN_ABBASI",candidate_name:"M. Usman Abbasi",overall_composite_score:44.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:7.5,experience_score:15,status:"done",missing_info_count:4,uploaded_at:"2026-07-19T10:30:00"},
+  {candidate_id:"19_ASIM_MASOOD",candidate_name:"Asim Masood",overall_composite_score:44.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:7.5,experience_score:15,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T10:32:00"},
+  {candidate_id:"26_AAMINA_AKBAR",candidate_name:"Aamina Akbar",overall_composite_score:44.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:7.5,experience_score:15,status:"done",missing_info_count:1,uploaded_at:"2026-07-19T10:34:00"},
+  {candidate_id:"37_SANIA_GUL",candidate_name:"Sania Gul",overall_composite_score:44.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:7.5,experience_score:15,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T10:36:00"},
+  {candidate_id:"08_TAYYABA_GULL",candidate_name:"Tayyaba Gull",overall_composite_score:44,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:12,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T10:38:00"},
+  {candidate_id:"09_MUHAMMAD_ABUBAKAR",candidate_name:"Muhammad Abubakar",overall_composite_score:44,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:12,status:"done",missing_info_count:3,uploaded_at:"2026-07-19T10:40:00"},
+  {candidate_id:"18_MUHAMMAD_AMJAD",candidate_name:"Muhammad Amjad",overall_composite_score:44,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:12,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T10:42:00"},
+  {candidate_id:"21_SAMAN_FATIMA",candidate_name:"Saman Fatima",overall_composite_score:44,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:12,status:"done",missing_info_count:1,uploaded_at:"2026-07-19T10:44:00"},
+  {candidate_id:"30_FAHD_SIKANDAR_KHAN",candidate_name:"Fahd Sikandar Khan",overall_composite_score:44,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:12,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T10:46:00"},
+  {candidate_id:"33_QAMAR_ABBAS",candidate_name:"Qamar Abbas",overall_composite_score:41.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:7.5,experience_score:12,status:"done",missing_info_count:4,uploaded_at:"2026-07-19T10:48:00"},
+  {candidate_id:"34_SHAHZAD",candidate_name:"Shahzad",overall_composite_score:41.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:7.5,experience_score:12,status:"done",missing_info_count:3,uploaded_at:"2026-07-19T10:50:00"},
+  {candidate_id:"03_NASIR_ALI_SHAH",candidate_name:"Nasir Ali Shah",overall_composite_score:40,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:8,status:"done",missing_info_count:3,uploaded_at:"2026-07-19T10:52:00"},
+  {candidate_id:"20_SYED_FASIH_ALI",candidate_name:"Syed Fasih Ali",overall_composite_score:40,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:8,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T10:54:00"},
+  {candidate_id:"40_ABDUR_REHMAN",candidate_name:"Abdur Rehman",overall_composite_score:40,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:8,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T10:56:00"},
+  {candidate_id:"41_MUHAMMAD_AQEEL",candidate_name:"Muhammad Aqeel",overall_composite_score:40,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:8,status:"done",missing_info_count:1,uploaded_at:"2026-07-19T10:58:00"},
+  {candidate_id:"06_FARMAN_ALI",candidate_name:"Farman Ali",overall_composite_score:39.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:2.5,experience_score:15,status:"done",missing_info_count:3,uploaded_at:"2026-07-19T11:00:00"},
+  {candidate_id:"27_SHAHEER",candidate_name:"Shaheer",overall_composite_score:39.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:2.5,experience_score:15,status:"done",missing_info_count:4,uploaded_at:"2026-07-19T11:02:00"},
+  {candidate_id:"42_SAQIB_JAMIL",candidate_name:"Saqib Jamil",overall_composite_score:39.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:2.5,experience_score:15,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T11:04:00"},
+  {candidate_id:"36_SAMANA_BATOOL",candidate_name:"Samana Batool",overall_composite_score:39,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:5,experience_score:12,status:"done",missing_info_count:3,uploaded_at:"2026-07-19T11:06:00"},
+  {candidate_id:"35_MATIULLAH_AHSAN",candidate_name:"Matiullah Ahsan",overall_composite_score:37.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:7.5,experience_score:8,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T11:08:00"},
+  {candidate_id:"10_MUHAMMAD_EHATISHAM",candidate_name:"Muhammad Ehatisham",overall_composite_score:36.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:2.5,experience_score:12,status:"done",missing_info_count:4,uploaded_at:"2026-07-19T11:10:00"},
+  {candidate_id:"17_SUHAIL_ASGHAR",candidate_name:"Suhail Asghar Qureshi",overall_composite_score:36,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:4,status:"done",missing_info_count:3,uploaded_at:"2026-07-19T11:12:00"},
+  {candidate_id:"22_ZEESHAN",candidate_name:"Zeeshan",overall_composite_score:36,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:4,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T11:14:00"},
+  {candidate_id:"28_IDRIS_KHAN",candidate_name:"Idris Khan",overall_composite_score:36,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:4,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T11:16:00"},
+  {candidate_id:"29_MUHAMMAD_SARMAD_TARIQ",candidate_name:"Muhammad Sarmad Tariq",overall_composite_score:36,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:4,status:"done",missing_info_count:3,uploaded_at:"2026-07-19T11:18:00"},
+  {candidate_id:"31_USMAN_MASUD",candidate_name:"Usman Masud",overall_composite_score:36,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:4,status:"done",missing_info_count:1,uploaded_at:"2026-07-19T11:20:00"},
+  {candidate_id:"39_MUHAMMAD_SAQIB",candidate_name:"Muhammad Saqib",overall_composite_score:36,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:10,experience_score:4,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T11:22:00"},
+  {candidate_id:"05_MUHAMMAD_MAJID",candidate_name:"Muhammad Majid",overall_composite_score:35,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:5,experience_score:8,status:"done",missing_info_count:3,uploaded_at:"2026-07-19T11:24:00"},
+  {candidate_id:"25_MUHAMMAD_ADEEL_ALTAF",candidate_name:"Muhammad Adeel Altaf",overall_composite_score:35,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:5,experience_score:8,status:"done",missing_info_count:2,uploaded_at:"2026-07-19T11:26:00"},
+  {candidate_id:"38_MUHAMMAD_MUSADIQ",candidate_name:"Muhammad Musadiq Ahmed",overall_composite_score:33.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:7.5,experience_score:4,status:"done",missing_info_count:4,uploaded_at:"2026-07-19T11:28:00"},
+  {candidate_id:"02_MUHAMMAD_SHAHWAZ",candidate_name:"Muhammad Shahwaz",overall_composite_score:28.5,candidate_tier:"Tier 4: Needs Clarification / Weak",education_score:10,research_score:5,supervision_score:2,innovation_score:2,breadth_score:3,collaboration_score:2.5,experience_score:4,status:"done",missing_info_count:5,uploaded_at:"2026-07-19T11:30:00"},
+];
+
+/* ═══════════════════════════════════
+   STATE
+═══════════════════════════════════ */
+let allData=[...RAW], currentPanel=null;
+let suitChart=null, distChart=null, radarChart=null;
+const DEFAULT_WEIGHTS={research:25,education:20,experience:15,supervision:10,innovation:10,breadth:10,collab:10};
+
+/* ═══════════════════════════════════
+   HELPERS
+═══════════════════════════════════ */
+function initials(n){return(n||'').split(' ').slice(0,2).map(w=>w[0]||'').join('').toUpperCase();}
+function tierNum(t){const m=(t||'').match(/Tier (\d)/);return m?+m[1]:4;}
+function suitLabel(c){const n=tierNum(c.candidate_tier);return n===1?'Strong':n===2?'Strong':n===3?'Moderate':c.missing_info_count>2?'Needs Clarification':'Weak';}
+function suitClass(s){return{Strong:'success',Moderate:'warning',Weak:'danger','Needs Clarification':'info'}[s]||'neutral';}
+function tierClass(n){return['','success','info','warning','danger'][n]||'neutral';}
+function tierLabel(n){return['','Tier 1 · Exceptional','Tier 2 · Strong','Tier 3 · Moderate','Tier 4 · Needs Review'][n]||'Unknown';}
+function scoreColor(s){return s>=65?'#10b981':s>=50?'#f59e0b':s>=35?'#3b82f6':'#ef4444';}
+function fmtDate(s){try{return new Date(s).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});}catch{return s||'—';}}
+function toast(msg,icon='✓'){
+  const t=document.createElement('div');t.className='toast';
+  t.innerHTML=`<span>${icon}</span>${msg}`;
+  document.body.appendChild(t);
+  setTimeout(()=>t.remove(),2800);
+}
+
+/* Ring SVG */
+function ringHTML(pct,color,size=80,stroke=7){
+  const r=(size-stroke)/2,c=size/2,circ=2*Math.PI*r;
+  const dash=((pct/100)*circ).toFixed(2);
+  const numSize=size<50?10:size<70?14:20;
+  return `<svg width="${size}" height="${size}">
+    <circle cx="${c}" cy="${c}" r="${r}" fill="none" stroke="#e5e7eb" stroke-width="${stroke}"/>
+    <circle cx="${c}" cy="${c}" r="${r}" fill="none" stroke="${color}" stroke-width="${stroke}"
+      stroke-dasharray="${dash} ${circ}" stroke-linecap="round" transform="rotate(-90 ${c} ${c})"/>
+  </svg>
+  <div class="score-ring-inner"><div class="score-ring-num" style="color:${color};font-size:${numSize}px">${Math.round(pct)}</div><div class="score-ring-lbl">/100</div></div>`;
+}
+
+/* ═══════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════ */
+const PAGE_TITLES={dashboard:'Dashboard',recommendations:'AI Recommendations',candidates:'All Candidates',compare:'Compare',email:'Email Center',upload:'Upload & Processing'};
+function navigate(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  document.querySelector(`[data-page="${page}"]`).classList.add('active');
+  document.getElementById('tb-cur').textContent=PAGE_TITLES[page]||page;
+  if(page==='dashboard')renderDashboard();
+  if(page==='candidates')renderCandidates();
+  if(page==='recommendations')renderRecommendations();
+}
+document.querySelectorAll('[data-page]').forEach(el=>el.addEventListener('click',()=>navigate(el.dataset.page)));
+
+/* ═══════════════════════════════════
+   API CHECK
+═══════════════════════════════════ */
+async function checkAPI(){
+  try{
+    const r=await fetch('http://127.0.0.1:8000/api/v1/health',{signal:AbortSignal.timeout(2000)});
+    if(r.ok){document.getElementById('api-dot').classList.remove('offline');document.getElementById('api-label').textContent='API Online';return true;}
+  }catch{}
+  document.getElementById('api-dot').classList.add('offline');
+  document.getElementById('api-label').textContent='API Offline';
+  return false;
+}
+async function fetchLiveData(){
+  const online=await checkAPI();
+  if(online){
+    try{
+      const r=await fetch('http://127.0.0.1:8000/api/v1/candidates');
+      if(r.ok){
+        const d=await r.json();
+        if(d&&d.length){
+          allData=d.map(c=>({...c,
+            overall_composite_score:parseFloat(c.overall_composite_score)||0,
+            missing_info_count:parseInt(c.missing_info_count)||0,
+            education_score:parseFloat(c.education_score)||10,
+            research_score:parseFloat(c.research_score)||5,
+            supervision_score:parseFloat(c.supervision_score)||2,
+            innovation_score:parseFloat(c.innovation_score)||2,
+            breadth_score:parseFloat(c.breadth_score)||3,
+            collaboration_score:parseFloat(c.collaboration_score)||5,
+            experience_score:parseFloat(c.experience_score)||8,
+          }));
+        }
+      }
+    }catch{}
+  }
+  renderAll();
+}
+
+/* ═══════════════════════════════════
+   DASHBOARD
+═══════════════════════════════════ */
+function renderDashboard(){
+  const total=allData.length,done=allData.filter(c=>c.status==='done').length;
+  const proc=allData.filter(c=>c.status==='processing').length;
+  const flagged=allData.filter(c=>c.missing_info_count>0).length;
+  const t1=allData.filter(c=>tierNum(c.candidate_tier)===1).length;
+  const avgScore=total?Math.round(allData.reduce((s,c)=>s+c.overall_composite_score,0)/total):0;
+
+  // Pipeline stages
+  document.getElementById('ps-total').textContent=total;
+  document.getElementById('ps-done').textContent=done;
+  document.getElementById('ps-proc').textContent=proc;
+  document.getElementById('ps-flag').textContent=flagged;
+  document.getElementById('ps-t1').textContent=t1||'0';
+
+  // KPI animated
+  countUp('kpi-total',total);countUp('kpi-done',done);
+  countUp('kpi-avg',avgScore);countUp('kpi-flagged',flagged);
+
+  // Nav badges
+  document.getElementById('nb-recs').textContent=total;
+  document.getElementById('nb-cands').textContent=total;
+  const nb=document.getElementById('nb-email');
+  if(flagged>0){nb.style.display='';nb.textContent=flagged;}
+
+  // Recent table (8 rows)
+  const recent=[...allData].sort((a,b)=>new Date(b.uploaded_at)-new Date(a.uploaded_at)).slice(0,8);
+  document.getElementById('recent-tbody').innerHTML=recent.map(c=>`
+    <tr onclick="openPanel('${c.candidate_id}')">
+      <td><div class="cand-cell"><div class="avatar">${initials(c.candidate_name)}</div><div><div class="cand-name">${c.candidate_name}</div><div class="cand-sub">${c.candidate_id}</div></div></div></td>
+      <td><span class="badge success"><span class="dot"></span>Done</span></td>
+      <td>
+        <div class="score-bar-wrap">
+          <div class="score-bar-bg"><div class="score-bar-fill" style="width:${c.overall_composite_score}%;background:${scoreColor(c.overall_composite_score)}"></div></div>
+          <span class="score-num">${c.overall_composite_score}</span>
+        </div>
+      </td>
+      <td><span class="badge ${suitClass(suitLabel(c))}"><span class="dot"></span>${suitLabel(c)}</span></td>
+      <td><span class="${c.missing_info_count>0?'missing-val flagged':'missing-val ok'} mono">${c.missing_info_count>0?c.missing_info_count:'—'}</span></td>
+      <td class="mono text-muted text-sm">${fmtDate(c.uploaded_at)}</td>
+      <td><span class="row-action">View →</span></td>
+    </tr>`).join('');
+
+  // Suitability donut
+  const sm={Strong:0,Moderate:0,Weak:0,'Needs Clarification':0};
+  allData.forEach(c=>{const s=suitLabel(c);if(s in sm)sm[s]++;});
+  const scols={Strong:'#10b981',Moderate:'#f59e0b',Weak:'#ef4444','Needs Clarification':'#3b82f6'};
+  const sd=Object.entries(sm).filter(([,v])=>v>0);
+  if(suitChart)suitChart.destroy();
+  suitChart=new Chart(document.getElementById('suit-chart'),{
+    type:'doughnut',
+    data:{labels:sd.map(([k])=>k),datasets:[{data:sd.map(([,v])=>v),backgroundColor:sd.map(([k])=>scols[k]),borderColor:'#fff',borderWidth:3,hoverOffset:5}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'70%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed} candidate${c.parsed!==1?'s':''}`}}}}
+  });
+  document.getElementById('suit-legend').innerHTML=sd.map(([k,v])=>`
+    <div class="legend-row"><div class="legend-swatch" style="background:${scols[k]}"></div><span class="legend-lbl">${k}</span><span class="legend-cnt">${v}</span><span class="legend-pct">${Math.round(v/total*100)}%</span></div>`).join('');
+
+  // Score distribution bar
+  const brackets=[{l:'28–35',lo:28,hi:35},{l:'36–42',lo:36,hi:42},{l:'43–48',lo:43,hi:48},{l:'49–55',lo:49,hi:55}];
+  const bcounts=brackets.map(b=>allData.filter(c=>c.overall_composite_score>=b.lo&&c.overall_composite_score<=b.hi).length);
+  const bcolors=['#ef4444','#f59e0b','#3b82f6','#10b981'];
+  if(distChart)distChart.destroy();
+  distChart=new Chart(document.getElementById('dist-chart'),{
+    type:'bar',
+    data:{labels:brackets.map(b=>b.l),datasets:[{data:bcounts,backgroundColor:bcolors.map(c=>c+'28'),borderColor:bcolors,borderWidth:2,borderRadius:5,barPercentage:.75}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{color:'#9ca3af',font:{size:10}}},y:{grid:{color:'rgba(0,0,0,.04)'},ticks:{color:'#9ca3af',font:{size:10},stepSize:5}}}}
+  });
+
+  // Top 3
+  const top3=[...allData].sort((a,b)=>b.overall_composite_score-a.overall_composite_score).slice(0,3);
+  const medals=['🥇','🥈','🥉'];
+  document.getElementById('top3-grid').innerHTML=top3.map((c,i)=>`
+    <div style="background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:18px;cursor:pointer;transition:all .18s" onclick="openPanel('${c.candidate_id}')" onmouseover="this.style.borderColor='#5b4cf5'" onmouseout="this.style.borderColor='var(--border)'">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div style="font-size:22px">${medals[i]}</div>
+        <div class="avatar" style="width:38px;height:38px">${initials(c.candidate_name)}</div>
+        <div><div class="cand-name">${c.candidate_name}</div><div class="cand-sub" style="font-size:10.5px">${c.candidate_id}</div></div>
+      </div>
+      <div class="score-ring-lg" style="width:60px;height:60px;margin:0 auto 12px">${ringHTML(c.overall_composite_score,scoreColor(c.overall_composite_score),60,6)}</div>
+      <div style="text-align:center"><span class="badge ${suitClass(suitLabel(c))}"><span class="dot"></span>${suitLabel(c)}</span></div>
+    </div>`).join('');
+}
+
+/* ═══════════════════════════════════
+   AI RECOMMENDATIONS (with re-weighting)
+═══════════════════════════════════ */
+function getWeights(){
+  return{
+    research:+document.getElementById('w-research').value,
+    education:+document.getElementById('w-education').value,
+    experience:+document.getElementById('w-experience').value,
+    supervision:+document.getElementById('w-supervision').value,
+    innovation:+document.getElementById('w-innovation').value,
+    breadth:+document.getElementById('w-breadth').value,
+    collab:+document.getElementById('w-collab').value,
+  };
+}
+function computeWeightedScore(c,w){
+  const tot=Object.values(w).reduce((s,v)=>s+v,0)||1;
+  return Math.round((
+    (c.research_score/25)*w.research+
+    (c.education_score/20)*w.education+
+    (c.experience_score/15)*w.experience+
+    (c.supervision_score/10)*w.supervision+
+    (c.innovation_score/10)*w.innovation+
+    (c.breadth_score/10)*w.breadth+
+    (c.collaboration_score/10)*w.collab
+  )/tot*100);
+}
+function onWeightChange(){
+  const w=getWeights();
+  ['research','education','experience','supervision','innovation','breadth','collab'].forEach(k=>{
+    document.getElementById('wv-'+k).textContent=w[k];
+  });
+  const tot=Object.values(w).reduce((s,v)=>s+v,0);
+  const tw=document.getElementById('total-weight');
+  tw.textContent=tot;
+  tw.style.color=Math.abs(tot-100)<10?'var(--success)':tot>100?'var(--danger)':'var(--warning)';
+  renderRecommendations();
+}
+function resetWeights(){
+  Object.entries(DEFAULT_WEIGHTS).forEach(([k,v])=>{
+    const el=document.getElementById('w-'+k);if(el)el.value=v;
+    const vl=document.getElementById('wv-'+k);if(vl)vl.textContent=v;
+  });
+  document.getElementById('total-weight').textContent='100';
+  document.getElementById('total-weight').style.color='var(--primary)';
+  renderRecommendations();
+}
+function renderRecommendations(){
+  const w=getWeights();
+  const ranked=[...allData].map(c=>({...c,_wscore:computeWeightedScore(c,w)})).sort((a,b)=>b._wscore-a._wscore);
+  document.getElementById('rec-tbody').innerHTML=ranked.map((c,i)=>{
+    const rCls=i===0?'rank-1':i===1?'rank-2':i===2?'rank-3':'rank-n';
+    return `<tr onclick="openPanel('${c.candidate_id}')">
+      <td><div class="rank-badge ${rCls}">${i+1}</div></td>
+      <td><div class="cand-cell"><div class="avatar">${initials(c.candidate_name)}</div><div><div class="cand-name">${c.candidate_name}</div><div class="cand-sub">${c.candidate_id}</div></div></div></td>
+      <td>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="score-ring-lg" style="width:38px;height:38px">${ringHTML(c._wscore,scoreColor(c._wscore),38,5)}</div>
+          <span class="mono fw7" style="font-size:15px;color:${scoreColor(c._wscore)}">${c._wscore}</span>
+        </div>
+      </td>
+      <td><span class="badge ${suitClass(suitLabel(c))}"><span class="dot"></span>${suitLabel(c)}</span></td>
+      <td class="mono text-sm">${c.education_score}<span class="text-muted">/20</span></td>
+      <td class="mono text-sm">${c.research_score}<span class="text-muted">/25</span></td>
+      <td class="mono text-sm">${c.experience_score}<span class="text-muted">/15</span></td>
+      <td><span class="row-action">Open →</span></td>
+    </tr>`;
+  }).join('');
+}
+
+/* ═══════════════════════════════════
+   CANDIDATES TABLE
+═══════════════════════════════════ */
+function renderCandidates(){
+  const q=document.getElementById('cand-search').value.toLowerCase();
+  const tier=document.getElementById('tier-filter').value;
+  const sort=document.getElementById('sort-sel').value;
+  let d=[...allData].filter(c=>{
+    const mq=!q||c.candidate_name.toLowerCase().includes(q)||c.candidate_id.toLowerCase().includes(q);
+    const mt=!tier||c.candidate_tier.includes(tier);
+    return mq&&mt;
+  });
+  if(sort==='score-asc')d.sort((a,b)=>a.overall_composite_score-b.overall_composite_score);
+  else if(sort==='name-asc')d.sort((a,b)=>a.candidate_name.localeCompare(b.candidate_name));
+  else if(sort==='missing-desc')d.sort((a,b)=>b.missing_info_count-a.missing_info_count);
+  else d.sort((a,b)=>b.overall_composite_score-a.overall_composite_score);
+  document.getElementById('cand-count').textContent=`${d.length} candidate${d.length!==1?'s':''}`;
+  if(!d.length){document.getElementById('all-tbody').innerHTML=`<tr><td colspan="9" class="empty-cell">No candidates match your filters.</td></tr>`;return;}
+  document.getElementById('all-tbody').innerHTML=d.map((c,i)=>`
+    <tr onclick="openPanel('${c.candidate_id}')">
+      <td class="mono text-muted text-sm">#${i+1}</td>
+      <td><div class="cand-cell"><div class="avatar">${initials(c.candidate_name)}</div><div><div class="cand-name">${c.candidate_name}</div><div class="cand-sub">${c.candidate_id}</div></div></div></td>
+      <td>
+        <div class="score-bar-wrap">
+          <div class="score-bar-bg"><div class="score-bar-fill" style="width:${c.overall_composite_score}%;background:${scoreColor(c.overall_composite_score)}"></div></div>
+          <span class="score-num">${c.overall_composite_score}</span>
+        </div>
+      </td>
+      <td class="mono text-sm">${c.education_score}<span class="text-muted">/20</span></td>
+      <td class="mono text-sm">${c.research_score}<span class="text-muted">/25</span></td>
+      <td class="mono text-sm">${c.experience_score}<span class="text-muted">/15</span></td>
+      <td><span class="badge ${suitClass(suitLabel(c))}"><span class="dot"></span>${suitLabel(c)}</span></td>
+      <td><span class="${c.missing_info_count>0?'missing-val flagged':'missing-val ok'} mono">${c.missing_info_count>0?c.missing_info_count:'—'}</span></td>
+      <td><span class="row-action">View →</span></td>
+    </tr>`).join('');
+}
+document.getElementById('cand-search').addEventListener('input',renderCandidates);
+document.getElementById('tier-filter').addEventListener('change',renderCandidates);
+document.getElementById('sort-sel').addEventListener('change',renderCandidates);
+document.getElementById('global-search').addEventListener('input',function(){
+  document.getElementById('cand-search').value=this.value;
+  navigate('candidates');
+});
+
+/* ═══════════════════════════════════
+   SLIDE PANEL
+═══════════════════════════════════ */
+const DIMS=[
+  {k:'education_score',  label:'Education',   max:20},
+  {k:'research_score',   label:'Research',    max:25},
+  {k:'supervision_score',label:'Supervision', max:10},
+  {k:'innovation_score', label:'Innovation',  max:10},
+  {k:'breadth_score',    label:'Breadth',     max:10},
+  {k:'collaboration_score',label:'Collaboration',max:10},
+  {k:'experience_score', label:'Experience',  max:15},
+];
+function buildInsights(c){
+  const items=[];
+  if(c.research_score>=15)items.push({cls:'pos',icon:'✓',text:`Strong research profile — ${c.research_score}/25 points. Publications and academic output are well-evidenced.`});
+  else if(c.research_score<8)items.push({cls:'neg',icon:'!',text:`Limited research output — only ${c.research_score}/25 points. Consider requesting a publication list.`});
+  if(c.education_score>=18)items.push({cls:'pos',icon:'✓',text:`Educational credentials meet or exceed the benchmark — ${c.education_score}/20 points.`});
+  if(c.experience_score>=12)items.push({cls:'pos',icon:'✓',text:`${c.experience_score} years of relevant academic/industry experience confirmed.`});
+  else items.push({cls:'neg',icon:'!',text:`Experience score is ${c.experience_score}/15. Verify industry or teaching tenure from CV.`});
+  if(c.missing_info_count>2)items.push({cls:'neg',icon:'⚠',text:`${c.missing_info_count} missing information flags detected. A follow-up email is recommended.`});
+  else if(c.missing_info_count===0)items.push({cls:'pos',icon:'✓',text:'Profile is complete — no missing information detected.'});
+  if(c.supervision_score<5)items.push({cls:'neg',icon:'!',text:`Low supervision score (${c.supervision_score}/10). Student mentorship data may be absent or unverified.`});
+  if(c.collaboration_score>=8)items.push({cls:'pos',icon:'✓',text:`Collaboration score is strong (${c.collaboration_score}/10) — co-authored work or team projects confirmed.`});
+  items.push({cls:'neu',icon:'i',text:`Composite tier: ${c.candidate_tier.replace(/^Tier \d: /,'')}.`});
+  return items.slice(0,5);
+}
+function openPanel(cid){
+  const c=allData.find(x=>x.candidate_id===cid);if(!c)return;
+  currentPanel=cid;
+  document.getElementById('pn-av').textContent=initials(c.candidate_name);
+  document.getElementById('pn-name').textContent=c.candidate_name;
+  document.getElementById('pn-id').textContent=c.candidate_id;
+
+  const n=tierNum(c.candidate_tier);
+  const col=scoreColor(c.overall_composite_score);
+  document.getElementById('pn-ring').innerHTML=ringHTML(c.overall_composite_score,col);
+  document.getElementById('pn-tier').innerHTML=`<span class="badge ${tierClass(n)}"><span class="dot"></span>${tierLabel(n)}</span>`;
+  document.getElementById('pn-summary-head').textContent=c.candidate_name;
+  document.getElementById('pn-summary').textContent=`Composite score of ${c.overall_composite_score}/100 across 7 AI-evaluated dimensions. ${c.missing_info_count>0?c.missing_info_count+' information gap(s) detected.':'Profile complete.'}`;
+
+  // Insights
+  document.getElementById('pn-insights').innerHTML=buildInsights(c).map(i=>`
+    <li class="insight-item ${i.cls}">
+      <div class="insight-icon"><svg viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="5"/></svg></div>
+      <span class="insight-text">${i.text}</span>
+    </li>`).join('');
+
+  // Dims
+  document.getElementById('pn-dims').innerHTML=DIMS.map(d=>`
+    <div class="dim-card">
+      <div class="dim-card-label">${d.label}</div>
+      <div class="dim-card-bar-wrap">
+        <div class="dim-card-bar-bg"><div class="dim-card-bar-fill" style="width:${(c[d.k]/d.max*100).toFixed(0)}%;background:${scoreColor(c.overall_composite_score)}"></div></div>
+        <span class="dim-card-val">${c[d.k]}<span class="dim-card-max"> /${d.max}</span></span>
+      </div>
+    </div>`).join('');
+
+  // Radar
+  if(radarChart)radarChart.destroy();
+  radarChart=new Chart(document.getElementById('radar-canvas'),{
+    type:'radar',
+    data:{
+      labels:DIMS.map(d=>d.label),
+      datasets:[{label:c.candidate_name,data:DIMS.map(d=>Math.round(c[d.k]/d.max*100)),
+        backgroundColor:'rgba(0,180,216,.12)',borderColor:'#00B4D8',borderWidth:2.5,
+        pointBackgroundColor:'#00B4D8',pointBorderColor:'#fff',pointRadius:4,pointBorderWidth:2}]
+    },
+    options:{responsive:true,maintainAspectRatio:false,
+      scales:{r:{min:0,max:100,grid:{color:'rgba(0,0,0,.06)'},angleLines:{color:'rgba(0,0,0,.06)'},
+        pointLabels:{color:'#9ca3af',font:{size:10,family:'Inter'}},ticks:{display:false}}},
+      plugins:{legend:{display:false}}}
+  });
+
+  document.getElementById('overlay').classList.add('open');
+  document.getElementById('slide-panel').style.display='flex';
+  document.body.style.overflow='hidden';
+}
+function closePanel(){
+  document.getElementById('overlay').classList.remove('open');
+  document.getElementById('slide-panel').style.display='none';
+  document.body.style.overflow='';
+  if(radarChart){radarChart.destroy();radarChart=null;}
+  currentPanel=null;
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePanel();});
+
+/* ═══════════════════════════════════
+   COMPARE
+═══════════════════════════════════ */
+function populateCompare(){
+  const opts='<option value="">Select…</option>'+[...allData].sort((a,b)=>b.overall_composite_score-a.overall_composite_score).map(c=>`<option value="${c.candidate_id}">${c.candidate_name} · ${c.overall_composite_score}/100</option>`).join('');
+  document.getElementById('pick-a').innerHTML=opts;
+  document.getElementById('pick-b').innerHTML=opts;
+}
+function runCompare(){
+  const idA=document.getElementById('pick-a').value,idB=document.getElementById('pick-b').value;
+  if(!idA||!idB||idA===idB){toast('Pick two different candidates','⚠');return;}
+  const cA=allData.find(c=>c.candidate_id===idA),cB=allData.find(c=>c.candidate_id===idB);
+  const dims=[{label:'Overall Score',kA:'overall_composite_score',kB:'overall_composite_score',max:100},...DIMS.map(d=>({label:d.label,kA:d.k,kB:d.k,max:d.max}))];
+  const winA=cA.overall_composite_score>=cB.overall_composite_score;
+  document.getElementById('compare-out').innerHTML=`
+    <div class="card">
+      <div class="card-head">
+        <div><div class="card-title">Comparison: ${cA.candidate_name} vs ${cB.candidate_name}</div><div class="card-desc">Side-by-side across all 8 dimensions</div></div>
+        <span class="badge ${winA?'info':'success'}"><span class="dot"></span>${(winA?cA:cB).candidate_name} leads overall</span>
+      </div>
+      <div class="table-wrap"><table>
+        <thead><tr>
+          <th>Dimension</th>
+          <th style="color:#5b4cf5">${cA.candidate_name}</th>
+          <th style="color:#10b981">${cB.candidate_name}</th>
+          <th>Advantage</th>
+        </tr></thead>
+        <tbody>${dims.map(d=>{
+          const vA=parseFloat(cA[d.kA]||0),vB=parseFloat(cB[d.kB]||0);
+          const winA=vA>vB,tie=vA===vB;
+          return `<tr>
+            <td style="font-weight:700;color:var(--fg)">${d.label}</td>
+            <td><div class="score-bar-wrap"><div class="score-bar-bg"><div class="score-bar-fill" style="width:${(vA/d.max*100).toFixed(0)}%;background:#5b4cf5"></div></div><span class="score-num" style="color:${winA?'#5b4cf5':'var(--fg-3)'}">${vA}</span></div></td>
+            <td><div class="score-bar-wrap"><div class="score-bar-bg"><div class="score-bar-fill" style="width:${(vB/d.max*100).toFixed(0)}%;background:#10b981"></div></div><span class="score-num" style="color:${!winA&&!tie?'#10b981':'var(--fg-3)'}">${vB}</span></div></td>
+            <td>${tie?'<span class="badge neutral">Tied</span>':winA?'<span class="badge purple">A</span>':'<span class="badge success">B</span>'}</td>
+          </tr>`;}).join('')}
+        </tbody>
+      </table></div>
+    </div>`;
+  document.getElementById('compare-out').classList.add('shown');
+}
+
+/* ═══════════════════════════════════
+   EMAIL
+═══════════════════════════════════ */
+function populateEmail(){
+  document.getElementById('email-sel').innerHTML='<option value="">Select a candidate to generate a personalised follow-up email…</option>'+
+    [...allData].sort((a,b)=>b.missing_info_count-a.missing_info_count||b.overall_composite_score-a.overall_composite_score).map(c=>`<option value="${c.candidate_id}">${c.candidate_name}${c.missing_info_count>0?' ⚠ '+c.missing_info_count+' flag(s)':''}</option>`).join('');
+}
+document.getElementById('email-sel').addEventListener('change',async function(){
+  const id=this.value;if(!id)return;
+  const c=allData.find(x=>x.candidate_id===id);
+  document.getElementById('email-out').innerHTML='<div style="padding:32px;display:flex;align-items:center;gap:12px;color:var(--fg-3);font-size:13px"><div class="spinner"></div>AI is drafting a personalised email…</div>';
+  let subject='',body='';
+  try{const r=await fetch(`http://127.0.0.1:8000/api/v1/email/${id}`,{signal:AbortSignal.timeout(6000)});if(r.ok){const d=await r.json();subject=d.subject;body=d.body;}}catch{}
+  if(!subject){
+    subject='Faculty Position Application — Additional Information Required';
+    body=`Dear ${c.candidate_name},\n\nThank you for submitting your application for the faculty position at our institution. Our automated TALASH evaluation system has completed the initial review of your credentials.\n\nTo finalise your evaluation, we kindly request the following additional information:\n\n• DOI links or journal references for publications listed in your CV\n• Verification of student supervision records (MS/PhD students mentored)\n• Institutional contact details for degree verification\n${c.missing_info_count>2?'• Additional context for research activities mentioned without supporting evidence\n':''}\nPlease respond at your earliest convenience. Your application will receive full consideration upon receipt of the requested materials.\n\nBest regards,\n\nFaculty Hiring Committee\nHigher Education Commission\nhiring@hec.gov.pk\n\n─────────────────────────────────────────\nThis email was generated by TALASH — AI Faculty Hiring Intelligence System\nCandidate ID: ${c.candidate_id} | Score: ${c.overall_composite_score}/100`;
+  }
+  document.getElementById('email-out').innerHTML=`
+    <div class="email-chrome">
+      <div class="email-chrome-bar">
+        <div class="chrome-dots"><div class="chrome-dot" style="background:#f87171"></div><div class="chrome-dot" style="background:#facc15"></div><div class="chrome-dot" style="background:#4ade80"></div></div>
+        <span class="email-chrome-title">TALASH Email Drafter — AI Generated</span>
+        <span class="badge success" style="font-size:10px">Ready to send</span>
+      </div>
+      <div class="email-field"><span class="ef-key">To</span><span class="ef-val">${c.candidate_name}</span></div>
+      <div class="email-field"><span class="ef-key">From</span><span class="ef-val">hiring@hec.gov.pk</span></div>
+      <div class="email-field"><span class="ef-key">Subject</span><span class="ef-subject">${subject}</span></div>
+      <div class="email-body">${body}</div>
+      <div class="email-actions">
+        <button class="btn sm" onclick="navigator.clipboard.writeText(${JSON.stringify(body)}).then(()=>{toast('Email body copied!');})">Copy Body</button>
+        <button class="btn sm" onclick="navigator.clipboard.writeText(${JSON.stringify(subject+'\n\n'+body)}).then(()=>{toast('Full email copied!');})">Copy All</button>
+      </div>
+    </div>`;
+});
+function draftEmail(cid){
+  closePanel();
+  navigate('email');
+  setTimeout(()=>{const s=document.getElementById('email-sel');s.value=cid;s.dispatchEvent(new Event('change'));},180);
+}
+
+/* ═══════════════════════════════════
+   UPLOAD
+═══════════════════════════════════ */
+const dz=document.getElementById('drop-zone');
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('dragging');});
+dz.addEventListener('dragleave',()=>dz.classList.remove('dragging'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('dragging');handleFiles(e.dataTransfer.files);});
+function handleFiles(files){
+  Array.from(files).forEach(f=>{
+    if(!f.name.endsWith('.pdf')){toast('Only PDF files are supported','⚠');return;}
+    const li=document.createElement('li');li.className='upload-row';
+    li.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span class="upload-row-name">${f.name}</span><span class="upload-row-size">${(f.size/1024).toFixed(1)} KB</span><span class="badge success">Queued</span>`;
+    document.getElementById('upload-list').appendChild(li);
+    const fd=new FormData();fd.append('file',f);
+    fetch('http://127.0.0.1:8000/api/v1/upload',{method:'POST',body:fd,signal:AbortSignal.timeout(10000)})
+      .then(r=>r.ok?r.json():null).then(d=>{if(d)li.querySelector('.badge').className='badge info';li.querySelector('.badge').textContent='Processing';})
+      .catch(()=>{});
+  });
+}
+
+/* ═══════════════════════════════════
+   ANIMATED COUNTER
+═══════════════════════════════════ */
+function countUp(id,target){
+  const el=document.getElementById(id);if(!el)return;
+  const dur=700,start=performance.now();
+  (function step(now){
+    const p=Math.min((now-start)/dur,1),e=1-Math.pow(1-p,3);
+    el.textContent=Math.round(target*e);
+    if(p<1)requestAnimationFrame(step);
+  })(performance.now());
+}
+
+/* ═══════════════════════════════════
+   INIT
+═══════════════════════════════════ */
+function renderAll(){
+  populateCompare();
+  populateEmail();
+  renderDashboard();
+  renderCandidates();
+  renderRecommendations();
+}
+fetchLiveData();
+setInterval(checkAPI,15000);
+
+/* ═══════════════════════════════════
+   SIDEBAR COLLAPSE TOGGLE
+═══════════════════════════════════ */
+function toggleSidebar(){
+  const sidebar=document.querySelector('.sidebar');
+  sidebar.classList.toggle('collapsed');
+  const isCollapsed=sidebar.classList.contains('collapsed');
+  // Flip chevron is handled by CSS rotate(180deg)
+  // Add tooltips on nav items when collapsed
+  document.querySelectorAll('.nav-item').forEach(el=>{
+    if(isCollapsed){el.setAttribute('title',el.querySelector('span')||el.textContent.trim());}
+    else{el.removeAttribute('title');}
+  });
+  localStorage.setItem('sidebar-collapsed',isCollapsed?'1':'0');
+}
+// Restore saved state
+(function(){
+  if(localStorage.getItem('sidebar-collapsed')==='1'){
+    document.querySelector('.sidebar').classList.add('collapsed');
+  }
+})();
+</script>
+</body>
+</html>
