@@ -46,21 +46,31 @@ def extract_missing_candidate_info(candidate_id: str, output_dir: str = "data/an
         try:
             df = pd.read_csv(sup_p, dtype=str)
             row = df[df["candidate_id"] == candidate_id]
-            if not row.empty and str(row.iloc[0].get("email_flag") or "").lower() == "true":
-                missing_items.append("Postgraduate student supervision record (list of MS/PhD thesis students supervised and graduation years).")
+            if not row.empty:
+                flag_val = str(row.iloc[0].get("email_flag") or "").strip()
+                data_missing = str(row.iloc[0].get("data_missing") or "").strip().lower()
+                # Flag is "REQUEST_SUPERVISION_DATA" or data_missing is true
+                if flag_val == "REQUEST_SUPERVISION_DATA" or data_missing == "true":
+                    total_sup = float(row.iloc[0].get("total_students_supervised") or 0)
+                    if total_sup == 0:
+                        missing_items.append("Postgraduate student supervision record (list of MS/PhD thesis students supervised and graduation years).")
         except Exception:
             pass
 
-    # 2. Check Unverified Education Degrees
+    # 2. Check Education — unexplained or significant gaps
     edu_p = out / "educational_profiles.csv"
     if edu_p.exists():
         try:
             df = pd.read_csv(edu_p, dtype=str)
             row = df[df["candidate_id"] == candidate_id]
             if not row.empty:
-                flags = str(row.iloc[0].get("data_quality_flags") or "")
-                if "MISSING_INSTITUTION" in flags or "UNRANKED" in flags:
-                    missing_items.append("Official degree certificates or verification links for unlisted degree awarding institutions.")
+                unexplained = float(row.iloc[0].get("unexplained_gaps") or 0)
+                significant = float(row.iloc[0].get("significant_gaps") or 0)
+                drift = str(row.iloc[0].get("specialization_drift") or "").lower()
+                if unexplained > 0:
+                    missing_items.append(f"Explanation for {int(unexplained)} unexplained gap(s) in academic record (institutions, dates, or activities during those periods).")
+                elif significant > 0 and drift not in ("", "none", "low", "nan"):
+                    missing_items.append("Clarification of specialization change between degrees and the academic rationale behind it.")
         except Exception:
             pass
 
