@@ -85,11 +85,14 @@ def compute_candidate_composite_score(
             research_score = min(research_score + 3.0, 25.0)
 
     # 3. Student Supervision Score (Max 10 pts)
-    sup_score = 2.0
+    # Default: neutral 5.0 when data is absent from the CV (data_missing=True).
+    # Penalise with 2.0 only when we have a confirmed record with zero students.
+    sup_score = 5.0
     if supervision_profile:
-        ms_cnt = float(supervision_profile.get("total_ms_supervised") or supervision_profile.get("ms_main_supervisor") or 0)
-        phd_cnt = float(supervision_profile.get("total_phd_supervised") or supervision_profile.get("phd_main_supervisor") or 0)
-        joint_cnt = float(supervision_profile.get("total_joint_papers") or supervision_profile.get("joint_publications_count") or 0)
+        data_missing = str(supervision_profile.get("data_missing") or "").strip().lower()
+        ms_cnt   = float(supervision_profile.get("total_ms_supervised")  or supervision_profile.get("ms_main_supervisor")  or 0)
+        phd_cnt  = float(supervision_profile.get("total_phd_supervised") or supervision_profile.get("phd_main_supervisor") or 0)
+        joint_cnt = float(supervision_profile.get("total_joint_papers")  or supervision_profile.get("joint_publications_count") or 0)
 
         total_sup = ms_cnt + (phd_cnt * 2.0)
         if total_sup >= 5 or phd_cnt >= 2:
@@ -98,7 +101,11 @@ def compute_candidate_composite_score(
             sup_score = 7.0
         elif total_sup >= 1 or joint_cnt >= 1:
             sup_score = 4.0
+        elif data_missing in ("true", "1", "yes"):
+            # Data not found in CV — cannot penalise; award neutral score
+            sup_score = 5.0
         else:
+            # Confirmed zero supervision records
             sup_score = 2.0
 
     # 4. Books & Patents Score (Max 10 pts)
