@@ -101,31 +101,30 @@ body {
   will-change: width;
 }
 .sidebar.collapsed { width: var(--sidebar-collapsed); }
-.sidebar.collapsed .brand-name,
-.sidebar.collapsed .brand-tag,
-.sidebar.collapsed .nav-item span,
+.sidebar.collapsed .brand-info,
+.sidebar.collapsed .nav-text,
 .sidebar.collapsed .nav-badge,
 .sidebar.collapsed .nav-section-label,
-.sidebar.collapsed .status-label,
-.sidebar.collapsed .status-sub,
-.sidebar.collapsed .sidebar-footer > *:not(.collapse-btn-wrap) {
-  opacity: 0;
-  pointer-events: none;
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.sidebar.collapsed .nav-item {
-  justify-content: center;
-  padding: 9px 0;
+.sidebar.collapsed .status-info {
+  display: none !important;
 }
 .sidebar.collapsed .sidebar-header {
   justify-content: center;
   padding: 18px 0 16px;
 }
+.sidebar.collapsed .sidebar-nav {
+  padding: 14px 6px;
+}
+.sidebar.collapsed .nav-item {
+  justify-content: center;
+  padding: 10px 0;
+  gap: 0;
+}
 .sidebar.collapsed .status-card {
   justify-content: center;
   padding: 10px 0;
+  border-color: transparent;
+  background: transparent;
 }
 /* subtle gradient stripe */
 .sidebar::before {
@@ -775,7 +774,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; 
         <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/>
       </svg>
     </div>
-    <div>
+    <div class="brand-info">
       <div class="brand-name">TALASH</div>
       <div class="brand-tag">AI Hiring Intelligence</div>
     </div>
@@ -785,31 +784,31 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; 
     <div class="nav-section-label">Main</div>
     <div class="nav-item active" data-page="dashboard">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-      Dashboard
+      <span class="nav-text">Dashboard</span>
     </div>
     <div class="nav-item" data-page="recommendations">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      AI Recommendations
+      <span class="nav-text">AI Recommendations</span>
       <span class="nav-badge" id="nb-recs">43</span>
     </div>
     <div class="nav-item" data-page="candidates">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-      Candidates
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 010 7.75"/></svg>
+      <span class="nav-text">Candidates</span>
       <span class="nav-badge" id="nb-cands">43</span>
     </div>
     <div class="nav-section-label" style="margin-top:10px">Tools</div>
     <div class="nav-item" data-page="compare">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
-      Compare
+      <span class="nav-text">Compare</span>
     </div>
     <div class="nav-item" data-page="email">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      Email Center
+      <span class="nav-text">Email Center</span>
       <span class="nav-badge" id="nb-email" style="display:none"></span>
     </div>
     <div class="nav-item" data-page="upload">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
-      Upload CVs
+      <span class="nav-text">Upload CVs</span>
     </div>
   </nav>
 
@@ -824,7 +823,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; 
     </div>
     <div class="status-card">
       <div class="status-dot offline" id="api-dot"></div>
-      <div>
+      <div class="status-info">
         <div class="status-label" id="api-label">Checking API…</div>
         <div class="status-sub">localhost:8000</div>
       </div>
@@ -1721,10 +1720,9 @@ function toggleSidebar(){
   const sidebar=document.querySelector('.sidebar');
   sidebar.classList.toggle('collapsed');
   const isCollapsed=sidebar.classList.contains('collapsed');
-  // Flip chevron is handled by CSS rotate(180deg)
-  // Add tooltips on nav items when collapsed
   document.querySelectorAll('.nav-item').forEach(el=>{
-    if(isCollapsed){el.setAttribute('title',el.querySelector('span')||el.textContent.trim());}
+    const txtEl=el.querySelector('.nav-text');
+    if(isCollapsed && txtEl){el.setAttribute('title',txtEl.textContent.trim());}
     else{el.removeAttribute('title');}
   });
   localStorage.setItem('sidebar-collapsed',isCollapsed?'1':'0');
