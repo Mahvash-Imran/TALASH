@@ -50,50 +50,56 @@ def compute_candidate_composite_score(
     # 1. Educational Score (Max 20 pts)
     edu_score = 10.0  # Base
     if edu_profile:
-        lbl = str(edu_profile.get("educational_strength_label") or "").lower()
+        lbl = str(edu_profile.get("educational_strength") or edu_profile.get("educational_strength_label") or edu_profile.get("rule_based_label") or "").lower()
         if "strong" in lbl:
-            edu_score = 19.0
+            edu_score = 18.0
         elif "moderate" in lbl:
             edu_score = 14.0
-        elif "needs" in lbl:
+        elif "weak" in lbl or "needs" in lbl:
             edu_score = 9.0
 
-        # Bonus for PhD
-        has_phd = float(edu_profile.get("phd_count") or 0) > 0
-        if has_phd:
-            edu_score = min(edu_score + 1.0, 20.0)
+        deg = str(edu_profile.get("highest_degree") or "").lower()
+        phd_cnt = float(edu_profile.get("phd_count") or 0)
+        if "phd" in deg or "ph.d" in deg or "doctor" in deg or phd_cnt > 0:
+            edu_score = min(edu_score + 2.0, 20.0)
 
     # 2. Research Quality Score (Max 25 pts)
     research_score = 5.0
     if research_profile:
-        lbl = str(research_profile.get("scholarly_strength_label") or "").lower()
-        if "strong" in lbl:
-            research_score = 24.0
-        elif "moderate" in lbl:
-            research_score = 17.0
-        elif "weak" in lbl:
-            research_score = 10.0
+        lbl = str(research_profile.get("research_strength") or research_profile.get("rule_based_label") or research_profile.get("scholarly_strength_label") or "").lower()
+        tj = float(research_profile.get("total_journals") or 0)
+        tc = float(research_profile.get("total_conferences") or 0)
+        pub_cnt = float(research_profile.get("total_publications") or (tj + tc))
+        q1_q2 = float(research_profile.get("q1_papers") or 0) + float(research_profile.get("q2_papers") or 0)
 
-        pub_cnt = float(research_profile.get("total_publications") or 0)
-        if pub_cnt >= 15:
-            research_score = min(research_score + 1.0, 25.0)
+        if "strong" in lbl or q1_q2 >= 3 or pub_cnt >= 10:
+            research_score = 22.0
+        elif "moderate" in lbl or q1_q2 >= 1 or pub_cnt >= 4:
+            research_score = 16.0
+        elif pub_cnt >= 1:
+            research_score = 10.0
+        else:
+            research_score = 5.0
+
+        if pub_cnt >= 15 or q1_q2 >= 5:
+            research_score = min(research_score + 3.0, 25.0)
 
     # 3. Student Supervision Score (Max 10 pts)
     sup_score = 2.0
     if supervision_profile:
-        ms_cnt = float(supervision_profile.get("ms_supervised_main") or 0)
-        phd_cnt = float(supervision_profile.get("phd_supervised_main") or 0)
-        joint_cnt = float(supervision_profile.get("joint_publications_count") or 0)
+        ms_cnt = float(supervision_profile.get("total_ms_supervised") or supervision_profile.get("ms_main_supervisor") or 0)
+        phd_cnt = float(supervision_profile.get("total_phd_supervised") or supervision_profile.get("phd_main_supervisor") or 0)
+        joint_cnt = float(supervision_profile.get("total_joint_papers") or supervision_profile.get("joint_publications_count") or 0)
 
         total_sup = ms_cnt + (phd_cnt * 2.0)
-        if total_sup >= 5:
+        if total_sup >= 5 or phd_cnt >= 2:
             sup_score = 10.0
-        elif total_sup >= 2:
+        elif total_sup >= 2 or phd_cnt >= 1:
             sup_score = 7.0
         elif total_sup >= 1 or joint_cnt >= 1:
             sup_score = 4.0
         else:
-            sup_score = 2.0  # Flagged/no data
+            sup_score = 2.0
 
     # 4. Books & Patents Score (Max 10 pts)
     innovation_score = 2.0
@@ -110,19 +116,20 @@ def compute_candidate_composite_score(
     # 5. Topic Breadth Score (Max 10 pts)
     breadth_score = 5.0
     if breadth_profile:
-        div_score = float(breadth_profile.get("shannon_entropy_diversity_score") or 0)
-        breadth_score = round(min(div_score * 10.0 + 3.0, 10.0), 1)
+        div_score = float(breadth_profile.get("diversity_score") or breadth_profile.get("raw_shannon_entropy") or breadth_profile.get("shannon_entropy_diversity_score") or 0)
+        themes = float(breadth_profile.get("distinct_themes_count") or 1)
+        breadth_score = round(min(div_score * 8.0 + (themes * 0.5) + 2.0, 10.0), 1)
 
     # 6. Collaboration Network Score (Max 10 pts)
     collab_score = 5.0
     if collab_profile:
         co_cnt = float(collab_profile.get("total_unique_coauthors") or 0)
         lbl = str(collab_profile.get("collaboration_strength_label") or "").lower()
-        if "broad" in lbl or co_cnt >= 20:
+        if "broad" in lbl or co_cnt >= 15:
             collab_score = 10.0
-        elif "balanced" in lbl or co_cnt >= 10:
+        elif "balanced" in lbl or co_cnt >= 5:
             collab_score = 7.5
-        elif "closed" in lbl or co_cnt >= 2:
+        elif co_cnt >= 1:
             collab_score = 5.0
         else:
             collab_score = 2.5
@@ -131,16 +138,16 @@ def compute_candidate_composite_score(
     exp_score = 5.0
     if exp_profile:
         yrs = float(exp_profile.get("total_experience_years") or 0)
-        jd_fit = float(exp_profile.get("jd_alignment_score") or 0)
-
         if yrs >= 10:
             exp_score = 15.0
         elif yrs >= 5:
             exp_score = 12.0
         elif yrs >= 2:
             exp_score = 8.0
+        elif yrs > 0:
+            exp_score = 5.0
         else:
-            exp_score = 4.0
+            exp_score = 3.0
 
     overall_score = round(edu_score + research_score + sup_score + innovation_score + breadth_score + collab_score + exp_score, 1)
     overall_score = min(overall_score, 100.0)

@@ -1286,13 +1286,13 @@ async function fetchLiveData(){
           allData=d.map(c=>({...c,
             overall_composite_score:parseFloat(c.overall_composite_score)||0,
             missing_info_count:parseInt(c.missing_info_count)||0,
-            education_score:parseFloat(c.education_score)||10,
-            research_score:parseFloat(c.research_score)||5,
-            supervision_score:parseFloat(c.supervision_score)||2,
-            innovation_score:parseFloat(c.innovation_score)||2,
-            breadth_score:parseFloat(c.breadth_score)||3,
-            collaboration_score:parseFloat(c.collaboration_score)||5,
-            experience_score:parseFloat(c.experience_score)||8,
+            education_score:c.education_score!==undefined?parseFloat(c.education_score):10,
+            research_score:c.research_score!==undefined?parseFloat(c.research_score):5,
+            supervision_score:c.supervision_score!==undefined?parseFloat(c.supervision_score):2,
+            innovation_score:c.innovation_score!==undefined?parseFloat(c.innovation_score):2,
+            breadth_score:c.breadth_score!==undefined?parseFloat(c.breadth_score):3,
+            collaboration_score:c.collaboration_score!==undefined?parseFloat(c.collaboration_score):5,
+            experience_score:c.experience_score!==undefined?parseFloat(c.experience_score):8,
           }));
         }
       }
@@ -1513,16 +1513,25 @@ const DIMS=[
 ];
 function buildInsights(c){
   const items=[];
-  if(c.research_score>=15)items.push({cls:'pos',icon:'✓',text:`Strong research profile — ${c.research_score}/25 points. Publications and academic output are well-evidenced.`});
-  else if(c.research_score<8)items.push({cls:'neg',icon:'!',text:`Limited research output — only ${c.research_score}/25 points. Consider requesting a publication list.`});
-  if(c.education_score>=18)items.push({cls:'pos',icon:'✓',text:`Educational credentials meet or exceed the benchmark — ${c.education_score}/20 points.`});
-  if(c.experience_score>=12)items.push({cls:'pos',icon:'✓',text:`${c.experience_score} years of relevant academic/industry experience confirmed.`});
-  else items.push({cls:'neg',icon:'!',text:`Experience score is ${c.experience_score}/15. Verify industry or teaching tenure from CV.`});
-  if(c.missing_info_count>2)items.push({cls:'neg',icon:'⚠',text:`${c.missing_info_count} missing information flags detected. A follow-up email is recommended.`});
-  else if(c.missing_info_count===0)items.push({cls:'pos',icon:'✓',text:'Profile is complete — no missing information detected.'});
-  if(c.supervision_score<5)items.push({cls:'neg',icon:'!',text:`Low supervision score (${c.supervision_score}/10). Student mentorship data may be absent or unverified.`});
-  if(c.collaboration_score>=8)items.push({cls:'pos',icon:'✓',text:`Collaboration score is strong (${c.collaboration_score}/10) — co-authored work or team projects confirmed.`});
-  items.push({cls:'neu',icon:'i',text:`Composite tier: ${c.candidate_tier.replace(/^Tier \d: /,'')}.`});
+  if(c.research_score>=20)items.push({cls:'pos',icon:'✓',text:`High Research Output — ${c.research_score}/25 points based on Scopus/WoS indexed publications.`});
+  else if(c.research_score>=12)items.push({cls:'neu',icon:'i',text:`Moderate Research Output — ${c.research_score}/25 points across peer-reviewed venues.`});
+  else items.push({cls:'neg',icon:'!',text:`Research Score: ${c.research_score}/25 points recorded across publication databases.`});
+
+  if(c.education_score>=18)items.push({cls:'pos',icon:'✓',text:`Education Credentials: ${c.education_score}/20 points — Terminal degree / PhD requirements met.`});
+  else items.push({cls:'neu',icon:'i',text:`Education Credentials: ${c.education_score}/20 points evaluated from institution rankings.`});
+
+  if(c.experience_score>=12)items.push({cls:'pos',icon:'✓',text:`Academic & Industry Tenure: ${c.experience_score}/15 points (${c.total_experience_years||c.experience_score} years verified timeline).`});
+  else items.push({cls:'neu',icon:'i',text:`Academic & Industry Tenure: ${c.experience_score}/15 points computed from recorded employment timeline.`});
+
+  if(c.supervision_score>=7)items.push({cls:'pos',icon:'✓',text:`Student Mentorship: ${c.supervision_score}/10 points (MS/PhD thesis supervision confirmed).`});
+  else items.push({cls:'neg',icon:'!',text:`Student Mentorship: ${c.supervision_score}/10 points recorded in thesis supervision datasets.`});
+
+  if(c.collaboration_score>=8)items.push({cls:'pos',icon:'✓',text:`Collaboration Network: ${c.collaboration_score}/10 points (Active co-authorship & joint research).`});
+
+  if(c.missing_info_count>2)items.push({cls:'neg',icon:'⚠',text:`Missing Information: ${c.missing_info_count} flagged gaps in extracted timeline/credentials.`});
+  else if(c.missing_info_count===0)items.push({cls:'pos',icon:'✓',text:'Profile Integrity: Complete — no missing credential flags detected.'});
+
+  items.push({cls:'neu',icon:'i',text:`Overall Classification: ${c.candidate_tier.replace(/^Tier \d: /,'')}.`});
   return items.slice(0,5);
 }
 function openPanel(cid){

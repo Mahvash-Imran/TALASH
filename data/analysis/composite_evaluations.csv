@@ -1,44 +1,44 @@
 candidate_id,overall_composite_score,candidate_tier,education_score,research_score,supervision_score,innovation_score,breadth_score,collaboration_score,experience_score,candidate_name
-04_MUHAMMAD_FARRUKH,53.0,Tier 3: Moderate Candidate,10.0,5.0,2.0,8.0,3.0,10.0,15.0,Muhammad Farrukh Qureshi
-24_AHMED_NAEEM,50.0,Tier 3: Moderate Candidate,10.0,5.0,2.0,8.0,3.0,10.0,12.0,Ahmed Naeem
-01_MUHAMMAD_SALMAN,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,MUHAMMAD SALMAN
-11_WAQAS_AMIN,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Waqas Amin
-12_SYED_TAMOORULHASSAN,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,SYED TAMOORULHASSAN
-13_MANZOOR_ELLAHI,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Manzoor Ellahi
-14_SAROSH_TAHIR,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Sarosh Tahir
-16_MUZZAMIL_GHAFFAR,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Muzzamil Ghaffar
-23_WAQAS_TARIQ_TOOR,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Waqas Tariq Toor
-32_QAISAR_HUSSAIN_ALVI,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Qaisar Hussain Alvi
-43_AMMARA_NASIM,47.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,15.0,Ammara Nasim
-07_FIZA_MURTAZA,44.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,15.0,Fiza Murtaza
-15_M_USMAN_ABBASI,44.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,15.0,M. Usman Abbasi
-19_ASIM_MASOOD,44.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,15.0,Asim Masood
-26_AAMINA_AKBAR,44.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,15.0,Aamina Akbar
-37_SANIA_GUL,44.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,15.0,Sania Gul
-08_TAYYABA_GULL,44.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,12.0,Tayyaba Gull
-09_MUHAMMAD_ABUBAKAR,44.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,12.0,Muhammad Abubakar
-18_MUHAMMAD_AMJAD,44.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,12.0,Muhammad Amjad
-21_SAMAN_FATIMA,44.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,12.0,Saman Fatima
-30_FAHD_SIKANDAR_KHAN,44.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,12.0,Fahd Sikandar Khan
-33_QAMAR_ABBAS,41.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,12.0,Qamar Abbas
-34_SHAHZAD,41.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,12.0,Shahzad
-03_NASIR_ALI_SHAH,40.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,8.0,Nasir Ali Shah
-20_SYED_FASIH_ALI,40.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,8.0,Syed Fasih Ali
-40_ABDUR_REHMAN,40.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,8.0,Abdur Rehman
-41_MUHAMMAD_AQEEL,40.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,8.0,Muhammad Aqeel
-06_FARMAN_ALI,39.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,2.5,15.0,Farman Ali
-27_SHAHEER,39.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,2.5,15.0,Shaheer
-42_SAQIB_JAMIL,39.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,2.5,15.0,Saqib Jamil
-36_SAMANA_BATOOL,39.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,5.0,12.0,Samana Batool
-35_MATIULLAH_AHSAN,37.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,8.0,Matiullah Ahsan
-10_MUHAMMAD_EHATISHAM,36.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,2.5,12.0,Muhammad Ehatisham
-17_SUHAIL_ASGHAR,36.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,4.0,Suhail Asghar Qureshi
-22_ZEESHAN,36.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,4.0,Zeeshan
-28_IDRIS_KHAN,36.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,4.0,Idris Khan
-29_MUHAMMAD_SARMAD_TARIQ,36.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,4.0,Muhammad Sarmad Tariq
-31_USMAN_MASUD,36.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,4.0,Usman Masud
-39_MUHAMMAD_SAQIB,36.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,10.0,4.0,Muhammad Saqib
-05_MUHAMMAD_MAJID,35.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,5.0,8.0,MUHAMMAD MAJID
-25_MUHAMMAD_ADEEL_ALTAF,35.0,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,5.0,8.0,MUHAMMAD ADEEL ALTAF
-38_MUHAMMAD_MUSADIQ,33.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,7.5,4.0,Muhammad Musadiq Ahmed
-02_MUHAMMAD_SHAHWAZ,28.5,Tier 4: Needs Clarification / Weak,10.0,5.0,2.0,2.0,3.0,2.5,4.0,MUHAMMAD SHAHWAZ
+04_MUHAMMAD_FARRUKH,86.0,Tier 1: Exceptional Fit,16.0,25.0,2.0,8.0,10.0,10.0,15.0,Muhammad Farrukh Qureshi
+11_WAQAS_AMIN,84.0,Tier 1: Exceptional Fit,20.0,25.0,2.0,2.0,10.0,10.0,15.0,Waqas Amin
+13_MANZOOR_ELLAHI,84.0,Tier 1: Exceptional Fit,20.0,25.0,2.0,2.0,10.0,10.0,15.0,Manzoor Ellahi
+23_WAQAS_TARIQ_TOOR,84.0,Tier 1: Exceptional Fit,20.0,25.0,2.0,2.0,10.0,10.0,15.0,Waqas Tariq Toor
+43_AMMARA_NASIM,84.0,Tier 1: Exceptional Fit,20.0,25.0,2.0,2.0,10.0,10.0,15.0,Ammara Nasim
+24_AHMED_NAEEM,82.0,Tier 1: Exceptional Fit,18.0,22.0,2.0,8.0,10.0,10.0,12.0,Ahmed Naeem
+09_MUHAMMAD_ABUBAKAR,80.7,Tier 1: Exceptional Fit,20.0,25.0,2.0,2.0,9.7,10.0,12.0,Muhammad Abubakar
+37_SANIA_GUL,79.2,Tier 2: Strong Candidate,20.0,25.0,2.0,2.0,7.7,7.5,15.0,Sania Gul
+34_SHAHZAD,78.5,Tier 2: Strong Candidate,20.0,25.0,2.0,2.0,10.0,7.5,12.0,Shahzad
+14_SAROSH_TAHIR,77.0,Tier 2: Strong Candidate,16.0,22.0,2.0,2.0,10.0,10.0,15.0,Sarosh Tahir
+41_MUHAMMAD_AQEEL,77.0,Tier 2: Strong Candidate,20.0,25.0,2.0,2.0,10.0,10.0,8.0,Muhammad Aqeel
+18_MUHAMMAD_AMJAD,76.7,Tier 2: Strong Candidate,20.0,25.0,2.0,2.0,5.7,10.0,12.0,Muhammad Amjad
+01_MUHAMMAD_SALMAN,75.0,Tier 2: Strong Candidate,20.0,16.0,2.0,2.0,10.0,10.0,15.0,MUHAMMAD SALMAN
+16_MUZZAMIL_GHAFFAR,75.0,Tier 2: Strong Candidate,20.0,16.0,2.0,2.0,10.0,10.0,15.0,Muzzamil Ghaffar
+32_QAISAR_HUSSAIN_ALVI,75.0,Tier 2: Strong Candidate,20.0,16.0,2.0,2.0,10.0,10.0,15.0,Qaisar Hussain Alvi
+07_FIZA_MURTAZA,74.5,Tier 2: Strong Candidate,16.0,22.0,2.0,2.0,10.0,7.5,15.0,Fiza Murtaza
+17_SUHAIL_ASGHAR,74.0,Tier 2: Strong Candidate,20.0,25.0,2.0,2.0,10.0,10.0,5.0,Suhail Asghar Qureshi
+03_NASIR_ALI_SHAH,73.5,Tier 2: Strong Candidate,20.0,22.0,2.0,2.0,9.5,10.0,8.0,Nasir Ali Shah
+19_ASIM_MASOOD,72.0,Tier 2: Strong Candidate,20.0,16.0,2.0,2.0,9.5,7.5,15.0,Asim Masood
+15_M_USMAN_ABBASI,71.0,Tier 2: Strong Candidate,20.0,22.0,2.0,2.0,2.5,7.5,15.0,M. Usman Abbasi
+22_ZEESHAN,71.0,Tier 2: Strong Candidate,20.0,22.0,2.0,2.0,10.0,10.0,5.0,Zeeshan
+30_FAHD_SIKANDAR_KHAN,69.0,Tier 2: Strong Candidate,20.0,16.0,2.0,2.0,7.0,10.0,12.0,Fahd Sikandar Khan
+26_AAMINA_AKBAR,68.5,Tier 2: Strong Candidate,16.0,16.0,2.0,2.0,10.0,7.5,15.0,Aamina Akbar
+20_SYED_FASIH_ALI,68.0,Tier 2: Strong Candidate,20.0,16.0,2.0,2.0,10.0,10.0,8.0,Syed Fasih Ali
+39_MUHAMMAD_SAQIB,67.6,Tier 2: Strong Candidate,20.0,25.0,2.0,2.0,5.6,10.0,3.0,Muhammad Saqib
+28_IDRIS_KHAN,67.0,Tier 2: Strong Candidate,18.0,22.0,2.0,2.0,10.0,10.0,3.0,Idris Khan
+36_SAMANA_BATOOL,67.0,Tier 2: Strong Candidate,20.0,16.0,2.0,2.0,10.0,5.0,12.0,Samana Batool
+08_TAYYABA_GULL,66.8,Tier 2: Strong Candidate,16.0,16.0,2.0,2.0,8.8,10.0,12.0,Tayyaba Gull
+38_MUHAMMAD_MUSADIQ,66.4,Tier 2: Strong Candidate,20.0,22.0,2.0,2.0,9.9,7.5,3.0,Muhammad Musadiq Ahmed
+29_MUHAMMAD_SARMAD_TARIQ,65.0,Tier 2: Strong Candidate,20.0,16.0,2.0,2.0,10.0,10.0,5.0,Muhammad Sarmad Tariq
+40_ABDUR_REHMAN,64.0,Tier 3: Moderate Candidate,16.0,16.0,2.0,2.0,10.0,10.0,8.0,Abdur Rehman
+12_SYED_TAMOORULHASSAN,63.5,Tier 3: Moderate Candidate,16.0,16.0,2.0,2.0,2.5,10.0,15.0,SYED TAMOORULHASSAN
+31_USMAN_MASUD,63.0,Tier 3: Moderate Candidate,20.0,16.0,2.0,2.0,10.0,10.0,3.0,Usman Masud
+33_QAMAR_ABBAS,62.0,Tier 3: Moderate Candidate,20.0,16.0,2.0,2.0,2.5,7.5,12.0,Qamar Abbas
+35_MATIULLAH_AHSAN,61.5,Tier 3: Moderate Candidate,16.0,16.0,2.0,2.0,10.0,7.5,8.0,Matiullah Ahsan
+25_MUHAMMAD_ADEEL_ALTAF,59.0,Tier 3: Moderate Candidate,16.0,16.0,2.0,2.0,10.0,5.0,8.0,MUHAMMAD ADEEL ALTAF
+21_SAMAN_FATIMA,54.5,Tier 3: Moderate Candidate,16.0,10.0,2.0,2.0,2.5,10.0,12.0,Saman Fatima
+27_SHAHEER,48.5,Tier 4: Needs Clarification / Weak,20.0,5.0,2.0,2.0,2.0,2.5,15.0,Shaheer
+05_MUHAMMAD_MAJID,45.5,Tier 4: Needs Clarification / Weak,16.0,10.0,2.0,2.0,2.5,5.0,8.0,MUHAMMAD MAJID
+06_FARMAN_ALI,44.5,Tier 4: Needs Clarification / Weak,16.0,5.0,2.0,2.0,2.0,2.5,15.0,Farman Ali
+42_SAQIB_JAMIL,44.5,Tier 4: Needs Clarification / Weak,16.0,5.0,2.0,2.0,2.0,2.5,15.0,Saqib Jamil
+10_MUHAMMAD_EHATISHAM,41.5,Tier 4: Needs Clarification / Weak,16.0,5.0,2.0,2.0,2.0,2.5,12.0,Muhammad Ehatisham
+02_MUHAMMAD_SHAHWAZ,32.5,Tier 4: Needs Clarification / Weak,14.0,5.0,2.0,2.0,2.0,2.5,5.0,MUHAMMAD SHAHWAZ

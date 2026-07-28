@@ -25,6 +25,13 @@ class CandidateSummary(BaseModel):
     candidate_name: str
     overall_composite_score: float
     candidate_tier: str
+    education_score: Optional[float] = 0.0
+    research_score: Optional[float] = 0.0
+    supervision_score: Optional[float] = 0.0
+    innovation_score: Optional[float] = 0.0
+    breadth_score: Optional[float] = 0.0
+    collaboration_score: Optional[float] = 0.0
+    experience_score: Optional[float] = 0.0
     total_experience_years: Optional[float] = 0.0
     scholarly_label: Optional[str] = "N/A"
     educational_strength_label: Optional[str] = "N/A"
