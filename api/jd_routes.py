@@ -5,6 +5,7 @@ jd_routes.py  –  FastAPI Controller for Module 11 Job Description Matching
 
 import json
 import os
+import re
 import shutil
 import datetime
 from pathlib import Path
@@ -24,6 +25,115 @@ JD_MATCHES_DIR = DATA_DIR / "jd_matches"
 JD_MATCHES_DIR.mkdir(parents=True, exist_ok=True)
 UPLOADS_DIR = Path("data/uploads")
 UPLOADS_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def _extract_experience_from_cv(cv_text: str) -> float:
+    """
+    Estimates total experience years from date ranges found in CV text.
+    Section-aware: only counts years from the PROFESSIONAL EXPERIENCE section
+    to avoid double-counting education date ranges.
+    Falls back to explicit 'X years of experience' mentions.
+    """
+    month_pat = (
+        r'(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|'
+        r'Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|'
+        r'Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)'
+    )
+    year_range_re = re.compile(
+        rf'{month_pat}?\s*(\d{{4}})\s*[-\u2013\u2014to\s]+{month_pat}?\s*(\d{{4}}|[Pp]resent|[Cc]urrent|[Nn]ow)',
+    )
+
+    # Try explicit mention first (e.g. "12+ years of experience")
+    m = re.search(r'(\d{1,2})\s*\+?\s*(?:years?|yrs?)\b.{0,40}?(?:experience|exp)', cv_text, re.IGNORECASE)
+    if m:
+        val = int(m.group(1))
+        if 1 <= val <= 40:
+            return float(val)
+
+    # Section-aware extraction: find experience section lines
+    lines = cv_text.splitlines()
+    in_exp = False
+    exp_lines = []
+    for line in lines:
+        low = line.lower().strip()
+        if re.search(
+            r'\b(professional experience|work experience|employment|career history|positions held|teaching experience)\b',
+            low
+        ):
+            in_exp = True
+        elif re.search(r'\b(education|academic background|qualifications|publications|skills|awards|references)\b', low):
+            # Stop collecting when a new major section starts
+            if in_exp:
+                break
+        if in_exp:
+            exp_lines.append(line)
+
+    search_text = '\n'.join(exp_lines) if exp_lines else cv_text
+
+    year_pairs = year_range_re.findall(search_text)
+    if not year_pairs:
+        return 0.0
+
+    current_year = datetime.datetime.now().year
+    total = 0.0
+    for start, end in year_pairs:
+        s = int(start)
+        e = current_year if end.lower() in ('present', 'current', 'now') else int(end)
+        diff = max(0, e - s)
+        if diff <= 45:  # Sanity: ignore crazy-long ranges
+            total += diff
+
+    return round(min(total, 50.0), 1)
+
+
+def _extract_degree_from_cv(cv_text: str) -> str:
+    """Extracts the highest degree from CV text."""
+    text_lower = cv_text.lower()
+    if re.search(r'\bph\.?d\b|\bdoctorate\b|\bdoctor of philosophy\b', text_lower):
+        return "PhD"
+    if re.search(r'\bm\.?s\b|\bmaster\b|\bmphil\b|\bm\.?phil\b|\bm\.?e\b|\bm\.?eng\b', text_lower):
+        return "MS"
+    return "BS"
+
+
+def _extract_specializations_from_cv(cv_text: str) -> List[str]:
+    """Extracts degree specializations/fields from CV education section."""
+    specs = []
+    # Look for education-section lines with common field names
+    edu_lines = re.findall(
+        r'(?:specializ(?:ation|ed|ing)|major(?:ing)?|field of study|discipline|in)\s*[:–-]?\s*([A-Za-z ,&/]+)',
+        cv_text, re.IGNORECASE
+    )
+    for line in edu_lines:
+        chunk = line.strip()[:80]
+        if chunk and len(chunk) > 3:
+            specs.append(chunk)
+    return specs[:5]
+
+
+def _extract_skills_from_cv(cv_text: str, jd_required_skills: List[str]) -> List[str]:
+    """Finds which JD-required skills appear in the CV, plus common technical keywords."""
+    found = set()
+    # Check JD required skills first
+    for sk in jd_required_skills:
+        if sk.lower() in cv_text.lower():
+            found.add(sk)
+
+    # Check broad technical vocabulary
+    tech_keywords = [
+        "Python", "Machine Learning", "Deep Learning", "Computer Vision", "PyTorch",
+        "TensorFlow", "OpenCV", "C++", "Java", "SQL", "Linux", "MATLAB", "R",
+        "Cybersecurity", "IoT", "Signal Processing", "Image Processing", "NLP",
+        "Natural Language Processing", "Reinforcement Learning", "Docker", "Kubernetes",
+        "Microelectronics", "VLSI", "Verilog", "FPGA", "Embedded Systems",
+        "AutoCAD", "PLC", "Wireless Communication", "Data Science", "Cloud Computing",
+        "Artificial Intelligence", "Object Detection", "Robotics", "5G", "LTE",
+    ]
+    for kw in tech_keywords:
+        if re.search(r'\b' + re.escape(kw) + r'\b', cv_text, re.IGNORECASE):
+            found.add(kw)
+
+    return list(found)
 
 
 @router.post("/upload")
@@ -171,19 +281,26 @@ async def evaluate_candidates_against_jd(
         except Exception:
             pass
 
-        # Extract basic skills & info heuristically
-        skills_found = []
-        for sk in parsed_jd.get("required_skills", []) + ["Python", "Machine Learning", "C++", "PyTorch", "Java", "SQL", "Linux"]:
-            if sk.lower() in cv_text.lower():
-                skills_found.append(sk)
+        # Robustly extract candidate profile from CV text
+        exp_years = _extract_experience_from_cv(cv_text)
+        highest_degree = _extract_degree_from_cv(cv_text)
+        specializations = _extract_specializations_from_cv(cv_text)
+        skills_found = _extract_skills_from_cv(cv_text, parsed_jd.get("required_skills", []))
+        cand_display_name = cv_file.filename.replace(".pdf", "").replace("_", " ")
 
         custom_cand = [{
             "candidate_id": cid,
-            "candidate_name": cv_file.filename.replace(".pdf", "").replace("_", " "),
-            "highest_degree": "PhD" if "phd" in cv_text.lower() or "ph.d" in cv_text.lower() else ("MS" if "ms" in cv_text.lower() or "master" in cv_text.lower() else "BS"),
-            "total_experience_years": 3.0,
-            "skills": list(set(skills_found)),
-            "summary": cv_text[:500] if cv_text else "New candidate uploaded for JD screen.",
+            "candidate_name": cand_display_name,
+            "highest_degree": highest_degree,
+            "total_experience_years": exp_years,
+            "skills": skills_found + specializations,
+            "specialization": ", ".join(specializations),
+            "summary": (
+                f"Degree: {highest_degree}. Experience: {exp_years} years. "
+                f"Specializations: {', '.join(specializations)}. "
+                f"Skills: {', '.join(skills_found)}. "
+                + (cv_text[:300] if cv_text else "")
+            ),
         }]
 
         match_res = compute_match_score(custom_cand[0], parsed_jd, jd_text=jd_text, skip_llm=True)

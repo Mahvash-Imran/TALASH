@@ -40,6 +40,58 @@ JOB DESCRIPTION:
 """
 
 
+def _extract_min_experience(text: str) -> float:
+    """
+    Robustly extracts minimum experience requirement from JD text.
+    Handles patterns like:
+      - 'Minimum 8+ years of post-qualification teaching or research experience'
+      - 'at least 5 years of relevant experience'
+      - '8+ years experience in Computer Vision'
+      - 'experience of 7 years'
+      - 'minimum of 10 years post-PhD'
+    """
+    text_lower = text.lower()
+
+    # Priority 1: 'experience of N years'
+    m = re.search(r'experience\s+of\s+(\d+)\s*\+?\s*(?:years?|yrs?)', text_lower)
+    if m:
+        return float(m.group(1))
+
+    # Priority 2: Explicit qualifier words right before N years
+    m = re.search(
+        r'(?:minimum|at least|minimum of|at least|over|more than|at-least)\s+(\d+)\s*\+?\s*(?:years?|yrs?)',
+        text_lower
+    )
+    if m:
+        return float(m.group(1))
+
+    # Priority 3: N years near experience/post/qualification keywords
+    m = re.search(
+        r'(\d+)\s*\+?\s*(?:years?|yrs?)\s+'
+        r'(?:of\s+)?(?:post.qualification|post-phd|relevant|teaching|research|industry|academic|'
+        r'post\s+qualification|professional|work)\s*(?:experience|exp)',
+        text_lower
+    )
+    if m:
+        return float(m.group(1))
+
+    # Priority 4: Broadest – any 'N+ years' or 'N years' close to the word 'experience'
+    # Only take the FIRST / MINIMUM number to avoid grabbing CGPAs or years like "2020"
+    candidates = []
+    for m in re.finditer(r'(\d{1,2})\s*\+?\s*(?:years?|yrs?)\b', text_lower):
+        num = int(m.group(1))
+        if 1 <= num <= 40:  # Plausible experience range, avoids years like 2014
+            # Check that 'experience' or 'exp' appears within 80 chars
+            window = text_lower[max(0, m.start() - 80): m.end() + 80]
+            if re.search(r'\bexperience\b|\bexp\b|\bpost', window):
+                candidates.append(num)
+
+    if candidates:
+        return float(min(candidates))  # Return lowest = minimum requirement
+
+    return 0.0
+
+
 def parse_job_description(
     jd_text: str,
     api_key: Optional[str] = None,
@@ -125,6 +177,10 @@ def _normalize_jd_dict(parsed: Dict[str, Any], raw_text: str) -> Dict[str, Any]:
         except (ValueError, TypeError):
             res["min_experience_years"] = 0
 
+        # Always re-extract experience from raw text as a sanity-check / fallback
+        if res["min_experience_years"] == 0:
+            res["min_experience_years"] = _extract_min_experience(raw_text)
+
         req_sk = parsed.get("required_skills")
         if isinstance(req_sk, list):
             res["required_skills"] = [str(x).strip() for x in req_sk if str(x).strip()]
@@ -147,81 +203,112 @@ def _normalize_jd_dict(parsed: Dict[str, Any], raw_text: str) -> Dict[str, Any]:
 
 
 def _extract_skills_from_text(text: str) -> List[str]:
-    """Dynamic skill and domain phrase extractor from JD text."""
-    skills = []
-    text_clean = text.replace("\n", " ").strip()
-
-    # Pattern 1: Explicit mentions after "skills in", "experience in", "knowledge of", "proficiency in", "expertise in", "requirements:"
-    phrases = re.findall(
-        r'(?:skills?|experience|knowledge|expertise|proficiency|requirements?|seeking|need)\s*(?:in|with|of|for|:)?\s*([A-Za-z0-9\+\#\s,\/\-\.\(\)]+?)(?:\.|\n|;|$|and\s+years|with\s+PhD|degree)',
-        text_clean, re.IGNORECASE
-    )
-    for p in phrases:
-        for chunk in re.split(r'[,;/]', p):
-            chunk_clean = chunk.strip()
-            # Exclude noise words
-            if len(chunk_clean) > 2 and not any(nw in chunk_clean.lower() for nw in ["years", "experience", "degree", "position", "seeking", "looking", "candidate", "applicant"]):
-                skills.append(chunk_clean)
-
-    # Pattern 2: Known technical & academic domain vocabulary
+    """
+    Extracts only specific technical skills and domain keywords from JD text.
+    Avoids including long sentence fragments.
+    """
+    # First pass: known technical & academic domain vocabulary
     domain_keywords = [
-        "Computer Vision", "Machine Learning", "Deep Learning", "Artificial Intelligence", "AI", "NLP",
-        "Natural Language Processing", "Cybersecurity", "Information Security", "Network Security",
-        "IoT", "Internet of Things", "Microelectronics", "Analog IC Design", "Digital Signal Processing",
-        "Signal Processing", "Embedded Systems", "Robotics", "Data Science", "Software Engineering",
-        "Cloud Computing", "Distributed Systems", "Wireless Communication", "Power Systems",
-        "Python", "C++", "Java", "PyTorch", "TensorFlow", "FastAPI", "Docker", "Kubernetes", "SQL", "AutoCAD", "PLC"
+        "Computer Vision", "Machine Learning", "Deep Learning", "Artificial Intelligence",
+        "Natural Language Processing", "NLP", "Cybersecurity", "Information Security",
+        "Network Security", "IoT", "Internet of Things", "Microelectronics", "Analog IC Design",
+        "Digital Signal Processing", "Signal Processing", "Embedded Systems", "Robotics",
+        "Data Science", "Software Engineering", "Cloud Computing", "Distributed Systems",
+        "Wireless Communication", "Power Systems", "VLSI", "Verilog", "FPGA",
+        "Python", "C++", "Java", "PyTorch", "TensorFlow", "OpenCV", "FastAPI",
+        "Docker", "Kubernetes", "SQL", "AutoCAD", "PLC", "MATLAB", "R",
+        "Image Processing", "Object Detection", "Semantic Segmentation", "Reinforcement Learning",
+        "Penetration Testing", "Cryptography", "Blockchain", "Big Data", "Hadoop", "Spark",
+        "5G", "LTE", "OFDM", "Antenna Design", "RF Engineering",
     ]
+
+    found = []
     for kw in domain_keywords:
-        if re.search(r'\b' + re.escape(kw.lower()) + r'\b', text.lower()):
-            if kw not in skills:
-                skills.append(kw)
+        if re.search(r'\b' + re.escape(kw) + r'\b', text, re.IGNORECASE):
+            found.append(kw)
+
+    # Second pass: explicit skill list items (short, specific phrases after skill-indicator words)
+    # Only take phrases that are short (< 5 words) and look like skill names
+    skill_indicators = re.findall(
+        r'(?:skills?|tools?|technologies?|proficiency in|expertise in|knowledge of)\s*[:\-]?\s*([^\n]{3,120})',
+        text, re.IGNORECASE
+    )
+    for phrase in skill_indicators:
+        for chunk in re.split(r'[,;/]', phrase):
+            chunk_clean = chunk.strip().rstrip('.')
+            words = chunk_clean.split()
+            # Only take short, clean skill names (1-4 words, no long sentences, at least 2 chars)
+            if 2 <= len(chunk_clean) <= 40 and 1 <= len(words) <= 4 and not any(
+                nw in chunk_clean.lower() for nw in [
+                    "years", "experience", "degree", "position", "seeking",
+                    "candidate", "applicant", "university", "teaching",
+                ]
+            ):
+                if chunk_clean and chunk_clean not in found:
+                    found.append(chunk_clean)
 
     # Deduplicate preserving order
     seen = set()
     deduped = []
-    for s in skills:
+    for s in found:
         s_norm = s.lower()
         if s_norm not in seen:
             seen.add(s_norm)
             deduped.append(s)
 
-    return deduped[:10]
+    return deduped[:15]
+
+
+def _extract_title_from_jd(text: str) -> str:
+    """Extracts a clean job title from JD text."""
+    lines = [l.strip() for l in text.splitlines() if l.strip()]
+    title = "Faculty Position"
+
+    # Skip common header/label lines and find first meaningful title line
+    for line in lines[:8]:
+        lower = line.lower()
+        # Skip lines that are just labels
+        if lower.startswith("job description:") or lower.startswith("job title:") or lower.startswith("position:"):
+            # Strip the label and use the remainder if it exists
+            remainder = re.sub(r'^(job description|job title|position)\s*:\s*', '', line, flags=re.IGNORECASE).strip()
+            if remainder:
+                title = remainder
+                break
+        elif any(kw in lower for kw in [
+            "assistant professor", "associate professor", "professor", "lecturer",
+            "engineer", "specialist", "researcher", "faculty", "lead", "instructor"
+        ]):
+            title = line[:100]
+            break
+
+    # Clean up any remaining "JOB DESCRIPTION:" prefix
+    title = re.sub(r'^(?:job description|job title|position)\s*:\s*', '', title, flags=re.IGNORECASE).strip()
+    return title or "Faculty Position"
 
 
 def _heuristic_parse_jd(jd_text: str) -> Dict[str, Any]:
     """Rule-based heuristic extractor when LLM is unavailable."""
     text_lower = jd_text.lower()
 
-    # Title extraction
-    title = "Faculty Position"
-    lines = [l.strip() for l in jd_text.splitlines() if l.strip()]
-    if lines:
-        title = lines[0][:80]
-        for line in lines[:5]:
-            if any(kw in line.lower() for kw in ["assistant professor", "associate professor", "professor", "lecturer", "engineer", "lead", "specialist"]):
-                title = line
-                break
+    title = _extract_title_from_jd(jd_text)
 
     # Degree level
     degree = "BS"
     if "phd" in text_lower or "ph.d" in text_lower or "doctorate" in text_lower:
         degree = "PhD"
-    elif "ms" in text_lower or "m.s" in text_lower or "mphil" in text_lower or "master" in text_lower:
+    elif re.search(r'\bms\b|\bm\.s\b|mphil|master', text_lower):
         degree = "MS"
 
-    # Min experience years
-    min_exp = 0
-    exp_match = re.search(r'(\d+)\+?\s*(?:years?|yrs?)\s*(?:of)?\s*(?:experience|exp)', text_lower)
-    if exp_match:
-        min_exp = float(exp_match.group(1))
+    # Min experience years — use robust extractor
+    min_exp = _extract_min_experience(jd_text)
 
     # Disciplines
     disciplines = []
     common_disciplines = [
         "Computer Science", "Software Engineering", "Artificial Intelligence",
         "Data Science", "Electrical Engineering", "Cybersecurity", "Information Technology",
-        "Machine Learning", "Computer Engineering", "Robotics", "Microelectronics", "Telecom"
+        "Machine Learning", "Computer Engineering", "Robotics", "Microelectronics", "Telecom",
+        "Electronics", "Information Security",
     ]
     for disc in common_disciplines:
         if disc.lower() in text_lower:
@@ -237,6 +324,10 @@ def _heuristic_parse_jd(jd_text: str) -> Dict[str, Any]:
         "required_skills": skills,
         "preferred_skills": [],
         "research_areas": disciplines,
-        "publication_requirement": "Peer-reviewed journal publications" if "publication" in text_lower or "research" in text_lower else None,
+        "publication_requirement": (
+            "Peer-reviewed journal publications"
+            if "publication" in text_lower or "research" in text_lower
+            else None
+        ),
         "other_requirements": [],
     }
