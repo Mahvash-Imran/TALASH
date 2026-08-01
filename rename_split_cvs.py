@@ -1,6 +1,5 @@
 """
 rename_split_cvs.py  –  Rename all split CVs to consistent NN_FIRSTNAME_LASTNAME format
-========================================================================================
 
 Reads the Name field from page 1 of each PDF.
 Always uses the ORIGINAL sequence number from the source dataset (1-43),
@@ -32,9 +31,6 @@ except ImportError:
     sys.exit(1)
 
 
-# ---------------------------------------------------------------------------
-# Name extraction
-# ---------------------------------------------------------------------------
 
 def extract_name(pdf_path: Path) -> str:
     """
