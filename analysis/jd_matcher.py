@@ -50,7 +50,6 @@ def structured_match_score(candidate: Dict[str, Any], jd: Dict[str, Any]) -> Dic
     """
     req_skills = jd.get("required_skills") or []
     pref_skills = jd.get("preferred_skills") or []
-    all_jd_skills = req_skills + pref_skills
 
     # Build rich candidate skills and domain search pool
     cand_skills_raw = candidate.get("skills") or candidate.get("top_strong_skills") or []
@@ -133,9 +132,46 @@ def structured_match_score(candidate: Dict[str, Any], jd: Dict[str, Any]) -> Dic
     }
 
 
+def generate_candidate_rationale(
+    candidate: Dict[str, Any],
+    structured: Dict[str, Any],
+    jd: Dict[str, Any]
+) -> str:
+    """
+    Generates a personalized, candidate-specific reasoning narrative.
+    """
+    cname = candidate.get("candidate_name") or candidate.get("candidate_id") or "The candidate"
+    deg = structured.get("cand_degree") or "BS"
+    exp = structured.get("cand_experience_years") or 0.0
+    matched = structured.get("matched_skills") or []
+    missing = structured.get("missing_skills") or []
+    req_exp = structured.get("req_experience_years") or 0.0
+
+    parts = []
+    parts.append(f"{cname} holds a {deg} degree with {exp} years of relevant experience.")
+
+    if matched:
+        parts.append(f"Demonstrates verified skill alignment in {', '.join(matched)}.")
+    else:
+        parts.append("Lacks direct overlap with the specific technical skills required for this vacancy.")
+
+    if missing:
+        parts.append(f"Unmatched required skills: {', '.join(missing[:3])}.")
+    else:
+        parts.append("Fully satisfies all required technical skill requirements.")
+
+    if req_exp > 0 and exp < req_exp:
+        parts.append(f"Total experience ({exp} yrs) is below the required threshold of {req_exp} years.")
+
+    return " ".join(parts)
+
+
 def llm_semantic_score(
+    candidate: Dict[str, Any],
     candidate_summary: str,
     jd_text: str,
+    structured: Dict[str, Any],
+    jd: Dict[str, Any],
     api_key: Optional[str] = None,
     model: str = "llama-3.3-70b-versatile",
     base_url: Optional[str] = None,
@@ -143,14 +179,16 @@ def llm_semantic_score(
 ) -> Dict[str, Any]:
     """
     Asks LLM for a semantic similarity score (0-100) and short fit rationale.
+    Falls back to dynamic candidate-specific rationale generator if LLM is skipped or unavailable.
     """
+    heuristic_rat = generate_candidate_rationale(candidate, structured, jd)
     key = api_key or os.environ.get("OPENAI_API_KEY", "")
     is_valid_key = bool(key and not str(key).startswith("your_") and len(str(key).strip()) > 20)
 
     if skip_llm or not is_valid_key or not candidate_summary or not jd_text:
         return {
-            "semantic_score": 65.0,
-            "rationale": "Candidate profile shows domain alignment based on extracted qualification data.",
+            "semantic_score": 65.0 if structured["matched_skills"] else 40.0,
+            "rationale": heuristic_rat,
         }
 
     try:
@@ -169,7 +207,7 @@ JOB DESCRIPTION:
 Return JSON only:
 {{
   "semantic_score": 85,   // number 0 to 100
-  "rationale": "2-3 concise sentences explaining the key strengths and potential gaps relative to the position."
+  "rationale": "2-3 concise sentences specifically explaining {candidate.get('candidate_name', 'this candidate')}'s key strengths and potential gaps for this exact position."
 }}
 """
         resp = client.chat.completions.create(
@@ -189,13 +227,13 @@ Return JSON only:
         parsed = json.loads(cleaned.strip())
         return {
             "semantic_score": float(parsed.get("semantic_score", 65.0)),
-            "rationale": str(parsed.get("rationale", "Candidate profile shows alignment with role.")).strip(),
+            "rationale": str(parsed.get("rationale", heuristic_rat)).strip(),
         }
     except Exception as e:
         logger.warning(f"LLM semantic score failed: {e}")
         return {
-            "semantic_score": 65.0,
-            "rationale": "Candidate profile evaluated via structured parameter alignment.",
+            "semantic_score": 65.0 if structured["matched_skills"] else 40.0,
+            "rationale": heuristic_rat,
         }
 
 
@@ -226,8 +264,11 @@ def compute_match_score(
     cand_summary_text = "\n".join(cand_summary_parts)
 
     semantic = llm_semantic_score(
-        cand_summary_text,
-        jd_text or str(jd),
+        candidate=candidate,
+        candidate_summary=cand_summary_text,
+        jd_text=jd_text or str(jd),
+        structured=structured,
+        jd=jd,
         api_key=api_key,
         skip_llm=skip_llm
     )
