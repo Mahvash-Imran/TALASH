@@ -802,12 +802,16 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; 
       <span class="nav-text">Compare</span>
     </div>
     <div class="nav-item" data-page="email">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       <span class="nav-text">Email Center</span>
       <span class="nav-badge" id="nb-email" style="display:none"></span>
     </div>
+    <div class="nav-item" data-page="jd">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      <span class="nav-text">JD Match</span>
+    </div>
     <div class="nav-item" data-page="upload">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
       <span class="nav-text">Upload CVs</span>
     </div>
   </nav>
@@ -1085,6 +1089,139 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; 
       </div>
     </div>
 
+    <!-- ══ JD MATCH ══ -->
+    <div class="page" id="page-jd">
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1>Job Description Matching</h1>
+          <p>Evaluate candidates directly against specific vacancy requirements (Degree level, Experience years, Required Skills, and Semantic Alignment).</p>
+        </div>
+      </div>
+
+      <!-- Control Grid: JD Input & History -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px">
+        <!-- Left: Upload/Paste JD -->
+        <div class="card" style="padding:20px">
+          <h3 style="font-size:14px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            1. Paste or Upload Job Description
+          </h3>
+          <textarea id="jd-text-input" class="filter-sel" style="width:100%;height:110px;font-family:inherit;font-size:13px;padding:10px;resize:vertical;margin-bottom:12px" placeholder="Paste Job Description text here (e.g. required degree, min experience years, required skills, research areas)..."></textarea>
+
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+            <input type="file" id="jd-file-input" accept=".pdf,.txt,.docx" style="display:none" onchange="handleJDFileSelect(this.files)" />
+            <button class="btn sm" onclick="document.getElementById('jd-file-input').click()">
+              Upload JD File (.pdf/.txt)
+            </button>
+            <span id="jd-file-label" style="font-size:12px;color:var(--fg-3)">No file chosen</span>
+          </div>
+
+          <button class="btn primary" style="width:100%" onclick="parseAndSetActiveJD()">
+            Parse &amp; Set Active JD
+          </button>
+        </div>
+
+        <!-- Right: Saved JD History -->
+        <div class="card" style="padding:20px">
+          <h3 style="font-size:14px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 16 14"/></svg>
+            Select Historical Saved JD
+          </h3>
+          <p style="font-size:12px;color:var(--fg-3);margin-bottom:12px">Select from previously analyzed job descriptions stored in history:</p>
+          <select id="jd-history-select" class="filter-sel" style="width:100%;margin-bottom:16px;font-size:13px;padding:9px 12px" onchange="loadSelectedJDFromHistory()">
+            <option value="">-- Choose a saved JD from history --</option>
+          </select>
+          <div id="jd-active-banner" style="display:none;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:12px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--primary);letter-spacing:.05em">Active JD Loaded</div>
+            <div id="jd-banner-title" style="font-size:14px;font-weight:700;margin:4px 0">Position Title</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px" id="jd-banner-badges"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate Selection & Execution Controls -->
+      <div class="card" style="padding:20px;margin-bottom:24px" id="jd-candidate-select-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+          <h3 style="font-size:14px;font-weight:700;display:flex;align-items:center;gap:8px">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            2. Select Candidates to Evaluate Against JD
+          </h3>
+          <div style="display:flex;gap:8px">
+            <button class="btn sm" onclick="toggleAllJDCandidates(true)">Select All</button>
+            <button class="btn sm" onclick="toggleAllJDCandidates(false)">Clear</button>
+          </div>
+        </div>
+
+        <!-- Mode Toggle -->
+        <div style="display:flex;gap:16px;margin-bottom:16px;font-size:13px">
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer">
+            <input type="radio" name="jd-mode" value="existing" checked onchange="toggleJDMode()" /> Existing Candidates (<span id="jd-cand-count">43</span>)
+          </label>
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer">
+            <input type="radio" name="jd-mode" value="new" onchange="toggleJDMode()" /> Upload New Resume PDF for JD Screening
+          </label>
+        </div>
+
+        <!-- Existing Candidates Container -->
+        <div id="jd-existing-cands-wrap" style="max-height:220px;overflow-y:auto;border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:16px">
+          <div id="jd-cands-checkbox-list" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:8px">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- New CV Upload Container -->
+        <div id="jd-new-cv-wrap" style="display:none;border:1px dashed var(--border-2);border-radius:8px;padding:20px;text-align:center;margin-bottom:16px;background:var(--surface-2)">
+          <input type="file" id="jd-new-cv-input" accept=".pdf" style="display:none" onchange="handleNewJDCVSelect(this.files)" />
+          <button class="btn primary sm" onclick="document.getElementById('jd-new-cv-input').click()">Choose Candidate PDF Resume</button>
+          <div id="jd-new-cv-name" style="font-size:12px;color:var(--fg-3);margin-top:8px">No PDF chosen</div>
+        </div>
+
+        <button class="btn primary" style="width:100%;font-size:14px;padding:10px" onclick="runJDEvaluation()">
+          Run JD Match Evaluation
+        </button>
+      </div>
+
+      <!-- Results Section -->
+      <div id="jd-results-section" style="display:none">
+        <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:24px">
+          <div class="kpi-card"><div class="kpi-label">Candidates Evaluated</div><div class="kpi-value" id="kpi-jd-total">0</div></div>
+          <div class="kpi-card"><div class="kpi-label">Strong Fits (≥75%)</div><div class="kpi-value" style="color:var(--success)" id="kpi-jd-strong">0</div></div>
+          <div class="kpi-card"><div class="kpi-label">Top Match Score</div><div class="kpi-value" style="color:var(--primary)" id="kpi-jd-top">0%</div></div>
+          <div class="kpi-card"><div class="kpi-label">Average Match Score</div><div class="kpi-value" id="kpi-jd-avg">0%</div></div>
+        </div>
+
+        <!-- New CV Prompt Banner -->
+        <div id="jd-new-cv-prompt-banner" style="display:none;background:var(--primary-dim);border:1px solid var(--primary-ring);border-radius:8px;padding:16px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-weight:700;font-size:13px;color:var(--fg-1)">New CV JD Screen Complete!</div>
+            <div style="font-size:12px;color:var(--fg-3)">Would you like to trigger full 10-module rubric analysis to generate composite score &amp; tier for this candidate?</div>
+          </div>
+          <button class="btn primary sm" onclick="triggerFullPipelineForNewCV()">Run Full 10-Module Evaluation</button>
+        </div>
+
+        <!-- Results Table -->
+        <div class="card" style="padding:0;overflow:hidden">
+          <table class="cand-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Candidate Name</th>
+                <th>Highest Degree</th>
+                <th>Experience</th>
+                <th>Match Score</th>
+                <th>Skill Match</th>
+                <th>Match Tier</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="jd-results-tbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <!-- ══ UPLOAD ══ -->
     <div class="page" id="page-upload">
       <div class="page-header">
@@ -1146,14 +1283,18 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; 
     <div style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--fg-3);margin-bottom:10px">Dimension Scores</div>
     <div class="dim-grid" id="pn-dims"></div>
 
-    <div style="display:flex;gap:8px;margin-top:16px">
+    <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap">
       <button class="btn" style="flex:1" onclick="draftEmail(currentPanel)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Draft Follow-up Email
+        Draft Email
+      </button>
+      <button class="btn" style="flex:1" onclick="evaluateCandidateAgainstJD(currentPanel)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        Evaluate vs JD
       </button>
       <button class="btn primary" style="flex:1" onclick="closePanel();navigate('compare')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
-        Compare Candidates
+        Compare
       </button>
     </div>
   </div>
@@ -1250,7 +1391,7 @@ function ringHTML(pct,color,size=80,stroke=7){
 /* ═══════════════════════════════════
    NAVIGATION
 ═══════════════════════════════════ */
-const PAGE_TITLES={dashboard:'Dashboard',recommendations:'AI Recommendations',candidates:'All Candidates',compare:'Compare',email:'Email Center',upload:'Upload & Processing'};
+const PAGE_TITLES={dashboard:'Dashboard',recommendations:'AI Recommendations',candidates:'All Candidates',compare:'Compare',email:'Email Center',jd:'Job Description Matching',upload:'Upload & Processing'};
 function navigate(page){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
@@ -1260,6 +1401,7 @@ function navigate(page){
   if(page==='dashboard')renderDashboard();
   if(page==='candidates')renderCandidates();
   if(page==='recommendations')renderRecommendations();
+  if(page==='jd')initJDPage();
 }
 document.querySelectorAll('[data-page]').forEach(el=>el.addEventListener('click',()=>navigate(el.dataset.page)));
 
@@ -1687,6 +1829,298 @@ function draftEmail(cid){
   closePanel();
   navigate('email');
   setTimeout(()=>{const s=document.getElementById('email-sel');s.value=cid;s.dispatchEvent(new Event('change'));},180);
+}
+
+/* ═══════════════════════════════════
+   JD MATCH MODULE
+═══════════════════════════════════ */
+let activeJDId = null;
+let activeJDParsed = null;
+let jdSelectedFile = null;
+let jdNewCVFile = null;
+let lastEvaluatedNewCVID = null;
+let currentJDResults = [];
+
+function initJDPage() {
+  renderJDCandidateCheckboxes();
+  loadJDHistory();
+}
+
+async function loadJDHistory() {
+  const sel = document.getElementById('jd-history-select');
+  if (!sel) return;
+  try {
+    const r = await fetch('http://127.0.0.1:8000/api/v1/jd/list');
+    if (r.ok) {
+      const data = await r.json();
+      const jds = data.jds || [];
+      sel.innerHTML = '<option value="">-- Choose a saved JD from history --</option>' +
+        jds.map(j => `<option value="${j.jd_id}">${j.title} (${j.candidate_count || 0} evaluated)</option>`).join('');
+      if (activeJDId) sel.value = activeJDId;
+    }
+  } catch {}
+}
+
+function handleJDFileSelect(files) {
+  if (files && files.length) {
+    jdSelectedFile = files[0];
+    document.getElementById('jd-file-label').textContent = files[0].name;
+  }
+}
+
+async function parseAndSetActiveJD() {
+  const text = document.getElementById('jd-text-input').value;
+  if (!text && !jdSelectedFile) {
+    toast('Please paste JD text or select a file.', '⚠');
+    return;
+  }
+  const fd = new FormData();
+  if (jdSelectedFile) {
+    fd.append('jd_file', jdSelectedFile);
+  } else {
+    fd.append('jd_text', text);
+  }
+
+  try {
+    const r = await fetch('http://127.0.0.1:8000/api/v1/jd/upload', { method: 'POST', body: fd });
+    if (r.ok) {
+      const d = await r.json();
+      activeJDId = d.jd_id;
+      activeJDParsed = d.parsed_jd;
+      updateActiveJDBanner(d.title, d.parsed_jd);
+      toast('Active JD loaded: ' + d.title);
+      loadJDHistory();
+    } else {
+      toast('Failed to parse JD', '⚠');
+    }
+  } catch (e) {
+    toast('Error uploading JD: ' + e, '⚠');
+  }
+}
+
+async function loadSelectedJDFromHistory() {
+  const jdId = document.getElementById('jd-history-select').value;
+  if (!jdId) return;
+  try {
+    const r = await fetch(`http://127.0.0.1:8000/api/v1/jd/${jdId}/results`);
+    if (r.ok) {
+      const d = await r.json();
+      activeJDId = d.jd_id;
+      activeJDParsed = d.parsed_jd;
+      updateActiveJDBanner(d.title, d.parsed_jd);
+      if (d.results && d.results.length) {
+        renderJDResults(d.results);
+      } else {
+        document.getElementById('jd-results-section').style.display = 'none';
+      }
+      toast('Loaded saved JD: ' + d.title);
+    }
+  } catch (e) {
+    toast('Error loading JD: ' + e, '⚠');
+  }
+}
+
+function updateActiveJDBanner(title, parsed) {
+  const banner = document.getElementById('jd-active-banner');
+  if (!banner) return;
+  banner.style.display = 'block';
+  document.getElementById('jd-banner-title').textContent = title || 'Job Position';
+  const badges = document.getElementById('jd-banner-badges');
+  badges.innerHTML = '';
+
+  if (parsed.required_degree_level) {
+    badges.innerHTML += `<span class="badge info">Degree: ${parsed.required_degree_level}</span>`;
+  }
+  if (parsed.min_experience_years) {
+    badges.innerHTML += `<span class="badge warning">Exp: ${parsed.min_experience_years}+ yrs</span>`;
+  }
+  if (parsed.required_skills && parsed.required_skills.length) {
+    badges.innerHTML += `<span class="badge success">Skills: ${parsed.required_skills.slice(0, 4).join(', ')}</span>`;
+  }
+}
+
+function renderJDCandidateCheckboxes() {
+  const container = document.getElementById('jd-cands-checkbox-list');
+  if (!container) return;
+  document.getElementById('jd-cand-count').textContent = allData.length;
+  container.innerHTML = allData.map(c => `
+    <label style="display:flex;align-items:center;gap:8px;font-size:12.5px;padding:4px 6px;border-radius:4px;background:var(--surface);cursor:pointer">
+      <input type="checkbox" class="jd-cand-cb" value="${c.candidate_id}" checked />
+      <span style="font-weight:600">${c.candidate_name}</span>
+      <span style="color:var(--fg-3);font-size:11px">(${c.candidate_id})</span>
+    </label>
+  `).join('');
+}
+
+function toggleAllJDCandidates(select) {
+  document.querySelectorAll('.jd-cand-cb').forEach(cb => cb.checked = select);
+}
+
+function toggleJDMode() {
+  const mode = document.querySelector('input[name="jd-mode"]:checked').value;
+  if (mode === 'existing') {
+    document.getElementById('jd-existing-cands-wrap').style.display = 'block';
+    document.getElementById('jd-new-cv-wrap').style.display = 'none';
+  } else {
+    document.getElementById('jd-existing-cands-wrap').style.display = 'none';
+    document.getElementById('jd-new-cv-wrap').style.display = 'block';
+  }
+}
+
+function handleNewJDCVSelect(files) {
+  if (files && files.length) {
+    jdNewCVFile = files[0];
+    document.getElementById('jd-new-cv-name').textContent = files[0].name;
+  }
+}
+
+async function runJDEvaluation() {
+  if (!activeJDId) {
+    toast('Please parse or select an active JD first!', '⚠');
+    return;
+  }
+  const mode = document.querySelector('input[name="jd-mode"]:checked').value;
+  const fd = new FormData();
+
+  if (mode === 'existing') {
+    const selected = Array.from(document.querySelectorAll('.jd-cand-cb:checked')).map(cb => cb.value);
+    if (!selected.length) {
+      toast('Select at least one candidate', '⚠');
+      return;
+    }
+    fd.append('candidate_ids', selected.join(','));
+  } else {
+    if (!jdNewCVFile) {
+      toast('Please choose a PDF resume first', '⚠');
+      return;
+    }
+    fd.append('cv_file', jdNewCVFile);
+  }
+
+  try {
+    const r = await fetch(`http://127.0.0.1:8000/api/v1/jd/${activeJDId}/evaluate`, { method: 'POST', body: fd });
+    if (r.ok) {
+      const d = await r.json();
+      if (mode === 'new') {
+        lastEvaluatedNewCVID = d.candidate_id;
+        document.getElementById('jd-new-cv-prompt-banner').style.display = 'flex';
+        renderJDResults(d.all_results || [d.match_result]);
+      } else {
+        document.getElementById('jd-new-cv-prompt-banner').style.display = 'none';
+        renderJDResults(d.results || []);
+      }
+      toast('JD evaluation completed!');
+      loadJDHistory();
+    } else {
+      toast('Evaluation failed', '⚠');
+    }
+  } catch (e) {
+    toast('Error running evaluation: ' + e, '⚠');
+  }
+}
+
+function renderJDResults(results) {
+  currentJDResults = results || [];
+  const section = document.getElementById('jd-results-section');
+  section.style.display = 'block';
+
+  const total = results.length;
+  const strong = results.filter(r => (r.match_score || 0) >= 75).length;
+  const topScore = results.length ? Math.max(...results.map(r => r.match_score || 0)) : 0;
+  const avgScore = results.length ? (results.reduce((a, b) => a + (b.match_score || 0), 0) / total) : 0;
+
+  countUp('kpi-jd-total', total);
+  countUp('kpi-jd-strong', strong);
+  document.getElementById('kpi-jd-top').textContent = Math.round(topScore) + '%';
+  document.getElementById('kpi-jd-avg').textContent = Math.round(avgScore) + '%';
+
+  const tbody = document.getElementById('jd-results-tbody');
+  tbody.innerHTML = results.map((r, i) => {
+    const score = Math.round(r.match_score || 0);
+    const scoreClass = score >= 75 ? 'success' : (score >= 55 ? 'warning' : 'danger');
+    const matched = Array.isArray(r.matched_skills) ? r.matched_skills : [];
+    const missing = Array.isArray(r.missing_skills) ? r.missing_skills : [];
+
+    return `
+      <tr>
+        <td style="font-weight:700;color:var(--fg-3)">#${i + 1}</td>
+        <td>
+          <div style="font-weight:600;color:var(--fg-1)">${r.candidate_name || r.candidate_id}</div>
+          <div style="font-size:11px;color:var(--fg-3)">${r.candidate_id}</div>
+        </td>
+        <td>
+          <span class="badge ${r.degree_match ? 'success' : 'warning'}">${r.cand_degree || 'BS'}</span>
+        </td>
+        <td>${r.cand_experience_years || 0} yrs</td>
+        <td>
+          <div style="display:flex;align-items:center;gap:8px">
+            <span class="badge ${scoreClass}" style="font-size:12px;font-weight:700">${score}%</span>
+          </div>
+        </td>
+        <td>
+          <div style="font-size:11px;color:var(--fg-2)">${matched.length} matched / ${missing.length} missing</div>
+        </td>
+        <td><span class="tier-pill tier-${score >= 75 ? '1' : (score >= 55 ? '2' : '4')}">${r.match_tier || 'N/A'}</span></td>
+        <td>
+          <button class="btn sm" onclick="showJDRationaleModal(${i})">Details</button>
+        </td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function showJDRationaleModal(idx) {
+  const item = currentJDResults[idx];
+  if (!item) return;
+  const matched = Array.isArray(item.matched_skills) ? item.matched_skills : [];
+  const missing = Array.isArray(item.missing_skills) ? item.missing_skills : [];
+
+  let html = `
+    <div style="padding:20px;max-width:550px">
+      <h3 style="margin-bottom:8px">${item.candidate_name} — Match Breakdown</h3>
+      <div style="margin-bottom:12px"><span class="badge primary" style="font-size:13px">${item.match_score}% Match Score (${item.match_tier})</span></div>
+
+      <div style="margin-bottom:12px">
+        <div style="font-size:11px;font-weight:700;color:var(--fg-3);margin-bottom:4px">MATCHED SKILLS (${matched.length})</div>
+        <div>${matched.map(s => `<span class="badge success" style="margin:2px">${s}</span>`).join('') || '<span style="color:var(--fg-3)">None</span>'}</div>
+      </div>
+
+      <div style="margin-bottom:12px">
+        <div style="font-size:11px;font-weight:700;color:var(--fg-3);margin-bottom:4px">MISSING REQUIRED SKILLS (${missing.length})</div>
+        <div>${missing.map(s => `<span class="badge danger" style="margin:2px">${s}</span>`).join('') || '<span style="color:var(--success)">None missing</span>'}</div>
+      </div>
+
+      <div style="margin-bottom:12px">
+        <div style="font-size:11px;font-weight:700;color:var(--fg-3);margin-bottom:4px">AI SEMANTIC FIT RATIONALE</div>
+        <p style="font-size:13px;line-height:1.6;color:var(--fg-2);background:var(--surface-2);padding:10px;border-radius:6px">${item.rationale || 'General alignment based on structured parameter matching.'}</p>
+      </div>
+    </div>
+  `;
+  showModal(html);
+}
+
+function evaluateCandidateAgainstJD(cid) {
+  closePanel();
+  navigate('jd');
+  setTimeout(() => {
+    toggleAllJDCandidates(false);
+    const cb = document.querySelector(`.jd-cand-cb[value="${cid}"]`);
+    if (cb) cb.checked = true;
+    toast(`Candidate ${cid} pre-selected for JD evaluation.`);
+  }, 200);
+}
+
+async function triggerFullPipelineForNewCV() {
+  if (!lastEvaluatedNewCVID) return;
+  try {
+    const r = await fetch(`http://127.0.0.1:8000/api/v1/analyze/${lastEvaluatedNewCVID}`, { method: 'POST' });
+    if (r.ok) {
+      toast('Full 10-module rubric analysis queued in background for candidate ' + lastEvaluatedNewCVID);
+      document.getElementById('jd-new-cv-prompt-banner').style.display = 'none';
+    }
+  } catch (e) {
+    toast('Error queuing full pipeline: ' + e, '⚠');
+  }
 }
 
 /* ═══════════════════════════════════
