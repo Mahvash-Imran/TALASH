@@ -1,11 +1,6 @@
 """
 jd_parser.py  –  Module 11: Job Description (JD) Requirements Extractor
 ========================================================================
-
-WHY THIS FILE EXISTS
---------------------
-Extracts structured requirements from raw Job Description text (or file content)
-using the Groq/OpenAI LLM client, with a deterministic rule-based fallback mode.
 """
 
 import json
@@ -21,20 +16,20 @@ Your task is to parse a Job Description and extract structured requirements into
 
 STRICT RULES:
 1. Return ONLY a valid JSON object. No markdown fences, no explanation.
-2. If a requirement is not specified, set it to null or an empty array [].
-3. For min_experience_years, extract a number (float or int). If not stated, set to 0.
+2. Extract all explicit technical skills, domain expertise, tools, and platforms mentioned in the job text into "required_skills".
+3. Extract degree level (PhD, MS, BS) and required academic discipline (e.g. Computer Science, Electrical Engineering, Microelectronics, Cybersecurity).
 
 JSON SCHEMA:
 {
   "title": "Job Title or Position Name",
-  "required_degree_level": "PhD / MS / BS / Bachelors / Master / etc.",
-  "required_discipline": ["Computer Science", "AI", "Software Engineering"],
+  "required_degree_level": "PhD / MS / BS",
+  "required_discipline": ["Computer Science", "Software Engineering"],
   "min_experience_years": 3,
   "required_skills": ["Python", "Machine Learning", "PyTorch"],
   "preferred_skills": ["Docker", "Kubernetes"],
   "research_areas": ["Computer Vision", "NLP"],
   "publication_requirement": "At least 3 Scopus indexed papers",
-  "other_requirements": ["HEC recognized PhD", "Postdoc experience"]
+  "other_requirements": []
 }
 """
 
@@ -89,7 +84,6 @@ def parse_job_description(
 
 
 def _clean_json_text(text: str) -> str:
-    """Strip markdown backticks and clean JSON string."""
     text = text.strip()
     if text.startswith("```json"):
         text = text[7:]
@@ -115,12 +109,11 @@ def _empty_jd_dict(title: str = "Faculty Position") -> Dict[str, Any]:
 
 
 def _normalize_jd_dict(parsed: Dict[str, Any], raw_text: str) -> Dict[str, Any]:
-    """Ensures all required fields exist and have correct types."""
     res = _empty_jd_dict()
     if isinstance(parsed, dict):
         res["title"] = str(parsed.get("title") or "Faculty Position").strip()
-        res["required_degree_level"] = str(parsed.get("required_degree_level") or "").strip()
-        
+        res["required_degree_level"] = str(parsed.get("required_degree_level") or "BS").strip()
+
         req_disc = parsed.get("required_discipline")
         if isinstance(req_disc, list):
             res["required_discipline"] = [str(x).strip() for x in req_disc if str(x).strip()]
@@ -145,25 +138,68 @@ def _normalize_jd_dict(parsed: Dict[str, Any], raw_text: str) -> Dict[str, Any]:
             res["research_areas"] = [str(x).strip() for x in r_areas if str(x).strip()]
 
         res["publication_requirement"] = parsed.get("publication_requirement")
-        
-        other_req = parsed.get("other_requirements")
-        if isinstance(other_req, list):
-            res["other_requirements"] = [str(x).strip() for x in other_req if str(x).strip()]
+
+    # If required_skills came out empty from LLM, run heuristic skill extraction as supplement
+    if not res["required_skills"]:
+        res["required_skills"] = _extract_skills_from_text(raw_text)
 
     return res
+
+
+def _extract_skills_from_text(text: str) -> List[str]:
+    """Dynamic skill and domain phrase extractor from JD text."""
+    skills = []
+    text_clean = text.replace("\n", " ").strip()
+
+    # Pattern 1: Explicit mentions after "skills in", "experience in", "knowledge of", "proficiency in", "expertise in", "requirements:"
+    phrases = re.findall(
+        r'(?:skills?|experience|knowledge|expertise|proficiency|requirements?|seeking|need)\s*(?:in|with|of|for|:)?\s*([A-Za-z0-9\+\#\s,\/\-\.\(\)]+?)(?:\.|\n|;|$|and\s+years|with\s+PhD|degree)',
+        text_clean, re.IGNORECASE
+    )
+    for p in phrases:
+        for chunk in re.split(r'[,;/]', p):
+            chunk_clean = chunk.strip()
+            # Exclude noise words
+            if len(chunk_clean) > 2 and not any(nw in chunk_clean.lower() for nw in ["years", "experience", "degree", "position", "seeking", "looking", "candidate", "applicant"]):
+                skills.append(chunk_clean)
+
+    # Pattern 2: Known technical & academic domain vocabulary
+    domain_keywords = [
+        "Computer Vision", "Machine Learning", "Deep Learning", "Artificial Intelligence", "AI", "NLP",
+        "Natural Language Processing", "Cybersecurity", "Information Security", "Network Security",
+        "IoT", "Internet of Things", "Microelectronics", "Analog IC Design", "Digital Signal Processing",
+        "Signal Processing", "Embedded Systems", "Robotics", "Data Science", "Software Engineering",
+        "Cloud Computing", "Distributed Systems", "Wireless Communication", "Power Systems",
+        "Python", "C++", "Java", "PyTorch", "TensorFlow", "FastAPI", "Docker", "Kubernetes", "SQL", "AutoCAD", "PLC"
+    ]
+    for kw in domain_keywords:
+        if re.search(r'\b' + re.escape(kw.lower()) + r'\b', text.lower()):
+            if kw not in skills:
+                skills.append(kw)
+
+    # Deduplicate preserving order
+    seen = set()
+    deduped = []
+    for s in skills:
+        s_norm = s.lower()
+        if s_norm not in seen:
+            seen.add(s_norm)
+            deduped.append(s)
+
+    return deduped[:10]
 
 
 def _heuristic_parse_jd(jd_text: str) -> Dict[str, Any]:
     """Rule-based heuristic extractor when LLM is unavailable."""
     text_lower = jd_text.lower()
-    
+
     # Title extraction
     title = "Faculty Position"
     lines = [l.strip() for l in jd_text.splitlines() if l.strip()]
     if lines:
         title = lines[0][:80]
         for line in lines[:5]:
-            if any(kw in line.lower() for kw in ["assistant professor", "associate professor", "professor", "lecturer", "engineer", "lead"]):
+            if any(kw in line.lower() for kw in ["assistant professor", "associate professor", "professor", "lecturer", "engineer", "lead", "specialist"]):
                 title = line
                 break
 
@@ -178,37 +214,28 @@ def _heuristic_parse_jd(jd_text: str) -> Dict[str, Any]:
     min_exp = 0
     exp_match = re.search(r'(\d+)\+?\s*(?:years?|yrs?)\s*(?:of)?\s*(?:experience|exp)', text_lower)
     if exp_match:
-        min_exp = int(exp_match.group(1))
+        min_exp = float(exp_match.group(1))
 
     # Disciplines
     disciplines = []
     common_disciplines = [
         "Computer Science", "Software Engineering", "Artificial Intelligence",
         "Data Science", "Electrical Engineering", "Cybersecurity", "Information Technology",
-        "Machine Learning", "Computer Engineering", "Robotics"
+        "Machine Learning", "Computer Engineering", "Robotics", "Microelectronics", "Telecom"
     ]
     for disc in common_disciplines:
         if disc.lower() in text_lower:
             disciplines.append(disc)
 
-    # Hard skills heuristics
-    skills = []
-    common_skills = [
-        "Python", "C++", "Java", "PyTorch", "TensorFlow", "Machine Learning",
-        "Deep Learning", "Computer Vision", "NLP", "SQL", "Docker", "Kubernetes",
-        "Cloud", "AWS", "Linux", "Git", "React", "Node.js", "FastAPI", "Data Structures"
-    ]
-    for skill in common_skills:
-        if re.search(r'\b' + re.escape(skill.lower()) + r'\b', text_lower):
-            skills.append(skill)
+    skills = _extract_skills_from_text(jd_text)
 
     return {
         "title": title,
         "required_degree_level": degree,
         "required_discipline": disciplines,
         "min_experience_years": min_exp,
-        "required_skills": skills[:8],
-        "preferred_skills": skills[8:12],
+        "required_skills": skills,
+        "preferred_skills": [],
         "research_areas": disciplines,
         "publication_requirement": "Peer-reviewed journal publications" if "publication" in text_lower or "research" in text_lower else None,
         "other_requirements": [],

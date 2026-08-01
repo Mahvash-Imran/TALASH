@@ -52,7 +52,7 @@ def structured_match_score(candidate: Dict[str, Any], jd: Dict[str, Any]) -> Dic
     pref_skills = jd.get("preferred_skills") or []
     all_jd_skills = req_skills + pref_skills
 
-    # Candidate skills list
+    # Build rich candidate skills and domain search pool
     cand_skills_raw = candidate.get("skills") or candidate.get("top_strong_skills") or []
     if isinstance(cand_skills_raw, str):
         cand_skills = [s.strip() for s in cand_skills_raw.split(",") if s.strip()]
@@ -66,26 +66,36 @@ def structured_match_score(candidate: Dict[str, Any], jd: Dict[str, Any]) -> Dic
     else:
         cand_skills = []
 
+    # Include specializations in search pool
+    specs = candidate.get("specializations") or candidate.get("specialization") or []
+    if isinstance(specs, list):
+        cand_skills.extend([str(x) for x in specs])
+    elif isinstance(specs, str) and specs:
+        cand_skills.append(specs)
+
     matched_skills = []
     missing_skills = []
 
-    for req_sk in req_skills:
-        req_sk_clean = req_sk.strip()
-        if not req_sk_clean:
-            continue
-        best_score = max(
-            (fuzz.partial_ratio(req_sk_clean.lower(), c_sk.lower()) for c_sk in cand_skills),
-            default=0
-        )
-        if best_score >= 75:
-            matched_skills.append(req_sk_clean)
-        else:
-            missing_skills.append(req_sk_clean)
+    if req_skills:
+        for req_sk in req_skills:
+            req_sk_clean = req_sk.strip()
+            if not req_sk_clean:
+                continue
+            best_score = max(
+                (fuzz.partial_ratio(req_sk_clean.lower(), c_sk.lower()) for c_sk in cand_skills),
+                default=0
+            )
+            if best_score >= 70 or any(req_sk_clean.lower() in c_sk.lower() or c_sk.lower() in req_sk_clean.lower() for c_sk in cand_skills):
+                matched_skills.append(req_sk_clean)
+            else:
+                missing_skills.append(req_sk_clean)
 
-    skill_match_pct = (
-        round((len(matched_skills) / len(req_skills)) * 100.0, 1)
-        if req_skills else 100.0
-    )
+        skill_match_pct = round((len(matched_skills) / len(req_skills)) * 100.0, 1)
+    else:
+        # If JD has no explicit skills listed, check candidate skills against JD title/text
+        jd_title = str(jd.get("title") or "").lower()
+        has_any_domain_match = any(fuzz.partial_ratio(c_sk.lower(), jd_title) >= 65 for c_sk in cand_skills)
+        skill_match_pct = 65.0 if has_any_domain_match else 30.0
 
     # Degree level match check
     req_deg = jd.get("required_degree_level") or "BS"
@@ -96,8 +106,8 @@ def structured_match_score(candidate: Dict[str, Any], jd: Dict[str, Any]) -> Dic
 
     # Experience match check
     min_exp = float(jd.get("min_experience_years") or 0)
-    cand_exp = float(candidate.get("total_experience_years") or candidate.get("experience_score") or 0)
-    experience_match = cand_exp >= min_exp
+    cand_exp = float(candidate.get("total_experience_years") or 0)
+    experience_match = cand_exp >= min_exp if min_exp > 0 else True
 
     # Discipline match check
     req_disc = jd.get("required_discipline") or []
@@ -105,7 +115,7 @@ def structured_match_score(candidate: Dict[str, Any], jd: Dict[str, Any]) -> Dic
     disc_match = True
     if req_disc:
         disc_match = any(
-            fuzz.partial_ratio(d.lower(), cand_disc) >= 70 or d.lower() in cand_disc
+            fuzz.partial_ratio(d.lower(), cand_disc) >= 65 or d.lower() in cand_disc
             for d in req_disc
         )
 
@@ -139,8 +149,8 @@ def llm_semantic_score(
 
     if skip_llm or not is_valid_key or not candidate_summary or not jd_text:
         return {
-            "semantic_score": 70.0,
-            "rationale": "Candidate profile shows general alignment with key requirements.",
+            "semantic_score": 65.0,
+            "rationale": "Candidate profile shows domain alignment based on extracted qualification data.",
         }
 
     try:
@@ -178,14 +188,14 @@ Return JSON only:
             cleaned = cleaned[:-3]
         parsed = json.loads(cleaned.strip())
         return {
-            "semantic_score": float(parsed.get("semantic_score", 70.0)),
-            "rationale": str(parsed.get("rationale", "Candidate profile shows general alignment.")).strip(),
+            "semantic_score": float(parsed.get("semantic_score", 65.0)),
+            "rationale": str(parsed.get("rationale", "Candidate profile shows alignment with role.")).strip(),
         }
     except Exception as e:
         logger.warning(f"LLM semantic score failed: {e}")
         return {
-            "semantic_score": 70.0,
-            "rationale": "Candidate profile evaluated via structured parameters.",
+            "semantic_score": 65.0,
+            "rationale": "Candidate profile evaluated via structured parameter alignment.",
         }
 
 
@@ -209,8 +219,9 @@ def compute_match_score(
         f"Candidate: {cname}",
         f"Highest Degree: {structured['cand_degree']}",
         f"Total Experience: {structured['cand_experience_years']} years",
+        f"Specializations: {candidate.get('specialization', '')}",
         f"Skills: {', '.join(structured['matched_skills'] + candidate.get('skills', []))}",
-        f"Summary: {candidate.get('summary', '') or candidate.get('profile_summary', '')}"
+        f"Summary: {candidate.get('summary', '')}"
     ]
     cand_summary_text = "\n".join(cand_summary_parts)
 
@@ -222,9 +233,9 @@ def compute_match_score(
     )
 
     # Calculate weighted final match score (0-100)
-    skill_part = structured["skill_match_pct"] * 0.40
-    semantic_part = semantic["semantic_score"] * 0.25
-    degree_part = (100.0 if structured["degree_match"] else 40.0) * 0.15
+    skill_part = structured["skill_match_pct"] * 0.45
+    semantic_part = semantic["semantic_score"] * 0.20
+    degree_part = (100.0 if structured["degree_match"] else 30.0) * 0.15
 
     # Experience calculation
     req_exp = structured["req_experience_years"]
@@ -235,7 +246,7 @@ def compute_match_score(
         exp_ratio = min(cand_exp / req_exp, 1.0)
         exp_part = (exp_ratio * 100.0) * 0.10
 
-    disc_part = (100.0 if structured["discipline_match"] else 50.0) * 0.10
+    disc_part = (100.0 if structured["discipline_match"] else 25.0) * 0.10
 
     final_score = round(skill_part + semantic_part + degree_part + exp_part + disc_part, 1)
     final_score = min(max(final_score, 0.0), 100.0)

@@ -38,7 +38,8 @@ def generate_jd_id(jd_title: str) -> str:
 
 def load_candidate_profiles(candidate_ids: Optional[List[str]] = None) -> List[Dict[str, Any]]:
     """
-    Loads candidate data from analysis CSVs (composite evaluations, experience, education, skills).
+    Loads candidate data from analysis & extracted CSVs (composite evaluations, experience, education, skills).
+    Aggregates rich candidate-specific parameters for precise JD matching.
     """
     comp_file = DATA_DIR / "composite_evaluations.csv"
     if not comp_file.exists():
@@ -53,6 +54,9 @@ def load_candidate_profiles(candidate_ids: Optional[List[str]] = None) -> List[D
     exp_df = _load_csv(DATA_DIR / "experience_profiles.csv")
     edu_df = _load_csv(DATA_DIR / "educational_profiles.csv")
     res_df = _load_csv(DATA_DIR / "research_aggregates.csv")
+    skills_df = _load_csv(EXTRACTED_DIR / "skills.csv")
+    sk_ev_df = _load_csv(DATA_DIR / "skill_evidence.csv")
+    edu_ext_df = _load_csv(EXTRACTED_DIR / "education.csv")
 
     exp_map = _to_map(exp_df)
     edu_map = _to_map(edu_df)
@@ -68,21 +72,51 @@ def load_candidate_profiles(candidate_ids: Optional[List[str]] = None) -> List[D
         edu_info = edu_map.get(cid, {})
         res_info = res_map.get(cid, {})
 
-        skills_list = []
-        skills_raw = exp_info.get("top_strong_skills", "")
-        if skills_raw:
-            skills_list = [s.strip() for s in str(skills_raw).split(",") if s.strip()]
+        # Actual total experience years
+        try:
+            exp_years = float(exp_info.get("total_experience_years") or r.get("total_experience_years") or 0.0)
+        except (ValueError, TypeError):
+            exp_years = 0.0
+
+        # Degree & Specializations
+        h_deg = edu_info.get("highest_degree") or r.get("highest_degree") or "BS"
+        specs = []
+        if edu_ext_df is not None and not edu_ext_df.empty:
+            c_edus = edu_ext_df[edu_ext_df["candidate_id"] == cid]
+            specs = [str(s).strip() for s in c_edus["specialization"].dropna().unique() if str(s).strip() and str(s).lower() != "nan"]
+
+        # Aggregate skills
+        skills_set = set()
+        raw_top = exp_info.get("top_strong_skills", "")
+        if raw_top and str(raw_top).lower() != "nan":
+            for s in str(raw_top).split(","):
+                if s.strip():
+                    skills_set.add(s.strip())
+
+        if skills_df is not None and not skills_df.empty:
+            c_sks = skills_df[skills_df["candidate_id"] == cid]
+            for s in c_sks["skill_name"].dropna():
+                if str(s).strip() and str(s).lower() != "nan":
+                    skills_set.add(str(s).strip())
+
+        if sk_ev_df is not None and not sk_ev_df.empty:
+            c_evs = sk_ev_df[sk_ev_df["candidate_id"] == cid]
+            for s in c_evs["skill_name"].dropna():
+                if str(s).strip() and str(s).lower() != "nan":
+                    skills_set.add(str(s).strip())
+
+        combined_skills = list(skills_set) + specs
 
         candidates.append({
             "candidate_id": cid,
             "candidate_name": r.get("candidate_name", cid),
-            "highest_degree": edu_info.get("highest_degree") or r.get("highest_degree") or "BS",
-            "total_experience_years": float(r.get("total_experience_years") or r.get("experience_score") or 0.0),
-            "skills": skills_list,
+            "highest_degree": h_deg,
+            "total_experience_years": exp_years,
+            "skills": combined_skills,
+            "specialization": " ".join(specs),
             "overall_composite_score": float(r.get("overall_composite_score") or 0.0),
             "candidate_tier": r.get("candidate_tier", "Unclassified"),
-            "specialization": edu_info.get("specialization_drift") or "",
-            "summary": exp_info.get("summary") or res_info.get("research_summary") or "",
+            "summary": f"Degree: {h_deg}. Experience: {exp_years} years. Specializations: {', '.join(specs)}. Skills: {', '.join(list(skills_set))}. {res_info.get('research_summary', '')}",
         })
 
     return candidates
@@ -124,7 +158,6 @@ def evaluate_jd_against_candidates(
     # Save to CSV
     if results:
         res_df = pd.DataFrame(results)
-        # Convert lists to comma separated strings for CSV
         csv_df = res_df.copy()
         if "matched_skills" in csv_df.columns:
             csv_df["matched_skills"] = csv_df["matched_skills"].apply(lambda x: ", ".join(x) if isinstance(x, list) else x)
