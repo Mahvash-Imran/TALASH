@@ -27,6 +27,23 @@ UPLOADS_DIR = Path("data/uploads")
 UPLOADS_DIR.mkdir(parents=True, exist_ok=True)
 
 
+def _sanitize(obj):
+    """
+    Recursively replaces NaN / Inf floats with None so FastAPI can JSON-serialize them.
+    Pandas read_csv often produces NaN for empty cells which breaks json.dumps.
+    """
+    import math
+    if isinstance(obj, float):
+        if math.isnan(obj) or math.isinf(obj):
+            return None
+        return obj
+    if isinstance(obj, dict):
+        return {k: _sanitize(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_sanitize(i) for i in obj]
+    return obj
+
+
 def _extract_experience_from_cv(cv_text: str) -> float:
     """
     Estimates total experience years from date ranges found in CV text.
@@ -322,7 +339,7 @@ async def evaluate_candidates_against_jd(
         # Save updated results
         pd.DataFrame(existing_results).to_csv(res_csv, index=False)
 
-        return {
+        return _sanitize({
             "status": "success",
             "jd_id": jd_id,
             "candidate_id": cid,
@@ -330,7 +347,7 @@ async def evaluate_candidates_against_jd(
             "all_results": existing_results,
             "can_trigger_full_pipeline": True,
             "message": "New CV evaluated against JD successfully. You can optionally trigger full 10-module rubric evaluation."
-        }
+        })
 
     # Workflow B: Existing Candidate Selection
     cids_list = None
@@ -344,12 +361,12 @@ async def evaluate_candidates_against_jd(
         skip_llm=True
     )
 
-    return {
+    return _sanitize({
         "status": "success",
         "jd_id": jd_id,
         "candidate_count": eval_out["candidate_count"],
         "results": eval_out["results"],
-    }
+    })
 
 
 @router.get("/{jd_id}/results")
@@ -379,10 +396,10 @@ def get_jd_results(jd_id: str):
         except Exception:
             pass
 
-    return {
+    return _sanitize({
         "jd_id": jd_id,
         "title": parsed_jd.get("title", jd_id),
         "parsed_jd": parsed_jd,
         "candidate_count": len(results),
         "results": results,
-    }
+    })
