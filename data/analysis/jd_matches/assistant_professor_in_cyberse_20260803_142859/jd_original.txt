@@ -1,0 +1,7 @@
+Assistant Professor in Cybersecurity and Network Security
+
+Requirements:
+- Ph.D. in Cybersecurity, Information Security, or Computer Science.
+- Minimum 5+ years academic or industrial experience in security operations.
+- Technical Skills: Cybersecurity, Network Security, Penetration Testing, Cryptography.
+- Experience with security certifications and network auditing.

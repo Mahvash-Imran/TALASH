@@ -3,6 +3,14 @@ main.py  –  FastAPI Application Entry Point
 ==========================================
 """
 
+# Load .env first — must be before any import that reads os.environ
+try:
+    from pathlib import Path as _Path
+    from dotenv import load_dotenv as _load_dotenv
+    _load_dotenv(_Path(__file__).resolve().parent.parent / ".env", override=True)
+except ImportError:
+    pass
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse

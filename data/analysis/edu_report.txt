@@ -4,8 +4,9 @@
   Candidates analysed : 43
 
   Strength Distribution:
-    Moderate              : 15
-    Strong                : 28
+    Moderate              : 21
+    Strong                : 21
+    Weak                  : 1
 
 ----------------------------------------------------------------------
   Per-Candidate Summaries
@@ -16,300 +17,300 @@
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: Muhammad Salman holds a PhD in Electrical Engineering from the International Islamic University, Islamabad, with a strong academic record and consistent specialization. His academic performance shows an improving trend, with no significant gaps detected in his educational history. He has a strong foundation in Electronics Engineering, with a progression from UG to PG and PhD in related fields.
 
   [Strong] 03_NASIR_ALI_SHAH
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: The candidate, 03_NASIR_ALI_SHAH, holds a PhD degree from Politecnico di Torino with a perfect score of 100.0%. Their educational progression is consistent, and their performance trend is improving. The candidate's specialization has shown some drift, but they have maintained a strong academic record with no significant gaps detected in their educational history.
 
   [Strong] 09_MUHAMMAD_ABUBAKAR
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: The candidate, 09_MUHAMMAD_ABUBAKAR, holds a PhD degree from Jiangsu University with a strong academic performance throughout their educational journey. They have a consistent progression in their field of study with a specialization in power electronics and power systems, which has a minor drift from their initial field of electronics engineering. The candidate's academic performance shows a stable trend with no significant gaps detected in their educational history.
 
   [Strong] 11_WAQAS_AMIN
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: The candidate holds a PhD in Electrical Energy Policy, Energy Trading, and Smart Grid Technology from the University of Electronic Science and Technology, with a strong academic performance of 90.0%. Their educational progression is consistent, and their performance trend is improving. The candidate's highest degree is a PhD from a ranked university, with no significant educational gaps detected.
 
   [Strong] 13_MANZOOR_ELLAHI
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
-
-  [Strong] 15_M_USMAN_ABBASI
-  Highest Degree : PhD
-  Progression    : Consistent
-  Perf. Trend    : improving
-  Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: The candidate, 13_MANZOOR_ELLAHI, holds a PhD in Electrical Engineering from The University of Lahore with a strong academic performance, achieving 90.5% in their PhD program. Their educational progression is consistent, with a highest degree of PhD and an improving performance trend. The candidate's specialization has evolved over time, but their overall academic background is robust.
 
   [Strong] 16_MUZZAMIL_GHAFFAR
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: The candidate, Muzzamil Ghaffar, holds a PhD degree from Air University with a high percentage of 93.5%. Their educational progression is consistent, with no significant gaps detected, and their performance trend is improving. They have demonstrated specialization consistency throughout their academic career.
 
   [Strong] 17_SUHAIL_ASGHAR
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: Suhail Asghar holds a PhD in Electrical Engineering from Universiti Tun Hussein Onn Malaysia, with a consistent progression and improving performance trend. His academic background demonstrates a strong foundation, with no significant gaps detected in his educational history. He has consistently specialized in fields related to electrical engineering, with high marks throughout his academic career.
 
   [Strong] 18_MUHAMMAD_AMJAD
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: The candidate has a PhD from POLITEHNICA Bucharest with a high grade of 95.0%. Their educational progression is consistent, and their performance trend is improving. The candidate has a strong academic background with no significant gaps detected in their education.
 
   [Strong] 19_ASIM_MASOOD
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
-
-  [Strong] 20_SYED_FASIH_ALI
-  Highest Degree : PhD
-  Progression    : Consistent
-  Perf. Trend    : declining
-  Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is declining.
+  Summary: Asim Masood holds a PhD in Information and Communication Engineering from the University of Science and Technology of China. His educational progression is consistent, with a highest degree of PhD and an improving performance trend. He has no significant educational gaps detected, and his specialization has evolved from pre-engineering to electronics and signal processing, and then to machine learning and artificial intelligence. His academic achievements and consistent progression justify his strong educational strength.
 
   [Strong] 22_ZEESHAN
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: Zeeshan has a PhD in Advanced System Engineering from the Free University of Bolzano, with a consistent progression in their educational background and an improving performance trend. They have a strong academic record, with high marks in their degrees, including 100% in their PhD. There are no significant gaps detected in their educational history, and their specialization has evolved from pre-engineering to informatics with some overlap.
 
   [Strong] 23_WAQAS_TARIQ_TOOR
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: The candidate, 23_WAQAS_TARIQ_TOOR, holds a PhD in Electronics and Communication Engineering from Hanyang University, with a consistent progression in their educational background. Their performance trend shows improvement, and there are no significant educational gaps detected. The candidate's specialization has drifted over time, but their highest degree is from a ranked university, supporting their strong educational profile.
 
   [Strong] 24_AHMED_NAEEM
   Highest Degree : PG
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 2/0/0
-  Summary: The candidate's highest qualification is PG. Academic performance trend is improving.
+  Summary: Ahmed Naeem has a consistent educational progression with a highest degree of PG in Electrical-Electronics Engineering. His academic performance shows an improving trend, with strong marks in his postgraduate studies. He has no significant educational gaps, and his specialization, although with some drift, demonstrates a clear focus on electrical engineering and related fields.
 
-  [Strong] 27_SHAHEER
+  [Strong] 25_MUHAMMAD_ADEEL_ALTAF
   Highest Degree : PhD
   Progression    : Consistent
-  Perf. Trend    : improving
+  Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: Muhammad Adeel Altaf holds a PhD in Electronic and Electrical Engineering from Kyungpook National University, with a strong academic performance of 95.0%. His educational progression is consistent, and his performance trend is stable. Although there is some specialization drift, his overall academic background and high marks in his PhD program justify a strong educational strength assessment.
 
   [Strong] 28_IDRIS_KHAN
   Highest Degree : PG
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PG. Academic performance trend is improving.
+  Summary: The candidate, Idris Khan, has a consistent educational progression with a highest degree of Postgraduate in specialized fields related to Electrical Engineering. Their performance trend is improving, with no significant gaps detected in their educational history. They have achieved strong marks throughout their academic career, with percentages above 73% in all their degrees.
 
   [Strong] 29_MUHAMMAD_SARMAD_TARIQ
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: The candidate, Muhammad Sarmad Tariq, holds a PhD in Electrical Engineering from the University of North Carolina Charlotte, with a consistent specialization in Electrical Engineering and a strong academic performance throughout their educational journey. They have a highest degree of PhD and their progression is consistent, with an improving performance trend. The candidate's educational background is marked by high percentages, including 90.0% and 95.0% in their HSSC and PhD, respectively.
 
   [Strong] 30_FAHD_SIKANDAR_KHAN
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: Fahd Sikandar Khan holds a PhD in Doctor of Engineering from the University of Tokyo, with a strong academic record and consistent specialization progression. Their performance trend is improving, with high marks in their PhD and Masters degrees. There are no significant educational gaps detected in their profile, supporting their strong educational background.
 
   [Strong] 31_USMAN_MASUD
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: The candidate holds a PhD in Electrical Engineering from the University of Kassel, with a consistent specialization in the field. Their academic performance shows an improving trend, with high marks in their postgraduate and PhD studies. The candidate's educational background is strong, with no significant gaps detected in their academic history.
 
   [Strong] 32_QAISAR_HUSSAIN_ALVI
   Highest Degree : PhD
   Progression    : Inconsistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
-
-  [Strong] 33_QAMAR_ABBAS
-  Highest Degree : PhD
-  Progression    : Inconsistent
-  Perf. Trend    : declining
-  Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is declining.
+  Summary: Qaisar Hussain Alvi holds a PhD in Electrical Engineering from UET, Taxila, with a strong academic record, including 79.0% in PhD, 85.2% in PG, 76.1% in UG, and 74.8% in HSSC. The candidate's performance trend is stable, and no significant educational gaps were detected. Although the progression is not consistent, the overall academic performance justifies the strength label.
 
   [Strong] 34_SHAHZAD
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
-
-  [Strong] 36_SAMANA_BATOOL
-  Highest Degree : PhD
-  Progression    : Inconsistent
-  Perf. Trend    : declining
-  Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is declining.
+  Summary: The candidate has a PhD in Intelligent Mechatronics Engineering from Sejong University, with a consistent progression in their educational background. They have a strong academic record, with marks above 75% in their undergraduate and postgraduate degrees. The candidate's specialization has drifted from their initial field, but their performance trend has remained stable. They have no significant educational gaps in their profile.
 
   [Strong] 37_SANIA_GUL
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
-
-  [Strong] 38_MUHAMMAD_MUSADIQ
-  Highest Degree : PhD
-  Progression    : Inconsistent
-  Perf. Trend    : declining
-  Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is declining.
+  Summary: Sania Gul has a PhD in Electrical Engineering from UET Peshawar with a high percentage of 98.8%. Her educational progression is consistent, with a specialization in Electrical Engineering throughout her degrees. She has shown an improving performance trend, with no significant gaps detected in her educational history.
 
   [Strong] 39_MUHAMMAD_SAQIB
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
-
-  [Strong] 41_MUHAMMAD_AQEEL
-  Highest Degree : PhD
-  Progression    : Consistent
-  Perf. Trend    : improving
-  Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
-
-  [Strong] 43_AMMARA_NASIM
-  Highest Degree : PhD
-  Progression    : Inconsistent
-  Perf. Trend    : insufficient data
-  Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD.
+  Summary: Muhammad Saqib has completed his educational journey with a PhD from Jeju National University, maintaining a consistent specialization and strong academic performance throughout. His highest degree is a PhD, and his academic progression is consistent with no significant gaps detected. He has demonstrated a stable performance trend, with no specialization drift, and has achieved high marks in all his degrees.
 
   [Moderate] 02_MUHAMMAD_SHAHWAZ
   Highest Degree : PG
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PG. Academic performance trend is stable.
+  Summary: Muhammad Shahwaz has a Master's degree in Engineering from NED UET Karachi with a consistent specialization in Engineering and Electronics. His academic performance has been stable, with a highest score of 77.0% in his SSC and an average of 74.2% in his Master's degree. He has no significant gaps in his educational history. His highest degree is a Postgraduate degree in Engineering.
 
   [Moderate] 04_MUHAMMAD_FARRUKH
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: Muhammad Farrukh has a PhD in Electrical Engineering from Riphah International University with a strong mark of 88.0%. He has a consistent progression in his educational background, with a stable performance trend. However, his university is not ranked, which affects his overall educational strength. His specialization has drifted from Electronic Engineering to Electrical Engineering, but this does not seem to have negatively impacted his academic performance.
 
   [Moderate] 05_MUHAMMAD_MAJID
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: Muhammad Majid holds a PhD in Electrical Engineering from the Institute of Space Technology with a strong mark of 90.0%. His educational progression is consistent, with a stable performance trend and no significant gaps detected. However, his institutions are not ranked, which prevents his profile from being classified as strong.
 
   [Moderate] 06_FARMAN_ALI
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: Farman Ali holds a PhD degree from Iqra National University, Peshawar, Pakistan, with a consistent progression and stable performance trend. The candidate's highest degree is a PhD, with no significant gaps detected in their educational history. The institutions attended are not ranked, which is a factor in the moderate educational strength assessment.
 
   [Moderate] 07_FIZA_MURTAZA
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: The candidate, 07_FIZA_MURTAZA, holds a PhD in Computer Engineering from the University of Engineering and Technology Taxila, with a consistent progression and stable performance trend. Their highest degree is a PhD, and they have no significant educational gaps. However, the institutions they attended are not ranked highly, which contributes to their moderate educational strength.
 
   [Moderate] 08_TAYYABA_GULL
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: The candidate, 08_TAYYABA_GULL, has a PhD in Power Electronics from Iqra National University with a strong mark of 89.5%. Their educational progression is consistent, with a stable performance trend. However, there is a specialization drift from Electrical Engineering to Power Electronics, which may be a factor in the assessment. The candidate's institutions are not ranked, contributing to the moderate educational strength label.
 
   [Moderate] 10_MUHAMMAD_EHATISHAM
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: The candidate has a PhD in Computer Engineering from the University of Engineering and Technology, Taxila, with a consistent specialization and strong marks throughout their academic career. They have also completed a course in Multimodal Data Processing and Machine Learning from the University of East London. The candidate's educational progression is consistent, and there are no significant gaps in their education. However, the universities they attended are not ranked, which affects their overall educational strength.
 
   [Moderate] 12_SYED_TAMOORULHASSAN
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: The candidate has a PhD in Communication Engineering from the University of Oulu, with a consistent progression in their educational background. They have a strong performance trend, with stable marks throughout their academic career. The candidate's specialization has drifted from Telecommunication Engineering to Communication Systems, but they have achieved high marks in their PhD program.
 
   [Moderate] 14_SAROSH_TAHIR
   Highest Degree : PhD
   Progression    : Inconsistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: The candidate holds a PhD in Computer and Control Engineering from Politecnico di Torino. Their educational progression is not consistent, with specialization drift observed across different degrees. The candidate's performance trend is stable, and no significant educational gaps were detected. They have a strong foundation in engineering, with degrees in Electronics Engineering and Telecommunication and Networking.
+
+  [Moderate] 15_M_USMAN_ABBASI
+  Highest Degree : PhD
+  Progression    : Consistent
+  Perf. Trend    : improving
+  Gaps (total/significant/unexplained): 0/0/0
+  Summary: The candidate has a PhD in Electrical Engineering from the National University of Computer and Emerging Sciences - FAST, with a consistent progression and improving performance trend. However, the specialization drift from Electrical Engineering to Biomedical Signal Processing indicates a minor drift. The candidate's academic background is solid, but the lack of ranking for most institutions attended is a factor in the assessment.
+
+  [Moderate] 20_SYED_FASIH_ALI
+  Highest Degree : PhD
+  Progression    : Consistent
+  Perf. Trend    : declining
+  Gaps (total/significant/unexplained): 0/0/0
+  Summary: The candidate, 20_SYED_FASIH_ALI, holds a PhD in Electrical Engineering from Lahore University of Management Science. Their educational progression is consistent, with a specialization that has drifted from Computer Engineering to Electrical Engineering. The candidate's performance trend is declining, which is a concern. Despite this, they have achieved strong marks in their undergraduate degree and a respectable mark in their PhD.
 
   [Moderate] 21_SAMAN_FATIMA
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
-
-  [Moderate] 25_MUHAMMAD_ADEEL_ALTAF
-  Highest Degree : PhD
-  Progression    : Consistent
-  Perf. Trend    : stable
-  Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: Saman Fatima has completed her educational degrees consistently, with a highest degree of PhD from University Paris Saclay. Her performance trend has been stable, and there are no significant educational gaps detected. However, the universities for her earlier degrees are not ranked, which affects her overall educational strength.
 
   [Moderate] 26_AAMINA_AKBAR
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: Aamina Akbar holds a PhD in Electrical Engineering with a specialization in Communication from the Institute of Space Technology. Her educational progression is consistent, and her performance trend is stable. She has a strong academic record, with high marks in her postgraduate and PhD studies, but her universities are not ranked in the top tiers, which is a factor in her moderate educational strength assessment.
+
+  [Moderate] 27_SHAHEER
+  Highest Degree : PhD
+  Progression    : Consistent
+  Perf. Trend    : improving
+  Gaps (total/significant/unexplained): 0/0/0
+  Summary: The candidate has a PhD degree from University Malaysia Pahang, with a consistent progression in their educational background. However, the institutions they attended are not ranked, and there are significant specialization drifts throughout their degrees. The candidate's performance trend is improving, and there are no significant educational gaps detected.
 
   [Moderate] 35_MATIULLAH_AHSAN
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: The candidate, Matiullah Ahsan, holds a PhD in Electrical Engineering from Universiti Tun Hussein Onn Malaysia with a strong mark of 85.0%. Their educational progression is consistent, with a stable performance trend and no significant gaps detected. The candidate's specialization has drifted from an undefined area to Electrical Power System and High Voltage, with no overlap.
+
+  [Moderate] 36_SAMANA_BATOOL
+  Highest Degree : PhD
+  Progression    : Inconsistent
+  Perf. Trend    : declining
+  Gaps (total/significant/unexplained): 0/0/0
+  Summary: The candidate holds a PhD in Electrical Engineering from a ranked university, with a perfect score. However, their educational progression is inconsistent, and their performance trend is declining. The candidate's specialization has also drifted significantly, from Artificial Intelligence in the medical domain to Computer Engineering, with no overlap.
+
+  [Moderate] 38_MUHAMMAD_MUSADIQ
+  Highest Degree : PhD
+  Progression    : Inconsistent
+  Perf. Trend    : declining
+  Gaps (total/significant/unexplained): 0/0/0
+  Summary: Muhammad Musadiq holds a PhD in Electrical Engineering from The Islamia University of Bahawalpur with a high percentage of 98.8%. However, the university is not ranked, and his performance trend shows a decline. He has a consistent specialization in Electrical Engineering throughout his degrees.
 
   [Moderate] 40_ABDUR_REHMAN
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : stable
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is stable.
+  Summary: Abdur Rehman holds a PhD in Electrical Engineering from Kunsan National University, with a consistent specialization and stable performance trend. The candidate's academic progression is consistent, with no significant gaps detected in their educational history. Abdur Rehman's highest degree is a PhD, achieved with a strong mark of 85.8%, although the universities attended are not ranked.
+
+  [Moderate] 41_MUHAMMAD_AQEEL
+  Highest Degree : PhD
+  Progression    : Consistent
+  Perf. Trend    : improving
+  Gaps (total/significant/unexplained): 0/0/0
+  Summary: The candidate, Muhammad Aqeel, has a PhD degree from KFUEIT with a strong academic performance trend, achieving 83.5% in their PhD program. Their educational progression is consistent, with no significant gaps detected. However, the universities they attended are not ranked, which affects their overall educational strength. The candidate's specialization has drifted from Phy, Math, Computer to Telecommunication Engineering.
 
   [Moderate] 42_SAQIB_JAMIL
   Highest Degree : PhD
   Progression    : Consistent
   Perf. Trend    : improving
   Gaps (total/significant/unexplained): 0/0/0
-  Summary: The candidate's highest qualification is PhD. Academic performance trend is improving.
+  Summary: The candidate has a PhD in Electrical Engineering from Sarhad University Peshawar, with a consistent progression and improving performance trend. Their highest degree is a PhD, and they have no significant educational gaps. The candidate's specialization has drifted over time, but they have maintained a strong academic record, with their highest marks being 87.2% in their PG degree and 85.5% in their PhD. The candidate's academic background is notable, but the lack of ranking for their institutions is a factor in their moderate educational strength.
+
+  [Moderate] 43_AMMARA_NASIM
+  Highest Degree : PhD
+  Progression    : Inconsistent
+  Perf. Trend    : insufficient data
+  Gaps (total/significant/unexplained): 0/0/0
+  Summary: The candidate, Ammara Nasim, holds a PhD in Computer Engineering from NUST, CEME, with a strong academic performance of 98.0%. However, their educational progression is not consistent, with a specialization drift from their initial field to Computer Vision, AI, and Deep Learning. The candidate's academic background is diverse, with degrees from multiple institutions, including NUST and UET Taxila.
+
+  [Weak] 33_QAMAR_ABBAS
+  Highest Degree : PhD
+  Progression    : Inconsistent
+  Perf. Trend    : declining
+  Gaps (total/significant/unexplained): 0/0/0
+  Summary: The candidate, 33_QAMAR_ABBAS, holds a PhD from SEECS NUST with an 87.5% mark, but their educational profile shows a declining performance trend and specialization drift from Internet of Things to Computer Engineering. Their highest degree is a PhD, but the progression is not consistent. The candidate's performance has been declining over time, which raises concerns about their academic strength.
 
 ======================================================================

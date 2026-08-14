@@ -1,0 +1,4 @@
+candidate_id,candidate_name,match_score,match_tier,skill_match_pct,matched_skills,missing_skills,degree_match,cand_degree,req_degree,experience_match,cand_experience_years,req_experience_years,discipline_match,semantic_score,rationale,evaluated_at
+04_MUHAMMAD_FARRUKH,Muhammad Farrukh Qureshi,47.5,Weak Fit,0.0,,"Python, PyTorch",True,PhD,PhD,True,15.0,3.0,False,70.0,Candidate profile shows general alignment with key requirements.,2026-08-02 02:20:24
+11_WAQAS_AMIN,Waqas Amin,47.5,Weak Fit,0.0,,"Python, PyTorch",True,PhD,PhD,True,15.0,3.0,False,70.0,Candidate profile shows general alignment with key requirements.,2026-08-02 02:20:24
+07_FIZA_MURTAZA,Fiza Murtaza,47.5,Weak Fit,0.0,,"Python, PyTorch",True,PhD,PhD,True,15.0,3.0,False,70.0,Candidate profile shows general alignment with key requirements.,2026-08-02 02:20:24

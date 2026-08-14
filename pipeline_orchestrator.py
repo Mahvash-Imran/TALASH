@@ -18,6 +18,13 @@ from typing import Any, Dict, List, Optional
 # Allow importing from root directory
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+# Load .env BEFORE any module reads os.environ for API keys
+try:
+    from dotenv import load_dotenv as _load_dotenv
+    _load_dotenv(Path(__file__).resolve().parent / ".env", override=True)
+except ImportError:
+    pass  # python-dotenv not installed; rely on shell environment
+
 from analysis.educational_profile import EducationalProfileAnalyser
 from analysis.research_profile import ResearchProfileAnalyser
 from analysis.supervision_analyser import SupervisionAnalyser
@@ -42,14 +49,14 @@ class MasterPipeline:
         extracted_dir: str = "data/extracted",
         analysis_dir:  str = "data/analysis",
         api_key:       Optional[str] = None,
-        model:         str = "meta-llama/llama-4-scout-17b-16e-instruct",
+        model:         Optional[str] = None,
         base_url:      Optional[str] = None,
         skip_llm:      bool = True,
     ):
         self.extracted_dir = Path(extracted_dir)
         self.analysis_dir  = Path(analysis_dir)
         self.api_key       = api_key or os.environ.get("OPENAI_API_KEY", "")
-        self.model         = model
+        self.model         = model or os.environ.get("OPENAI_MODEL", "llama-3.1-8b-instant")
         self.base_url      = base_url or os.environ.get("OPENAI_BASE_URL")
         is_valid_key       = bool(self.api_key and not str(self.api_key).startswith("your_") and len(str(self.api_key).strip()) > 20)
         self.skip_llm      = skip_llm or not is_valid_key

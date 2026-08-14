@@ -16,6 +16,13 @@ Tests:
 import sys
 from pathlib import Path
 
+# Load .env FIRST — must happen before any import reads os.environ for API keys
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).resolve().parent / ".env", override=True)
+except ImportError:
+    pass
+
 # Ensure UTF-8 output on Windows
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")

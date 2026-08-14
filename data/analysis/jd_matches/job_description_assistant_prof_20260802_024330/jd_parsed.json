@@ -1,0 +1,27 @@
+{
+  "title": "Assistant Professor / Associate Professor in Computer Vision",
+  "required_degree_level": "PhD",
+  "required_discipline": [
+    "Computer Science",
+    "Artificial Intelligence",
+    "Computer Engineering"
+  ],
+  "min_experience_years": 8.0,
+  "required_skills": [
+    "Computer Vision",
+    "Deep Learning",
+    "Artificial Intelligence",
+    "Python",
+    "PyTorch",
+    "OpenCV",
+    "Image Processing"
+  ],
+  "preferred_skills": [],
+  "research_areas": [
+    "Computer Science",
+    "Artificial Intelligence",
+    "Computer Engineering"
+  ],
+  "publication_requirement": "Peer-reviewed journal publications",
+  "other_requirements": []
+}

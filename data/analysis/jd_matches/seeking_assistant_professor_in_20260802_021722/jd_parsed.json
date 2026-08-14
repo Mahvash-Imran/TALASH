@@ -1,0 +1,20 @@
+{
+  "title": "Seeking Assistant Professor in Computer Science with PhD and 3 years experience in Machine Learning",
+  "required_degree_level": "PhD",
+  "required_discipline": [
+    "Computer Science",
+    "Machine Learning"
+  ],
+  "min_experience_years": 3.0,
+  "required_skills": [
+    "Machine Learning",
+    "Python"
+  ],
+  "preferred_skills": [],
+  "research_areas": [
+    "Computer Science",
+    "Machine Learning"
+  ],
+  "publication_requirement": null,
+  "other_requirements": []
+}

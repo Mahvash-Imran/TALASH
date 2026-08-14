@@ -1,0 +1,25 @@
+{
+  "title": "Assistant Professor in Cybersecurity and Network Security",
+  "required_degree_level": "PhD",
+  "required_discipline": [
+    "Computer Science",
+    "Cybersecurity",
+    "Information Security"
+  ],
+  "min_experience_years": 5.0,
+  "required_skills": [
+    "Cybersecurity",
+    "Information Security",
+    "Network Security",
+    "Penetration Testing",
+    "Cryptography"
+  ],
+  "preferred_skills": [],
+  "research_areas": [
+    "Computer Science",
+    "Cybersecurity",
+    "Information Security"
+  ],
+  "publication_requirement": null,
+  "other_requirements": []
+}

@@ -15,6 +15,13 @@ from pathlib import Path
 # Allow importing from root directory
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+# Load .env BEFORE importing api.main (which reads os.environ at import time)
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).resolve().parent / ".env", override=True)
+except ImportError:
+    pass
+
 import uvicorn
 
 

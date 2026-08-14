@@ -1,0 +1,9 @@
+Assistant Professor / Associate Professor in Computer Vision
+
+We are seeking a highly qualified faculty member in Computer Science and Artificial Intelligence with a specialization in Computer Vision and Deep Learning.
+
+Requirements:
+- Ph.D. in Computer Engineering, Computer Science, or closely related discipline.
+- Minimum 8+ years of post-qualification teaching or research experience.
+- Technical Skills: Computer Vision, Deep Learning, PyTorch, Image Processing, OpenCV, Python.
+- Proven track record of high-impact journal publications in computer vision.

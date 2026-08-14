@@ -22,9 +22,9 @@
   Summary: Candidate Qaisar Hussain Alvi possesses 21.2 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 4 recorded activity event(s), with 0 overlap(s) and 1 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Strong Profile.
 
   [Strong Profile] 33_QAMAR_ABBAS
-  Total Experience: 8.0 yrs | Trajectory: Stable Rank | Overlaps: 0 | Gaps: 0
+  Total Experience: 8.1 yrs | Trajectory: Stable Rank | Overlaps: 0 | Gaps: 0
   Proven Skills: IoT | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Qamar Abbas possesses 8.0 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 3 recorded activity event(s), with 0 overlap(s) and 0 gap(s) identified. Proven technical competencies include IoT, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Strong Profile.
+  Summary: Candidate Qamar Abbas possesses 8.1 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 3 recorded activity event(s), with 0 overlap(s) and 0 gap(s) identified. Proven technical competencies include IoT, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Strong Profile.
 
   [Solid Profile] 04_MUHAMMAD_FARRUKH
   Total Experience: 11.2 yrs | Trajectory: Upward Progression | Overlaps: 4 | Gaps: 1
@@ -32,29 +32,29 @@
   Summary: Candidate Muhammad Farrukh Qureshi possesses 11.2 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 7 recorded activity event(s), with 4 overlap(s) and 1 gap(s) identified. Proven technical competencies include Deep Learning, Machine Learning, achieving a 18.2% position alignment score. Overall professional experience profile is classified as Solid Profile.
 
   [Solid Profile] 05_MUHAMMAD_MAJID
-  Total Experience: 4.9 yrs | Trajectory: Stable Rank | Overlaps: 1 | Gaps: 4
+  Total Experience: 5.0 yrs | Trajectory: Stable Rank | Overlaps: 1 | Gaps: 4
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate MUHAMMAD MAJID possesses 4.9 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 7 recorded activity event(s), with 1 overlap(s) and 4 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Solid Profile.
+  Summary: Candidate MUHAMMAD MAJID possesses 5.0 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 7 recorded activity event(s), with 1 overlap(s) and 4 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Solid Profile.
 
   [Solid Profile] 08_TAYYABA_GULL
-  Total Experience: 7.9 yrs | Trajectory: Upward Progression | Overlaps: 3 | Gaps: 4
+  Total Experience: 8.1 yrs | Trajectory: Upward Progression | Overlaps: 3 | Gaps: 4
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Tayyaba Gull possesses 7.9 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 9 recorded activity event(s), with 3 overlap(s) and 4 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Solid Profile.
+  Summary: Candidate Tayyaba Gull possesses 8.1 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 9 recorded activity event(s), with 3 overlap(s) and 4 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Solid Profile.
 
   [Solid Profile] 15_M_USMAN_ABBASI
-  Total Experience: 16.7 yrs | Trajectory: Upward Progression | Overlaps: 5 | Gaps: 2
+  Total Experience: 16.8 yrs | Trajectory: Upward Progression | Overlaps: 5 | Gaps: 2
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate M. Usman Abbasi possesses 16.7 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 7 recorded activity event(s), with 5 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Solid Profile.
+  Summary: Candidate M. Usman Abbasi possesses 16.8 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 7 recorded activity event(s), with 5 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Solid Profile.
 
   [Solid Profile] 16_MUZZAMIL_GHAFFAR
-  Total Experience: 14.3 yrs | Trajectory: Upward Progression | Overlaps: 4 | Gaps: 3
+  Total Experience: 14.4 yrs | Trajectory: Upward Progression | Overlaps: 4 | Gaps: 3
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Muzzamil Ghaffar possesses 14.3 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 9 recorded activity event(s), with 4 overlap(s) and 3 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Solid Profile.
+  Summary: Candidate Muzzamil Ghaffar possesses 14.4 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 9 recorded activity event(s), with 4 overlap(s) and 3 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Solid Profile.
 
   [Solid Profile] 20_SYED_FASIH_ALI
-  Total Experience: 2.4 yrs | Trajectory: Upward Progression | Overlaps: 2 | Gaps: 3
+  Total Experience: 2.5 yrs | Trajectory: Upward Progression | Overlaps: 2 | Gaps: 3
   Proven Skills: IoT | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Syed Fasih Ali possesses 2.4 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 7 recorded activity event(s), with 2 overlap(s) and 3 gap(s) identified. Proven technical competencies include IoT, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Solid Profile.
+  Summary: Candidate Syed Fasih Ali possesses 2.5 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 7 recorded activity event(s), with 2 overlap(s) and 3 gap(s) identified. Proven technical competencies include IoT, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Solid Profile.
 
   [Solid Profile] 26_AAMINA_AKBAR
   Total Experience: 12.0 yrs | Trajectory: Stable Rank | Overlaps: 3 | Gaps: 2
@@ -67,9 +67,9 @@
   Summary: Candidate Matiullah Ahsan possesses 2.2 years of total professional experience demonstrating a early career trajectory. Their unified timeline contains 7 recorded activity event(s), with 2 overlap(s) and 3 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 4.5% position alignment score. Overall professional experience profile is classified as Solid Profile.
 
   [Solid Profile] 36_SAMANA_BATOOL
-  Total Experience: 8.4 yrs | Trajectory: Upward Progression | Overlaps: 1 | Gaps: 2
+  Total Experience: 8.6 yrs | Trajectory: Upward Progression | Overlaps: 1 | Gaps: 2
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Samana Batool possesses 8.4 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 4 recorded activity event(s), with 1 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Solid Profile.
+  Summary: Candidate Samana Batool possesses 8.6 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 4 recorded activity event(s), with 1 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Solid Profile.
 
   [Solid Profile] 41_MUHAMMAD_AQEEL
   Total Experience: 4.2 yrs | Trajectory: Stable Rank | Overlaps: 1 | Gaps: 1
@@ -77,9 +77,9 @@
   Summary: Candidate Muhammad Aqeel possesses 4.2 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 6 recorded activity event(s), with 1 overlap(s) and 1 gap(s) identified. Proven technical competencies include Deep Learning, Image Processing, IoT, achieving a 18.2% position alignment score. Overall professional experience profile is classified as Solid Profile.
 
   [Developing Profile] 01_MUHAMMAD_SALMAN
-  Total Experience: 19.0 yrs | Trajectory: Upward Progression | Overlaps: 6 | Gaps: 1
+  Total Experience: 19.1 yrs | Trajectory: Upward Progression | Overlaps: 6 | Gaps: 1
   Proven Skills:  | JD Score: 4.5% (Low Alignment)
-  Summary: Candidate MUHAMMAD SALMAN possesses 19.0 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 10 recorded activity event(s), with 6 overlap(s) and 1 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 4.5% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate MUHAMMAD SALMAN possesses 19.1 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 10 recorded activity event(s), with 6 overlap(s) and 1 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 4.5% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 02_MUHAMMAD_SHAHWAZ
   Total Experience: 0.7 yrs | Trajectory: Stable Rank | Overlaps: 2 | Gaps: 4
@@ -87,84 +87,84 @@
   Summary: Candidate MUHAMMAD SHAHWAZ possesses 0.7 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 8 recorded activity event(s), with 2 overlap(s) and 4 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 03_NASIR_ALI_SHAH
-  Total Experience: 2.9 yrs | Trajectory: Stable Rank | Overlaps: 7 | Gaps: 4
+  Total Experience: 3.0 yrs | Trajectory: Stable Rank | Overlaps: 7 | Gaps: 4
   Proven Skills: IoT, Machine Learning | JD Score: 9.1% (Low Alignment)
-  Summary: Candidate Nasir Ali Shah possesses 2.9 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 10 recorded activity event(s), with 7 overlap(s) and 4 gap(s) identified. Proven technical competencies include IoT, Machine Learning, achieving a 9.1% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Nasir Ali Shah possesses 3.0 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 10 recorded activity event(s), with 7 overlap(s) and 4 gap(s) identified. Proven technical competencies include IoT, Machine Learning, achieving a 9.1% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 06_FARMAN_ALI
-  Total Experience: 11.9 yrs | Trajectory: Steady Career Path | Overlaps: 6 | Gaps: 2
+  Total Experience: 12.0 yrs | Trajectory: Steady Career Path | Overlaps: 6 | Gaps: 2
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Farman Ali possesses 11.9 years of total professional experience demonstrating a steady career path trajectory. Their unified timeline contains 9 recorded activity event(s), with 6 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Farman Ali possesses 12.0 years of total professional experience demonstrating a steady career path trajectory. Their unified timeline contains 9 recorded activity event(s), with 6 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 07_FIZA_MURTAZA
-  Total Experience: 13.8 yrs | Trajectory: Upward Progression | Overlaps: 12 | Gaps: 1
+  Total Experience: 14.0 yrs | Trajectory: Upward Progression | Overlaps: 12 | Gaps: 1
   Proven Skills: Computer Vision | JD Score: 9.1% (Low Alignment)
-  Summary: Candidate Fiza Murtaza possesses 13.8 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 14 recorded activity event(s), with 12 overlap(s) and 1 gap(s) identified. Proven technical competencies include Computer Vision, achieving a 9.1% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Fiza Murtaza possesses 14.0 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 14 recorded activity event(s), with 12 overlap(s) and 1 gap(s) identified. Proven technical competencies include Computer Vision, achieving a 9.1% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 09_MUHAMMAD_ABUBAKAR
-  Total Experience: 9.1 yrs | Trajectory: Upward Progression | Overlaps: 3 | Gaps: 4
+  Total Experience: 9.2 yrs | Trajectory: Upward Progression | Overlaps: 3 | Gaps: 4
   Proven Skills: Deep Learning, Machine Learning | JD Score: 22.7% (Low Alignment)
-  Summary: Candidate Muhammad Abubakar possesses 9.1 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 12 recorded activity event(s), with 3 overlap(s) and 4 gap(s) identified. Proven technical competencies include Deep Learning, Machine Learning, achieving a 22.7% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Muhammad Abubakar possesses 9.2 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 12 recorded activity event(s), with 3 overlap(s) and 4 gap(s) identified. Proven technical competencies include Deep Learning, Machine Learning, achieving a 22.7% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 10_MUHAMMAD_EHATISHAM
-  Total Experience: 9.9 yrs | Trajectory: Stable Rank | Overlaps: 6 | Gaps: 2
+  Total Experience: 10.0 yrs | Trajectory: Stable Rank | Overlaps: 6 | Gaps: 2
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Muhammad Ehatisham possesses 9.9 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 11 recorded activity event(s), with 6 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Muhammad Ehatisham possesses 10.0 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 11 recorded activity event(s), with 6 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 11_WAQAS_AMIN
-  Total Experience: 14.0 yrs | Trajectory: Upward Progression | Overlaps: 6 | Gaps: 3
+  Total Experience: 14.1 yrs | Trajectory: Upward Progression | Overlaps: 6 | Gaps: 3
   Proven Skills: Cybersecurity | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Waqas Amin possesses 14.0 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 10 recorded activity event(s), with 6 overlap(s) and 3 gap(s) identified. Proven technical competencies include Cybersecurity, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Waqas Amin possesses 14.1 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 10 recorded activity event(s), with 6 overlap(s) and 3 gap(s) identified. Proven technical competencies include Cybersecurity, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 12_SYED_TAMOORULHASSAN
-  Total Experience: 15.2 yrs | Trajectory: Stable Rank | Overlaps: 4 | Gaps: 2
+  Total Experience: 15.3 yrs | Trajectory: Stable Rank | Overlaps: 4 | Gaps: 2
   Proven Skills: Wireless Networks | JD Score: 9.1% (Low Alignment)
-  Summary: Candidate SYED TAMOORULHASSAN possesses 15.2 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 10 recorded activity event(s), with 4 overlap(s) and 2 gap(s) identified. Proven technical competencies include Wireless Networks, achieving a 9.1% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate SYED TAMOORULHASSAN possesses 15.3 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 10 recorded activity event(s), with 4 overlap(s) and 2 gap(s) identified. Proven technical competencies include Wireless Networks, achieving a 9.1% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 13_MANZOOR_ELLAHI
-  Total Experience: 17.8 yrs | Trajectory: Upward Progression | Overlaps: 6 | Gaps: 2
+  Total Experience: 17.9 yrs | Trajectory: Upward Progression | Overlaps: 6 | Gaps: 2
   Proven Skills: IoT, Machine Learning | JD Score: 9.1% (Low Alignment)
-  Summary: Candidate Manzoor Ellahi possesses 17.8 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 10 recorded activity event(s), with 6 overlap(s) and 2 gap(s) identified. Proven technical competencies include IoT, Machine Learning, achieving a 9.1% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Manzoor Ellahi possesses 17.9 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 10 recorded activity event(s), with 6 overlap(s) and 2 gap(s) identified. Proven technical competencies include IoT, Machine Learning, achieving a 9.1% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 14_SAROSH_TAHIR
-  Total Experience: 17.3 yrs | Trajectory: Stable Rank | Overlaps: 6 | Gaps: 1
+  Total Experience: 17.4 yrs | Trajectory: Stable Rank | Overlaps: 6 | Gaps: 1
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Sarosh Tahir possesses 17.3 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 12 recorded activity event(s), with 6 overlap(s) and 1 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Sarosh Tahir possesses 17.4 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 12 recorded activity event(s), with 6 overlap(s) and 1 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 17_SUHAIL_ASGHAR
-  Total Experience: 0.8 yrs | Trajectory: Early Career | Overlaps: 2 | Gaps: 2
+  Total Experience: 0.9 yrs | Trajectory: Early Career | Overlaps: 2 | Gaps: 2
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Suhail Asghar Qureshi possesses 0.8 years of total professional experience demonstrating a early career trajectory. Their unified timeline contains 6 recorded activity event(s), with 2 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Suhail Asghar Qureshi possesses 0.9 years of total professional experience demonstrating a early career trajectory. Their unified timeline contains 6 recorded activity event(s), with 2 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 18_MUHAMMAD_AMJAD
-  Total Experience: 8.9 yrs | Trajectory: Upward Progression | Overlaps: 11 | Gaps: 4
+  Total Experience: 9.1 yrs | Trajectory: Upward Progression | Overlaps: 11 | Gaps: 4
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Muhammad Amjad possesses 8.9 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 12 recorded activity event(s), with 11 overlap(s) and 4 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Muhammad Amjad possesses 9.1 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 12 recorded activity event(s), with 11 overlap(s) and 4 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 19_ASIM_MASOOD
-  Total Experience: 12.1 yrs | Trajectory: Upward Progression | Overlaps: 3 | Gaps: 4
+  Total Experience: 12.2 yrs | Trajectory: Upward Progression | Overlaps: 3 | Gaps: 4
   Proven Skills: Machine Learning | JD Score: 9.1% (Low Alignment)
-  Summary: Candidate Asim Masood possesses 12.1 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 12 recorded activity event(s), with 3 overlap(s) and 4 gap(s) identified. Proven technical competencies include Machine Learning, achieving a 9.1% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Asim Masood possesses 12.2 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 12 recorded activity event(s), with 3 overlap(s) and 4 gap(s) identified. Proven technical competencies include Machine Learning, achieving a 9.1% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 21_SAMAN_FATIMA
-  Total Experience: 5.1 yrs | Trajectory: Upward Progression | Overlaps: 3 | Gaps: 4
+  Total Experience: 5.2 yrs | Trajectory: Upward Progression | Overlaps: 3 | Gaps: 4
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Saman Fatima possesses 5.1 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 10 recorded activity event(s), with 3 overlap(s) and 4 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Saman Fatima possesses 5.2 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 10 recorded activity event(s), with 3 overlap(s) and 4 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 22_ZEESHAN
-  Total Experience: 1.5 yrs | Trajectory: Early Career | Overlaps: 2 | Gaps: 3
+  Total Experience: 1.6 yrs | Trajectory: Early Career | Overlaps: 2 | Gaps: 3
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Zeeshan possesses 1.5 years of total professional experience demonstrating a early career trajectory. Their unified timeline contains 6 recorded activity event(s), with 2 overlap(s) and 3 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Zeeshan possesses 1.6 years of total professional experience demonstrating a early career trajectory. Their unified timeline contains 6 recorded activity event(s), with 2 overlap(s) and 3 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 23_WAQAS_TARIQ_TOOR
-  Total Experience: 17.4 yrs | Trajectory: Upward Progression | Overlaps: 5 | Gaps: 3
+  Total Experience: 17.5 yrs | Trajectory: Upward Progression | Overlaps: 5 | Gaps: 3
   Proven Skills: Artificial Intelligence, Deep Learning, IoT, Machine Learning | JD Score: 27.3% (Low Alignment)
-  Summary: Candidate Waqas Tariq Toor possesses 17.4 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 10 recorded activity event(s), with 5 overlap(s) and 3 gap(s) identified. Proven technical competencies include Artificial Intelligence, Deep Learning, IoT, achieving a 27.3% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Waqas Tariq Toor possesses 17.5 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 10 recorded activity event(s), with 5 overlap(s) and 3 gap(s) identified. Proven technical competencies include Artificial Intelligence, Deep Learning, IoT, achieving a 27.3% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 24_AHMED_NAEEM
-  Total Experience: 6.5 yrs | Trajectory: Steady Career Path | Overlaps: 3 | Gaps: 0
+  Total Experience: 6.6 yrs | Trajectory: Steady Career Path | Overlaps: 3 | Gaps: 0
   Proven Skills:  | JD Score: 4.5% (Low Alignment)
-  Summary: Candidate Ahmed Naeem possesses 6.5 years of total professional experience demonstrating a steady career path trajectory. Their unified timeline contains 6 recorded activity event(s), with 3 overlap(s) and 0 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 4.5% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Ahmed Naeem possesses 6.6 years of total professional experience demonstrating a steady career path trajectory. Their unified timeline contains 6 recorded activity event(s), with 3 overlap(s) and 0 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 4.5% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 25_MUHAMMAD_ADEEL_ALTAF
   Total Experience: 4.7 yrs | Trajectory: Upward Progression | Overlaps: 4 | Gaps: 4
@@ -172,9 +172,9 @@
   Summary: Candidate MUHAMMAD ADEEL ALTAF possesses 4.7 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 8 recorded activity event(s), with 4 overlap(s) and 4 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 4.5% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 27_SHAHEER
-  Total Experience: 22.0 yrs | Trajectory: Upward Progression | Overlaps: 8 | Gaps: 2
+  Total Experience: 22.2 yrs | Trajectory: Upward Progression | Overlaps: 8 | Gaps: 2
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Shaheer possesses 22.0 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 12 recorded activity event(s), with 8 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Shaheer possesses 22.2 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 12 recorded activity event(s), with 8 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 29_MUHAMMAD_SARMAD_TARIQ
   Total Experience: 1.6 yrs | Trajectory: Early Career | Overlaps: 2 | Gaps: 2
@@ -182,14 +182,14 @@
   Summary: Candidate Muhammad Sarmad Tariq possesses 1.6 years of total professional experience demonstrating a early career trajectory. Their unified timeline contains 6 recorded activity event(s), with 2 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 30_FAHD_SIKANDAR_KHAN
-  Total Experience: 9.7 yrs | Trajectory: Stable Rank | Overlaps: 5 | Gaps: 3
+  Total Experience: 9.8 yrs | Trajectory: Stable Rank | Overlaps: 5 | Gaps: 3
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Fahd Sikandar Khan possesses 9.7 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 12 recorded activity event(s), with 5 overlap(s) and 3 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Fahd Sikandar Khan possesses 9.8 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 12 recorded activity event(s), with 5 overlap(s) and 3 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 34_SHAHZAD
-  Total Experience: 9.3 yrs | Trajectory: Upward Progression | Overlaps: 4 | Gaps: 1
+  Total Experience: 9.4 yrs | Trajectory: Upward Progression | Overlaps: 4 | Gaps: 1
   Proven Skills: IoT | JD Score: 4.5% (Low Alignment)
-  Summary: Candidate Shahzad possesses 9.3 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 9 recorded activity event(s), with 4 overlap(s) and 1 gap(s) identified. Proven technical competencies include IoT, achieving a 4.5% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Shahzad possesses 9.4 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 9 recorded activity event(s), with 4 overlap(s) and 1 gap(s) identified. Proven technical competencies include IoT, achieving a 4.5% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 37_SANIA_GUL
   Total Experience: 16.0 yrs | Trajectory: Upward Progression | Overlaps: 4 | Gaps: 3
@@ -202,14 +202,14 @@
   Summary: Candidate Abdur Rehman possesses 4.0 years of total professional experience demonstrating a early career trajectory. Their unified timeline contains 8 recorded activity event(s), with 4 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 42_SAQIB_JAMIL
-  Total Experience: 13.5 yrs | Trajectory: Stable Rank | Overlaps: 3 | Gaps: 2
+  Total Experience: 13.6 yrs | Trajectory: Stable Rank | Overlaps: 3 | Gaps: 2
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Saqib Jamil possesses 13.5 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 6 recorded activity event(s), with 3 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Saqib Jamil possesses 13.6 years of total professional experience demonstrating a stable rank trajectory. Their unified timeline contains 6 recorded activity event(s), with 3 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Developing Profile] 43_AMMARA_NASIM
-  Total Experience: 13.8 yrs | Trajectory: Upward Progression | Overlaps: 5 | Gaps: 2
+  Total Experience: 13.9 yrs | Trajectory: Upward Progression | Overlaps: 5 | Gaps: 2
   Proven Skills:  | JD Score: 0.0% (Low Alignment)
-  Summary: Candidate Ammara Nasim possesses 13.8 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 9 recorded activity event(s), with 5 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
+  Summary: Candidate Ammara Nasim possesses 13.9 years of total professional experience demonstrating a upward progression trajectory. Their unified timeline contains 9 recorded activity event(s), with 5 overlap(s) and 2 gap(s) identified. Proven technical competencies include general domain competencies, achieving a 0.0% position alignment score. Overall professional experience profile is classified as Developing Profile.
 
   [Needs Clarification] 28_IDRIS_KHAN
   Total Experience: 0.0 yrs | Trajectory: No Professional Experience Listed | Overlaps: 1 | Gaps: 3

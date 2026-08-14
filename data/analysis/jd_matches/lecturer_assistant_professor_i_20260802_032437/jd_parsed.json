@@ -1,0 +1,26 @@
+{
+  "title": "Lecturer / Assistant Professor in Microelectronics & Hardware Systems",
+  "required_degree_level": "PhD",
+  "required_discipline": [
+    "Electrical Engineering",
+    "Microelectronics",
+    "Electronics"
+  ],
+  "min_experience_years": 3.0,
+  "required_skills": [
+    "Microelectronics",
+    "Analog IC Design",
+    "VLSI",
+    "Verilog",
+    "FPGA",
+    "Cadence Virtuoso"
+  ],
+  "preferred_skills": [],
+  "research_areas": [
+    "Electrical Engineering",
+    "Microelectronics",
+    "Electronics"
+  ],
+  "publication_requirement": null,
+  "other_requirements": []
+}
