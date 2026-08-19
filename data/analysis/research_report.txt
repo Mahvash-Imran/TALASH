@@ -1,11 +1,11 @@
 ======================================================================
   TALASH Module 3 - Research Profile Report
 ======================================================================
-  Candidates analysed : 43
+  Candidates analysed : 45
 
   Research Strength Distribution:
-    Moderate                 : 18
-    Needs Clarification      : 5
+    Moderate                 : 19
+    Needs Clarification      : 6
     Strong                   : 13
     Weak                     : 7
 
@@ -116,6 +116,14 @@
   CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
   Authorship    : 1st=8 Corr=4 Co=5
   Summary: The candidate has 17 publication(s) in total (17 journal, 0 conference). 7 paper(s) are in Q1/Q2 Scopus-ranked journals. 8 paper(s) are indexed in Web of Science. Overall research profile is assessed as Strong.
+
+  [Moderate] 09_SANA_FATIMA_RIZVI
+  Publications  : 3 journal, 0 conference
+  Scopus/WoS    : 2 / 2
+  Quartiles     : Q1=2 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=3 Corr=0 Co=0
+  Summary: The candidate has 3 publication(s) in total (3 journal, 0 conference). 2 paper(s) are in Q1/Q2 Scopus-ranked journals. 2 paper(s) are indexed in Web of Science. Overall research profile is assessed as Moderate.
 
   [Moderate] 12_SYED_TAMOORULHASSAN
   Publications  : 3 journal, 4 conference
@@ -350,6 +358,14 @@
   Summary: The candidate has no publication records in the dataset.
 
   [Needs Clarification] 42_SAQIB_JAMIL
+  Publications  : 0 journal, 0 conference
+  Scopus/WoS    : 0 / 0
+  Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0
+  CORE ranks    : A*=0 A=0 B=0 C=0 Unranked=0
+  Authorship    : 1st=0 Corr=0 Co=0
+  Summary: The candidate has no publication records in the dataset.
+
+  [Needs Clarification] Muhammad_Dawood_Rizwan_CV
   Publications  : 0 journal, 0 conference
   Scopus/WoS    : 0 / 0
   Quartiles     : Q1=0 Q2=0 Q3=0 Q4=0

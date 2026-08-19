@@ -20,6 +20,10 @@ data/logs/*
 data/cvs/*
 !data/cvs/.gitkeep
 
+# Scratch scripts and temporary uploads
+scratch/
+data/uploads/
+
 # OS specific files
 .DS_Store
 Thumbs.db

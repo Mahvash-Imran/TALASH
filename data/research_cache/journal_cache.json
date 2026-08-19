@@ -983,5 +983,6 @@
     "wos_indexed": false,
     "impact_factor": null,
     "predatory_suspected": true
-  }
+  },
+  "journal::journal of computing": {}
 }

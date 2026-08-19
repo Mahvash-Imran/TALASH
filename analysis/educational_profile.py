@@ -59,7 +59,7 @@ class EducationalProfileAnalyser:
         output_dir:     str = "data/analysis",
         rankings_csv:   Optional[str] = None,
         api_key:        Optional[str] = None,
-        model:          str = "llama-3.3-70b-versatile",
+        model:          str = "groq/compound-mini",
         base_url:       Optional[str] = None,
         skip_llm:       bool = False,
     ):

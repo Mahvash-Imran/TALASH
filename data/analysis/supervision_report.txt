@@ -1,11 +1,11 @@
 ======================================================================
   TALASH Module 4 – Student Supervision Analysis Report
 ======================================================================
-  Candidates analysed           : 43
-  Candidates with NO data (flagged for email) : 43
+  Candidates analysed           : 45
+  Candidates with NO data (flagged for email) : 45
 
   Supervisory Strength Distribution:
-    Needs Clarification      : 43
+    Needs Clarification      : 45
 
 ----------------------------------------------------------------------
   Per-Candidate Supervision Summaries
@@ -46,6 +46,10 @@
   [Needs Clarification] 09_MUHAMMAD_ABUBAKAR
   ** Supervision data NOT provided in CV — flagged for follow-up email **
   Summary: No supervision information was found in the CV of 09_MUHAMMAD_ABUBAKAR. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] 09_SANA_FATIMA_RIZVI
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of 09_SANA_FATIMA_RIZVI. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
 
   [Needs Clarification] 10_MUHAMMAD_EHATISHAM
   ** Supervision data NOT provided in CV — flagged for follow-up email **
@@ -182,5 +186,9 @@
   [Needs Clarification] 43_AMMARA_NASIM
   ** Supervision data NOT provided in CV — flagged for follow-up email **
   Summary: No supervision information was found in the CV of 43_AMMARA_NASIM. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
+
+  [Needs Clarification] Muhammad_Dawood_Rizwan_CV
+  ** Supervision data NOT provided in CV — flagged for follow-up email **
+  Summary: No supervision information was found in the CV of Muhammad_Dawood_Rizwan_CV. This candidate has been flagged for follow-up to provide details of supervised MS/PhD students including names, degree levels, and graduation years.
 
 ======================================================================

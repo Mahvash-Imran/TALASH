@@ -149,6 +149,19 @@ def extract_and_align_skills(
     return aligned_results
 
 
+SKILL_EQUIVALENCE_MAP = {
+    "artificial intelligence": ["machine learning", "deep learning", "ai", "ml", "neural networks", "data science", "computer vision", "nlp"],
+    "machine learning": ["artificial intelligence", "deep learning", "ai", "ml", "neural networks", "data science", "pattern recognition"],
+    "deep learning": ["machine learning", "artificial intelligence", "ai", "ml", "neural networks", "computer vision", "nlp"],
+    "computer vision": ["image processing", "pattern recognition", "cv", "ai", "machine learning", "deep learning"],
+    "natural language processing": ["nlp", "text mining", "large language models", "llm", "ai", "machine learning"],
+    "data science": ["machine learning", "data analytics", "data analysis", "big data", "statistics", "ai"],
+    "software engineering": ["software development", "programming", "system design", "coding", "software architecture", "python", "c++", "java"],
+    "wireless networks": ["networking", "telecommunication", "wireless communication", "sensor networks", "iot"],
+    "signal processing": ["digital signal processing", "dsp", "audio processing", "image processing"],
+}
+
+
 def compute_jd_alignment_score(
     skills_evidence: List[Dict[str, Any]],
     jd_requirements: Optional[List[str]] = None
@@ -156,6 +169,7 @@ def compute_jd_alignment_score(
     """
     Computes Job Description (JD) alignment score (0 to 100%).
     Default benchmark criteria: Computer Science & Academic Faculty Requirements.
+    Supports skill equivalences (e.g. AI == Machine Learning).
     """
     if not jd_requirements:
         jd_requirements = [
@@ -171,16 +185,26 @@ def compute_jd_alignment_score(
     cand_skills_map = {s["skill_name"].lower(): s for s in skills_evidence}
 
     for req in jd_requirements:
-        req_low = req.lower()
+        req_low = req.lower().strip()
         matched = False
 
-        for sk_low, info in cand_skills_map.items():
-            if req_low in sk_low or sk_low in req_low or fuzz.token_sort_ratio(req_low, sk_low) >= 80:
-                matched = True
-                if info["evidence_level"] == "Strong Evidence":
-                    matched_strong.append(req)
-                else:
-                    matched_moderate.append(req)
+        # Equivalence candidates
+        equiv_terms = set([req_low] + SKILL_EQUIVALENCE_MAP.get(req_low, []))
+        for main_term, syns in SKILL_EQUIVALENCE_MAP.items():
+            if req_low == main_term or req_low in syns:
+                equiv_terms.add(main_term)
+                equiv_terms.update(syns)
+
+        for eq_term in equiv_terms:
+            for sk_low, info in cand_skills_map.items():
+                if eq_term in sk_low or sk_low in eq_term or fuzz.token_sort_ratio(eq_term, sk_low) >= 80:
+                    matched = True
+                    if info["evidence_level"] == "Strong Evidence":
+                        matched_strong.append(req)
+                    else:
+                        matched_moderate.append(req)
+                    break
+            if matched:
                 break
 
         if not matched:

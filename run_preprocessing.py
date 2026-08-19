@@ -201,8 +201,8 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--model",
-        default=os.environ.get("OPENAI_MODEL", "gpt-4o-mini"),
-        help="OpenAI model to use (default: gpt-4o-mini). Use gpt-4o for higher accuracy.",
+        default=os.environ.get("OPENAI_MODEL", "groq/compound-mini"),
+        help="Model to use (default: groq/compound-mini).",
     )
     parser.add_argument(
         "--api-key",

@@ -1,12 +1,12 @@
 ======================================================================
   TALASH Module 7 – Topic Variability & Research Breadth Report
 ======================================================================
-  Candidates analysed           : 43
-  Total publications classified : 379
+  Candidates analysed           : 45
+  Total publications classified : 388
 
   Research Profile Type Distribution:
-    Focused Researcher       : 16
-    Interdisciplinary        : 9
+    Focused Researcher       : 17
+    Interdisciplinary        : 10
     No Publications          : 5
     Specialist               : 13
 
@@ -188,11 +188,23 @@
   Theme Breakdown: {"Energy & Renewable Systems": 60.0, "General Computer Science / Other": 40.0}
   Summary: Candidate Abdur Rehman has authored 5 publication(s) across 2 research theme(s). The primary research concentration is in Energy & Renewable Systems, accounting for 60.0% of all publications. With a normalized diversity score of 0.97, the overall research profile is classified as Focused Researcher.
 
+  [Focused Researcher] Muhammad_Dawood_Rizwan_CV
+  Total Publications: 6 | Dominant Theme: Robotics & Automation (50.0%)
+  Diversity Score (Shannon Entropy): 0.90 | Trend Pattern: Evolving Focus
+  Theme Breakdown: {"Robotics & Automation": 50.0, "Biomedical & Health Informatics": 16.7, "General Computer Science / Other": 16.7, "Computer Vision & Image Processing": 16.7}
+  Summary: Candidate nan has authored 6 publication(s) across 4 research theme(s). The primary research concentration is in Robotics & Automation, accounting for 50.0% of all publications. With a normalized diversity score of 0.90, the overall research profile is classified as Focused Researcher.
+
   [Interdisciplinary] 04_MUHAMMAD_FARRUKH
   Total Publications: 23 | Dominant Theme: Machine Learning & Artificial Intelligence (47.8%)
   Diversity Score (Shannon Entropy): 0.81 | Trend Pattern: Evolving Focus
   Theme Breakdown: {"Machine Learning & Artificial Intelligence": 47.8, "Computer Vision & Image Processing": 17.4, "General Computer Science / Other": 17.4, "Biomedical & Health Informatics": 8.7, "Energy & Renewable Systems": 4.3, "Robotics & Automation": 4.3}
   Summary: Candidate Muhammad Farrukh Qureshi has authored 23 publication(s) across 6 research theme(s). The primary research concentration is in Machine Learning & Artificial Intelligence, accounting for 47.8% of all publications. With a normalized diversity score of 0.81, the overall research profile is classified as Interdisciplinary.
+
+  [Interdisciplinary] 09_SANA_FATIMA_RIZVI
+  Total Publications: 3 | Dominant Theme: Natural Language Processing (33.3%)
+  Diversity Score (Shannon Entropy): 1.00 | Trend Pattern: Shifting / Interdisciplinary Focus
+  Theme Breakdown: {"Natural Language Processing": 33.3, "Cybersecurity & Privacy": 33.3, "Biomedical & Health Informatics": 33.3}
+  Summary: Candidate Sana Fatima Rizvi has authored 3 publication(s) across 3 research theme(s). The primary research concentration is in Natural Language Processing, accounting for 33.3% of all publications. With a normalized diversity score of 1.00, the overall research profile is classified as Interdisciplinary.
 
   [Interdisciplinary] 11_WAQAS_AMIN
   Total Publications: 25 | Dominant Theme: Energy & Renewable Systems (44.0%)

@@ -123,7 +123,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--model",
-        default=os.environ.get("OPENAI_MODEL", "llama-3.3-70b-versatile"),
+        default=os.environ.get("OPENAI_MODEL", "groq/compound-mini"),
         help="LLM model name",
     )
     parser.add_argument(

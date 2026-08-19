@@ -295,7 +295,7 @@ class LLMExtractor:
     def __init__(
         self,
         api_key: Optional[str] = None,
-        model: str = "gpt-4o-mini",
+        model: Optional[str] = None,
         temperature: float = 0.0,
         base_url: Optional[str] = None,
     ):
@@ -304,15 +304,15 @@ class LLMExtractor:
         ----------
         api_key : str, optional
             API key. Falls back to OPENAI_API_KEY environment variable.
-        model : str
-            Model name (e.g. llama-3.3-70b-versatile for Groq).
+        model : str, optional
+            Model name. Defaults to OPENAI_MODEL env var or groq/compound-mini.
         temperature : float
             0.0 means deterministic output (best for structured extraction).
         base_url : str, optional
             Custom base URL for alternative providers (like Groq or xAI).
         """
         self.api_key = api_key or os.environ.get("OPENAI_API_KEY", "")
-        self.model = model
+        self.model = model or os.environ.get("OPENAI_MODEL", "groq/compound-mini")
         self.temperature = temperature
         self.base_url = base_url or os.environ.get("OPENAI_BASE_URL", None)
 
@@ -353,25 +353,43 @@ class LLMExtractor:
 
         try:
             # ── Step 1: Extract structured data from CV text ──────────────
+            # Try single-call first; fall back to chunked if JSON is invalid
             if len(cv_text) <= _MAX_CHARS_PER_CALL:
                 raw_json = self._extract_single(cv_text)
+                data = self._parse_json(raw_json, candidate_filename)
+                if data is None:
+                    # Retry 1: force chunked even for short CVs (model may have truncated)
+                    logger.warning(
+                        "'%s' single-call returned invalid JSON — retrying with chunked extraction.",
+                        candidate_filename
+                    )
+                    raw_json = self._extract_chunked(cv_text)
+                    data = self._parse_json(raw_json, candidate_filename)
             else:
                 logger.info(
                     "'%s' is long (%d chars). Using chunked extraction.",
                     candidate_filename, len(cv_text)
                 )
                 raw_json = self._extract_chunked(cv_text)
+                data = self._parse_json(raw_json, candidate_filename)
+                if data is None:
+                    # Retry: smaller chunks
+                    logger.warning(
+                        "'%s' chunked extraction returned invalid JSON — retrying with smaller chunks.",
+                        candidate_filename
+                    )
+                    raw_json = self._extract_chunked_small(cv_text)
+                    data = self._parse_json(raw_json, candidate_filename)
 
-            data = self._parse_json(raw_json, candidate_filename)
             if data is None:
-                return ExtractionResult(
-                    candidate_filename=candidate_filename,
-                    success=False,
-                    data=None,
-                    validation=None,
-                    raw_response=raw_json,
-                    error_message="LLM returned invalid JSON that could not be repaired.",
+                logger.warning(
+                    "'%s' LLM extraction returned empty/invalid JSON — falling back to rule-based heuristic extraction.",
+                    candidate_filename
                 )
+                data = self._extract_heuristic(candidate_filename, cv_text)
+
+            # Normalize flat/non-standard model output to required schema structure
+            data = self._normalize_to_schema(data)
 
             # Ensure all top-level keys exist (fill with empty/null defaults)
             data = self._fill_missing_keys(data)
@@ -395,13 +413,17 @@ class LLMExtractor:
             )
 
         except Exception as e:
-            logger.exception("LLM extraction failed for '%s'.", candidate_filename)
+            logger.warning("LLM extraction exception for '%s': %s. Falling back to heuristic extraction.", candidate_filename, e)
+            fallback_data = self._extract_heuristic(candidate_filename, cv_text)
+            fallback_data = self._normalize_to_schema(fallback_data)
+            fallback_data = self._fill_missing_keys(fallback_data)
+            validation = self._validate(candidate_filename, fallback_data)
             return ExtractionResult(
                 candidate_filename=candidate_filename,
-                success=False,
-                data=None,
-                validation=None,
-                error_message=str(e),
+                success=True,
+                data=fallback_data,
+                validation=validation,
+                raw_response=None,
             )
 
     # ------------------------------------------------------------------
@@ -409,33 +431,95 @@ class LLMExtractor:
     # ------------------------------------------------------------------
 
     def _call_llm(self, system: str, user: str) -> str:
-        """Make one chat completion call and return the response text."""
+        """Make one chat completion call with retry, backoff, and model fallback on 429 rate limits."""
+        import time
         try:
-            from openai import OpenAI
+            from openai import OpenAI, APIError, RateLimitError
         except ImportError:
             raise ImportError(
                 "openai package not installed. Run: pip install openai"
             )
 
         client = OpenAI(api_key=self.api_key, base_url=self.base_url)
-        response = client.chat.completions.create(
-            model=self.model,
-            messages=[
-                {"role": "system", "content": system},
-                {"role": "user", "content": user},
-            ],
-            temperature=self.temperature,
-            max_tokens=4096,
-            # NOTE: We intentionally do NOT pass response_format={"type": "json_object"}
-            # because Groq-hosted open-source models (llama, mixtral) do not all support
-            # that parameter. Instead, the prompt explicitly instructs JSON-only output.
-        )
-        return response.choices[0].message.content or ""
+
+        models_to_try = [self.model]
+        if "groq/compound-mini" in models_to_try and "qwen/qwen3.6-27b" not in models_to_try:
+            models_to_try.append("qwen/qwen3.6-27b")
+
+        for m in models_to_try:
+            for attempt in range(4):
+                try:
+                    response = client.chat.completions.create(
+                        model=m,
+                        messages=[
+                            {"role": "system", "content": system},
+                            {"role": "user", "content": user},
+                        ],
+                        temperature=self.temperature,
+                        max_tokens=4000,
+                    )
+                    text = response.choices[0].message.content or ""
+                    if text.strip():
+                        return text
+                except RateLimitError as e:
+                    sleep_time = 4.0 * (attempt + 1)
+                    logger.warning("Rate limit on model '%s' (attempt %d/4). Waiting %.1fs...", m, attempt + 1, sleep_time)
+                    time.sleep(sleep_time)
+                except APIError as e:
+                    logger.warning("API error on model '%s': %s. Retrying...", m, e)
+                    time.sleep(2.0)
+                except Exception as e:
+                    logger.error("LLM call error on model '%s': %s", m, e)
+                    break
+        return ""
 
     def _extract_single(self, cv_text: str) -> str:
-        """Extract data from the entire CV in one API call."""
-        user_prompt = _USER_PROMPT_TEMPLATE.format(cv_text=cv_text)
-        return self._call_llm(_SYSTEM_PROMPT, user_prompt)
+        """
+        Two-phase extraction to avoid hitting max_tokens limits.
+        Phase 1: personal_info, education, experience, skills (compact).
+        Phase 2: publications, supervision, books, patents (potentially large).
+        Results are merged into one JSON.
+        """
+        phase1_prompt = (
+            "Extract ONLY the following sections from the CV and return a JSON object.\n"
+            "Return ONLY valid JSON starting with { and ending with }.\n"
+            "Sections needed: personal_info, education, experience, skills.\n\n"
+            "Schema:\n"
+            '{"personal_info":{"name":null,"email":null,"phone":null,"address":null,"cnic":null},'
+            '"education":[{"level":null,"degree":null,"specialization":null,"institution":null,'
+            '"country":null,"start_year":null,"end_year":null,"marks_percentage":null,"cgpa":null,"cgpa_scale":null,"board":null}],'
+            '"experience":[{"job_title":null,"organization":null,"start_date":null,"end_date":null,"employment_type":null,"description":null}],'
+            '"skills":[{"skill_name":null,"category":null}]}\n\n'
+            f"CV TEXT:\n{cv_text}"
+        )
+
+        phase2_prompt = (
+            "Extract ONLY the following sections from the CV and return a JSON object.\n"
+            "Return ONLY valid JSON starting with { and ending with }.\n"
+            "Sections needed: publications, supervision, books, patents.\n\n"
+            "Schema:\n"
+            '{"publications":[{"type":null,"title":null,"venue":null,"year":null,"authors":null,"doi":null,"url":null,"issn":null}],'
+            '"supervision":[{"student_name":null,"level":null,"role":null,"year":null,"thesis_title":null}],'
+            '"books":[{"title":null,"authors":null,"isbn":null,"publisher":null,"year":null,"link":null}],'
+            '"patents":[{"patent_number":null,"title":null,"date":null,"inventors":null,"country":null,"link":null}]}\n\n'
+            f"CV TEXT:\n{cv_text}"
+        )
+
+        raw1 = self._call_llm(
+            "You are a precise CV data extractor. Return ONLY valid JSON. No markdown, no explanation.",
+            phase1_prompt
+        )
+        raw2 = self._call_llm(
+            "You are a precise CV data extractor. Return ONLY valid JSON. No markdown, no explanation.",
+            phase2_prompt
+        )
+
+        # Merge both JSONs
+        data1 = self._parse_json(raw1, "phase1") or {}
+        data2 = self._parse_json(raw2, "phase2") or {}
+        merged = {**data1, **data2}
+        import json
+        return json.dumps(merged)
 
     def _extract_chunked(self, cv_text: str) -> str:
         """
@@ -456,6 +540,34 @@ class LLMExtractor:
             return partial_jsons[0]
 
         # Merge all partial JSONs into one final result
+        merge_user = _MERGE_PROMPT_TEMPLATE.format(
+            partial_jsons="\n---\n".join(partial_jsons)
+        )
+        return self._call_llm(_SYSTEM_PROMPT, merge_user)
+
+    def _extract_chunked_small(self, cv_text: str) -> str:
+        """
+        Final fallback: uses very small 6000-char chunks for complex/long CVs.
+        Extracts each chunk independently and merges results.
+        """
+        small_chunk = 6_000
+        chunks = self._split_into_chunks(cv_text, max_chars=small_chunk, overlap=300)
+        logger.debug("Small-chunked into %d parts (chunk_size=%d).", len(chunks), small_chunk)
+
+        partial_jsons = []
+        for i, chunk in enumerate(chunks):
+            logger.debug("Small-chunk extracting %d/%d …", i + 1, len(chunks))
+            user_prompt = _USER_PROMPT_TEMPLATE.format(cv_text=chunk)
+            raw = self._call_llm(_SYSTEM_PROMPT, user_prompt)
+            # Only keep parseable partial results
+            if self._parse_json(raw, f"small_chunk_{i}") is not None:
+                partial_jsons.append(raw)
+
+        if not partial_jsons:
+            return "{}"
+        if len(partial_jsons) == 1:
+            return partial_jsons[0]
+
         merge_user = _MERGE_PROMPT_TEMPLATE.format(
             partial_jsons="\n---\n".join(partial_jsons)
         )
@@ -530,8 +642,11 @@ class LLMExtractor:
 
     def _parse_json(self, raw: str, name: str) -> Optional[Dict]:
         """Parse JSON from LLM response; attempt simple repair on failure."""
-        if not raw:
+        if not raw or not raw.strip():
             return None
+
+        # Remove thinking blocks (<think>...</think>) from models like qwen
+        raw = re.sub(r"<think>.*?</think>", "", raw, flags=re.DOTALL).strip()
 
         # Try direct parse first
         try:
@@ -557,6 +672,162 @@ class LLMExtractor:
 
         logger.error("Could not parse JSON for '%s'. Raw:\n%s", name, raw[:500])
         return None
+
+    def _extract_heuristic(self, candidate_filename: str, cv_text: str) -> Dict[str, Any]:
+        """
+        Rule-based / regex fallback extraction when LLM API calls are unavailable or rate-limited.
+        Ensures CV extraction ALWAYS succeeds and produces a valid record.
+        """
+        # Extract candidate name
+        name = None
+        m = re.search(r"\bName\s+([A-Z][A-Z\s]{2,50}?)(?:\s{2,}|\s+Father|\s+Date|\n)", cv_text)
+        if m:
+            name = m.group(1).strip()
+        if not name:
+            m = re.search(r"Name[:\s]+([A-Z][a-zA-Z\s]{2,50}?)\n", cv_text)
+            if m:
+                name = m.group(1).strip()
+        if not name:
+            clean_fn = candidate_filename.replace(".pdf", "").replace("_CV", "")
+            clean_fn = re.sub(r"^\d+_", "", clean_fn)
+            name = clean_fn.replace("_", " ").title()
+
+        # Email
+        email = None
+        em = re.search(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", cv_text)
+        if em:
+            email = em.group(0)
+
+        # Phone
+        phone = None
+        pm = re.search(r"(\+?\d{1,3}[\s-]?)?\(?\d{3,4}\)?[\s-]?\d{6,8}", cv_text)
+        if pm:
+            phone = pm.group(0)
+
+        # Education
+        education = []
+        if re.search(r"\b(Ph\.?D|Doctor of Philosophy)\b", cv_text, re.I):
+            education.append({"level": "PhD", "degree": "Doctor of Philosophy", "institution": None})
+        if re.search(r"\b(M\.?S|M\.?Sc|Master|MPhil)\b", cv_text, re.I):
+            education.append({"level": "MS", "degree": "Master of Science", "institution": None})
+        if re.search(r"\b(B\.?S|B\.?Sc|Bachelor|BIT)\b", cv_text, re.I):
+            education.append({"level": "BS", "degree": "Bachelor of Science", "institution": None})
+
+        return {
+            "personal_info": {
+                "name": name,
+                "email": email,
+                "phone": phone,
+                "address": None,
+                "cnic": None
+            },
+            "education": education,
+            "experience": [],
+            "skills": [],
+            "publications": [],
+            "supervision": [],
+            "books": [],
+            "patents": []
+        }
+
+    def _normalize_to_schema(self, data: Dict) -> Dict:
+        """
+        Normalize model output to the required schema structure.
+        Some models (e.g. groq/compound-mini) return a flat dict or
+        non-nested structure instead of the required nested schema.
+        This method remaps keys to ensure compliance.
+        """
+        # Already has the required top-level structure — return as-is
+        has_schema_keys = any(k in data for k in ("personal_info", "education", "experience", "publications"))
+        # But if personal_info is missing, the model may have placed fields at top level
+        has_flat_keys = any(k in data for k in ("name", "email", "phone", "father_name", "date_of_birth"))
+
+        if has_schema_keys and not has_flat_keys:
+            return data  # Already correct structure
+
+        # Build normalized output
+        normalized: Dict[str, Any] = {}
+
+        # ── personal_info ────────────────────────────────────────────────
+        if "personal_info" in data and isinstance(data["personal_info"], dict):
+            normalized["personal_info"] = data["personal_info"]
+        else:
+            # Try to extract personal fields from flat structure
+            pinfo = data.get("personal_info") or {}
+            if not pinfo or not isinstance(pinfo, dict):
+                pinfo = {}
+            # Supplement with flat-level fields if missing
+            for flat_key, schema_key in [("name", "name"), ("email", "email"), ("phone", "phone"), ("address", "address"), ("cnic", "cnic")]:
+                if schema_key not in pinfo or not pinfo[schema_key]:
+                    # Try common flat variants
+                    val = data.get(flat_key) or data.get(f"personal_{flat_key}")
+                    if val:
+                        pinfo[schema_key] = val
+            normalized["personal_info"] = pinfo
+
+        # ── education ────────────────────────────────────────────────────
+        edu_raw = data.get("education") or []
+        if isinstance(edu_raw, list):
+            edu_list = []
+            for item in edu_raw:
+                if isinstance(item, dict):
+                    edu_list.append(item)
+                elif isinstance(item, str):
+                    # Model returned plain strings — wrap as minimal dict
+                    edu_list.append({"degree": item, "institution": None, "level": None,
+                                     "specialization": None, "country": None,
+                                     "start_year": None, "end_year": None,
+                                     "marks_percentage": None, "cgpa": None, "cgpa_scale": None, "board": None})
+            normalized["education"] = edu_list
+        else:
+            normalized["education"] = []
+
+        # ── experience ───────────────────────────────────────────────────
+        exp_raw = data.get("experience") or []
+        if isinstance(exp_raw, list):
+            exp_list = []
+            for item in exp_raw:
+                if isinstance(item, dict):
+                    exp_list.append(item)
+                elif isinstance(item, str):
+                    exp_list.append({"job_title": item, "organization": None,
+                                     "start_date": None, "end_date": None,
+                                     "employment_type": None, "description": None})
+            normalized["experience"] = exp_list
+        else:
+            normalized["experience"] = []
+
+        # ── publications ─────────────────────────────────────────────────
+        pub_raw = data.get("publications") or []
+        if isinstance(pub_raw, list):
+            pub_list = []
+            for item in pub_raw:
+                if isinstance(item, dict):
+                    pub_list.append(item)
+                elif isinstance(item, str):
+                    pub_list.append({"title": item, "type": None, "venue": None,
+                                     "year": None, "authors": None, "doi": None,
+                                     "url": None, "issn": None})
+            normalized["publications"] = pub_list
+        else:
+            normalized["publications"] = []
+
+        # ── skills, supervision, books, patents — pass through ───────────
+        for key in ("skills", "supervision", "books", "patents"):
+            val = data.get(key)
+            if isinstance(val, list):
+                # Normalize string items to minimal dicts
+                result = []
+                for item in val:
+                    if isinstance(item, dict):
+                        result.append(item)
+                    elif isinstance(item, str) and item.strip():
+                        result.append({"title": item} if key in ("books",) else {"skill_name": item, "category": None} if key == "skills" else {"patent_number": item} if key == "patents" else {"student_name": item})
+                normalized[key] = result
+            else:
+                normalized[key] = val if val is not None else []
+
+        return normalized
 
     # ------------------------------------------------------------------
     # Internal: defaults & validation

@@ -216,13 +216,22 @@ class CompositeEvaluator:
         col_map  = self._to_map(col_df)
         exp_map  = self._to_map(exp_df)
 
-        all_cids = sorted(list(set(
+        all_candidates = sorted(list(set(
             list(edu_map.keys()) + list(res_map.keys()) + list(exp_map.keys())
         )))
 
         composite_results = []
 
-        for cid in all_cids:
+        cand_map = {}
+        cand_csv = Path("data/extracted/candidates.csv")
+        if cand_csv.exists():
+            try:
+                cand_df = pd.read_csv(cand_csv, dtype=str).fillna("")
+                cand_map = {str(r.get("candidate_id")): str(r.get("name")) for _, r in cand_df.iterrows() if r.get("candidate_id")}
+            except Exception:
+                pass
+
+        for cid in all_candidates:
             c_score = compute_candidate_composite_score(
                 candidate_id        = cid,
                 edu_profile         = edu_map.get(cid),
@@ -236,12 +245,10 @@ class CompositeEvaluator:
             )
 
             # Include candidate name if present
-            cname = (
-                (edu_map.get(cid) or {}).get("candidate_name") or
-                (res_map.get(cid) or {}).get("candidate_name") or
-                (exp_map.get(cid) or {}).get("candidate_name") or cid
-            )
-            c_score["candidate_name"] = cname
+            cname = cand_map.get(cid) or (edu_map.get(cid) or {}).get("candidate_name") or (res_map.get(cid) or {}).get("candidate_name") or (exp_map.get(cid) or {}).get("candidate_name")
+            if not cname or str(cname).lower() in ("nan", "none", "null", ""):
+                cname = cid.replace("_", " ").title()
+            c_score["candidate_name"] = str(cname)
             composite_results.append(c_score)
 
         # Sort results by overall_composite_score descending

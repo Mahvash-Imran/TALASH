@@ -36,7 +36,7 @@ def main():
     parser.add_argument(
         "--model",
         type=str,
-        default="llama-3.3-70b-versatile",
+        default="groq/compound-mini",
         help="LLM model name to use"
     )
     args = parser.parse_args()

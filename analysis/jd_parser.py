@@ -95,7 +95,7 @@ def _extract_min_experience(text: str) -> float:
 def parse_job_description(
     jd_text: str,
     api_key: Optional[str] = None,
-    model: str = "llama-3.3-70b-versatile",
+    model: str = "groq/compound-mini",
     base_url: Optional[str] = None,
     skip_llm: bool = False,
 ) -> Dict[str, Any]:

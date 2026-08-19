@@ -2384,16 +2384,104 @@ dz.addEventListener('dragleave',()=>dz.classList.remove('dragging'));
 dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('dragging');handleFiles(e.dataTransfer.files);});
 function handleFiles(files){
   Array.from(files).forEach(f=>{
-    if(!f.name.endsWith('.pdf')){toast('Only PDF files are supported','⚠');return;}
+    if(!f.name.endsWith('.pdf')){toast('Only PDF files are supported','\u26A0');return;}
     const li=document.createElement('li');li.className='upload-row';
-    li.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span class="upload-row-name">${f.name}</span><span class="upload-row-size">${(f.size/1024).toFixed(1)} KB</span><span class="badge success">Queued</span>`;
+    li.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span class="upload-row-name">${f.name}</span><span class="upload-row-size">${(f.size/1024).toFixed(1)} KB</span><span class="badge info">Uploading\u2026</span>`;
     document.getElementById('upload-list').appendChild(li);
+    const badgeEl=li.querySelector('.badge');
+
+    // Inject bulk progress bar (hidden by default)
+    const bulkBar=document.createElement('div');
+    bulkBar.style.cssText='width:100%;margin-top:6px;display:none;flex-direction:column;gap:4px;';
+    bulkBar.innerHTML=`
+      <div style="font-size:11px;color:var(--text-muted);font-weight:500;" class="bulk-msg">Detecting\u2026</div>
+      <div style="background:rgba(255,255,255,0.08);border-radius:4px;height:6px;overflow:hidden;">
+        <div class="bulk-prog" style="height:100%;background:linear-gradient(90deg,#7c3aed,#06b6d4);width:0%;transition:width 0.4s;border-radius:4px;"></div>
+      </div>
+      <div style="font-size:10px;color:var(--text-muted);" class="bulk-count"></div>`;
+    li.appendChild(bulkBar);
+
     const fd=new FormData();fd.append('file',f);
-    fetch('http://127.0.0.1:8000/api/v1/upload',{method:'POST',body:fd,signal:AbortSignal.timeout(10000)})
-      .then(r=>r.ok?r.json():null).then(d=>{if(d)li.querySelector('.badge').className='badge info';li.querySelector('.badge').textContent='Processing';})
-      .catch(()=>{});
+    fetch('http://127.0.0.1:8000/api/v1/upload',{method:'POST',body:fd,signal:AbortSignal.timeout(20000)})
+      .then(r=>r.ok?r.json():r.json().then(e=>Promise.reject(e.detail||'Upload failed')))
+      .then(d=>{
+        const cid=d.candidate_id;
+        const isBulk=d.message&&d.message.toLowerCase().includes('bulk');
+
+        if(isBulk){
+          badgeEl.className='badge info';badgeEl.textContent='Splitting\u2026';
+          bulkBar.style.display='flex';
+          toast(`Bulk PDF detected! Splitting and processing candidates in background. This may take several minutes.`,'\uD83D\uDCCB');
+        } else {
+          badgeEl.className='badge info';badgeEl.textContent='Step 1/3';
+          toast(`CV "${f.name}" uploaded \u2014 running full pipeline. This may take 2\u20134 minutes.`,'\uD83D\uDCC4');
+        }
+
+        const msgEl=bulkBar.querySelector('.bulk-msg');
+        const progEl=bulkBar.querySelector('.bulk-prog');
+        const cntEl=bulkBar.querySelector('.bulk-count');
+
+        const poll=setInterval(async()=>{
+          try{
+            const sr=await fetch(`http://127.0.0.1:8000/api/v1/status/${cid}`,{signal:AbortSignal.timeout(5000)});
+            if(!sr.ok)return;
+            const s=await sr.json();
+            const msg=s.message||'Processing\u2026';
+
+            if(s.status==='processing'){
+              if(s.is_bulk){
+                // Bulk: show progress bar
+                const total=s.total||1;
+                const done=s.completed||0;
+                const pct=Math.round((done/total)*100);
+                progEl.style.width=pct+'%';
+                if(msg.includes('Splitting')){
+                  badgeEl.textContent='Splitting\u2026';
+                  msgEl.textContent=msg;
+                } else if(msg.includes('Step 2')){
+                  badgeEl.textContent=`Extracting ${done}/${total}`;
+                  msgEl.textContent=msg;
+                  cntEl.textContent=s.candidates&&s.candidates.length?`Done: ${s.candidates.slice(-3).join(', ')}${s.candidates.length>3?'\u2026':''}`:'';
+                } else if(msg.includes('Step 3')){
+                  progEl.style.width='90%';
+                  badgeEl.textContent='Scoring\u2026';
+                  msgEl.textContent='Running analysis pipeline\u2026';
+                }
+              } else {
+                // Single: show step badge
+                const step=msg.match(/Step (\d)\/3/);
+                badgeEl.textContent=step?`Step ${step[1]}/3`:'Processing\u2026';
+              }
+            } else if(s.status==='done'){
+              clearInterval(poll);
+              progEl.style.width='100%';
+              badgeEl.className='badge success';
+              if(s.is_bulk){
+                const done=s.completed||'?';
+                const total=s.total||'?';
+                badgeEl.textContent=`Done ${done}/${total} \u2713`;
+                msgEl.textContent=s.message||'All candidates processed!';
+                cntEl.textContent='';
+                toast(`Bulk upload complete! ${done} of ${total} candidates added to dashboard.`,'\u2705');
+              } else {
+                badgeEl.textContent='Done \u2713';
+                toast(`Candidate processed and added to dashboard!`,'\u2705');
+              }
+              setTimeout(()=>fetchLiveData(),800);
+            } else if(s.status==='error'){
+              clearInterval(poll);
+              progEl.style.width='100%';progEl.style.background='#ef4444';
+              badgeEl.className='badge danger';badgeEl.textContent='Error \u2717';
+              msgEl.textContent=s.message||'Processing failed';
+              toast(`Processing failed for "${f.name}": ${s.message}`,'\u26A0');
+            }
+          }catch(e){}
+        },5000);
+      })
+      .catch(err=>{badgeEl.className='badge danger';badgeEl.textContent='Failed';toast('Upload failed: '+err,'\u26A0');});
   });
 }
+
 
 /* ═══════════════════════════════════
    ANIMATED COUNTER

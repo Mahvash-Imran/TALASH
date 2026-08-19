@@ -72,7 +72,10 @@ class MasterPipeline:
         logger.info("============================================================")
 
         # 1. Module 2: Educational Profile
-        m2 = EducationalProfileAnalyser(output_dir=str(self.analysis_dir))
+        m2 = EducationalProfileAnalyser(
+            output_dir=str(self.analysis_dir),
+            api_key=self.api_key, model=self.model, base_url=self.base_url, skip_llm=self.skip_llm
+        )
         m2.run()
 
         # 2. Module 3: Research Profile

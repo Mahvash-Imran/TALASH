@@ -1,11 +1,11 @@
 ======================================================================
   TALASH Module 5 – Books Authored / Co-Authored Report
 ======================================================================
-  Candidates analysed           : 43
+  Candidates analysed           : 45
   Total books extracted         : 0
 
   Scholarly Dissemination Label Distribution:
-    No Books Listed          : 43
+    No Books Listed          : 45
 
 ----------------------------------------------------------------------
   Per-Candidate Book Summaries
@@ -55,6 +55,11 @@
   Total Books: 0 (Sole=0, Lead=0, Co=0)
   Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
   Summary: Candidate Muhammad Abubakar has no books authored or listed in their CV.
+
+  [No Books Listed] 09_SANA_FATIMA_RIZVI
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate Sana Fatima Rizvi has no books authored or listed in their CV.
 
   [No Books Listed] 10_MUHAMMAD_EHATISHAM
   Total Books: 0 (Sole=0, Lead=0, Co=0)
@@ -225,5 +230,10 @@
   Total Books: 0 (Sole=0, Lead=0, Co=0)
   Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
   Summary: Candidate Ammara Nasim has no books authored or listed in their CV.
+
+  [No Books Listed] Muhammad_Dawood_Rizwan_CV
+  Total Books: 0 (Sole=0, Lead=0, Co=0)
+  Publisher Credibility: Recognized=0, Self-Published=0, Unknown=0
+  Summary: Candidate nan has no books authored or listed in their CV.
 
 ======================================================================

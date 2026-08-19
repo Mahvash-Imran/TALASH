@@ -1,12 +1,12 @@
 ======================================================================
   TALASH Module 6 – Patents Analysis Report
 ======================================================================
-  Candidates analysed           : 43
+  Candidates analysed           : 45
   Total patents extracted       : 11
 
   Innovation & IP Output Label Distribution:
     Moderate                 : 1
-    No Patents Listed        : 41
+    No Patents Listed        : 43
     Strong                   : 1
 
 ----------------------------------------------------------------------
@@ -62,6 +62,11 @@
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
   Summary: Candidate Muhammad Abubakar has no patents listed in their CV.
+
+  [No Patents Listed] 09_SANA_FATIMA_RIZVI
+  Total Patents: 0 (Sole=0, Lead=0, Co=0)
+  Jurisdiction: International=0, National=0
+  Summary: Candidate Sana Fatima Rizvi has no patents listed in their CV.
 
   [No Patents Listed] 10_MUHAMMAD_EHATISHAM
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
@@ -227,5 +232,10 @@
   Total Patents: 0 (Sole=0, Lead=0, Co=0)
   Jurisdiction: International=0, National=0
   Summary: Candidate Ammara Nasim has no patents listed in their CV.
+
+  [No Patents Listed] Muhammad_Dawood_Rizwan_CV
+  Total Patents: 0 (Sole=0, Lead=0, Co=0)
+  Jurisdiction: International=0, National=0
+  Summary: Candidate nan has no patents listed in their CV.
 
 ======================================================================
