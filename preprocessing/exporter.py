@@ -139,7 +139,8 @@ class Exporter:
         self._patents: List[Dict] = []
         self._report: List[Dict] = []
 
-        self._row_counters: Dict[str, int] = {}  # tracks auto-increment IDs per table
+        # tracks auto-increment IDs per table
+        self._row_counters: Dict[str, int] = {}
 
     # ------------------------------------------------------------------
     # Public: add data
@@ -201,7 +202,8 @@ class Exporter:
 
         # ── publications table ────────────────────────────────────────────
         for pub in (normalized_data.get("publications") or []):
-            row = {"row_id": self._next_id("publications"), "candidate_id": cid}
+            row = {"row_id": self._next_id(
+                "publications"), "candidate_id": cid}
             row.update(pub)
             self._publications.append(row)
 
@@ -225,7 +227,8 @@ class Exporter:
 
         # ── parsing report ────────────────────────────────────────────────
         missing = validation.summary() if validation else ""
-        warnings = "; ".join(getattr(pdf_result, "warnings", [])) if pdf_result else ""
+        warnings = "; ".join(
+            getattr(pdf_result, "warnings", [])) if pdf_result else ""
         self._report.append({
             "candidate_id":       cid,
             "source_filename":    candidate_filename + ".pdf",
@@ -254,7 +257,8 @@ class Exporter:
         No data rows are added to other tables, only a failure row in the report.
         """
         cid = self._make_candidate_id(candidate_filename)
-        warnings = "; ".join(getattr(pdf_result, "warnings", [])) if pdf_result else ""
+        warnings = "; ".join(
+            getattr(pdf_result, "warnings", [])) if pdf_result else ""
         self._report.append({
             "candidate_id":       cid,
             "source_filename":    candidate_filename + ".pdf",
@@ -298,14 +302,17 @@ class Exporter:
                 try:
                     old_df = pd.read_csv(csv_path)
                     new_cids = df['candidate_id'].dropna().unique()
-                    old_df_filtered = old_df[~old_df['candidate_id'].isin(new_cids)]
-                    combined_df = pd.concat([old_df_filtered, df], ignore_index=True)
+                    old_df_filtered = old_df[~old_df['candidate_id'].isin(
+                        new_cids)]
+                    combined_df = pd.concat(
+                        [old_df_filtered, df], ignore_index=True)
                     if 'row_id' in combined_df.columns:
                         combined_df['row_id'] = range(1, len(combined_df) + 1)
                     df = combined_df
                     dfs[name] = df
                 except Exception as e:
-                    logger.warning("Could not merge with existing CSV %s: %s", csv_path.name, e)
+                    logger.warning(
+                        "Could not merge with existing CSV %s: %s", csv_path.name, e)
 
             df.to_csv(csv_path, index=False)
             logger.info("Wrote %d rows -> %s", len(df), csv_path.name)
@@ -390,9 +397,9 @@ class Exporter:
     @staticmethod
     def _print_report(report_df: "pd.DataFrame"):
         """Print a formatted parsing report to stdout."""
-        total     = len(report_df)
+        total = len(report_df)
         succeeded = len(report_df[report_df["status"] == "success"])
-        failed    = len(report_df[report_df["status"] == "failed"])
+        failed = len(report_df[report_df["status"] == "failed"])
 
         print("\n" + "=" * 60)
         print("  TALASH PRE-PROCESSING REPORT")
@@ -404,7 +411,8 @@ class Exporter:
 
         for _, row in report_df.iterrows():
             status_icon = "OK" if row["status"] == "success" else "FAIL"
-            print(f"\n  {status_icon} {row['source_filename']} ({row['candidate_id']})")
+            print(
+                f"\n  {status_icon} {row['source_filename']} ({row['candidate_id']})")
             if row["status"] == "success":
                 print(
                     f"     Pages: {row['pages']} | "
