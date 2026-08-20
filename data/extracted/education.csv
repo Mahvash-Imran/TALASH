@@ -1,0 +1,230 @@
+row_id,candidate_id,level,degree,specialization,institution,country,board,start_year,end_year,marks_percentage,marks_percentage_original,cgpa,cgpa_scale,cgpa_normalized_4,the_rank,the_rank_range,qs_rank,qs_rank_range,ranking_notes
+1,01_MUHAMMAD_SALMAN,PhD,Electrical Engineering,Communication Systems,"International Islamic university, Islamabad",Pakistan,,,2024.0,,,3.33,4.0,3.33,,1001+,,,
+2,01_MUHAMMAD_SALMAN,MS,Electrical Engineering,Communication Systems,"COMSATS University, Islamabad, Attock Campus",Pakistan,,,2014.0,,,3.03,4.0,3.03,,,,,"Campus ranking not available, rankings are typically given to main university"
+3,01_MUHAMMAD_SALMAN,BSc,Electronics Engineering,Electronics,"COMSATS University, Islamabad, Abbottabad Campus",Pakistan,,,2011.0,69.84,69.84,,,,,,,,"Campus ranking not available, rankings are typically given to main university"
+4,01_MUHAMMAD_SALMAN,HSSC,,Pre-Engineering,,Pakistan,B.I.S.E Bannu,,2006.0,65.45,65.45,,,,,,,,
+5,01_MUHAMMAD_SALMAN,SSC,,Science Subjects,,Pakistan,B.I.S.E Bannu,,2004.0,71.0,71.0,,,,,,,,
+6,02_MUHAMMAD_SHAHWAZ,primary,science,,karachi board,Pakistan,karachi board,,1988.0,70.0,70.0,,,,,,,,not a university
+7,02_MUHAMMAD_SHAHWAZ,ssc,science,,karachi matric board,Pakistan,karachi matric board,,2003.0,77.0,77.0,,,,,,,,not a university
+8,02_MUHAMMAD_SHAHWAZ,HSSC,FSC,pre-engineering,karachi inter board,Pakistan,karachi inter board,,2005.0,54.0,54.0,,,,,,,,not a university
+9,02_MUHAMMAD_SHAHWAZ,BS,BACHELOR OF ELECTRONICS,ENGINEERING,DAWOOD COLEEGE OF ENGINEERING AND ENGINEERING TECHNOLOGY,Pakistan,,,2012.0,75.0,75.0,,,,,,,,not in THE/QS
+10,02_MUHAMMAD_SHAHWAZ,MS,M.ENGG,ELECTRONICS,NED UET KARACHI,Pakistan,,,2017.0,,,2.97,4.0,2.97,,1001+,,,
+11,03_NASIR_ALI_SHAH,PhD,FPGA and GPU acceleration of complex computational algorithms,"Electrical, Electronics and Communications Engineering",Politecnico di Torino,Italy,,,2024.0,100.0,100.0,,,,301.0,,144.0,,
+12,03_NASIR_ALI_SHAH,Other,Evaluation of Hardware Embedded Systems acceleration for ORAN/5G,,ORANGE INNOVATION,,,,2026.0,99.0,99.0,,,,,,,,not a university
+13,03_NASIR_ALI_SHAH,MS,,"Electriical, Electronics and Communications Engineering",Politecnico di Torino,Italy,,,2023.0,90.0,90.0,,,,301.0,,144.0,,
+14,03_NASIR_ALI_SHAH,BS,,Computer Engineering Embedded Systems,Politecnico di Torino,Italy,,,2019.0,90.9,90.9,,,,301.0,,144.0,,
+15,03_NASIR_ALI_SHAH,BS,,Computer Systems Engineering,Hamdard University,Pakistan,,,2014.0,,,3.35,4.0,3.35,,1001+,,,
+16,03_NASIR_ALI_SHAH,HSSC,,Pre-Engineering,BISE BANNU,Pakistan,BISE BANNU,,2010.0,78.0,78.0,,,,,,,,not a university
+17,03_NASIR_ALI_SHAH,SSC,,Science,BISE Bannu,Pakistan,BISE Bannu,,2008.0,83.33,83.33,,,,,,,,not a university
+18,04_MUHAMMAD_FARRUKH,PhD,Electrical Engineering,"Deep Learning, Signal Processing, Hardware AI",Riphah International University,Pakistan,,,2024.0,,,3.52,4.0,3.52,,,,,not in THE/QS
+19,04_MUHAMMAD_FARRUKH,MS,Electrical Engineering,Digital Signal Processing,Riphah International University,Pakistan,,,2015.0,,,3.33,4.0,3.33,,,,,not in THE/QS
+20,04_MUHAMMAD_FARRUKH,BS,Electronic Engineering,Electronic Engineering,International Islamic University,Pakistan,,,2012.0,2.84,2.84,,,,,1001+,,,
+21,04_MUHAMMAD_FARRUKH,HSSC,,Pre-Engineering,BISE Abbottabad,Pakistan,,,2008.0,62.0,62.0,,,,,,,,not a university
+22,04_MUHAMMAD_FARRUKH,SSC,,Science,BISE Abbottabad,Pakistan,,,2006.0,76.6,76.6,,,,,,,,not a university
+23,05_MUHAMMAD_MAJID,PhD,ELECTRICAL ENGINEERING,WIRELESS COMMUNICATION,INSTITUTE OF SPACE TECHNOLOGY,Pakistan,,,2025.0,,,3.6,4.0,3.6,,1001+,,,
+24,05_MUHAMMAD_MAJID,MS,ELECTRONICS ENGINEERING,WIRELESS COMMUNICATION,MUHAMMAD ALI JINNAH UNIVERSITY,Pakistan,,,2015.0,,,3.36,4.0,3.36,,,,,not in THE/QS
+25,05_MUHAMMAD_MAJID,BS,ELECTRONIC ENGINEERING,ELECTRONICS,"SSUET, KARACHI",Pakistan,,,2011.0,2.5,2.5,,,,,,,,not in THE/QS
+26,05_MUHAMMAD_MAJID,HSSC,FSc,PRE ENGINEERING,,Pakistan,BISE D.G.KHAN,,2006.0,73.54,73.54,,,,,,,,
+27,05_MUHAMMAD_MAJID,SSC,MATRIC,SCIENCE,,Pakistan,BISE D.G.KHAN,,2003.0,67.5,67.5,,,,,,,,
+28,06_FARMAN_ALI,Postdoc,,nil,Nanjing University of Aeronautics and Astronautics,China,,,2025.0,,,,,,,601-800,,,
+29,06_FARMAN_ALI,PhD,,Electrical Nonlinear Optical Fiber Communication Engineering,"Iqra National University, Peshawar, Pakistan",Pakistan,,,2019.0,,,3.2,4.0,3.2,,,,,not in THE/QS
+30,06_FARMAN_ALI,MS,,Electrical Engineering,Sarhad University of Science and Information Technology,Pakistan,,,2014.0,,,3.14,4.0,3.14,,,,,not in THE/QS
+31,06_FARMAN_ALI,BE,,Electrical Engineering,Sarhad University of Science and Information Technology,Pakistan,,,2012.0,,,3.07,4.0,3.07,,,,,not in THE/QS
+32,06_FARMAN_ALI,DAE,,Electrical,BTE Peshawar,Pakistan,,,2007.0,60.0,60.0,,,,,,,,not a university
+33,06_FARMAN_ALI,SSC,,,BISE Mardan,Pakistan,,,2004.0,60.0,60.0,,,,,,,,not a university
+34,07_FIZA_MURTAZA,PhD,PhD in Computer Engineering,"Computer Vision, Temporal Human Action Detection",University of Engineering and Technology Taxila,Pakistan,,2015.0,2019.0,,,3.83,4.0,3.83,,,,,not in THE/QS
+35,07_FIZA_MURTAZA,MS,MS in Computer Engineering,Signal and Image Processing,University of Engineering and Technology Taxila,Pakistan,,2013.0,2015.0,,,3.62,4.0,3.62,,,,,not in THE/QS
+36,07_FIZA_MURTAZA,BS,BS in Electrical (Computer) Engineering,Computer Engineering,"COMSATS Institute of Information Technology, Abbottabad",Pakistan,,2009.0,2013.0,3.65,3.65,,,,,1001+,,,
+37,07_FIZA_MURTAZA,HSSC,,Pre-Engineering,BISE Abbottabad,Pakistan,,2007.0,2009.0,74.0,74.0,,,,,,,,"not a university, a board of intermediate and secondary education"
+38,07_FIZA_MURTAZA,SSC,,Science,BISE Abbottabad,Pakistan,,2005.0,2007.0,72.0,72.0,,,,,,,,"not a university, a board of intermediate and secondary education"
+39,08_TAYYABA_GULL,PhD,Doctor of Philosphy in Power Electronics,Power Electronics,Iqra National University,Pakistan,,,2023.0,,,3.58,4.0,3.58,,,,,Not found in THE or QS rankings
+40,08_TAYYABA_GULL,MS,MSc,Communication,Cecos University,Pakistan,,,2013.0,,,3.13,4.0,3.13,,,,,Not found in THE or QS rankings
+41,08_TAYYABA_GULL,BS,BSc Electrical Engineering,Electrical Engr,University of Engineering and Technology Peshawar,Pakistan,,,2007.0,,,,,,,,,,Not found in THE or QS rankings
+42,08_TAYYABA_GULL,HSSC,Intermediate,Pre-Engr,Peshawar Board,Pakistan,,,2003.0,75.0,75.0,,,,,,,,"Not a university, does not participate in THE or QS rankings"
+43,08_TAYYABA_GULL,SSC,Matric,Science,Federal Board of Education/Army Public School,Pakistan,Federal Board of Education,,2000.0,80.0,80.0,,,,,,,,"Not a university, does not participate in THE or QS rankings"
+44,09_MUHAMMAD_ABUBAKAR,PhD,PhD,power electronics and power systems,Jiangsu University,China,,,2020.0,86.0,86.0,,,,,1001+,,651-700,
+45,09_MUHAMMAD_ABUBAKAR,MS,MS,Electronics Engineering,International Islamic University,Pakistan,,,2014.0,,,3.75,4.0,3.75,,1001+,,,
+46,09_MUHAMMAD_ABUBAKAR,BS,BS,Electrical Engineering,The University of Faisalabad,Pakistan,,,2009.0,,,3.28,4.0,3.28,,,,,
+47,09_MUHAMMAD_ABUBAKAR,HSSC,Fsc,Pre Engineering,,Pakistan,BISE Faisalabad,,2004.0,59.0,59.0,,,,,,,,
+48,09_MUHAMMAD_ABUBAKAR,SSC,Matric,Science,,Pakistan,BISE Faisalabad,,2002.0,76.0,76.0,,,,,,,,
+49,10_MUHAMMAD_EHATISHAM,PostDoc,Multimodal Data Processing and Machine Learning,,University of East London,UK,,,2026.0,,,,,,,601-800,,,
+50,10_MUHAMMAD_EHATISHAM,PhD,Computer Engineering,Artificial Intelligence and Pervasive Computing,"University of Engineering and Technology (UET), Taxila",Pakistan,,,2020.0,,,4.0,4.0,4.0,,1001+,,,
+51,10_MUHAMMAD_EHATISHAM,MS,Computer Engineering,Signal and Image Processing,"University of Engineering and Technology (UET), Taxila",Pakistan,,,2017.0,,,3.96,4.0,3.96,,1001+,,,
+52,10_MUHAMMAD_EHATISHAM,BS,Computer Engineering,,"University of Engineering and Technology (UET), Taxila",Pakistan,,,2014.0,,,4.0,4.0,4.0,,1001+,,,
+53,10_MUHAMMAD_EHATISHAM,HSSC,,Computer Science,"FBISE, Islamabad",Pakistan,,,2010.0,90.0,90.0,,,,,,,,not a university
+54,10_MUHAMMAD_EHATISHAM,SSC,,Science,BISE Rawalpindi,Pakistan,,,2008.0,87.88,87.88,,,,,,,,not a university
+55,11_WAQAS_AMIN,PhD,"Electrical Energy Policy, Energy Trading, Smart Grid Technology",Electrical,University of Electronic Science and Technology,,,,2020.0,,,3.6,4.0,3.6,,1001+,,,
+56,11_WAQAS_AMIN,MBA,Human Resource Management,,"IBA, Punjab University",,,,2012.0,,,3.03,4.0,3.03,,,,,"IBA is a business school, rankings not available separately"
+57,11_WAQAS_AMIN,MSc,Electrical Electronics and Communication Engineering,,The University of Lahore,,,,2016.0,,,3.25,4.0,3.25,,,,,not in THE/QS
+58,11_WAQAS_AMIN,BE,Electrical Engineering,,The University of Lahore,,,,2011.0,,,2.88,4.0,2.88,,,,,not in THE/QS
+59,11_WAQAS_AMIN,HSSC,,Pre-Engg,,,Bise Lahore,,2002.0,65.0,65.0,,,,,,,,
+60,11_WAQAS_AMIN,SSC,,Science,,,Bise Lahore,,2000.0,77.0,77.0,,,,,,,,
+61,12_SYED_TAMOORULHASSAN,PhD,Doctor of Science in Communication Engineering,Communication Engineering,University of Oulu,,,,2024.0,,,5.0,5.0,4.0,301.0,,411.0,,
+62,12_SYED_TAMOORULHASSAN,MS,Master of Science in Communication Systems Engineering,Communication Systems,Linkoping University,,,,2011.0,,,4.07,5.0,3.256,301.0,,341.0,,
+63,12_SYED_TAMOORULHASSAN,BS,Bachelor of Science in Telecommunication Engineering,Telecommunication Engineering,National University of Computer and Emerging Sciences,,,,2007.0,3.0,3.0,,,,,1001+,,501-550,
+64,12_SYED_TAMOORULHASSAN,HSSC,Higher Secondary School Certificate,Pre-Engineering,Federal Board of Intermediate and Secondary Education,,,,2003.0,72.7,72.7,,,,,,,,not a university
+65,12_SYED_TAMOORULHASSAN,SSC,Secondary School Certificate,Pre-Engineering,Federal Board of Intermediate and Secondary Education,,,,2001.0,73.73,73.73,,,,,,,,not a university
+66,13_MANZOOR_ELLAHI,PhD,Electrical Engineering,Development of Improved Metaheuristic Optimization Algorithms for Optimal Economic Dispatch of Renewable Energy Sources,The University of Lahore,Pakistan,,,2022.0,3.62,3.62,3.62,4.0,3.62,,1001+,,,
+67,13_MANZOOR_ELLAHI,MS,Electrical Engineering,Power Factor Monitoring and Load Management using Smart Metering Techniques,The University of Lahore,Pakistan,,,2014.0,3.2,3.2,3.2,4.0,3.2,,1001+,,,
+68,13_MANZOOR_ELLAHI,BSc,Electrical Engineering,Online Monitoring of Electricity Data and Wireless Transmission using Radio Frequency,"UET, Lahore",Pakistan,,,2010.0,2.87,2.87,2.87,4.0,2.87,,1001+,,,
+69,13_MANZOOR_ELLAHI,HSSC,,Pre-Engineering,"BISE, Gujranwala",Pakistan,,,2006.0,81.0,81.0,,,,,,,,not a university
+70,13_MANZOOR_ELLAHI,SSC,,Science,BISE Gujranwala,Pakistan,,,2004.0,67.0,67.0,,,,,,,,not a university
+71,14_SAROSH_TAHIR,PhD,Computer and Control Engineering,Next Generation Optical Networks,POLITECNICO DI TORINO,Italy,,,2017.0,,,,,,401.0,,346.0,,
+72,14_SAROSH_TAHIR,MS,Telecommunication and Networking,Communication,POLITECNICO DI TORINO,Italy,,,2017.0,,,,,,401.0,,346.0,,
+73,14_SAROSH_TAHIR,BS,Electronics Engineering,Communication,COMSATS,Pakistan,,,2009.0,2.69,2.69,,,,,1001+,,801-1000,
+74,14_SAROSH_TAHIR,HSSC,FSc,Pre-Eng,Mirpur BISE,Pakistan,,,2004.0,67.0,67.0,,,,,,,,not a university
+75,14_SAROSH_TAHIR,SSC,Matric,Science,FBISE,Pakistan,,,2002.0,74.0,74.0,,,,,,,,not a university
+76,15_M_USMAN_ABBASI,PhD,PhD in Electrical Engineering,Biomedical Signal Processing,National University of Computer and Emerging Sciences - FAST,Pakistan,,,2021.0,,,3.56,4.0,3.56,,1001+,,,
+77,15_M_USMAN_ABBASI,MS,Electrical Engineering,Electrical Engineering,CECOS University,Pakistan,,,2015.0,,,3.13,4.0,3.13,,,,,not in THE/QS
+78,15_M_USMAN_ABBASI,BS,Bachelors in Electrical Engineering,Electrical Engineering,CECOS University,Pakistan,,,2009.0,,,3.2,4.0,3.2,,,,,not in THE/QS
+79,15_M_USMAN_ABBASI,HSSC,Higher Secondary School Certificate,Pre-Engineering,"Board of Intermediate and Secondary Education, Peshawar",Pakistan,"Board of Intermediate and Secondary Education, Peshawar",,2004.0,61.36,61.36,,,,,,,,not a university
+80,15_M_USMAN_ABBASI,SSC,Secondary School Certificate,Science,"Board of Intermediate and Secondary Education, Peshawar",Pakistan,"Board of Intermediate and Secondary Education, Peshawar",,2002.0,73.76,73.76,,,,,,,,not a university
+81,16_MUZZAMIL_GHAFFAR,PhD,Ph D,Mechatronics Engineering,Air University,Pakistan,,,2023.0,,,3.74,4.0,3.74,,1001+,,,
+82,16_MUZZAMIL_GHAFFAR,MS,MS,Mechatronics Engineering,Air University,Pakistan,,,2017.0,,,3.56,4.0,3.56,,1001+,,,
+83,16_MUZZAMIL_GHAFFAR,BS,BSc,Electrical Engineering,"Federal Urdu University of Arts, Science and Technology",Pakistan,,,2009.0,,,3.49,4.0,3.49,,1001+,,,
+84,16_MUZZAMIL_GHAFFAR,HSSC,HSSC,Pre Engineering,Federal board,Pakistan,,,2005.0,53.0,53.0,,,,,,,,not a university
+85,16_MUZZAMIL_GHAFFAR,SSC,SSC,Science,Rawalpindi board,Pakistan,,,2003.0,76.0,76.0,,,,,,,,not a university
+86,17_SUHAIL_ASGHAR,PhD,Doctor of Philosophy in Electrical Engineering,Telecommunication Engineering,Universiti Tun Hussein Onn Malaysia (UTHM),Malaysia,,,2025.0,94.0,94.0,,,,,1001+,,,
+87,17_SUHAIL_ASGHAR,MS,Master of Electrical Engineering,Telecommunication Engineering,Universiti Tun Hussein Onn Malaysia (UTHM),Malaysia,,,2022.0,91.0,91.0,,,,,1001+,,,
+88,17_SUHAIL_ASGHAR,BS,Bachelor of Engineering in Electronic Engineering,Electronics,"Quaid e Awam University of Engineering, Sciences & Technology (Nawabshah)",Pakistan,,,2018.0,81.0,81.0,,,,,,,,not in THE/QS
+89,17_SUHAIL_ASGHAR,HSSC,Higher Secondary Certificate,Pre-Engineering,Board of Intermediate and Secondary Education Hyderabad (BISEH),Pakistan,BISEH,,2013.0,68.0,68.0,,,,,,,,"not a university, an examination board"
+90,17_SUHAIL_ASGHAR,SSC,Secondary School Certificate,Science,Board of Intermediate and Secondary Education Hyderabad (BISEH),Pakistan,BISEH,,2011.0,75.0,75.0,,,,,,,,"not a university, an examination board"
+91,18_MUHAMMAD_AMJAD,Postdoc,Researcher,Remote Sensing,University Parthenope Naples,Italy,,2023.0,2024.0,80.0,80.0,,,,,,,,Not ranked in THE or QS
+92,18_MUHAMMAD_AMJAD,PhD,,Electronics Telecommunication Technology,POLITEHNICA Bucharest,Romania,,,2023.0,,,3.8,4.0,3.8,,,,,Not ranked in THE or QS
+93,18_MUHAMMAD_AMJAD,MS,,Information and Communication Systems,Nanjing University of Science and Technology,,,,2020.0,,,3.5,4.0,3.5,,1001+,,,
+94,18_MUHAMMAD_AMJAD,BS,,Electrical (Telecommunication) Engineering,Government College University Faisalabad,Pakistan,,,2015.0,,,3.5,4.0,3.5,,,,,Not ranked in THE or QS
+95,18_MUHAMMAD_AMJAD,HSSC,,Pre Engineering,,,BISE Multan,,2010.0,79.0,79.0,,,,,,,,
+96,18_MUHAMMAD_AMJAD,SSC,,Science,,,FBISE,,2008.0,76.0,76.0,,,,,,,,
+97,19_ASIM_MASOOD,PhD,Information and Communication Engineering,"Machine Learning, Artificial Intelligence, Speech Processing, Natural Language Processing",University of Science and Technology of China,China,,,2021.0,,,3.68,4.0,3.68,87.0,,89.0,,
+98,19_ASIM_MASOOD,MSc,Microelectronic System and Telecommunication Engineering,"Microelectronic System, Telecommunication, Signal Processing",University of Liverpool,UK,,,2008.0,81.0,81.0,,,,178.0,,189.0,,
+99,19_ASIM_MASOOD,BE,Electrical Engineering,"Electronics, Signal Processing",NUST,Pakistan,,,2006.0,,,2.5,4.0,2.5,,1001+,417.0,,
+100,19_ASIM_MASOOD,HSSC,,Pre-Engineering,FBISE,Pakistan,,,2002.0,76.0,76.0,,,,,,,,not a university
+101,19_ASIM_MASOOD,SSC,,Science,FBISE,Pakistan,,,2000.0,85.0,85.0,,,,,,,,not a university
+102,20_SYED_FASIH_ALI,PhD,Electrical Engineering,Wireless Communication,Lahore University of Management Science,Pakistan,,,2025.0,,,3.2,4.0,3.2,,,,651-700,
+103,20_SYED_FASIH_ALI,MS,Electrical Engineering,Telecommunication and Networks,National University of Science and Technology,Pakistan,,,2018.0,,,3.47,4.0,3.47,,1001+,,501-550,
+104,20_SYED_FASIH_ALI,BS,Computer Engineering,Computer Engineering,Bahauddin Zikriya University,Pakistan,,,2014.0,,,3.88,4.0,3.88,,,,,not in THE/QS
+105,20_SYED_FASIH_ALI,HSSC,,Pre Engineering,,Pakistan,Multan board,,2010.0,61.0,61.0,,,,,,,,
+106,20_SYED_FASIH_ALI,SSC,,Science,,Pakistan,Multan Board,,2007.0,69.0,69.0,,,,,,,,
+107,21_SAMAN_FATIMA,PhD,Doctorat,Microelectronics - Analog IC Design,University Paris Saclay (CentraleSupelec),France,,,2023.0,,,,,,,,,,Part of University Paris-Saclay
+108,21_SAMAN_FATIMA,MS,Master,E3A -M2 Integration circuits-systemes,"University Paris Saclay (University Paris-Sud, CentraleSupelec, Telecom Paris-tech)",France,,,2018.0,70.75,70.75,,,,46.0,,15.0,,
+109,21_SAMAN_FATIMA,BS,B.Sc.,Electronics,Islamia University of Bahawalpur,Pakistan,,,2014.0,,,3.79,4.0,3.79,,1001+,,,Pakistani national ranking only
+110,21_SAMAN_FATIMA,HSSC,,Pre-Engineering,,Pakistan,FBISE,,2010.0,78.81,78.81,,,,,,,,
+111,21_SAMAN_FATIMA,SSC,,"MATHS, PHYSICS, CHEMISTRY, BIOLOGY",,Pakistan,FBISE,,2008.0,83.41,83.41,,,,,,,,
+112,22_ZEESHAN,PhD,Advanced System Engineering,Informatics,Free University of Bolzano,Italy,,,2025.0,100.0,100.0,,,,,,,,
+113,22_ZEESHAN,MS,Electronics and Communication,Machine Learning,Chongqing University,,,,2020.0,86.0,86.0,,,,,,,,
+114,22_ZEESHAN,BS,Electrical (Telecom) Engineering,Telecommunication,The University of Lancaster- COMSATS Dual degree,,,,2016.0,79.23,79.23,,,,,,,,
+115,22_ZEESHAN,HSSC,FSc,Pre Engineering,Superior College,,,,2011.0,74.0,74.0,,,,,,,,
+116,22_ZEESHAN,SSC,Matric,Science group,Faisalabad,,,,2009.0,83.6,83.6,,,,,,,,
+117,23_WAQAS_TARIQ_TOOR,PhD,Electronics and Communication Engineering,Algorithm development for congestion control in IoT,Hanyang University,South Korea,,,2018.0,,,4.0,4.0,4.0,,301-400,155.0,,
+118,23_WAQAS_TARIQ_TOOR,MS,Electrical Engineering,Wireless Communication,University of Management and Technology Lahore,Pakistan,,,2011.0,,,4.0,4.0,4.0,,,,,Not found in THE or QS rankings
+119,23_WAQAS_TARIQ_TOOR,BS,Electrical Engineering,Electronics and Communication,University of Engineering and Technology Lahore,Pakistan,,,2007.0,68.75,68.75,,,,,1001+,,801-1000,
+120,23_WAQAS_TARIQ_TOOR,HSSC,FSc,Pre Engineering,BISE BWP,Pakistan,BISE BWP,,2001.0,82.54,82.54,,,,,,,,"Not a university, BISE stands for Board of Intermediate and Secondary Education"
+121,23_WAQAS_TARIQ_TOOR,SSC,Matric,Science,BISE BWP,Pakistan,BISE BWP,,2000.0,83.88,83.88,,,,,,,,"Not a university, BISE stands for Board of Intermediate and Secondary Education"
+122,24_AHMED_NAEEM,MS,Electrical-Electronics Engineering,Wireless Communication Technologies and Cyber Systems and Cyber Security,Istanbul Medipol University,Turkey,,2020.0,2025.0,,,3.29,4.0,3.29,,,,,not in THE/QS
+123,24_AHMED_NAEEM,MS,Electrical Engineering,Machine Learning,National University of Computer and Emerging Sciences (FAST),Pakistan,,2016.0,2019.0,,,3.53,4.0,3.53,,1001+,,,
+124,24_AHMED_NAEEM,BS,Electrical Engineering,Majors in Communications,National University of Computer and Emerging Sciences (FAST),Pakistan,,2012.0,2016.0,,,2.71,4.0,2.71,,1001+,,,
+125,24_AHMED_NAEEM,HSSC,Intermediate,Pre-Engineering,Peshawar Board,Pakistan,Peshawar Board,2010.0,2012.0,74.8,74.8,,,,,,,,"not a university, a Pakistani examination board"
+126,24_AHMED_NAEEM,SSC,GCE O-level,Science,"University of Cambridge, UK",UK,"University of Cambridge, UK",2007.0,2009.0,68.78,68.78,,,,3.0,,3.0,,
+127,25_MUHAMMAD_ADEEL_ALTAF,PhD,PhD in Electronic and Electrical Engineering,Intelligent Systems and Control,"Kyungpook National University, Daegu",South Korea,,,2026.0,,,3.8,4.0,3.8,,501-600,,561-570,
+128,25_MUHAMMAD_ADEEL_ALTAF,MS,MS in Electronic Engineering,Communications and Networks,"International Islamic University, Islamabad",Pakistan,,,2016.0,,,3.35,4.0,3.35,,1001+,,,
+129,25_MUHAMMAD_ADEEL_ALTAF,BS,Computer Systems Engineering,Security system,"Bahauddin Zakariya University, Multan",Pakistan,,,2011.0,2.53,2.53,,,,,1001+,,,
+130,25_MUHAMMAD_ADEEL_ALTAF,HSSC,Fsc,Pre-Engineering,BISE Multan,Pakistan,BISE Multan,,2006.0,61.0,61.0,,,,,,,,not a university
+131,25_MUHAMMAD_ADEEL_ALTAF,SSC,Matriculation,Science group,BISE Multan,Pakistan,BISE Multan,,2004.0,60.0,60.0,,,,,,,,not a university
+132,26_AAMINA_AKBAR,PhD,Electrical (Communication),"Wireless Communication, Convex Optimization",Institute of Space Technology,Pakistan,,,2025.0,,,3.83,4.0,3.83,,,,,not in THE/QS
+133,26_AAMINA_AKBAR,MS,Electrical (Telecom),Telecommunication,Center for Advanced Studies in Engineering (CASE),Pakistan,,,2013.0,,,3.9,4.0,3.9,,,,,not in THE/QS
+134,26_AAMINA_AKBAR,BE,Electrical (Telecom),Telecommunication,NUST,Pakistan,,,2010.0,2.63,2.63,,,,,1001+,,,
+135,26_AAMINA_AKBAR,HSSC,,Pre-Engineering,,Pakistan,Federal Board,,2006.0,76.0,76.0,,,,,,,,
+136,26_AAMINA_AKBAR,SSC,,Science,,Pakistan,Federal Board,,2004.0,88.0,88.0,,,,,,,,
+137,27_SHAHEER,PhD,,POWER ELECTRONICS,University Malaysia Pahang,,,,2021.0,,,4.0,4.0,4.0,,,,,
+138,27_SHAHEER,Masters,electrical control systems,,Hogskolan Dalarna,,,,2006.0,,,4.0,4.0,4.0,,,,,
+139,27_SHAHEER,MBA,,Human Resource Management,University of Peshawar,,,,2012.0,64.0,64.0,,,,,,,,
+140,27_SHAHEER,Bachelor,electrical engineering,,"University of engineering and technology,Peshawar",,,,2003.0,67.0,67.0,,,,,1001+,,,
+141,27_SHAHEER,HSSC,,pre engineering,,,federal board of intermediate n secondary education,,1996.0,61.0,61.0,,,,,,,,
+142,27_SHAHEER,SSC,,science,,,federal board of intermediate n secondary education,,1994.0,68.0,68.0,,,,,,,,
+143,28_IDRIS_KHAN,MS,Renewable Power,,North China Electric Power University Beijing,China,,,2018.0,87.0,87.0,,,,,1001+,,,
+144,28_IDRIS_KHAN,MS,Power Systems and Automation,,North China Electric Power University Beijing,China,,,2014.0,83.0,83.0,,,,,1001+,,,
+145,28_IDRIS_KHAN,BS,Electrical Engineering,,UET Peshawar,Pakistan,,,2006.0,73.0,73.0,,,,,1001+,,,
+146,28_IDRIS_KHAN,HSSC,,,BISE Peshawar,Pakistan,,,2001.0,74.0,74.0,,,,,,,,"not a university, it's a board of intermediate and secondary education"
+147,28_IDRIS_KHAN,SSC,,,BISE Swat,Pakistan,,,1999.0,80.0,80.0,,,,,,,,"not a university, it's a board of intermediate and secondary education"
+148,29_MUHAMMAD_SARMAD_TARIQ,HSSC,Pre-Engineering,Pre-Engineering,Cambridge,,Cambridge O Levels,,2009.0,90.0,90.0,,,,3.0,,3.0,,
+149,29_MUHAMMAD_SARMAD_TARIQ,HSSC,Pre-Engineering,Pre-Engineering,Cambridge,,Cambridge A Levels,,2011.0,95.0,95.0,,,,3.0,,3.0,,
+150,29_MUHAMMAD_SARMAD_TARIQ,BS,Electrical Engineering,Electrical Engineering,Lahore University of Management Sciences,Pakistan,,,2015.0,,,3.1,4.0,3.1,,1001+,,651-700,
+151,29_MUHAMMAD_SARMAD_TARIQ,MS,Masters in Electrical Engineering,Power Systems,University of New South Wales,Australia,,,2017.0,76.0,76.0,,,,65.0,,44.0,,
+152,29_MUHAMMAD_SARMAD_TARIQ,PhD,PhD in Electrical Engineering,Power Systems,University of North Carolina Charlotte,USA,,,2024.0,,,3.8,4.0,3.8,,1001+,,,
+153,30_FAHD_SIKANDAR_KHAN,PhD,Doctor of Engineering,Interdisciplinary,University of Tokyo,Japan,,,2019.0,,,3.91,4.0,3.91,27.0,,23.0,,
+154,30_FAHD_SIKANDAR_KHAN,MS,Masters in Science,Thin film fabrication,University of Tokyo,Japan,,,2016.0,,,3.61,4.0,3.61,27.0,,23.0,,
+155,30_FAHD_SIKANDAR_KHAN,BS,,Electrical Engineering Computers,UET-Taxila,Pakistan,,,2010.0,,,3.01,4.0,3.01,,1001+,,,Pakistani national university
+156,30_FAHD_SIKANDAR_KHAN,HSSC,A-Levels,,Cambridge,,,,2006.0,78.7,78.7,,,,3.0,,3.0,,
+157,30_FAHD_SIKANDAR_KHAN,SSC,O-Levels,,Cambridge,,,,2004.0,81.1,81.1,,,,3.0,,3.0,,
+158,31_USMAN_MASUD,PhD,Electrical Engineering,Electrical and electronics engineering,University of Kassel,Germany,,,2014.0,,,4.0,4.0,4.0,,801-1000,,701-750,
+159,31_USMAN_MASUD,MSc,Electrical Engineering,Electrical and electronics engineering,University of Kassel,Germany,,,2010.0,,,4.0,4.0,4.0,,801-1000,,701-750,
+160,31_USMAN_MASUD,Postgraduate Diploma,Telecommunications,Telecommunications Engineering,National University of Sciences and Engineering Technology,,,,2007.0,,,2.67,4.0,2.67,,1001+,,701+,
+161,31_USMAN_MASUD,BSc,Electrical Engineering,Electrical and electronics engineering,"University of Engineering and Technology, Taxila",,,,2005.0,80.0,80.0,,,,,1001+,,701+,
+162,31_USMAN_MASUD,HSSC,,Pre-Engineering,,,Federal Board,,2001.0,83.0,83.0,,,,,,,,
+163,31_USMAN_MASUD,SSC,,Science,,,Federal Board,,1999.0,84.0,84.0,,,,,,,,
+164,32_QAISAR_HUSSAIN_ALVI,PhD,Electrical Engineering,Electronics and Communication,"UET, Taxila",Pakistan,,,,,,3.16,4.0,3.16,,1001+,,,
+165,32_QAISAR_HUSSAIN_ALVI,MS,Electrical Engineering,Electronics and Communication,"UET, Taxila",Pakistan,,,,,,3.41,4.0,3.41,,1001+,,,
+166,32_QAISAR_HUSSAIN_ALVI,BS,Electronics Engineering,Electronics and Communication,NED UET Karachi,Pakistan,,,,76.07,76.07,,,,,801-1000,,,
+167,32_QAISAR_HUSSAIN_ALVI,HSSC,F.Sc,Pre-Engineering,,Pakistan,Faisalabad Board,,,74.81,74.81,,,,,,,,
+168,32_QAISAR_HUSSAIN_ALVI,SSC,,Science,,Pakistan,Faisalabad Board,,,81.87,81.87,,,,,,,,
+169,33_QAMAR_ABBAS,PhD,PhD,Internet of thing,SEECS NUST,Pakistan,,,,,,3.5,4.0,3.5,,801-1000,,701-750,
+170,33_QAMAR_ABBAS,MS,MS,Internet of thing,University of Lahore,Pakistan,,,,,,3.64,4.0,3.64,,1001+,,701-750,
+171,33_QAMAR_ABBAS,BS,BS,Computer Engineering,COMSATS Islamabad,Pakistan,,,,73.0,73.0,,,,,801-1000,,751-800,
+172,33_QAMAR_ABBAS,HSSC,FSC Pre Engineering,,KIU,Pakistan,,,,69.0,69.0,,,,,,,,not in THE/QS
+173,33_QAMAR_ABBAS,SSC,SSC Science,,,Pakistan,FBISE,,,69.0,69.0,,,,,,,,
+174,34_SHAHZAD,PhD,Intelligent Mechatronics Engineering,Computer Networks,Sejong University,South Korea,,,2024.0,,,4.13,5.0,3.304,,601-800,,,
+175,34_SHAHZAD,MS,Computer Engineering,Computer Networks,Hongik University,South Korea,,,2020.0,,,4.31,5.0,3.448,,,,,
+176,34_SHAHZAD,BS,Electrical (Computer) Engineering,"Computer Architecture, Computer Networks",Comsats University Islamabad,Pakistan,,,2015.0,,,3.26,4.0,3.26,,801-1000,,701-750,
+177,34_SHAHZAD,HSSC,FSc Pre Engineering,,,,BISE D I Khan,,2011.0,64.0,64.0,,,,,,,,
+178,34_SHAHZAD,Matric,,,,,BISE D I Khan,,2008.0,74.0,74.0,,,,,,,,
+179,35_MATIULLAH_AHSAN,PhD,Electrical Engineering,"Electrical Power System, High Voltage, Artificial Intelligence",Universiti Tun Hussein Onn Malaysia,Malaysia,,,2025.0,85.0,85.0,,,,,601-800,801.0,,THE and QS rankings are for 2022 or latest available
+180,35_MATIULLAH_AHSAN,MS,Electrical Power Engineering,,CECOS University of IT and Emerging Sciences,,,,2019.0,,,3.04,4.0,3.04,,1001+,,,Pakistani national ranking; not in top 1000 QS or THE
+181,35_MATIULLAH_AHSAN,BS,Electrical Communication Engineering,,"University of Engineering and Technology, Peshawar",,,,2014.0,2.27,2.27,,,,,1001+,,701+,THE and QS rankings are for 2022 or latest available
+182,35_MATIULLAH_AHSAN,HSSC,Pre-engineering,,,,Peshawar board,,2009.0,72.9,72.9,,,,,,,,
+183,35_MATIULLAH_AHSAN,SSC,Science,,,,Peshawar,,2006.0,70.28,70.28,,,,,,,,
+184,36_SAMANA_BATOOL,PhD,Electrical Engineering,Artificial Intelligence in medical domain,CUST,,,,,,,4.0,4.0,4.0,,,,,"not found in recent rankings, possibly referred to as USTC (University of Science and Technology of China)"
+185,36_SAMANA_BATOOL,MS,Computer Engineering,Computer Engineering,UET,,,,,,,3.3,4.0,3.3,,801-1000,,,
+186,36_SAMANA_BATOOL,BE,Electrical Engineering,Electrical Engineering,NUST,,,,,,,3.57,4.0,3.57,,801-1000,,701-750,
+187,36_SAMANA_BATOOL,HSSC,Pre-Engineering,,,,FBISE,,,76.0,76.0,,,,,,,,
+188,36_SAMANA_BATOOL,SSC,Science,,,,FBISE,,,77.0,77.0,,,,,,,,
+189,37_SANIA_GUL,PhD,Electrical Engineering,,UET Peshawar,Pakistan,,,2021.0,,,3.95,4.0,3.95,,,,,not in THE/QS
+190,37_SANIA_GUL,MSc,Electrical Engineering,,UET Peshawar,Pakistan,,,2006.0,,,3.88,4.0,3.88,,,,,not in THE/QS
+191,37_SANIA_GUL,BSc,Electrical Engineering,,UET,Pakistan,,,2001.0,76.0,76.0,,,,,801-1000,,701+,
+192,37_SANIA_GUL,FSc,Pre-Engineering,,,Pakistan,Peshawar,,1996.0,81.18,81.18,,,,,,,,
+193,37_SANIA_GUL,SSC,Science,,,Pakistan,Peshawar,,1994.0,82.3,82.3,,,,,,,,
+194,38_MUHAMMAD_MUSADIQ,PhD,Electrical Engineering,Power Systems,The Islamia University of Bahawalpur,Pakistan,,,,,,3.95,4.0,3.95,,801-1000,,701+,
+195,38_MUHAMMAD_MUSADIQ,MS,Electrical Engineering,Power Systems,NUST,Pakistan,,,,,,3.9,4.0,3.9,,601-800,355.0,,
+196,38_MUHAMMAD_MUSADIQ,BS,Electrical Engineering,Power,The Islamia University of Bahawalpur,Pakistan,,,,,,3.73,4.0,3.73,,801-1000,,701+,
+197,38_MUHAMMAD_MUSADIQ,HSSC,Pre-Engineering,Pre-Engineering,,,Bahawalpur Board,,,80.0,80.0,,,,,,,,
+198,38_MUHAMMAD_MUSADIQ,SSC,Science,Science,,,BISE Multan,,,88.0,88.0,,,,,,,,
+199,39_MUHAMMAD_SAQIB,PhD,PhD,Electronic Engineering,Jeju National University,South Korea,,,2025.0,,,4.33,5.0,3.464,,,,,
+200,39_MUHAMMAD_SAQIB,MS,MS,Electronic Engineering,Jeju National University,South Korea,,,2021.0,,,4.38,5.0,3.504,,,,,
+201,39_MUHAMMAD_SAQIB,BS,BS,Electronic Engineering,International Islamic University Islamabad (IIUI),Pakistan,,,2018.0,,,3.55,4.0,3.55,,801-1000,,701+,
+202,39_MUHAMMAD_SAQIB,HSSC,F.Sc,Pre-Engineering,,,Board of Intermediate and Secondary Education Rawalpindi,,2013.0,71.27,71.27,,,,,,,,
+203,39_MUHAMMAD_SAQIB,SSC,Matric,Science group,,,Board of Intermediate and Secondary Education Rawalpindi,,2010.0,76.19,76.19,,,,,,,,
+204,40_ABDUR_REHMAN,PhD,Electrical Engineering,"Design of PM Machines, especially flux modulation machines",Kunsan National University,South Korea,,,2023.0,,,4.29,5.0,3.432,,,,,
+205,40_ABDUR_REHMAN,MS,Electrical Engineering,Design of Electric Machines,Kunsan National University,South Korea,,,2019.0,,,4.25,5.0,3.4,,,,,
+206,40_ABDUR_REHMAN,BSc,Electrical Engineering (Electronics),,Federal Urdu University of Arts Science and Technology,Pakistan,,,2015.0,3.13,3.13,,,,,801-1000,,,
+207,40_ABDUR_REHMAN,HSSC,,Pre-Engineering,,,Federal Board of Intermediate and Secondary Education,,2010.0,68.45,68.45,,,,,,,,
+208,40_ABDUR_REHMAN,SSC,,Science,,,Federal Board of Intermediate and Secondary Education,,2008.0,61.65,61.65,,,,,,,,
+209,41_MUHAMMAD_AQEEL,PhD,PhD,Computer Engineering,KFUEIT,Pakistan,,,2025.0,,,3.34,4.0,3.34,,1001+,,,
+210,41_MUHAMMAD_AQEEL,MS,MS,Electronics Engineering,The Islamia University of Bahawalpur,Pakistan,,,2020.0,,,3.47,4.0,3.47,,801-1000,,,
+211,41_MUHAMMAD_AQEEL,BS,BS,Telecommunication Engineering,The Islamia University of Bahawalpur,Pakistan,,,2017.0,,,3.15,4.0,3.15,,801-1000,,,
+212,41_MUHAMMAD_AQEEL,HSSC,HSSC,"Phy, Math, Computer",BISE Bahawalpur,Pakistan,BISE Bahawalpur,,2013.0,65.0,65.0,,,,,,,,not in THE/QS
+213,41_MUHAMMAD_AQEEL,Matric,Matric,"Phy, Math, Ch, Bio",BISE Bahawalpur,Pakistan,BISE Bahawalpur,,2010.0,67.0,67.0,,,,,,,,not in THE/QS
+214,42_SAQIB_JAMIL,PhD,Electrical Engineering,Plasmonics,Sarhad University Peshawar,Pakistan,,,2023.0,,,3.42,4.0,3.42,,1001+,,,
+215,42_SAQIB_JAMIL,MPhil,Electrical Engineering,Communication and Electronics,UET Peshawar,Pakistan,,,2015.0,,,3.49,4.0,3.49,,1001+,,,
+216,42_SAQIB_JAMIL,BS,Electrical Engineering,Communication,UET Peshawar,Pakistan,,,2010.0,,,2.35,4.0,2.35,,1001+,,,
+217,42_SAQIB_JAMIL,HSSC,Pre-Engineering,,,,BISEP,,2005.0,64.0,64.0,,,,,,,,
+218,42_SAQIB_JAMIL,SSC,Science,,,,FBISE,,2003.0,64.0,64.0,,,,,,,,
+219,43_AMMARA_NASIM,PhD,Computer Engineering,"Computer Vision, AI, Deep Learning","NUST,CEME",Pakistan,,,2025.0,,,3.92,4.0,3.92,,,,,"Part of NUST, specific rankings not available"
+220,43_AMMARA_NASIM,MSEE,Telecommunication and Signal Processing,,UET Taxila,Pakistan,,,2016.0,,,3.5,4.0,3.5,,801-1000,,,Pakistani national ranking
+221,43_AMMARA_NASIM,BEE,,"electronics, Signal Processing, Image Processing ,FPGA","NUST,SEECS",Pakistan,,,2012.0,,,3.03,4.0,3.03,,,,,"Part of NUST, specific rankings not available"
+222,43_AMMARA_NASIM,FSC,Pre-Engineering,,,,Federal,,2008.0,80.3,80.3,,,,,,,,
+223,43_AMMARA_NASIM,Matric,Science,,,,Federal,,2008.0,89.5,89.5,,,,,,,,
+224,09_SANA_FATIMA_RIZVI,PhD,PhD,"Machine Learning, NLP",Beihang University,China,,,2023.0,,,3.82,4.0,3.82,,,,,
+225,09_SANA_FATIMA_RIZVI,MS,MS,Artificial Intelligence,"University of Engineering & Technology, Taxila",Pakistan,,,2016.0,,,3.65,4.0,3.65,,,,,
+226,09_SANA_FATIMA_RIZVI,BS,BS,Software Engineering,"University of Engineering & Technology, Taxila",Pakistan,,,2012.0,,,,,,,,,,
+227,09_SANA_FATIMA_RIZVI,HSSC,FSc,Pre Engineering,,Pakistan,BISE Rawalpindi,,2008.0,71.0,71.0,,,,,,,,
+228,Muhammad_Dawood_Rizwan_CV,Bachelor,Bachelor of Information Technology,,Punjab University College of Information Technology (PUCIT),Pakistan,,2020.0,2024.0,,,,,,,,,,Constituent college of the University of the Punjab; not ranked separately in global rankings.
+229,Muhammad_Dawood_Rizwan_CV,Fellowship,,,RPTU TU Kaiserslautern,Germany,,2025.0,2025.0,,,,,,,401-500,,401-410,RPTU is the merged entity of TU Kaiserslautern and TU Ludwigshafen; rankings often still list the institution as TU Kaiserslautern.

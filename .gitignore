@@ -13,17 +13,12 @@ venv/
 env/
 .venv/
 
-# Data files — keep directory structure (.gitkeep) but not actual data
-data/extracted/*
-!data/extracted/.gitkeep
+# Heavy raw PDFs and logs
+data/cvs/*.pdf
+data/cvs/split/*.pdf
+data/uploads/*.pdf
 data/logs/*
 !data/logs/.gitkeep
-data/cvs/*
-!data/cvs/.gitkeep
-data/uploads/*
-!data/uploads/.gitkeep
-data/analysis/*.csv
-data/analysis/jd_matches/*/
 
 # Scratch and temp files
 scratch/
