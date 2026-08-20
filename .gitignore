@@ -3,26 +3,30 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Environment variables
+# Environment variables — NEVER commit real secrets
 .env
 .env.*
+!.env.example
 
 # Virtual environment
 venv/
 env/
 .venv/
 
-# Data and logs (we don't want to commit the extracted data or logs, just the structure)
+# Data files — keep directory structure (.gitkeep) but not actual data
 data/extracted/*
 !data/extracted/.gitkeep
 data/logs/*
 !data/logs/.gitkeep
 data/cvs/*
 !data/cvs/.gitkeep
+data/uploads/*
+!data/uploads/.gitkeep
+data/analysis/*.csv
+data/analysis/jd_matches/*/
 
-# Scratch scripts and temporary uploads
+# Scratch and temp files
 scratch/
-data/uploads/
 
 # OS specific files
 .DS_Store

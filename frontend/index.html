@@ -955,7 +955,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; 
       <div class="status-dot offline" id="api-dot"></div>
       <div class="status-info">
         <div class="status-label" id="api-label">Checking API…</div>
-        <div class="status-sub">localhost:8000</div>
+        <div class="status-sub" id="api-host">loading…</div>
       </div>
     </div>
   </div>
@@ -1530,9 +1530,19 @@ const RAW=[
 ];
 
 /* ═══════════════════════════════════
+   API BASE — auto-detects production vs local
+   On Railway / any cloud host:  uses window.location.origin (same host)
+   Locally:                      falls back to localhost:8080
+═══════════════════════════════════ */
+const API_BASE = (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost')
+  ? `${window.location.protocol}//${window.location.hostname}:8080`
+  : window.location.origin;
+
+/* ═══════════════════════════════════
    STATE
 ═══════════════════════════════════ */
 let allData=[...RAW], currentPanel=null;
+
 let suitChart=null, distChart=null, radarChart=null;
 const DEFAULT_WEIGHTS={research:25,education:20,experience:15,supervision:10,innovation:10,breadth:10,collab:10};
 
@@ -1588,8 +1598,10 @@ document.querySelectorAll('[data-page]').forEach(el=>el.addEventListener('click'
    API CHECK
 ═══════════════════════════════════ */
 async function checkAPI(){
+  const hostEl=document.getElementById('api-host');
+  if(hostEl) hostEl.textContent=window.location.hostname+(window.location.port?':'+window.location.port:'');
   try{
-    const r=await fetch('http://127.0.0.1:8000/api/v1/health',{signal:AbortSignal.timeout(2000)});
+    const r=await fetch(`${API_BASE}/api/v1/health`,{signal:AbortSignal.timeout(3000)});
     if(r.ok){document.getElementById('api-dot').classList.remove('offline');document.getElementById('api-label').textContent='API Online';return true;}
   }catch{}
   document.getElementById('api-dot').classList.add('offline');
@@ -1600,7 +1612,7 @@ async function fetchLiveData(){
   const online=await checkAPI();
   if(online){
     try{
-      const r=await fetch('http://127.0.0.1:8000/api/v1/candidates');
+      const r=await fetch(`${API_BASE}/api/v1/candidates');
       if(r.ok){
         const d=await r.json();
         if(d&&d.length){
@@ -1977,7 +1989,7 @@ document.getElementById('email-sel').addEventListener('change',async function(){
   const c=allData.find(x=>x.candidate_id===id);
   document.getElementById('email-out').innerHTML='<div style="padding:32px;display:flex;align-items:center;gap:12px;color:var(--fg-3);font-size:13px"><div class="spinner"></div>AI is drafting a personalised email…</div>';
   let subject='',body='';
-  try{const r=await fetch(`http://127.0.0.1:8000/api/v1/email/${id}`,{signal:AbortSignal.timeout(8000)});if(r.ok){const d=await r.json();subject=d.subject;body=d.body;}}catch{}
+  try{const r=await fetch(`${API_BASE}/api/v1/email/${id}`,{signal:AbortSignal.timeout(8000)});if(r.ok){const d=await r.json();subject=d.subject;body=d.body;}}catch{}
   if(!subject){
     // Build a personalised fallback using the candidate's actual data
     subject=`Information Request: Faculty Application — ${c.candidate_name}`;
@@ -2037,7 +2049,7 @@ async function loadJDHistory() {
   const sel = document.getElementById('jd-history-select');
   if (!sel) return;
   try {
-    const r = await fetch('http://127.0.0.1:8000/api/v1/jd/list');
+    const r = await fetch(`${API_BASE}/api/v1/jd/list');
     if (r.ok) {
       const data = await r.json();
       const jds = data.jds || [];
@@ -2069,7 +2081,7 @@ async function parseAndSetActiveJD() {
   }
 
   try {
-    const r = await fetch('http://127.0.0.1:8000/api/v1/jd/upload', { method: 'POST', body: fd });
+    const r = await fetch(`${API_BASE}/api/v1/jd/upload', { method: 'POST', body: fd });
     if (r.ok) {
       const d = await r.json();
       activeJDId = d.jd_id;
@@ -2089,7 +2101,7 @@ async function loadSelectedJDFromHistory() {
   const jdId = document.getElementById('jd-history-select').value;
   if (!jdId) return;
   try {
-    const r = await fetch(`http://127.0.0.1:8000/api/v1/jd/${jdId}/results`);
+    const r = await fetch(`${API_BASE}/api/v1/jd/${jdId}/results`);
     if (r.ok) {
       const d = await r.json();
       activeJDId = d.jd_id;
@@ -2185,7 +2197,7 @@ async function runJDEvaluation() {
   }
 
   try {
-    const r = await fetch(`http://127.0.0.1:8000/api/v1/jd/${activeJDId}/evaluate`, { method: 'POST', body: fd });
+    const r = await fetch(`${API_BASE}/api/v1/jd/${activeJDId}/evaluate`, { method: 'POST', body: fd });
     if (r.ok) {
       const d = await r.json();
       if (mode === 'new') {
@@ -2365,7 +2377,7 @@ function evaluateCandidateAgainstJD(cid) {
 async function triggerFullPipelineForNewCV() {
   if (!lastEvaluatedNewCVID) return;
   try {
-    const r = await fetch(`http://127.0.0.1:8000/api/v1/analyze/${lastEvaluatedNewCVID}`, { method: 'POST' });
+    const r = await fetch(`${API_BASE}/api/v1/analyze/${lastEvaluatedNewCVID}`, { method: 'POST' });
     if (r.ok) {
       toast('Full 10-module rubric analysis queued in background for candidate ' + lastEvaluatedNewCVID);
       document.getElementById('jd-new-cv-prompt-banner').style.display = 'none';
@@ -2402,7 +2414,7 @@ function handleFiles(files){
     li.appendChild(bulkBar);
 
     const fd=new FormData();fd.append('file',f);
-    fetch('http://127.0.0.1:8000/api/v1/upload',{method:'POST',body:fd,signal:AbortSignal.timeout(20000)})
+    fetch(`${API_BASE}/api/v1/upload',{method:'POST',body:fd,signal:AbortSignal.timeout(20000)})
       .then(r=>r.ok?r.json():r.json().then(e=>Promise.reject(e.detail||'Upload failed')))
       .then(d=>{
         const cid=d.candidate_id;
@@ -2423,7 +2435,7 @@ function handleFiles(files){
 
         const poll=setInterval(async()=>{
           try{
-            const sr=await fetch(`http://127.0.0.1:8000/api/v1/status/${cid}`,{signal:AbortSignal.timeout(5000)});
+            const sr=await fetch(`${API_BASE}/api/v1/status/${cid}`,{signal:AbortSignal.timeout(5000)});
             if(!sr.ok)return;
             const s=await sr.json();
             const msg=s.message||'Processing\u2026';
