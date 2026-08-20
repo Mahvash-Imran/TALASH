@@ -465,21 +465,6 @@ All module outputs are written to `data/analysis/`.
 
 ---
 
-## Deployment
-
-The application is fully containerised. A `Dockerfile` and `railway.toml` are included for one-click deployment on Railway.
-
-```bash
-docker build -t talash .
-docker run -p 8080:8080 --env-file .env talash
-```
-
-For Railway deployment, connect the GitHub repository at [railway.app](https://railway.app), add the three environment variables from `.env.example` in the Railway Variables tab, and attach a persistent volume mounted at `/app/data` to preserve candidate data and JD match results across restarts.
-
-The frontend auto-detects whether it is running locally or on a cloud host and adjusts all API calls accordingly. No frontend configuration changes are required between environments.
-
----
-
 ## Development Status
 
 The following additions are planned for subsequent development cycles: WebSocket-based real-time pipeline progress streaming, persistent candidate storage using a relational database backend, export functionality for ranked reports in PDF and Excel formats, role-based access control for multi-user institutional deployment, and an email delivery integration for the Email Center page.
