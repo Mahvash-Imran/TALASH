@@ -1,8 +1,8 @@
-﻿# TALASH
+# TALASH
 
 **Talent Acquisition and Longitudinal Academic Scoring for Higher Education**
 
-TALASH is an automated faculty candidate evaluation system developed for the Higher Education Commission of Pakistan. It ingests PDF curricula vitae, parses and normalises structured data across nine domain modules, computes a composite suitability score across seven academic dimensions, and exposes results through a REST API and an interactive single-page dashboard.
+TALASH is an automated faculty candidate evaluation system developed for the Higher Education Commission of Pakistan. It ingests PDF curricula vitae, parses and normalises structured data across nine domain modules, computes a composite suitability score across seven academic dimensions, matches candidates against job descriptions using AI, and exposes results through a REST API and an interactive single-page dashboard.
 
 The system is designed to eliminate manual screening bottlenecks in large-scale faculty recruitment cycles, where evaluation committees are required to assess dozens to hundreds of CVs against a standardised rubric of academic merit.
 
@@ -12,16 +12,18 @@ The system is designed to eliminate manual screening bottlenecks in large-scale 
 
 1. [Architecture Overview](#architecture-overview)
 2. [Module Pipeline](#module-pipeline)
-3. [Scoring Dimensions](#scoring-dimensions)
-4. [Repository Structure](#repository-structure)
-5. [Installation](#installation)
-6. [Configuration](#configuration)
-7. [Running the Pipeline](#running-the-pipeline)
-8. [API Reference](#api-reference)
-9. [Frontend Dashboard](#frontend-dashboard)
-10. [Output Artefacts](#output-artefacts)
-11. [Technology Stack](#technology-stack)
-12. [Development Status](#development-status)
+3. [Module 11: Job Description Matching](#module-11-job-description-matching)
+4. [Scoring Dimensions](#scoring-dimensions)
+5. [Repository Structure](#repository-structure)
+6. [Installation](#installation)
+7. [Configuration](#configuration)
+8. [Running the Pipeline](#running-the-pipeline)
+9. [API Reference](#api-reference)
+10. [Frontend Dashboard](#frontend-dashboard)
+11. [Output Artefacts](#output-artefacts)
+12. [Technology Stack](#technology-stack)
+13. [Deployment](#deployment)
+14. [Development Status](#development-status)
 
 ---
 
@@ -51,10 +53,13 @@ Modules 3-10: Domain Analysis
   |            +-- Module 10: Composite Scoring and Ranking
   |
   v
-data/analysis/   <-- CSVs, XLSX, text reports
+Module 11: Job Description Matching (independent, on-demand)
   |
   v
-FastAPI REST API  <-- /api/v1/candidates, /api/v1/email/{id}, /api/v1/upload
+data/analysis/   <-- CSVs, XLSX, text reports, JD match results
+  |
+  v
+FastAPI REST API  <-- /api/v1/candidates, /api/v1/jd/*, /api/v1/email/{id}
   |
   v
 Frontend Dashboard  <-- Single-page application (vanilla JS/CSS)
@@ -126,6 +131,51 @@ Entry point: `pipeline_orchestrator.py` (full pipeline) or `run_batch.py` (scori
 
 ---
 
+## Module 11: Job Description Matching
+
+Module 11 is an independent, on-demand feature added to complement the core evaluation pipeline. It allows a hiring committee to paste or upload a Job Description and instantly receive ranked match scores for any selection of candidates, without needing to re-run the full evaluation pipeline.
+
+### How It Works
+
+A Job Description is submitted as plain text or a PDF through the dashboard or API. The system parses it to extract the required degree level, minimum years of experience, and required technical skills. Each candidate is then scored against the JD across three dimensions: degree eligibility, experience adequacy, and skill overlap. A weighted composite match score is computed and each candidate is assigned a fit tier.
+
+**Fit tiers**
+
+- Strong Fit: 75 percent and above
+- Moderate Fit: 50 to 74 percent
+- Weak Fit: below 50 percent
+
+### Candidate-Specific AI Rationale
+
+Every match result includes a dynamically generated natural-language rationale unique to each candidate. The rationale states the candidate's degree, years of experience, which required skills were matched, which were missing, and whether the experience threshold was met. This replaces generic or identical explanations with meaningful, candidate-specific reasoning.
+
+### New CV Upload for JD Screening
+
+A new CV PDF can be uploaded directly on the JD Match page without running the full pipeline. The system extracts experience from date ranges in the employment section, identifies the highest degree, and detects skills from a broad technical keyword vocabulary aligned with the JD requirements. The candidate is immediately scored against the active JD and the result is stored historically.
+
+After a new CV is screened, the dashboard offers an option to trigger the full 10-module rubric evaluation for that candidate.
+
+### Historical JD Storage
+
+Each uploaded Job Description is saved with a unique identifier in `data/analysis/jd_matches/`. Match results are persisted as CSV files alongside the parsed JD and original text. Previously uploaded JDs can be loaded from a history dropdown without re-uploading, and their stored results are retrieved instantly.
+
+### Experience Extraction Accuracy
+
+The experience parser is section-aware. It locates the professional experience section of the CV and sums only the date ranges found there, avoiding double-counting of education period date ranges. It also recognises explicit experience statements such as "12 years of experience" and uses them as a direct input when present.
+
+### JD Match API Endpoints
+
+All JD endpoints are prefixed with `/api/v1/jd`.
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/v1/jd/upload` | Upload a new JD as text or PDF. Returns parsed JD metadata and a unique JD ID. |
+| GET | `/api/v1/jd/list` | Returns a list of all historically stored JDs with candidate counts. |
+| POST | `/api/v1/jd/{jd_id}/evaluate` | Evaluates selected existing candidates or a new uploaded CV against the specified JD. |
+| GET | `/api/v1/jd/{jd_id}/results` | Returns stored match results for a previously evaluated JD. |
+
+---
+
 ## Scoring Dimensions
 
 The composite score is a weighted sum across seven dimensions. Default weights are indicated below.
@@ -158,7 +208,7 @@ Dimension weights are adjustable at runtime through the frontend dashboard Smart
 ```
 talash/
 |
-|-- analysis/                   Domain analysis modules (M3-M10)
+|-- analysis/                   Domain analysis modules (M3-M10) and JD matching (M11)
 |   |-- educational_profile.py
 |   |-- research_profile.py
 |   |-- supervision_analysis.py
@@ -167,18 +217,23 @@ talash/
 |   |-- topic_analysis.py
 |   |-- collaboration_analysis.py
 |   |-- composite_scorer.py
+|   |-- jd_parser.py            Module 11: JD text parsing and skill/experience extraction
+|   |-- jd_matcher.py           Module 11: candidate-JD scoring and AI rationale generation
 |
 |-- api/                        FastAPI application
 |   |-- main.py                 Application entry point and static mounts
-|   |-- routes.py               API route handlers
+|   |-- routes.py               Core candidate API route handlers
+|   |-- jd_routes.py            Module 11 JD match API route handlers
 |   |-- schemas.py              Pydantic request/response models
 |
 |-- data/
 |   |-- cvs/                    Raw and split PDF files
 |   |-- extracted/              Module 2 structured CSV outputs
 |   |-- analysis/               Module 3-10 analysis outputs (CSV, XLSX, TXT)
+|   |   |-- jd_matches/         Module 11 JD match results, one subdirectory per JD
 |   |-- rankings/               Reference data (universities, journal lists)
 |   |-- research_cache/         Cached external API responses
+|   |-- uploads/                Uploaded CV PDFs from the JD new-CV workflow
 |   |-- logs/                   Per-module execution logs
 |
 |-- frontend/
@@ -191,10 +246,13 @@ talash/
 |   |-- exporter.py
 |
 |-- pipeline_orchestrator.py    Full end-to-end pipeline runner
+|-- run_jd_matching.py          Module 11 standalone runner and evaluate helper
 |-- run_backend.py              Uvicorn server launcher
 |-- run_batch.py                Scoring-only batch runner
 |-- run_preprocessing.py        Module 1 runner
 |-- run_*.py                    Individual module runners (M3-M9)
+|-- Dockerfile                  Production container definition
+|-- railway.toml                Railway deployment configuration
 |-- requirements.txt
 |-- .env.example
 ```
@@ -211,16 +269,10 @@ python -m venv .venv
 source .venv/bin/activate       # Linux / macOS
 ```
 
-Install core pipeline dependencies:
+Install all dependencies:
 
 ```bash
 pip install -r requirements.txt
-```
-
-Install API server dependencies:
-
-```bash
-pip install fastapi uvicorn python-multipart
 ```
 
 ---
@@ -230,10 +282,12 @@ pip install fastapi uvicorn python-multipart
 Copy `.env.example` to `.env` and populate the required values.
 
 ```
-GROQ_API_KEY=your_groq_api_key_here
+OPENAI_API_KEY=your_groq_api_key_here
+OPENAI_BASE_URL=https://api.groq.com/openai/v1
+OPENAI_MODEL=groq/compound-mini
 ```
 
-The system uses the Groq API for LLM-assisted structured extraction in Module 2. All other modules operate without external API dependencies. Journal quality lookups in Module 4 use cached responses stored in `data/research_cache/` and will only make live requests on cache misses.
+The system uses the Groq API for LLM-assisted structured extraction in Module 2 and for AI-generated candidate rationale in Module 11. All other modules operate without external API dependencies. Journal quality lookups in Module 4 use cached responses stored in `data/research_cache/` and will only make live requests on cache misses. Module 11 scoring is fully heuristic and does not require an LLM call; the LLM is used only to enrich the rationale text when available.
 
 ---
 
@@ -259,13 +313,19 @@ python run_collaboration_analysis.py # Module 9
 python pipeline_orchestrator.py      # Module 10: scoring and ranking
 ```
 
+Module 11 standalone (requires Module 10 output to be present):
+
+```bash
+python run_jd_matching.py
+```
+
 Starting the API server:
 
 ```bash
-python run_backend.py
+python -m uvicorn api.main:app --host 127.0.0.1 --port 8080 --reload
 ```
 
-The server starts on `http://127.0.0.1:8000` by default. Interactive API documentation is available at `/docs` (Swagger UI) and `/redoc` (ReDoc).
+The server starts on `http://127.0.0.1:8080` by default. Interactive API documentation is available at `/docs` (Swagger UI) and `/redoc` (ReDoc).
 
 ---
 
@@ -278,36 +338,12 @@ All endpoints are prefixed with `/api/v1`.
 Returns the operational status of the API server.
 
 ```json
-{
-  "status": "ok",
-  "version": "1.0.0"
-}
+{ "status": "ok", "version": "1.0.0" }
 ```
 
 ### GET /api/v1/candidates
 
 Returns the ranked list of all evaluated candidates with composite scores, dimension scores, suitability tier, missing information count, and upload timestamp.
-
-```json
-[
-  {
-    "candidate_id": "04_MUHAMMAD_FARRUKH",
-    "candidate_name": "Muhammad Farrukh Qureshi",
-    "overall_composite_score": 53.0,
-    "candidate_tier": "Tier 3: Moderate Candidate",
-    "education_score": 10,
-    "research_score": 5,
-    "experience_score": 15,
-    "supervision_score": 2,
-    "innovation_score": 2,
-    "breadth_score": 3,
-    "collaboration_score": 10,
-    "status": "done",
-    "missing_info_count": 2,
-    "uploaded_at": "2026-07-19T10:00:00"
-  }
-]
-```
 
 ### GET /api/v1/candidates/{candidate_id}
 
@@ -317,47 +353,57 @@ Returns the full evaluation profile for a single candidate.
 
 Returns an AI-drafted follow-up email template for candidates with missing information flags.
 
-```json
-{
-  "candidate_id": "04_MUHAMMAD_FARRUKH",
-  "subject": "Faculty Position Application — Additional Information Required",
-  "body": "..."
-}
-```
-
 ### POST /api/v1/upload
 
-Accepts a PDF file upload and returns a processing acknowledgement. The uploaded file is queued for processing through the full pipeline.
+Accepts a PDF file upload and queues it for processing through the full pipeline.
 
-Content-Type: `multipart/form-data`  
-Form field: `file` (PDF)
+Content-Type: `multipart/form-data` — Form field: `file` (PDF)
+
+### POST /api/v1/jd/upload
+
+Uploads a new Job Description as plain text or PDF. Returns parsed metadata including extracted title, required degree, minimum experience, required skills, and a unique JD ID for subsequent evaluation calls.
+
+### GET /api/v1/jd/list
+
+Returns a summary list of all historically stored Job Descriptions with titles, creation timestamps, and candidate match counts.
+
+### POST /api/v1/jd/{jd_id}/evaluate
+
+Evaluates one or more candidates against the specified JD. Accepts either a comma-separated list of existing candidate IDs or a new CV PDF file upload. Returns ranked match results with scores, skill match details, fit tiers, and AI-generated rationale for each candidate.
+
+### GET /api/v1/jd/{jd_id}/results
+
+Returns stored match results for a previously evaluated JD without re-running the evaluation.
 
 ---
 
 ## Frontend Dashboard
 
-The dashboard is a self-contained single-page application written in vanilla JavaScript and CSS with no build step or external framework dependency. It loads embedded candidate data by default and attempts to fetch live data from the API on startup.
-
-When the backend is running, the dashboard is served at `http://127.0.0.1:8000`. For offline use, open `frontend/index.html` directly in any modern browser.
+The dashboard is a self-contained single-page application written in vanilla JavaScript and CSS with no build step or external framework dependency. It loads embedded candidate data by default and attempts to fetch live data from the API on startup. The API base URL is detected automatically from `window.location.origin`, making the dashboard work correctly in both local and cloud-hosted environments without code changes.
 
 **Pages**
 
 | Page | Description |
 |---|---|
-| Dashboard | KPI summary cards, pipeline stage bar, recent candidate table, score distribution chart, top-ranked candidate highlights |
+| Dashboard | Hero banner with live stats, KPI summary cards, pipeline stage bar, recent candidate table, score distribution chart, and top-ranked candidate highlights |
 | AI Recommendations | Full ranked candidate list with real-time re-ranking via adjustable dimension weight sliders |
-| Candidates | Searchable, sortable, filterable table of all candidates with score visualisations |
-| Compare | Side-by-side dimensional score comparison for any two selected candidates |
+| Candidates | Searchable, sortable, filterable table of all candidates with score visualisations and a JD Match shortcut button per row |
+| Compare | Side-by-side dimensional score comparison for any two or three selected candidates |
 | Email Center | Personalised follow-up email generation for flagged candidates |
+| JD Match | Job description upload, candidate selection, match evaluation, historical JD results, and new CV upload for instant JD screening |
 | Upload CVs | Drag-and-drop PDF upload interface with processing queue |
 
 **Smart Weighting**
 
-The AI Recommendations page includes a weight control panel with seven range sliders corresponding to each scoring dimension. Adjusting any slider recomputes the weighted composite score and re-ranks all candidates in real time without modifying stored database values. This allows evaluation committees to explore alternative prioritisation scenarios interactively.
+The AI Recommendations page includes a weight control panel with seven range sliders corresponding to each scoring dimension. Adjusting any slider recomputes the weighted composite score and re-ranks all candidates in real time without modifying stored database values.
+
+**JD Match Tab**
+
+The JD Match page is a dedicated output tab for Module 11. It supports two workflows. In the existing-candidates workflow, a committee selects any subset of evaluated candidates and runs them against a loaded JD. In the new-CV workflow, a fresh PDF resume is uploaded and screened against the JD immediately, with an option to trigger the full 10-module evaluation afterwards. All JD sessions are stored and reloadable from a history dropdown.
 
 **Backend Connectivity**
 
-The API status indicator in the sidebar polls `http://127.0.0.1:8000/api/v1/health` every fifteen seconds and reflects the connection state. When the API is reachable, the dashboard replaces embedded data with live API data transparently.
+The API status indicator in the sidebar polls `/api/v1/health` every fifteen seconds and reflects the connection state with a live or offline dot indicator. When the API is reachable, the dashboard replaces embedded data with live API data transparently.
 
 ---
 
@@ -370,18 +416,15 @@ All module outputs are written to `data/analysis/`.
 | `candidates.csv` | Master candidate index with composite scores and tier classifications |
 | `edu_gaps.csv` | Educational credential gap flags per candidate |
 | `research_aggregates.csv` | Aggregated publication and journal tier statistics |
-| `research_aggregates.xlsx` | Excel version with formatted tables |
 | `supervision_profiles.csv` | Thesis supervision records with verification flags |
-| `supervision_profiles.xlsx` | Excel version |
 | `experience_profiles.csv` | Verified employment timelines with computed tenure |
-| `experience_profiles.xlsx` | Excel version |
 | `research_breadth_profiles.csv` | Topic cluster assignments and breadth scores |
 | `patent_aggregates.csv` | Patent records with granted and filed classification |
 | `journal_profiles.csv` | Per-publication journal tier and impact metadata |
-| `edu_report.txt` | Human-readable education analysis narrative |
-| `research_report.txt` | Human-readable research analysis narrative |
-| `supervision_report.txt` | Human-readable supervision analysis narrative |
-| `experience_report.txt` | Human-readable experience analysis narrative |
+| `jd_matches/{jd_id}/meta.json` | Parsed JD metadata: title, required degree, min experience, skills |
+| `jd_matches/{jd_id}/jd_parsed.json` | Full structured JD parse output |
+| `jd_matches/{jd_id}/jd_original.txt` | Original JD text as submitted |
+| `jd_matches/{jd_id}/results.csv` | Ranked candidate match results for this JD |
 
 ---
 
@@ -412,16 +455,37 @@ All module outputs are written to `data/analysis/`.
 | Typography | Inter, JetBrains Mono (Google Fonts) |
 | Build tooling | None |
 
+**Deployment**
+
+| Component | Technology |
+|---|---|
+| Containerisation | Docker |
+| Cloud platform | Railway |
+| Version control | GitHub |
+
+---
+
+## Deployment
+
+The application is fully containerised. A `Dockerfile` and `railway.toml` are included for one-click deployment on Railway.
+
+```bash
+docker build -t talash .
+docker run -p 8080:8080 --env-file .env talash
+```
+
+For Railway deployment, connect the GitHub repository at [railway.app](https://railway.app), add the three environment variables from `.env.example` in the Railway Variables tab, and attach a persistent volume mounted at `/app/data` to preserve candidate data and JD match results across restarts.
+
+The frontend auto-detects whether it is running locally or on a cloud host and adjusts all API calls accordingly. No frontend configuration changes are required between environments.
+
 ---
 
 ## Development Status
 
-Planned additions for subsequent development cycles include WebSocket-based real-time pipeline progress streaming, persistent candidate storage using a relational database backend, export functionality for ranked reports in PDF and Excel formats, and role-based access control for multi-user institutional deployment.
+The following additions are planned for subsequent development cycles: WebSocket-based real-time pipeline progress streaming, persistent candidate storage using a relational database backend, export functionality for ranked reports in PDF and Excel formats, role-based access control for multi-user institutional deployment, and an email delivery integration for the Email Center page.
 
 ---
 
 ## License
 
 This project was developed for internal use. Distribution and reproduction outside the commissioning institution require explicit written authorisation.
-
-
