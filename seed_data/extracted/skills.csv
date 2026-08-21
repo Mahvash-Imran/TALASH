@@ -1,0 +1,43 @@
+row_id,candidate_id,skill_name,category
+1,07_FIZA_MURTAZA,,
+2,08_TAYYABA_GULL,,
+3,09_MUHAMMAD_ABUBAKAR,Programmable Logic Controller,technical
+4,09_MUHAMMAD_ABUBAKAR,Google Data Analytics,technical
+5,11_WAQAS_AMIN,Programmable Logic Controllers,
+6,11_WAQAS_AMIN,AutoCad,
+7,11_WAQAS_AMIN,ISO 14001:2004,
+8,11_WAQAS_AMIN,Mobile switching Substation,
+9,11_WAQAS_AMIN,ISO 9001:2000,
+10,15_M_USMAN_ABBASI,,
+11,16_MUZZAMIL_GHAFFAR,PLC and SCADA,technical
+12,16_MUZZAMIL_GHAFFAR,FPGA,technical
+13,28_IDRIS_KHAN,,
+14,Muhammad_Dawood_Rizwan_CV,LLMs,AI & Machine Learning Development & DevOps
+15,Muhammad_Dawood_Rizwan_CV,LangChain,AI & Machine Learning Development & DevOps
+16,Muhammad_Dawood_Rizwan_CV,CrewAI,AI & Machine Learning Development & DevOps
+17,Muhammad_Dawood_Rizwan_CV,n8n,AI & Machine Learning Development & DevOps
+18,Muhammad_Dawood_Rizwan_CV,AI agents,AI & Machine Learning Development & DevOps
+19,Muhammad_Dawood_Rizwan_CV,RAG,AI & Machine Learning Development & DevOps
+20,Muhammad_Dawood_Rizwan_CV,Python,AI & Machine Learning Development & DevOps
+21,Muhammad_Dawood_Rizwan_CV,TypeScript,AI & Machine Learning Development & DevOps
+22,Muhammad_Dawood_Rizwan_CV,NextJS,AI & Machine Learning Development & DevOps
+23,Muhammad_Dawood_Rizwan_CV,ReactJS,AI & Machine Learning Development & DevOps
+24,Muhammad_Dawood_Rizwan_CV,FastAPI,AI & Machine Learning Development & DevOps
+25,Muhammad_Dawood_Rizwan_CV,Transformers,AI & Machine Learning Development & DevOps
+26,Muhammad_Dawood_Rizwan_CV,Prompt Engineering,AI & Machine Learning Development & DevOps
+27,Muhammad_Dawood_Rizwan_CV,Generative AI,AI & Machine Learning Development & DevOps
+28,Muhammad_Dawood_Rizwan_CV,Django,AI & Machine Learning Development & DevOps
+29,Muhammad_Dawood_Rizwan_CV,Docker,AI & Machine Learning Development & DevOps
+30,Muhammad_Dawood_Rizwan_CV,Git/GitHub,AI & Machine Learning Development & DevOps
+31,Muhammad_Dawood_Rizwan_CV,Vercel,AI & Machine Learning Development & DevOps
+32,Muhammad_Dawood_Rizwan_CV,TensorFlow,AI & Machine Learning Development & DevOps
+33,Muhammad_Dawood_Rizwan_CV,PyTorch,AI & Machine Learning Development & DevOps
+34,Muhammad_Dawood_Rizwan_CV,Spacy,AI & Machine Learning Development & DevOps
+35,Muhammad_Dawood_Rizwan_CV,NLTK,AI & Machine Learning Development & DevOps
+36,Muhammad_Dawood_Rizwan_CV,PostgreSQL,Databases
+37,Muhammad_Dawood_Rizwan_CV,MongoDB,Databases
+38,Muhammad_Dawood_Rizwan_CV,MySQL,Databases
+39,Muhammad_Dawood_Rizwan_CV,"Vector Databases (Chroma, Qdrant, FAISS, Pinecone)",Databases
+40,Muhammad_Dawood_Rizwan_CV,Decision-Making,Soft Skills & Leadership
+41,Muhammad_Dawood_Rizwan_CV,Team Management,Soft Skills & Leadership
+42,Muhammad_Dawood_Rizwan_CV,Communication,Communication

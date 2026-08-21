@@ -1,0 +1,46 @@
+candidate_id,candidate_name,total_patents,sole_inventor_count,lead_inventor_count,co_inventor_count,contributing_innovator_count,unknown_role_count,international_patents,national_patents,unknown_jurisdiction_patents,verifiable_patents,unverifiable_patents,innovation_label,innovation_assessment,rule_based_label
+24_AHMED_NAEEM,Ahmed Naeem,10,0,0,0,0,10,10,0,0,10,0,Strong,Candidate Ahmed Naeem holds 10 patent(s). 10 international patent(s). Overall applied innovation and IP profile is assessed as Strong.,Strong
+04_MUHAMMAD_FARRUKH,Muhammad Farrukh Qureshi,1,0,0,0,0,1,0,1,0,1,0,Moderate,Candidate Muhammad Farrukh Qureshi holds 1 patent(s). 1 national (Pakistani) patent(s). Overall applied innovation and IP profile is assessed as Moderate.,Moderate
+01_MUHAMMAD_SALMAN,MUHAMMAD SALMAN,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate MUHAMMAD SALMAN has no patents listed in their CV.,No Patents Listed
+02_MUHAMMAD_SHAHWAZ,MUHAMMAD SHAHWAZ,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate MUHAMMAD SHAHWAZ has no patents listed in their CV.,No Patents Listed
+03_NASIR_ALI_SHAH,Nasir Ali Shah,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Nasir Ali Shah has no patents listed in their CV.,No Patents Listed
+05_MUHAMMAD_MAJID,MUHAMMAD MAJID,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate MUHAMMAD MAJID has no patents listed in their CV.,No Patents Listed
+06_FARMAN_ALI,Farman Ali,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Farman Ali has no patents listed in their CV.,No Patents Listed
+07_FIZA_MURTAZA,Fiza Murtaza,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Fiza Murtaza has no patents listed in their CV.,No Patents Listed
+08_TAYYABA_GULL,Tayyaba Gull,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Tayyaba Gull has no patents listed in their CV.,No Patents Listed
+09_MUHAMMAD_ABUBAKAR,Muhammad Abubakar,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Muhammad Abubakar has no patents listed in their CV.,No Patents Listed
+09_SANA_FATIMA_RIZVI,Sana Fatima Rizvi,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Sana Fatima Rizvi has no patents listed in their CV.,No Patents Listed
+10_MUHAMMAD_EHATISHAM,Muhammad Ehatisham,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Muhammad Ehatisham has no patents listed in their CV.,No Patents Listed
+11_WAQAS_AMIN,Waqas Amin,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Waqas Amin has no patents listed in their CV.,No Patents Listed
+12_SYED_TAMOORULHASSAN,SYED TAMOORULHASSAN,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate SYED TAMOORULHASSAN has no patents listed in their CV.,No Patents Listed
+13_MANZOOR_ELLAHI,Manzoor Ellahi,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Manzoor Ellahi has no patents listed in their CV.,No Patents Listed
+14_SAROSH_TAHIR,Sarosh Tahir,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Sarosh Tahir has no patents listed in their CV.,No Patents Listed
+15_M_USMAN_ABBASI,M. Usman Abbasi,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate M. Usman Abbasi has no patents listed in their CV.,No Patents Listed
+16_MUZZAMIL_GHAFFAR,Muzzamil Ghaffar,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Muzzamil Ghaffar has no patents listed in their CV.,No Patents Listed
+17_SUHAIL_ASGHAR,Suhail Asghar Qureshi,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Suhail Asghar Qureshi has no patents listed in their CV.,No Patents Listed
+18_MUHAMMAD_AMJAD,Muhammad Amjad,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Muhammad Amjad has no patents listed in their CV.,No Patents Listed
+19_ASIM_MASOOD,Asim Masood,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Asim Masood has no patents listed in their CV.,No Patents Listed
+20_SYED_FASIH_ALI,Syed Fasih Ali,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Syed Fasih Ali has no patents listed in their CV.,No Patents Listed
+21_SAMAN_FATIMA,Saman Fatima,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Saman Fatima has no patents listed in their CV.,No Patents Listed
+22_ZEESHAN,Zeeshan,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Zeeshan has no patents listed in their CV.,No Patents Listed
+23_WAQAS_TARIQ_TOOR,Waqas Tariq Toor,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Waqas Tariq Toor has no patents listed in their CV.,No Patents Listed
+25_MUHAMMAD_ADEEL_ALTAF,MUHAMMAD ADEEL ALTAF,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate MUHAMMAD ADEEL ALTAF has no patents listed in their CV.,No Patents Listed
+26_AAMINA_AKBAR,Aamina Akbar,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Aamina Akbar has no patents listed in their CV.,No Patents Listed
+27_SHAHEER,Shaheer,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Shaheer has no patents listed in their CV.,No Patents Listed
+28_IDRIS_KHAN,Idris Khan,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Idris Khan has no patents listed in their CV.,No Patents Listed
+29_MUHAMMAD_SARMAD_TARIQ,Muhammad Sarmad Tariq,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Muhammad Sarmad Tariq has no patents listed in their CV.,No Patents Listed
+30_FAHD_SIKANDAR_KHAN,Fahd Sikandar Khan,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Fahd Sikandar Khan has no patents listed in their CV.,No Patents Listed
+31_USMAN_MASUD,Usman Masud,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Usman Masud has no patents listed in their CV.,No Patents Listed
+32_QAISAR_HUSSAIN_ALVI,Qaisar Hussain Alvi,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Qaisar Hussain Alvi has no patents listed in their CV.,No Patents Listed
+33_QAMAR_ABBAS,Qamar Abbas,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Qamar Abbas has no patents listed in their CV.,No Patents Listed
+34_SHAHZAD,Shahzad,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Shahzad has no patents listed in their CV.,No Patents Listed
+35_MATIULLAH_AHSAN,Matiullah Ahsan,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Matiullah Ahsan has no patents listed in their CV.,No Patents Listed
+36_SAMANA_BATOOL,Samana Batool,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Samana Batool has no patents listed in their CV.,No Patents Listed
+37_SANIA_GUL,Sania Gul,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Sania Gul has no patents listed in their CV.,No Patents Listed
+38_MUHAMMAD_MUSADIQ,Muhammad Musadiq Ahmed,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Muhammad Musadiq Ahmed has no patents listed in their CV.,No Patents Listed
+39_MUHAMMAD_SAQIB,Muhammad Saqib,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Muhammad Saqib has no patents listed in their CV.,No Patents Listed
+40_ABDUR_REHMAN,Abdur Rehman,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Abdur Rehman has no patents listed in their CV.,No Patents Listed
+41_MUHAMMAD_AQEEL,Muhammad Aqeel,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Muhammad Aqeel has no patents listed in their CV.,No Patents Listed
+42_SAQIB_JAMIL,Saqib Jamil,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Saqib Jamil has no patents listed in their CV.,No Patents Listed
+43_AMMARA_NASIM,Ammara Nasim,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate Ammara Nasim has no patents listed in their CV.,No Patents Listed
+Muhammad_Dawood_Rizwan_CV,nan,0,0,0,0,0,0,0,0,0,0,0,No Patents Listed,Candidate nan has no patents listed in their CV.,No Patents Listed

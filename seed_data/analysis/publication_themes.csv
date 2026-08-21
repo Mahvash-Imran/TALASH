@@ -1,0 +1,389 @@
+candidate_id,title,year,venue,primary_theme,secondary_theme,keywords
+01_MUHAMMAD_SALMAN,"A Hybrid Framework Integrating Deterministic Clustering, Neural Networks, and Energy-Aware Routing for Enhanced Efficiency and Longevity in Wireless Sensor Network",2025.0,International Journal,Wireless Networks & IoT,Machine Learning & Artificial Intelligence,"wireless, sensor network"
+01_MUHAMMAD_SALMAN,AI for Cleaner Air: Predictive Modeling of PM2.5 Using Deep Learning and Traditional Time-Series Approaches,2025.0,International Journal,Machine Learning & Artificial Intelligence,,deep learning
+01_MUHAMMAD_SALMAN,Improvement of Traveling Salesman Problem Solution using Hybrid Algorithm based on Best-Worst Ant System and Particle Swarm Optimization,2021.0,International Journal,Machine Learning & Artificial Intelligence,,optimization
+01_MUHAMMAD_SALMAN,Enhancing Energy Efficiency in WSNs with Hybrid LEACH-D and ANN,2024.0,international Conference,Energy & Renewable Systems,,energy
+01_MUHAMMAD_SALMAN,A Novel Approach to Energy Optimization: Efficient Path Selection in Wireless Sensor Networks with Hybrid ANN,2024.0,International Journal,Machine Learning & Artificial Intelligence,Wireless Networks & IoT,optimization
+03_NASIR_ALI_SHAH,Lightweight aes design for iot applications: Optimizations in fpga and asic with dfa countermeasure strategies,2025.0,IEEE Access,Wireless Networks & IoT,,iot
+03_NASIR_ALI_SHAH,Analysis of machine learning based imputation of missing data,2023.0,Cybernetics and Systems,Machine Learning & Artificial Intelligence,,machine learning
+03_NASIR_ALI_SHAH,Cuda-optimized gpu acceleration of 3gpp 3d channel model simulations for 5g network planning,2023.0,Electronics,Wireless Networks & IoT,,5g
+03_NASIR_ALI_SHAH,FPGA acceleration of 3GPP channel model emulator for 5G new radio,2022.0,IEEE Access,Wireless Networks & IoT,,"5g, radio"
+04_MUHAMMAD_FARRUKH,Machine Learning and Multivariate Analysis of Depression Prevalence and Predictors in Acute Coronary Syndrome,2025.0,IEEE Access,Machine Learning & Artificial Intelligence,,machine learning
+04_MUHAMMAD_FARRUKH,Automated lumpy skin grading in bovine images using novel deep convolutional neural networks,2025.0,Multimedia Tools and Applications,Computer Vision & Image Processing,,convolutional
+04_MUHAMMAD_FARRUKH,Lighthybridnet-Transformer-Ffia: A Hybrid Transformer Based Deep Learning Model for Enhanced Fish Feeding Intensity Classification,2025.0,Aquacultural Engineering,Machine Learning & Artificial Intelligence,Natural Language Processing,"deep learning, classification"
+04_MUHAMMAD_FARRUKH,EEG electrode setup optimization using feature extraction techniques for neonatal sleep state classification,2025.0,Frontiers in Computational Neuroscience,Machine Learning & Artificial Intelligence,Computer Vision & Image Processing,"classification, optimization"
+04_MUHAMMAD_FARRUKH,Augmenting aquaculture efficiency through involutional neural networks and self-attention for oplegnathus punctatus feeding intensity classification from log mel spectrograms,2024.0,MDPI Animal,Machine Learning & Artificial Intelligence,,classification
+04_MUHAMMAD_FARRUKH,Design and development of a soft robotic gripper for precision control for biomedical applications,2024.0,International Conference on En,Biomedical & Health Informatics,,biomedical
+04_MUHAMMAD_FARRUKH,Real-time weed segmentation in tobacco crops utilizing deep learning on a jetson nano,2024.0,International Conference on En,Computer Vision & Image Processing,Machine Learning & Artificial Intelligence,segmentation
+04_MUHAMMAD_FARRUKH,Improving Thyroid Disorder Diagnosis via Ensemble Stacking and Bidirectional Feature Selection,2024.0,"Computers, Materials & Continua",Machine Learning & Artificial Intelligence,,feature selection
+04_MUHAMMAD_FARRUKH,EMG gesture signal analysis towards diagnosis of upper limb using dual-pathway convolutional neural network,2024.0,AIMS Mathematical Biosciences and Engineering,Computer Vision & Image Processing,Machine Learning & Artificial Intelligence,convolutional
+04_MUHAMMAD_FARRUKH,Discrete Wavelet Transform for Laser Diode Self-Mixing Interferometry Processing for Vibrations Measurement,2023.0,2nd International Conference o,General Computer Science / Other,,
+04_MUHAMMAD_FARRUKH,Deep learning-based classification of wheat leaf diseases for edge devices,2023.0,2nd International Conference o,Machine Learning & Artificial Intelligence,,"deep learning, classification"
+04_MUHAMMAD_FARRUKH,Efficient energy management for household: Optimization-based integration of distributed energy resources in smart grid,2023.0,IEEE Access,Energy & Renewable Systems,Machine Learning & Artificial Intelligence,"energy, grid, smart grid"
+04_MUHAMMAD_FARRUKH,Automated uterine fibroids detection in ultrasound images using deep convolutional neural networks,2023.0,Healthcare,Computer Vision & Image Processing,Biomedical & Health Informatics,convolutional
+04_MUHAMMAD_FARRUKH,Enhancing ductal carcinoma classification using transfer learning with 3D U-net models in breast cancer imaging,2023.0,Applied Sciences,Machine Learning & Artificial Intelligence,Biomedical & Health Informatics,"classification, transfer learning"
+04_MUHAMMAD_FARRUKH,E2CNN: An efficient concatenated CNN for classification of surface EMG extracted from upper limb using CNN for human-computer interaction,2023.0,IEEE Sensors Journal,Machine Learning & Artificial Intelligence,Computer Vision & Image Processing,classification
+04_MUHAMMAD_FARRUKH,Effective kernel-principal component analysis based approach for wisconsin breast cancer diagnosis,2023.0,Electronics Letters,Biomedical & Health Informatics,,cancer
+04_MUHAMMAD_FARRUKH,Efficient thyroid disorder identification with weighted voting ensemble of super learners by using adaptive synthetic sampling technique,2023.0,AIMS Mathematics,General Computer Science / Other,,
+04_MUHAMMAD_FARRUKH,Leveraging training strategies of artificial neural network for classification of multiday electromyography signals,2022.0,International Conference on Em,Machine Learning & Artificial Intelligence,,"neural network, classification"
+04_MUHAMMAD_FARRUKH,Estimation of Real-Time Wheeled Mobile Robot (Differential Drive) Motion & Pose with Obstacle Avoidance,2022.0,19th International Bhurban Con,Robotics & Automation,,robot
+04_MUHAMMAD_FARRUKH,Spectral image-based multiday surface electromyography classification of hand motions using CNN for human-computer interaction,2022.0,IEEE Sensors Journal,Machine Learning & Artificial Intelligence,Computer Vision & Image Processing,classification
+04_MUHAMMAD_FARRUKH,SVM-based real-time classification of prosthetic fingers using myo armband-acquired electromyography data,2021.0,IEEE 21st international confer,Machine Learning & Artificial Intelligence,,"classification, svm"
+04_MUHAMMAD_FARRUKH,Spectral processing of self-mixing interferometric signal phase for improved vibration sensing under weak-and moderate-feedback regime,2019.0,IEEE Sensors Journal,General Computer Science / Other,,
+04_MUHAMMAD_FARRUKH,Android based Internet accessible infant incubator,2019.0,8th International Conference o,General Computer Science / Other,,
+05_MUHAMMAD_MAJID,Reconfigurable Intelligent Surfaces Assisted NLOS Radar Anti Jamming Using Deep Reinforcement Learning,2024.0,JOURNAL,Machine Learning & Artificial Intelligence,,reinforcement learning
+05_MUHAMMAD_MAJID,Anti-jamming radar waveform design for repeater jammer using reinforcement learning,2024.0,JOURNAL,Machine Learning & Artificial Intelligence,,reinforcement learning
+05_MUHAMMAD_MAJID,Reinforcement learning based techniques for radar anti-jamming,2021.0,nan,Machine Learning & Artificial Intelligence,,reinforcement learning
+07_FIZA_MURTAZA,Multiple Batches of Motion History Images (MB-MHIs) for Multi-view Human Action Recognition,2020.0,Arabian Journal for Science and Engineering,Computer Vision & Image Processing,,action recognition
+07_FIZA_MURTAZA,TAB: Temporally aggregated bag-of-words for temporal action proposals,2019.0,Computer Vision and Image Understanding,Computer Vision & Image Processing,,computer vision
+07_FIZA_MURTAZA,End-to-End Temporal Action Detection Using Bag of Discriminant Snippets,2018.0,IEEE Signal Processing Letters,General Computer Science / Other,,
+07_FIZA_MURTAZA,Visual analysis of asphalt pavement for detection and localization of potholes,2018.0,Advanced Engineering Informatics,Computer Vision & Image Processing,,visual
+07_FIZA_MURTAZA,Vectors of Temporally Correlated Snippets for Temporal Action Detection,2020.0,Computers and Electrical Engineering,General Computer Science / Other,,
+07_FIZA_MURTAZA,PASSENGER DETECTION AND COUNTING FOR PUBLIC TRANSPORT SYSTEM,2020.0,NED University Journal of Research,General Computer Science / Other,,
+07_FIZA_MURTAZA,PMHI: proposals from motion history images for temporal segmentation of long uncut videos,2017.0,IEEE Signal Processing Letters,Computer Vision & Image Processing,,segmentation
+07_FIZA_MURTAZA,Multi-view human action recognition using 2D motion templates based on MHIs and their HOG description,2016.0,IET Computer Vision,Computer Vision & Image Processing,,"computer vision, action recognition"
+07_FIZA_MURTAZA,Plant Species Identification using Discriminant Bag of Words (DBoW),2020.0,15th International Conference on Co,General Computer Science / Other,,
+07_FIZA_MURTAZA,DA-VLAD: Discriminative Action Vector of Locally Aggregated Descriptors for Action Recognition,2018.0,25th IEEE International Conference,Computer Vision & Image Processing,,action recognition
+07_FIZA_MURTAZA,Computer vision based detection and localization of potholes in asphalt pavement images,2016.0,2016 IEEE Canadian Conference on Electrical and Computer Engineering,Computer Vision & Image Processing,,computer vision
+07_FIZA_MURTAZA,Multi-view human action recognition using histograms of oriented gradients (HOG) description of motion history images (MHIs),2015.0,13th IEEE International Conference,Computer Vision & Image Processing,,action recognition
+08_TAYYABA_GULL,Spectral Restoration based speech enhancement for robust speaker identification,2017.0,Journals,General Computer Science / Other,,
+08_TAYYABA_GULL,Shunt-Active-Power-Filter-A-Review,2024.0,journal,General Computer Science / Other,,
+08_TAYYABA_GULL,Free-Space Optical channel turbulence analysis based on lognormal distribution and stochastic differential equation,2018.0,journal,General Computer Science / Other,,
+08_TAYYABA_GULL,Measuring the Performance of Handover Mechanisms in UMTS for Diverse Traffic Services Classes to Improve QoS,2011.0,journal,General Computer Science / Other,,
+08_TAYYABA_GULL,Design of a Multi-Mode Power Management System for Electric Vehicles with Grid Integration,2024.0,journal,Energy & Renewable Systems,,grid
+09_MUHAMMAD_ABUBAKAR,Machine Learning-Based Suicide Risk Assessment and Intervention Strategies for Depression,2024.0,UMT AIR,Machine Learning & Artificial Intelligence,,machine learning
+09_MUHAMMAD_ABUBAKAR,Securing Financial Transactions: Leveraging Random Forest for Credit Card Fraud Detection and Info,2025.0,UCP Journal of Engineering,Machine Learning & Artificial Intelligence,,random forest
+09_MUHAMMAD_ABUBAKAR,"IIOT: An Infusion of Embedded Systems, TinyML, and Federated Learning in Industrial IoT",2025.0,Journal of Computing & Biomedical I,Biomedical & Health Informatics,Wireless Networks & IoT,biomedical
+09_MUHAMMAD_ABUBAKAR,Ethical Considerations in Utilizing Machine Learning for Depression and Anxiety Detection in College Students,2025.0,Journal of Computing & Biomedical I,Machine Learning & Artificial Intelligence,Biomedical & Health Informatics,machine learning
+09_MUHAMMAD_ABUBAKAR,Pakistan's Political Sentiments Analysis based on Twitter Using Machine Learning,2024.0,Journal of Computing & Biomedical I,Machine Learning & Artificial Intelligence,Biomedical & Health Informatics,machine learning
+09_MUHAMMAD_ABUBAKAR,A Hybrid Approach for Analysis of Urdu Tweets Authorship Empowered by Genetic Algorithm and K-Nearest Neighbors,2023.0,Journal of Computing & Biomedical I,Biomedical & Health Informatics,,biomedical
+09_MUHAMMAD_ABUBAKAR,Optimizing Power Quality Disturbance Classification With Higher Order Statistics: Social And Economic Impacts,2024.0,Kurdish Studies,Machine Learning & Artificial Intelligence,,classification
+09_MUHAMMAD_ABUBAKAR,A gene selection algorithm for microarray cancer classification using an improved particle swarm optimization,2024.0,Scientific Reports,Machine Learning & Artificial Intelligence,Biomedical & Health Informatics,"classification, optimization"
+09_MUHAMMAD_ABUBAKAR,High-Precision Identification of Power Quality Disturbances Based on Discrete Orthogonal S-Transforms and Compressed Neural Network Methods,2023.0,IEEE Access,Machine Learning & Artificial Intelligence,,neural network
+09_MUHAMMAD_ABUBAKAR,Legendre based neural networks integrated with heuristic algorithms for the analysis of Lorenz chaotic model: an intelligent and comparative study,2025.0,Scientific Reports,General Computer Science / Other,,
+09_MUHAMMAD_ABUBAKAR,ECGNet: High-Precision ECG Classification Using Deep Learning and Advanced Activation Functions,2025.0,IEEE Access,Machine Learning & Artificial Intelligence,Biomedical & Health Informatics,"deep learning, classification"
+09_MUHAMMAD_ABUBAKAR,Design of a novel noise resilient algorithm for fault detection in wind turbines on supervisory control and data acquisition system,2025.0,Scientific Reports,General Computer Science / Other,,
+09_MUHAMMAD_ABUBAKAR,A Hybrid RSM-ANN-GA Approach on Optimization of Ultrasound-Assisted Extraction Conditions for Bioactive Component-Rich Stevia rebaudiana (Bertoni) Leaves,2022.0,Foods,Machine Learning & Artificial Intelligence,,optimization
+09_MUHAMMAD_ABUBAKAR,Soft Sensor Model Based on IBA-LSSVM for Photosynthetic Bacteria Fermentation Process,2021.0,Int J Bioautomation,General Computer Science / Other,,
+09_MUHAMMAD_ABUBAKAR,Modelling and Analysis of a very Low Head Kaplan Turbine Runner Blades for Rural Area of Punjab,2014.0,International Journal of Scientific,General Computer Science / Other,,
+09_MUHAMMAD_ABUBAKAR,Classification of Power Quality Disturbance Based on Multiscale Singular Spectral Analysis and Multi Resolution Wavelet Transforms,2019.0,International Journal of Recent Tec,Machine Learning & Artificial Intelligence,,classification
+09_MUHAMMAD_ABUBAKAR,Identification of Multiple Power Quality Disturbances Problems in Wind-Grid Integration System,2019.0,International Journal of Renewable,Energy & Renewable Systems,,grid
+09_MUHAMMAD_ABUBAKAR,Hybrid self-inertia weight adaptive particle swarm optimization with local search using C4. 5 decision tree classifier for feature selection problems,2019.0,Connection Science,Machine Learning & Artificial Intelligence,,"feature selection, optimization"
+09_MUHAMMAD_ABUBAKAR,Signal Processing and Deep Learning Techniques for Power Quality Events Monitoring and Classification,2019.0,Electric Power Components and Systems,Machine Learning & Artificial Intelligence,,"deep learning, classification"
+09_MUHAMMAD_ABUBAKAR,Soft-sensor modeling for L-lysine fermentation process based on hybrid ICS-MLSSVM,2020.0,Scientific Reports,General Computer Science / Other,,
+09_MUHAMMAD_ABUBAKAR,Complex power quality disturbances classification via curvelet transform and deep learning,2018.0,Electric Power Systems and Research,Machine Learning & Artificial Intelligence,,"deep learning, classification"
+09_MUHAMMAD_ABUBAKAR,Power Quality Disturbance Monitoring and Classification Based on Improved PCA and Convolution Neural Network for Wind-Grid Distribution Systems,2019.0,Energies,Machine Learning & Artificial Intelligence,Energy & Renewable Systems,"neural network, classification"
+11_WAQAS_AMIN,A Novel Method of Transformer Overloading on Detection by Instrumentatio Magnetic Flux Leakage Measurements,2025.0,IEEE Transactions,Natural Language Processing,,transformer
+11_WAQAS_AMIN,Optimization of social welfare and mitigating privacy risks in P2P energy trading: Di(cid:0)erential privacy for secure data reporting,2025.0,Applied Energy,Machine Learning & Artificial Intelligence,Cybersecurity & Privacy,optimization
+11_WAQAS_AMIN,3DFFL: privacy-preserving Federated Few-Shot Learning for 3D point clouds in autonomous vehicles,2024.0,Scientific Reports,Cybersecurity & Privacy,Robotics & Automation,privacy
+11_WAQAS_AMIN,A fair and effective approach to managing distributed energy resources through peer-to-peer energy trading with load prioritization among smart homes,2024.0,Energy Reports,Energy & Renewable Systems,,energy
+11_WAQAS_AMIN,"Smart Grid Systems: Addressing Privacy Threats, Security Vulnerabilities, and Demand-Supply Balance (A review)",2025.0,Energies,Cybersecurity & Privacy,Energy & Renewable Systems,"security, privacy"
+11_WAQAS_AMIN,"Enhancing Smart Grid Security and Efficiency: AI, Energy Routing, and T&D Innovations (A Review)",2025.0,Energies,Energy & Renewable Systems,Cybersecurity & Privacy,"energy, grid, smart grid"
+11_WAQAS_AMIN,Attention-Enhanced Bidirectional LSTM for Accurate False Data Injection Attack Detection in Smart Grid,2025.0,Transactions on Emerging Telecommunications Technologies,Energy & Renewable Systems,,"grid, smart grid"
+11_WAQAS_AMIN,Energy Efficiency Optimization in Vehicle Telecommunication Network Using Hybrid-Genetic Algorithm,2025.0,Transactions on Emerging Telecommunications Technologies,Machine Learning & Artificial Intelligence,Wireless Networks & IoT,optimization
+11_WAQAS_AMIN,Enhanced Cybersecurity for Smart Grids: Detecting Protocol-Specific DDoS Attacks on Modbus Networks,2025.0,Computers and Electrical Engineering,Cybersecurity & Privacy,,cybersecurity
+11_WAQAS_AMIN,Blockchain Enabled Reserved Pricing and Privacy on Consumer Preserving Model for Elect Peer-to-Peer Energy Trading In Smart Grid,2025.0,IEEE Transactions,Energy & Renewable Systems,Cybersecurity & Privacy,"energy, grid, smart grid"
+11_WAQAS_AMIN,FPGA-Driven Secure Energy Routing and Attack Detection in Decentralized Elect Microgrids With SREMBased Dynamic Path Optimization,2025.0,IEEE Transactions,Machine Learning & Artificial Intelligence,Energy & Renewable Systems,optimization
+11_WAQAS_AMIN,Vehicle-to-Everything (V2X) Traffic and Transportation Technology and Its Pilot Projects: A Review,2025.0,Journal of Transportation Technology,General Computer Science / Other,,
+11_WAQAS_AMIN,Reputation-Based Uniform Pricing & Energy Distribution in Peer-to-Peer Energy Trading Market,2025.0,Ain Shams Engineering Journal,Energy & Renewable Systems,,energy
+11_WAQAS_AMIN,A secure energy management model for Peer-to-Peer smart grids with user-centric constraints,2025.0,Internet of Things,Wireless Networks & IoT,Energy & Renewable Systems,internet of things
+11_WAQAS_AMIN,Role of blockchain technology in transactive energy market: A review,2022.0,Sustainable Energy Technologies,Cybersecurity & Privacy,Energy & Renewable Systems,blockchain
+11_WAQAS_AMIN,An Effective Pricing Mechanism for Electricity Trading Considering Customer Preference and Reserved Price in Direct P2P Electricity Market Under Uncertainty in Grid Supply,2022.0,International Journal,Energy & Renewable Systems,,grid
+11_WAQAS_AMIN,P2P Energy Trading: An Optimal Solution for Energy Shortage in Pakistan,2022.0,International Journal,Energy & Renewable Systems,,energy
+11_WAQAS_AMIN,Cost-effective Energy Management System in Prosumer based Electricity Market,2020.0,Intl Conference,Energy & Renewable Systems,,energy
+11_WAQAS_AMIN,Blockchain based domestic appliances scheduling in community microgrids,2019.0,Intl Conference,Cybersecurity & Privacy,,blockchain
+11_WAQAS_AMIN,Blockchain enabled distributed demand side management in community energy system with smart homes,2020.0,Intl Journal,Cybersecurity & Privacy,Energy & Renewable Systems,blockchain
+11_WAQAS_AMIN,A novel communication efficient peer-to-peer energy trading scheme for enhanced privacy in microgrids,2021.0,Intl Journal,Cybersecurity & Privacy,Energy & Renewable Systems,privacy
+11_WAQAS_AMIN,A motivational game-theoretic approach for peer-to-peer energy trading in islanded and grid-connected microgrid,2020.0,Intl Journal,Energy & Renewable Systems,,"energy, grid"
+11_WAQAS_AMIN,Consumers' preference based optimal price determination model for P2P energy trading,2020.0,Intl Journal,Energy & Renewable Systems,,energy
+11_WAQAS_AMIN,A converging non-cooperative & cooperative game theory approach for stabilizing peer-to-peer electricity trading,2020.0,Intl Journal,General Computer Science / Other,,
+11_WAQAS_AMIN,A Review of Transactive Energy Systems: Concept and Implementation,2021.0,Intl Journal,Energy & Renewable Systems,,energy
+12_SYED_TAMOORULHASSAN,Techno-Economic Analysis of Visible Light Communications,2013.0,IEEE International Symposium on Wireless Communication,Wireless Networks & IoT,,wireless
+12_SYED_TAMOORULHASSAN,Device-to-device assisted mobile cloud framework for 5G networks,2016.0,IEEE 14th International Conference,Wireless Networks & IoT,,5g
+12_SYED_TAMOORULHASSAN,Latency-Aware Radio Resource Optimization in Learning-Based Cloud-Aided Small Cell Wireless Networks,2023.0,IEEE Transactions on Green Computing,Wireless Networks & IoT,Machine Learning & Artificial Intelligence,"wireless, radio"
+12_SYED_TAMOORULHASSAN,Learning-based Caching in Cloud-Aided Wireless Networks,2017.0,IEEE Communication Letters,Wireless Networks & IoT,,wireless
+12_SYED_TAMOORULHASSAN,Caching in Wireless Small Cell Networks: A Storage-Bandwidth Tradeoff,2016.0,IEEE Communication Letters,Wireless Networks & IoT,,wireless
+12_SYED_TAMOORULHASSAN,Modeling and Analysis of Content Caching in Wireless Small Cell Networks,2015.0,IEEE International Symposium on Wireless Communication,Wireless Networks & IoT,,wireless
+12_SYED_TAMOORULHASSAN,Mobile Cloud based architecture for Device-to-Device Communication Underlying Cellular Network,2013.0,IEEE IFIP Wireless Days,Wireless Networks & IoT,,"wireless, cellular"
+13_MANZOOR_ELLAHI,A scheme for transfer of load between HVDC and HVAC Link,2022.0,nan,General Computer Science / Other,,
+13_MANZOOR_ELLAHI,IoT based health supervision of energy storage system,2022.0,nan,Energy & Renewable Systems,Wireless Networks & IoT,"energy, energy storage"
+13_MANZOOR_ELLAHI,Forecasting of wind speed and power through FFNN and CFNN using HPSOBA and MHPSO-BAACs techniques,2022.0,Electronics,General Computer Science / Other,,
+13_MANZOOR_ELLAHI,Optimal Solution of Environmental Economic Dispatch Problems Using QPGPSO-ω,2023.0,Applied Sciences (MDPI),General Computer Science / Other,,
+13_MANZOOR_ELLAHI,Real-Time Internet-based Technology Applying Machine Learning Algorithm to Identify Airplane,2024.0,Journal of Innovative Computing and Informatics,Machine Learning & Artificial Intelligence,,machine learning
+13_MANZOOR_ELLAHI,An Overview on Switching to Renewable Energy Resources in Pakistan for Sustainable Future: Its Challenges and Policy Recommendations,2024.0,nan,Energy & Renewable Systems,,energy
+13_MANZOOR_ELLAHI,Advancing Wearables: Dual-Band Antenna Design with High Permittivity Miniaturization using Natural Substrate,2024.0,nan,Wireless Networks & IoT,,antenna
+13_MANZOOR_ELLAHI,Robust steganography technique for enhancing the protection of medical records in healthcare informatics,2025.0,IEEE Journal of Biomedical and Health Informatics,Biomedical & Health Informatics,Cybersecurity & Privacy,"biomedical, healthcare, medical"
+13_MANZOOR_ELLAHI,Experimental study on lightning discharge attachment to the modern wind turbine blade with lightning protection system,2017.0,nan,Energy & Renewable Systems,,wind turbine
+13_MANZOOR_ELLAHI,Faults detection and classification of HVDC transmission lines of using discrete wavelet transform,2018.0,nan,Machine Learning & Artificial Intelligence,,classification
+13_MANZOOR_ELLAHI,Design of interruption process for HVDC system using vacuum circuit breaker based on virtual current zero,2017.0,nan,General Computer Science / Other,,
+13_MANZOOR_ELLAHI,Major Prospects of Wind Energy in Pakistan,2020.0,nan,Energy & Renewable Systems,,energy
+13_MANZOOR_ELLAHI,Design of smart cooling system for power transformer,2018.0,nan,Natural Language Processing,,transformer
+13_MANZOOR_ELLAHI,"Dynamic Modeling, Control and Power Management in a Grid-Integrated PV/SOFC/SC based Hybrid Power System",2021.0,nan,Energy & Renewable Systems,,"power system, grid"
+13_MANZOOR_ELLAHI,Demand Response & Broadcasting Control Technique for Smart Air Conditioners using NB-PLC,2018.0,nan,General Computer Science / Other,,
+13_MANZOOR_ELLAHI,Design and Implementation of TCSC for 500kV Power Transmission System,2018.0,nan,General Computer Science / Other,,
+13_MANZOOR_ELLAHI,Online monitoring of Electricity Data through wireless transmission using Radio Frequency,2013.0,nan,Wireless Networks & IoT,,"wireless, radio"
+13_MANZOOR_ELLAHI,Field Measurements of NB-PLC for LV Network,2018.0,nan,General Computer Science / Other,,
+13_MANZOOR_ELLAHI,Optimal Energy Saving for Highway M-2 using Unreliable Grid tied PV-Diesel Hybrid Design System,2019.0,nan,Energy & Renewable Systems,,"energy, grid"
+13_MANZOOR_ELLAHI,Power Factor Monitoring and Load Management using Smart Metering Techniques,2013.0,nan,General Computer Science / Other,,
+13_MANZOOR_ELLAHI,Recent Approaches of Forecasting and Optimal Economic Dispatch to Overcome Intermittency of Wind and Photovoltaic (PV) Systems: A Review,2019.0,nan,Energy & Renewable Systems,,photovoltaic
+13_MANZOOR_ELLAHI,A hybrid metaheuristic approach for the solution of renewables-incorporated economic dispatch problems,2020.0,nan,General Computer Science / Other,,
+13_MANZOOR_ELLAHI,A Modified Hybrid Particle Swarm Optimization with Bat Algorithm Parameter Inspired Acceleration Coefficients for Solving Eco-Friendly and Economic Dispatch Problems,2021.0,nan,Machine Learning & Artificial Intelligence,,optimization
+14_SAROSH_TAHIR,Enabling PUF-based Authentication in QKD Networks,2025.0,International Conference,Cybersecurity & Privacy,,authentication
+14_SAROSH_TAHIR,A Blocking Probability Study for the Aethereal Network-on-Chip,2016.0,International Conference,General Computer Science / Other,,
+14_SAROSH_TAHIR,Merit of hybrid EDFA/Raman amplification in fixed-grid all-optical network exploiting multi-rate transponders,2018.0,International Journal of Communication Systems,Energy & Renewable Systems,,grid
+14_SAROSH_TAHIR,Raman Pumping as an Energy Efficient Solution for NyWDM Flexible-grid Elastic Optical Networks,2017.0,International Journal of Electrical,Energy & Renewable Systems,,"energy, grid"
+14_SAROSH_TAHIR,Impact of Fiber Type and Raman Pumping in NyWDM Flexible-grid Elastic Optical Networks,2016.0,IEEE International Conference on Transparent Optical Networks,Energy & Renewable Systems,,grid
+14_SAROSH_TAHIR,Exploiting Transmission Level Potentialities in Logical Topology Design of Flexible-Grid Optical Networks,2016.0,IEEE International Conference on Communications,Energy & Renewable Systems,,grid
+14_SAROSH_TAHIR,Impact of Fiber Types and Raman Pumping in Reconfigurable DWDM Transparent Optical Networks,2015.0,European Conference and Exhibition,General Computer Science / Other,,
+14_SAROSH_TAHIR,On the Importance of the Detailed Transmission Layer Modelling in Optical Network Design,2015.0,Italian National Conference on Phot,General Computer Science / Other,,
+14_SAROSH_TAHIR,A Transmission Layer Aware Network Design for Fixed and Flexible Grid Optical Networks,2015.0,IEEE International Conference on Transparent Optical Networks,Energy & Renewable Systems,,grid
+14_SAROSH_TAHIR,Exploring the Effects of Physical Layer Parameters in WDM based Fixed and Flexible-Grid Networks,2015.0,IEEE-IFIP International Conference,Energy & Renewable Systems,,grid
+15_M_USMAN_ABBASI,Multiple contaminant biosignal quality analysis for electrocardiography,2022.0,Biomedical Signal Processing and Co,Biomedical & Health Informatics,,"biomedical, biosignal"
+15_M_USMAN_ABBASI,Improved and secured electromyography in the Internet of health things,2021.0,IEEE Journal of Biomedical and Health Informatics,Biomedical & Health Informatics,,biomedical
+15_M_USMAN_ABBASI,Detection of epilepsy seizures in neo-natal EEG using LSTM architecture,2019.0,IEEE Access,Biomedical & Health Informatics,,"eeg, epilepsy"
+16_MUZZAMIL_GHAFFAR,Accuracy Improvement of Non-Intrusive Load Monitoring Using Voting-Based Consensus Clustering,2023.0,IEEE Access,Machine Learning & Artificial Intelligence,,clustering
+16_MUZZAMIL_GHAFFAR,Reducing the Environmental Impact of School Buildings Through Better Design: A Case Study in Pakistan,2018.0,European Conference on Sustainability,General Computer Science / Other,,
+16_MUZZAMIL_GHAFFAR,Mitigating CO2 emissions of academic buildings in Pakistan using energy conservation techniques,2019.0,JOURNAL OF ENGINEERING AND APPLIED,Energy & Renewable Systems,,energy
+16_MUZZAMIL_GHAFFAR,Electrical energy management of building using fuzzy control,2019.0,International Conference on Ro,Energy & Renewable Systems,,energy
+16_MUZZAMIL_GHAFFAR,Assistive Smart Home Environment using Head Gestures and EEG Eye Blink Control Schemes,2021.0,International Conference on Ar,Biomedical & Health Informatics,,eeg
+16_MUZZAMIL_GHAFFAR,Non-intrusive load monitoring of buildings using spectral clustering,2022.0,Sensors,Machine Learning & Artificial Intelligence,,clustering
+17_SUHAIL_ASGHAR,Graphene as a Phase Shifter Element for Reflectarray Beam-Steering at THz Frequencies,2025.0,Progress In Electromagnetics Research,General Computer Science / Other,,
+17_SUHAIL_ASGHAR,Planar edged UWB antenna for water quality measurement,2023.0,Progress In Electromagnetics Research,Wireless Networks & IoT,,antenna
+17_SUHAIL_ASGHAR,Early Detection and Quantitative Analysis of Skin Cancer Using THz Metamaterial Biosensor,2024.0,International Journal of Integrated,Biomedical & Health Informatics,,cancer
+17_SUHAIL_ASGHAR,The 6G Reconfigurable Reflectarray Antenna Using a Gold-VO-2 Bilayer Structure,2024.0,Progress In Electromagnetics Research,Wireless Networks & IoT,,"6g, antenna"
+17_SUHAIL_ASGHAR,Millimetre‐wave metamaterial‐based sensor for characterisation of cooking oils,2021.0,International Journal of Antennas,General Computer Science / Other,,
+17_SUHAIL_ASGHAR,Double-Layered metamaterial resonator operating at millimetre wave for detection of dengue virus,2022.0,AEU-International Journal of Electr,General Computer Science / Other,,
+17_SUHAIL_ASGHAR,Glucose level detection using millimetre-wave metamaterial-inspired resonator,2022.0,Plos one,General Computer Science / Other,,
+17_SUHAIL_ASGHAR,Reflectarray 2D Beam-Steering With Graphene on Copper Elements for 6G Point-to-Point Communication,2024.0,IEEE Open Journal of Antennas and Propagation,Wireless Networks & IoT,,6g
+18_MUHAMMAD_AMJAD,Habitat types mapping using remote sensing techniques in Cyprus,2025.0,Eleventh International Conference,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,Comparison of Novel and Classical AI Techniques for SAR Oil Spill Detection,2025.0,International Conference on Machine,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,CFAR-based automatic ship detection exploiting polarimetric correlation descriptors,2025.0,Eleventh International Conference,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,Accelerating ocean currents analysis: tiling-based parallel computing for SAR imagery,2025.0,Eleventh International Conference,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,Oil Spill Detection using Convolutional Neural Networks and Sentinel-1 SAR Imagery,2025.0,The International Archives of the Photogrammetry,Computer Vision & Image Processing,,convolutional
+18_MUHAMMAD_AMJAD,Subaperture decomposition analysis for accurate ship detection and velocity estimation in synthetic aperture radar imagery,2024.0,Remote Sensing Letters,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,Active Microwave Sensors for Vegetation Water Content Estimation,2024.0,2024 IEEE International,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,Validation of Reported Strong Currents in Mamaia Bay (Black Sea) Using Sentinel-1 SAR Data,2024.0,MetroSea2024,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,Coarse-to-fine Estimation: Compressive Sensing for High-Resolution Inverse SAR Imaging,2024.0,EuSAR 2024,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,Towards Complex-Valued Deep Architectures with Data Model Preservation for Sea Surface Current Estimation from SAR Data,2023.0,CBMI 2023,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,Ice Cover Delineation Over Devon Iceland Using Sentinel Polarimetric SAR and Optical Data,2023.0,IEEE,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,Assessment of mm-Wave High Resolution Inverse SAR Imaging both with Compact and Sparse Data,2023.0,IEEE,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,Exploiting Inverse SAR Images and Dual-Pol Decomposition for the Estimation of Tree Scattering Properties,2023.0,IEEE,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,Coastline Extraction From SAR Data Using Doppler Centroid Images,2022.0,IEEE Geoscience and Remote Sensing,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,On the De-Ramping of SLC-IW Tops SAR Data and Ocean Circulation Parameters Estimation,2022.0,IEEE,General Computer Science / Other,,
+18_MUHAMMAD_AMJAD,Doppler Centroid Estimation for Ocean Surface Current Retrieval from Sentinel-1 SAR Data,2022.0,IEEE,General Computer Science / Other,,
+19_ASIM_MASOOD,Information theory based redundancy and independent component analysis,2008.0,Proceedings of the 1.00,General Computer Science / Other,,
+19_ASIM_MASOOD,Cochlear Microphonic Data Acquisition System,2024.0,IEEE Instrumentation and Measurement,General Computer Science / Other,,
+19_ASIM_MASOOD,Independent Component Analysis based speech separation using geometric kth nearest neighbor entropy estimator,2020.0,IEEE 5th International Conference,General Computer Science / Other,,
+19_ASIM_MASOOD,Independent Vector Analysis based Convolutive Speech Separation by Estimating Entropy using Recursive Copula Splitting,2020.0,15th IEEE International Conference,General Computer Science / Other,,
+19_ASIM_MASOOD,Single Channel Speech Separation using Deep and Recurrent Neural Network via Copula Component Analysis,2021.0,International Journal of Speech Technology,Machine Learning & Artificial Intelligence,,neural network
+19_ASIM_MASOOD,Dual-Transform Source Separation Using Sparse Non-Negative Matrix Factorization,2021.0,"Circuits, Systems & Signal Processing",General Computer Science / Other,,
+19_ASIM_MASOOD,A non-invasive cochlear microphonic measurement system,2012.0,Journal,General Computer Science / Other,,
+19_ASIM_MASOOD,Improvement of Joint Optimization of Masks and Deep Recurrent Neural Networks for Monaural Speech Separation using Optimized Activation Functions,2020.0,Chinese Journal of Acoustics,Machine Learning & Artificial Intelligence,,optimization
+20_SYED_FASIH_ALI,Identification of efficient COVID-19 diagnostic test through artificial neural networks approach − and substantiated by modeling and simulation,2021.0,Journal of Intelligent Systems,General Computer Science / Other,,
+20_SYED_FASIH_ALI,Latency Analysis of an RF Energy Harvesting System with a Backscatter Symbiotic Radio,2024.0,IEEE Wireless communication and net,Wireless Networks & IoT,Energy & Renewable Systems,"wireless, radio"
+20_SYED_FASIH_ALI,Latency-Optimum NOMA With RF Energy Harvesting and Finite Battery Capacity,2023.0,IEEE Communication Letters,Energy & Renewable Systems,,"energy, battery"
+20_SYED_FASIH_ALI,On achieving throughput optimality with energy prediction-based power allocation in 5G networks,2018.0,Transaction on Emerging Telecommuni,Energy & Renewable Systems,Wireless Networks & IoT,energy
+21_SAMAN_FATIMA,A CMOS readout circuit for a low shunt resistance IR photo-detector,2023.0,IEEE International Conference on El,General Computer Science / Other,,
+22_ZEESHAN,A Novel Bistatic-SAR Simulation-Based Fixed Receiver Multit,2020.0,IEEE,General Computer Science / Other,,
+22_ZEESHAN,Multi-Factor Trust Management in Distributed Storage Networks based on Capacity and Behavior,2024.0,9th International Conference,General Computer Science / Other,,
+22_ZEESHAN,Motion Synchronization Control for a Large Aircraft's Hybrid Actuation System Using Fuzzy Logic- and Based Control Techniques,2023.0,Mathematics,General Computer Science / Other,,
+22_ZEESHAN,Motion synchronization for the SHA/EMA hybrid actuation system by using an optimization algorithm,2021.0,"Journal for Control, Measurement, and Diagnostics",Machine Learning & Artificial Intelligence,,optimization
+22_ZEESHAN,Hierarchical Boosting Dual-Stage Feature Reduction Ensemble Model for Parkinson's Disease and Speech Data,2021.0,Diagnostics,Biomedical & Health Informatics,,disease
+22_ZEESHAN,Weighted Hybrid Feature Reduction Embedded with Ensemble Learning for Speech Data of Parkinson's Disease,2021.0,Mathematics,Machine Learning & Artificial Intelligence,Biomedical & Health Informatics,ensemble learning
+22_ZEESHAN,Robust-DSN - Performance and Fault Tolerance of a Distributed Storage Network,2023.0,Eighth International Conference,General Computer Science / Other,,
+22_ZEESHAN,Robust-DSN: A Hybrid Distributed Replication and Encoding Network and Grouped with a Distributed Swarm Workflow Scheduler,2024.0,Electronics,General Computer Science / Other,,
+22_ZEESHAN,BE-DSN: leveraging blockchain for improving data availability and security in distributed storage networks,2025.0,Cluster Computing,Cybersecurity & Privacy,,"security, blockchain"
+22_ZEESHAN,A secure and reliable distributed storage system with multi-factor trust-aware workflow scheduling,2025.0,Cluster Computing,General Computer Science / Other,,
+23_WAQAS_TARIQ_TOOR,Enhancing early detection of diabetes using machine learning algorithms,2024.0,1st International Conference,Machine Learning & Artificial Intelligence,,machine learning
+23_WAQAS_TARIQ_TOOR,Experimental investigation on a solar-powered oxy-hydrogen gas system for enhanced plastic pyrolysis,2024.0,Results in Optics,Energy & Renewable Systems,,"solar, pyrolysis"
+23_WAQAS_TARIQ_TOOR,Machine Learning Based Early Detection for Brain Stroke,2024.0,Horizons of Information Technology,Machine Learning & Artificial Intelligence,,machine learning
+23_WAQAS_TARIQ_TOOR,"A Comparative Study of DenseNet121, VGG16, and Custom CNNs for Brain Tumor Classification using MRI Images",2024.0,3rd International Conference,Machine Learning & Artificial Intelligence,,classification
+23_WAQAS_TARIQ_TOOR,Mutually Guided Image Dehazing,2022.0,International Conference on Em,General Computer Science / Other,,
+23_WAQAS_TARIQ_TOOR,Online control of random access with splitting,2020.0,Proceedings of the Twenty-First International Conference,General Computer Science / Other,,
+23_WAQAS_TARIQ_TOOR,A Comparative Study of Customer Preferences for Telecommunication Technologies in Pakistan,2020.0,Engineering Journal,Wireless Networks & IoT,,telecommunication
+23_WAQAS_TARIQ_TOOR,Recursive pseudo-Bayesian access class barring for M2M communications in LTE systems,2017.0,IEEE Transactions on Vehicular Technology,Wireless Networks & IoT,,vehicular
+23_WAQAS_TARIQ_TOOR,Distributed transmission control in multichannel S-ALOHA for ad-hoc Networks,2017.0,IEEE Communications Letters,Wireless Networks & IoT,,ad-hoc
+23_WAQAS_TARIQ_TOOR,A novel dissimilarity of activity biomarker and functional connectivity analysis for the epilepsy diagnosis,2019.0,Symmetry,Biomedical & Health Informatics,,epilepsy
+23_WAQAS_TARIQ_TOOR,Practical splitting algorithm for multi-channel slotted random access systems,2019.0,IEEE Transactions on Mobile Computing,General Computer Science / Other,,
+23_WAQAS_TARIQ_TOOR,IoT enabled quality of experience measurement for next generation networks in smart cities,2020.0,Sustainable Cities and Society,Wireless Networks & IoT,,iot
+23_WAQAS_TARIQ_TOOR,Two step random access latency improvement in congested beyond 5G networks,2020.0,Electronics,Wireless Networks & IoT,,5g
+23_WAQAS_TARIQ_TOOR,Combined access barring scheme for IoT devices using Bayesian estimation,2020.0,Electronics,Wireless Networks & IoT,,iot
+23_WAQAS_TARIQ_TOOR,Analysis of two-step random access procedure for cellular ultra-reliable low latency communications,2021.0,IEEE Access,Wireless Networks & IoT,,cellular
+23_WAQAS_TARIQ_TOOR,Performance analysis of access class barring for next generation IoT devices,2021.0,Alexandria Engineering Journal,Wireless Networks & IoT,,iot
+23_WAQAS_TARIQ_TOOR,Detection of small size traffic signs using regressive anchor box selection and DBL layer tweaking in YOLOv3,2021.0,Applied Sciences,General Computer Science / Other,,
+23_WAQAS_TARIQ_TOOR,Evolution of random access process: From Legacy networks to 5G and beyond,2022.0,Transactions on Emerging Telecommunications Technologies,Wireless Networks & IoT,,5g
+23_WAQAS_TARIQ_TOOR,Quantum key distribution protocol selector based on machine learning for next-generation networks,2022.0,Sustainability,Machine Learning & Artificial Intelligence,,machine learning
+23_WAQAS_TARIQ_TOOR,Wound rotor synchronous motor as promising solution for traction applications,2022.0,Electronics,General Computer Science / Other,,
+23_WAQAS_TARIQ_TOOR,A New Noise Shaping Approach for Sigma-Delta Modulators Using Two-Stage Feed-Forward Delays and Hybrid MASH-EFM,2023.0,Electronics,General Computer Science / Other,,
+23_WAQAS_TARIQ_TOOR,Mini-slot based access barring scheme for IoT networks,2023.0,Human-Centric Computing and Information Sciences,Wireless Networks & IoT,,iot
+23_WAQAS_TARIQ_TOOR,Reversible encryption and lossless data hiding for medical imaging aiding smart health care,2023.0,Cluster Computing,Computer Vision & Image Processing,Cybersecurity & Privacy,medical imaging
+23_WAQAS_TARIQ_TOOR,Detection of Parkinson's Disease from Voice Signals Using Explainable Artificial Intelligence,2024.0,3rd International Conference,Machine Learning & Artificial Intelligence,Biomedical & Health Informatics,artificial intelligence
+23_WAQAS_TARIQ_TOOR,Tuberculosis detection in chest X-rays using hybrid deep learning models,2024.0,3rd International Conference,Machine Learning & Artificial Intelligence,,deep learning
+23_WAQAS_TARIQ_TOOR,Dual-Core: Dual Collision Resolution for Massive Access in Cellular IoT Networks,2025.0,IEEE Transactions on Communications,Wireless Networks & IoT,,"iot, cellular"
+23_WAQAS_TARIQ_TOOR,Hybrid Deep Learning for Blood Cancer Detection: A CNN-GCN Approach for Enhanced Diagnostic Accuracy,2025.0,International Conference on Em,Machine Learning & Artificial Intelligence,Biomedical & Health Informatics,deep learning
+23_WAQAS_TARIQ_TOOR,IoT-Driven Battery Health Management and Tracking for Eco-friendly and Efficient Electric Transportation,2025.0,International Conference on Em,Energy & Renewable Systems,Wireless Networks & IoT,battery
+23_WAQAS_TARIQ_TOOR,Capture Effect-based Optimal Access Class Barring for IoT Communications,2025.0,Physical Communications,Wireless Networks & IoT,,iot
+24_AHMED_NAEEM,Physical layer security for wireless sensing and joint radar and communications,2024.0,Physical Layer Security for Wireles,Wireless Networks & IoT,Cybersecurity & Privacy,wireless
+24_AHMED_NAEEM,Signal domain physical modification for PLS,2024.0,Physical Layer Security for Wireles,Cybersecurity & Privacy,,security
+24_AHMED_NAEEM,Blind Signal Analysis-Wireless Communication Signals: A L,2021.0,Wireless Communication Signals,Wireless Networks & IoT,,wireless
+24_AHMED_NAEEM,Fall Detection using Accelerometer Calibration,2019.0,15th International Conference on Em,General Computer Science / Other,,
+24_AHMED_NAEEM,Joint Radar and Communication based Blind Signal Separation using a New Non-Linear Function for Fast-ICA,2021.0,2021 IEEE 94th Vehicular Technology,Wireless Networks & IoT,,vehicular
+24_AHMED_NAEEM,A Novel Frame Design for Non-Terrestrial Network Based Integrated Sensing and Communication,2022.0,IEEE 33rd Annual International Symp,Wireless Networks & IoT,,non-terrestrial
+24_AHMED_NAEEM,Radar-Aided Communication Scheduling Algorithm for 5G and Beyond Networks,2022.0,IEEE Access,Wireless Networks & IoT,,5g
+24_AHMED_NAEEM,Joint Adaptive OFDM and Reinforcement Learning Design for Autonomous Vehicles: Leveraging Age of Updates,2025.0,IEEE Open Journal of Vehicular Tech,Machine Learning & Artificial Intelligence,Wireless Networks & IoT,reinforcement learning
+24_AHMED_NAEEM,Polarization-Based Multiplexing: Enabling Spectrum Efficient Joint Radar and Communication,2024.0,IEEE Wireless Communications Letter,Wireless Networks & IoT,,wireless
+24_AHMED_NAEEM,A Novel User Association Scheme for Joint Radar and Communication in Cell-Free mMIMO Systems,2025.0,IEEE Transactions on Vehicular Tech,Wireless Networks & IoT,,vehicular
+24_AHMED_NAEEM,A Temporal Broadening-Aware Pulse Width Adaptation Scheme for ISI Mitigation and Energy Efficiency in THz Communication,2025.0,IEEE Transactions on Green Communic,Energy & Renewable Systems,,energy
+25_MUHAMMAD_ADEEL_ALTAF,A Multimodal Framework for MODT Using Enhanced Correlation-Based Affinity Metrics in Autonomous Driving,2025.0,The 7th International Conference on Artificial Intelligence in Information and Communication,Machine Learning & Artificial Intelligence,Robotics & Automation,artificial intelligence
+25_MUHAMMAD_ADEEL_ALTAF,Multi-Modal Integration of 2D and 3D Attributes for Multi-Vehicles Tracking,2024.0,15th International Conference on In,General Computer Science / Other,,
+25_MUHAMMAD_ADEEL_ALTAF,Gaussian Mixture Model-based Data Association Incorporating Deep Learning Network for Multivehicle Tracking and Detection in Autonomous Driving Systems,2025.0,Advanced Intelligent Systems,Machine Learning & Artificial Intelligence,Robotics & Automation,deep learning
+25_MUHAMMAD_ADEEL_ALTAF,"Usage of IR Sensors in HVAC Systems, Vehicles, and Manufacturing Industries: A Review",2022.0,IEEE Sensors Journal,General Computer Science / Other,,
+25_MUHAMMAD_ADEEL_ALTAF,Multiple Object Detection and Tracking in Autonomous Vehicles: A Survey on Enhanced Affinity Computation and Its Multimodal Applications,2025.0,ICT Express,Computer Vision & Image Processing,Robotics & Automation,object detection
+26_AAMINA_AKBAR,Joint Backhaul Pairing and Resource Allocation of Moving Small Cells Using NOMA,2023.0,International Conference,General Computer Science / Other,,
+26_AAMINA_AKBAR,Noma in Hetnets: Adaptive Resource Allocation with Imperfect Sic,2025.0,Journal,General Computer Science / Other,,
+26_AAMINA_AKBAR,An energy-efficient JT-CoMP enabled framework with adaptive OMA/NOMA in HetNets,2024.0,Journal,Energy & Renewable Systems,,energy
+26_AAMINA_AKBAR,NOMA and 5G emerging technologies: A survey on issues and solution techniques,2021.0,Journal,Wireless Networks & IoT,,5g
+28_IDRIS_KHAN,Incorporation of carbon nanotubes in photoactive layer of organic solar cells,2020.0,Ain Shams Engineering Journal,Energy & Renewable Systems,,solar
+28_IDRIS_KHAN,Effect of Solar Concentrators on the Efficiency of Solar Panels,2018.0,International Conference on Co 2018,Energy & Renewable Systems,,solar
+28_IDRIS_KHAN,A study of product distribution under fast pyrolysis of wheat stalk while producing Bio-oil,2018.0,International Conference on Computi 2018,Energy & Renewable Systems,,"pyrolysis, bio-oil"
+28_IDRIS_KHAN,A review on the challenges and possibilities of using CNTs in organic solar cells,2018.0,Science of Advanced Materials,Energy & Renewable Systems,,solar
+28_IDRIS_KHAN,Sketching Pakistan's energy dynamics: Prospects of biomass energy,2018.0,JOURNAL OF RENEWABLE AND SUSTAINABL,Energy & Renewable Systems,,energy
+28_IDRIS_KHAN,Photovoltaic Power Forecasting based on Elman Neural Network Software Engineering Method,2017.0,8th IEEE International Conference,Machine Learning & Artificial Intelligence,Software Engineering & Web Technologies,neural network
+28_IDRIS_KHAN,Photovoltaic Power prediction by Cascade forward artificial neural network,2017.0,7th international conference on,Machine Learning & Artificial Intelligence,Energy & Renewable Systems,neural network
+28_IDRIS_KHAN,Hybrid Power Forecasting Model for Photovoltaic Plants Based on Neural Network and Air Quality Index,2017.0,International Journal of Photoenerg,Machine Learning & Artificial Intelligence,Energy & Renewable Systems,neural network
+28_IDRIS_KHAN,Preparation and breakdown properties of mineral oil based alumina nanofluids,2015.0,International conference on Em,General Computer Science / Other,,
+28_IDRIS_KHAN,Comparison of transmission losses and voltage drops of GIL(Gas Insulated transmission line) and overhead transmission lines,2014.0,Power Electronics and Motion Contro,Energy & Renewable Systems,,power electronics
+29_MUHAMMAD_SARMAD_TARIQ,Economic analysis of a small hybrid power system,2015.0,Power Generation,Energy & Renewable Systems,,power system
+29_MUHAMMAD_SARMAD_TARIQ,"Impact of module and inverter failures on the performance of central-, string-, and micro-inverter PV systems",2018.0,Microelectronics Reliability,General Computer Science / Other,,
+29_MUHAMMAD_SARMAD_TARIQ,Harmonic analysis of grid-connected solar PV systems with nonlinear household loads in low-voltage distribution networks,2021.0,Sustainability,Energy & Renewable Systems,,"solar, grid"
+29_MUHAMMAD_SARMAD_TARIQ,Optimal power flow and contingency analysis incorporating distributed facts and dynamic thermal line rating,2021.0,North American Power Symposium,General Computer Science / Other,,
+29_MUHAMMAD_SARMAD_TARIQ,A Unified Power Flow Controller (UPFC) Based Optimal Power Flow Methodology for Balancing Electric Grid Line-Loading,2024.0,IEEE Industry Applications Society,Energy & Renewable Systems,,grid
+29_MUHAMMAD_SARMAD_TARIQ,Optimal Location Methodology for Multiple UPFCs to Reduce Transmission Congestion,2025.0,SoutheastCon,General Computer Science / Other,,
+29_MUHAMMAD_SARMAD_TARIQ,Optimal Power Flow Methodology with UPFC and Synchronous generator for Optimal Power Flow Management,2025.0,SoutheastCon,General Computer Science / Other,,
+30_FAHD_SIKANDAR_KHAN,"Catalytically Active Bimetallic Nickel-Cobalt MOF Linked Via Pyridine 2, 6-Dicarboxylate for Electrochemical Water Splitting Applications",2024.0,Arab Journal of Science & Engineering,General Computer Science / Other,,
+30_FAHD_SIKANDAR_KHAN,Elucidating the performance of hexamethylene tetra-amine interlinked bimetallic NiCo-MOF for efficient electrochemical hydrogen and oxygen evolution,2024.0,RSC Advances,General Computer Science / Other,,
+30_FAHD_SIKANDAR_KHAN,Scalability and Efficiency Analysis of Hyperledger Fabric and Private Ethereum in Smart Contract Execution,2025.0,nan,General Computer Science / Other,,
+30_FAHD_SIKANDAR_KHAN,Electrochemical reduction of CO2 by Arc Plasma Deposition of copper and gold composite nano particles,2018.0,Nanoscience Meet,General Computer Science / Other,,
+30_FAHD_SIKANDAR_KHAN,Solar Energy Conversion via reduction of CO2 using Concentrator Photovoltaics,2018.0,22nd International conference on ph,Energy & Renewable Systems,,"energy, solar"
+30_FAHD_SIKANDAR_KHAN,Arc Plasma Deposited Copper and Gold Nanoparticles on FTO Substrate for Electrochemical Reduction of CO2,2019.0,Advances in nanoscience and nanotechnology,General Computer Science / Other,,
+30_FAHD_SIKANDAR_KHAN,Electrochemical reduction of CO2 using cuprous oxide particles supported on Carbon Paper substrate,2019.0,Asian Journal of Nanoscience and Nanotechnology,General Computer Science / Other,,
+30_FAHD_SIKANDAR_KHAN,Spectral Properties of Glass (15Ga2S3 · 85GeS2) Doped with Erbium,2017.0,Glass Physics & Chemistry,General Computer Science / Other,,
+30_FAHD_SIKANDAR_KHAN,Electrochemical reduction of CO2 using Indium doped Germanium Sulphide amorphous glass structures,2020.0,Heliyon,General Computer Science / Other,,
+31_USMAN_MASUD,Preparation of dual mode spectroscopic system for testing: Analysis of sample holder and investigation of intensity noise,2025.0,Heliyon,General Computer Science / Other,,
+31_USMAN_MASUD,Sensitivity evaluation of Brownian motion and chemical reaction parameter on transport of motile gyrotactic microorganism in nanofluid over a wedge,2024.0,ZAMM - Journal of Applied Mathematic,General Computer Science / Other,,
+31_USMAN_MASUD,A Novel Deep Learning Framework With Meta-Heuristic Feature Selection for Enhanced Remote Sensing Image Classification,2024.0,IEEE Access,Machine Learning & Artificial Intelligence,Computer Vision & Image Processing,"deep learning, classification, feature selection"
+32_QAISAR_HUSSAIN_ALVI,Performance evaluation of,2011.0,New Horizons,General Computer Science / Other,,
+32_QAISAR_HUSSAIN_ALVI,Full Duplex Relaying in Non,2020.0,Radioengineering Journal,General Computer Science / Other,,
+32_QAISAR_HUSSAIN_ALVI,Performance Analysis of,2023.0,Telecommunication Systems,Wireless Networks & IoT,,telecommunication
+32_QAISAR_HUSSAIN_ALVI,On the Capacity Analysis,2023.0,Wireless Personal Communication,Wireless Networks & IoT,,wireless
+33_QAMAR_ABBAS,Enhancing Backscatter Communication in IoT Networks with Power-Domain NOMA,2024.0,Wireless-Powered Backscatter Commun,Wireless Networks & IoT,,"wireless, iot"
+33_QAMAR_ABBAS,NOMA enhanced backscatter communication for green IoT networks,2019.0,16th International Symposium on,Wireless Networks & IoT,,iot
+33_QAMAR_ABBAS,Joint Optimization of Age of Information and Energy Efficiency in IoT Networks,2020.0,91st Vehicular Technology Conference,Wireless Networks & IoT,Machine Learning & Artificial Intelligence,"iot, vehicular"
+33_QAMAR_ABBAS,Age of Information in Backscatter Communication,2020.0,Wireless-Powered Backscatter Commun,Wireless Networks & IoT,,wireless
+33_QAMAR_ABBAS,A Markovian Model for the Analysis of Age of Information in IoT Networks,2021.0,IEEE Wireless Communications Letter,Wireless Networks & IoT,,"wireless, iot"
+33_QAMAR_ABBAS,A comprehensive survey on age of information in massive IoT networks,2023.0,Computer Communications,Wireless Networks & IoT,,iot
+33_QAMAR_ABBAS,On minimizing the age of information in NOMA-based vehicular networks using Markov decision process,2022.0,IEEE Transactions on Intelligent Transportation Systems,Wireless Networks & IoT,,vehicular
+34_SHAHZAD,Flexible IoT Datapath Programming using P4,2019.0,International Conference on Green and Sustainable Computing,Wireless Networks & IoT,,iot
+34_SHAHZAD,Enhanced Explicit Congestion Notification (EECN) in TCP with P4 Programming,2020.0,International Conference on Green and Sustainable Computing,General Computer Science / Other,,
+34_SHAHZAD,FLIP: Flexible IoT Path programming for Large-scale IoT,2020.0,"20th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing",Energy & Renewable Systems,Wireless Networks & IoT,grid
+34_SHAHZAD,Big Data Merging and Deep Learning Model Optimization for Improving Weather Information Forecasting Performance,2021.0,Journal of the Institute of Electronics and Information Engineers,Machine Learning & Artificial Intelligence,Data Science & Big Data,"deep learning, optimization"
+34_SHAHZAD,Reinforcement Learning-Aided Edge Intelligence Framework for Delay-Sensitive Industrial Applications,2022.0,Sensors,Machine Learning & Artificial Intelligence,,reinforcement learning
+34_SHAHZAD,IoTactileSim: A Virtual Testbed for Tactile Industrial Internet of Things Services,2021.0,Sensors,Wireless Networks & IoT,,internet of things
+34_SHAHZAD,Learning-Based Adaptive Sliding-Window RLNC for High Bandwidth-Delay Product Networks,2023.0,IEEE Access,General Computer Science / Other,,
+34_SHAHZAD,RLECN: A Reinforcement Learning Based Dynamic ECN Threshold Setting Mechanism,2023.0,ICT Express,Machine Learning & Artificial Intelligence,,reinforcement learning
+34_SHAHZAD,RS-RLNC: A Reinforcement Learning Based Selective Random Linear Network Coding Framework For Tactile Internet,2023.0,IEEE Access,Machine Learning & Artificial Intelligence,,reinforcement learning
+35_MATIULLAH_AHSAN,Comparative analysis of mathematical and simulation models for electric field generated beneath 400 kV overhead transmission lines,2025.0,Measurement Part E,General Computer Science / Other,,
+35_MATIULLAH_AHSAN,Deep learning based vision transformer approach for detecting overlapping PV faults using multi labeling,2025.0,Measurement Part E,Natural Language Processing,Machine Learning & Artificial Intelligence,transformer
+35_MATIULLAH_AHSAN,Simulation-based analysis of electric field characteristics under high-voltage double-circuit and quadrupole overhead transmission lines,2025.0,Journal of Electrostatics,General Computer Science / Other,,
+35_MATIULLAH_AHSAN,Analysis of high-ampacity and low-sag conductors of 275 kV overhead transmission lines using reconductoring technique,2025.0,Electric Power Systems Research,General Computer Science / Other,,
+35_MATIULLAH_AHSAN,"Solar PV adoption for homes (A case of Peshawar, Pakistan)",2017.0,nan,Energy & Renewable Systems,,solar
+36_SAMANA_BATOOL,A Hybrid Spatial and Temporal Attention Driven Network for Left Ventricular Function Assessment Using Echocardiography,2025.0,nan,General Computer Science / Other,,
+36_SAMANA_BATOOL,EFNet: A Multitask Deep-Learning Network for Simultaneous Quantification of Left Ventricle Structure and Function,2024.0,Physica Medica,General Computer Science / Other,,
+36_SAMANA_BATOOL,Ejection Fraction Estimation from Echocardiograms Using Optimal Left Ventricle Feature Extraction Based on Clinical Methods,2023.0,Diagnostics,Computer Vision & Image Processing,Biomedical & Health Informatics,feature extraction
+37_SANIA_GUL,Comparison of Cold-Cup Biopsy Versus Resection,2025.0,Cureus,General Computer Science / Other,,
+37_SANIA_GUL,STEM: spatial speech separation using twin-delayed DDPG,2025.0,Journal,General Computer Science / Other,,
+37_SANIA_GUL,Single-channel speech denoising by masking the colored,2025.0,Journal,General Computer Science / Other,,
+37_SANIA_GUL,Single channel speech denoising by DDPG,2025.0,Applied Acoustics,General Computer Science / Other,,
+37_SANIA_GUL,Triple-0: Zero-shot denoising and dereverberation,2024.0,Plos-One,General Computer Science / Other,,
+37_SANIA_GUL,On Evaluation of Discrete RL Agents for Traffic,2024.0,International Journal of Innovation,General Computer Science / Other,,
+37_SANIA_GUL,DEW: A wavelet approach of rare sound event detection,2024.0,Plos-One,General Computer Science / Other,,
+37_SANIA_GUL,A survey of audio enhancement algorithms for,2023.0,IEEE Access,General Computer Science / Other,,
+37_SANIA_GUL,Single channel speech enhancement by colored,2024.0,Computer Speech & Language,General Computer Science / Other,,
+37_SANIA_GUL,Preserving the beamforming effect for spatial,2024.0,Computer Speech & Language,Wireless Networks & IoT,,beamforming
+37_SANIA_GUL,On evaluation of dereverberation algorithms,2022.0,2022 International Conference,General Computer Science / Other,,
+37_SANIA_GUL,Enhancing the correlation between the quality,2022.0,Applied Acoustics,General Computer Science / Other,,
+37_SANIA_GUL,Integration of deep learning with expectation,2021.0,Applied Acoustics,Machine Learning & Artificial Intelligence,,deep learning
+37_SANIA_GUL,Enabling an anechoic U-Net based speech,2021.0,Applied acoustics,General Computer Science / Other,,
+37_SANIA_GUL,Clustering of spatial cues by semantic,2021.0,Applied Acoustics,Machine Learning & Artificial Intelligence,,clustering
+37_SANIA_GUL,On enhancing model‐based expectation,2019.0,International Journal of Communication,General Computer Science / Other,,
+37_SANIA_GUL,Enhancing the Separation of Sources,2019.0,2019 15th International Conference,General Computer Science / Other,,
+38_MUHAMMAD_MUSADIQ,Optimal Siting of Phasor Measurement Units in National Transmission Network of Pakistan to Ensure Complete System Observability,2020.0,IEEE 23rd International Multitopic Conference,General Computer Science / Other,,
+38_MUHAMMAD_MUSADIQ,An Optimal PMU Placement Against N-1 Contingency of PMU Using Integer Linear Programming Approach,2019.0,International Conference on Applied,General Computer Science / Other,,
+38_MUHAMMAD_MUSADIQ,Effect Of PV System Design And Financial Variables On Systems Perfomance And Financial Feasibility,2023.0,International Conference on Energy,Energy & Renewable Systems,,energy
+38_MUHAMMAD_MUSADIQ,Optimising PMU Placement using Integer Linear Programming for Complete Network Observability with Zero Injection Bus and N-1 Contingency,2023.0,International Conference on Energy,Energy & Renewable Systems,,energy
+38_MUHAMMAD_MUSADIQ,A Critical Review of State-of-the-Art Optimal PMU Placement Techniques,2022.0,Energies,General Computer Science / Other,,
+38_MUHAMMAD_MUSADIQ,Optimal PMU Placement to Enhance Observability in Transmission Networks Using ILP and Degree of Centrality,2024.0,Energies,General Computer Science / Other,,
+38_MUHAMMAD_MUSADIQ,Novel Multi-Stage Phasor Measurement Unit Placement on Critical Buses with Observability Assessment,2025.0,Energies,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,Polarization Reversal Characteristics of Ferroelectric-Schottky Diode Hybrid Structure,2020.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,Temperature-sensing behavior of poly (vinylidene fluoride-trifluoroethylene) film,2020.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,High-performance humidity sensor based on the graphene flower/zinc oxide composite,2021.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,Highly efficient and wide range humidity response of biocompatible egg white thin film,2021.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,A full-range flexible and printed humidity sensor based on a solution-processed p (Vdf-trfe)/graphene-flower composite,2021.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,Polarization Reversal Characteristics in Capacitors with a Metal/Insulator/Ferroelectric/Metal Structure,2021.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,All-Printed Flexible Memristor with Metal-Non-Metal-Doped TiO2 Nanoparticle Thin Films,2022.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,Characterization and performance evaluation of fully biocompatible gelatin-based humidity sensor for health and environmental monitoring,2023.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,"Wide-Range, Fast-Responsive Humidity Sensor Based on In2Se3/PEDOT:PSS Nanocomposite",2023.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,Self-powered humidity sensor driven by triboelectric nanogenerator composed of bio-wasted peanut skin powder,2024.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,"Hierarchically structured porous natural dielectric layer for sustainable pressure sensing, gesture monitoring, and detecting spatial pressure distribution",2024.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,"High performance triboelectric nanogenerator based on purified chitin nanopaper for the applications of self-powered humidity sensing, gait monitoring, and hyperhidrosis sensor",2024.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,"DFT investigation of structural, electronic, optical, mechanical, and thermoelectric properties of halide perovskites XZnCl3(X = Ag, Au, Cu)",2025.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,High Performance Triboelectric Nanogenerator Based on Metal-Organic Framework Composites for IoT-Assisted Wireless Healthcare Monitoring,2025.0,nan,Wireless Networks & IoT,Biomedical & Health Informatics,"wireless, iot"
+39_MUHAMMAD_SAQIB,A Sustainable and Flexible Carbon Paper-Based Multifunctional Human-Machine Interface (HMI) Sensor,2025.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,2D materials-memristive devices nexus: From status quo to Impending applications,2025.0,nan,General Computer Science / Other,,
+39_MUHAMMAD_SAQIB,"Adaptable self-powered humidity sensor based on a highly permeable, hierarchically fibrous, and chaotically textured sustainable biowaste",2025.0,nan,General Computer Science / Other,,
+40_ABDUR_REHMAN,Design and Evaluation of PM Vernier Machine for Urban Air Mobility Propulsion Applications,2025.0,IEEE Canadian Journal of Electrical,General Computer Science / Other,,
+40_ABDUR_REHMAN,Centralized Intelligent Home Energy Management System,2018.0,2017 International Conference on Renewable and Sustainable Energy,Energy & Renewable Systems,,energy
+40_ABDUR_REHMAN,Design and Analysis of a Vernier Motor Considering Series Compensation,2020.0,IEEE Energy Conversion Congress and Exposition,Energy & Renewable Systems,,energy
+40_ABDUR_REHMAN,Spoke-type PM Vernier as a Promising Candidate for MW-Scale Direct Drive Wind Turbine Applications,2023.0,International Conference on Power Electronics,Energy & Renewable Systems,,"wind turbine, power electronics"
+40_ABDUR_REHMAN,Design of a Low-Cost PM Vernier Machine with Improved Electromagnetic Performance,2024.0,IEEE 21st Biennial Conference on Industrial Electronics,General Computer Science / Other,,
+41_MUHAMMAD_AQEEL,Comparative Analysis of Urdu Parts Of Speech Taggers using Machine Learning Techniques,2020.0,International Multitopic Conference,Machine Learning & Artificial Intelligence,,machine learning
+41_MUHAMMAD_AQEEL,Facial Emotion Recognition using Deep Learning (FERDL),2023.0,International Multitopic Conference,Machine Learning & Artificial Intelligence,,deep learning
+41_MUHAMMAD_AQEEL,Analysis of the MIDAS and OASIS biomedical databases for the application of multimodal image processing,2020.0,Intelligent Technologies and Applications,Computer Vision & Image Processing,Biomedical & Health Informatics,image processing
+41_MUHAMMAD_AQEEL,Brain tumor localization and segmentation based on Pixel-Based thresholding with morphological operation,2020.0,Intelligent Technologies and Applications,Computer Vision & Image Processing,,segmentation
+41_MUHAMMAD_AQEEL,Detection of Anomaly in Videos Using Convolutional Autoencoder and Generative Adversarial Network model,2005.0,International Multitopic Conference,Computer Vision & Image Processing,Machine Learning & Artificial Intelligence,convolutional
+41_MUHAMMAD_AQEEL,Lungs nodule cancer detection using statistical techniques,2020.0,international multitopic conference,Biomedical & Health Informatics,,cancer
+41_MUHAMMAD_AQEEL,Real-Time Apple Disease Detection and Classification Using Hybrid CNN Model,2024.0,International Journal of Advanced N,Machine Learning & Artificial Intelligence,Biomedical & Health Informatics,classification
+41_MUHAMMAD_AQEEL,Web-Based method to connect organizations and IT people using iterative model,2023.0,International Journal of Information,General Computer Science / Other,,
+41_MUHAMMAD_AQEEL,Real-Time Health Monitoring Smart System for Cardiac Patients using Internet of Things (IoT),2023.0,International Journal of Electrical,Wireless Networks & IoT,Biomedical & Health Informatics,"iot, internet of things"
+41_MUHAMMAD_AQEEL,Intelligent Smart Energy Meter Reading System Using Global System for Mobile Communication,2023.0,International Journal of Intelligen,Energy & Renewable Systems,,energy
+41_MUHAMMAD_AQEEL,Recent trends in cloud computing and IoT platforms for it management and development: a review,2023.0,Pakistan Journal of Engineering and,Wireless Networks & IoT,,iot
+41_MUHAMMAD_AQEEL,IoT-Driven Smart Agricultural Technology for Real-Time Soil and Crop Optimization,2025.0,Smart Agricultural Technology,Machine Learning & Artificial Intelligence,Wireless Networks & IoT,optimization
+41_MUHAMMAD_AQEEL,Milk adulteration identification using hyperspectral imaging and machine learning,2025.0,Journal of Dairy Science,Machine Learning & Artificial Intelligence,,machine learning
+41_MUHAMMAD_AQEEL,Hyperspectral Identification of Milk Adulteration using Advance Deep Learning,2024.0,IEEE Access,Machine Learning & Artificial Intelligence,,deep learning
+41_MUHAMMAD_AQEEL,Hyperspectral identification of oil adulteration using machine learning techniques,2024.0,Current Research in Food S,Machine Learning & Artificial Intelligence,,machine learning
+43_AMMARA_NASIM,Investigating 3D Echocardiography Image Fusion for Improving Image Quality,2013.0,3rd IEEE International Conference,General Computer Science / Other,,
+43_AMMARA_NASIM,Contrast 3D Echocardiographic Segmentation by image inversion,2014.0,17th IEEE International Multi Topic Conference,Computer Vision & Image Processing,,segmentation
+43_AMMARA_NASIM,Review of OCT and Fundus images for detecting Macular Edema,2015.0,IEEE International Conference,Biomedical & Health Informatics,,edema
+43_AMMARA_NASIM,Fully automated identification of heart sounds for the analysis of cardiovascular pathology,2018.0,Future Information and Communication Technology,General Computer Science / Other,,
+43_AMMARA_NASIM,Automated identification colorectal gland sparsity from benign images,2017.0,International Conference on Image Processing,Computer Vision & Image Processing,,image processing
+43_AMMARA_NASIM,Mitosis detection in breast cancer by inference of segmentation and bag of features,2017.0,International Conference on Computer Vision,Computer Vision & Image Processing,Biomedical & Health Informatics,"computer vision, segmentation"
+43_AMMARA_NASIM,Automated diagnosis of retinal Edema from optical coherence tomography images,2018.0,International Conference on Computer Vision,Biomedical & Health Informatics,Computer Vision & Image Processing,"retinal, edema"
+43_AMMARA_NASIM,Automated Gland Segmentation Leading to Cancer Detection for Colorectal Biopsy Images,2019.0,Future of Information and Communication Technology,Computer Vision & Image Processing,Biomedical & Health Informatics,segmentation
+43_AMMARA_NASIM,Development of EMD-based framework for modelling the effects of chiropractic care,2024.0,20th International Conference on Bhurban,General Computer Science / Other,,
+43_AMMARA_NASIM,A Robust Semantic Segmentation Framework for Baggage Threat Detection,2025.0,International Conference on Computer Vision,Computer Vision & Image Processing,Cybersecurity & Privacy,"computer vision, segmentation"
+43_AMMARA_NASIM,Incremental Instance Segmentation for Cluttered Baggage Threat Detection,2023.0,IEEE International Conference,Computer Vision & Image Processing,Cybersecurity & Privacy,segmentation
+43_AMMARA_NASIM,A Cross-domain Vision Transformer Based Framework for Baggage Threat Classification,2024.0,16th International Conference,Natural Language Processing,Machine Learning & Artificial Intelligence,transformer
+43_AMMARA_NASIM,A Cross-Domain Threat Screening and Localization Framework Using Vision Transformers and Self-supervised Learning,2024.0,14th International Conference,Machine Learning & Artificial Intelligence,Cybersecurity & Privacy,supervised
+43_AMMARA_NASIM,"Fully automated robust system to detect retinal edema, central serous chorioretinopathy and age-related macular degeneration from optical coherence tomography images",2017.0,BioMed Research International,Biomedical & Health Informatics,,"retinal, edema"
+43_AMMARA_NASIM,No-reference image quality assessment using bag-of-features with feature selection,2020.0,Multimedia Tools and Applications,Machine Learning & Artificial Intelligence,,feature selection
+43_AMMARA_NASIM,Class and Data-Incremental Learning Framework for Baggage Threat Segmentation via Knowledge Distillation,2025.0,IEEE Acess,Computer Vision & Image Processing,Cybersecurity & Privacy,segmentation
+43_AMMARA_NASIM,Regressor Driven Incremental Instance Segmentation for Contraband Items Identification,2025.0,Engineering Applications of Artificial Intelligence,Computer Vision & Image Processing,Machine Learning & Artificial Intelligence,segmentation
+09_SANA_FATIMA_RIZVI,Transformer-Based Sentiment Analysis for Low-Resource Urdu Text,2024.0,IEEE Access,Natural Language Processing,,"sentiment, sentiment analysis, transformer"
+09_SANA_FATIMA_RIZVI,A Federated Learning Framework for Privacy-Preserving Healthcare Diagnostics,2023.0,Scientific Reports,Cybersecurity & Privacy,Biomedical & Health Informatics,privacy
+09_SANA_FATIMA_RIZVI,Deep Learning Approaches for Crop Disease Detection in Punjab Informatics & Biomedical,2022.0,Journal of Computing,Biomedical & Health Informatics,Machine Learning & Artificial Intelligence,"biomedical, disease"
+Muhammad_Dawood_Rizwan_CV,"Large Language Models in Clinical Reasoning: Capabilities, Challenges, and the Future of AI-Assisted Healthcare",nan,Journal of Healthcare Informatics Research,Biomedical & Health Informatics,,"healthcare, clinical"
+Muhammad_Dawood_Rizwan_CV,Bridging Performance and Efficiency: Distilling Vision Transformers for Remote Sensing,2025,2025 5th International Conference on Digital Futures and Transformative Technologies (ICoDT2),General Computer Science / Other,,
+Muhammad_Dawood_Rizwan_CV,From Segmentation to Structured Reports: Auditable Continual Learning for Automation in Medical Imaging Diagnostics,2026,2026 International Conference on Robotics and Automation in Industry (ICRAI),Computer Vision & Image Processing,Biomedical & Health Informatics,"segmentation, medical imaging"
+Muhammad_Dawood_Rizwan_CV,HunarmandAI: A Bilingual Intelligent Diagnostic Interface for Smart Vehicles and Industrial Mechatronic Systems,2026,2026 International Conference on Robotics and Automation in Industry (ICRAI),Robotics & Automation,,robotics
+Muhammad_Dawood_Rizwan_CV,XMedFusion: A Knowledge-Guided Multimodal Perception and Reasoning Framework for Autonomous Medical Systems,2026,2026 International Conference on Robotics and Automation in Industry (ICRAI),Robotics & Automation,Biomedical & Health Informatics,"robotics, autonomous"
+Muhammad_Dawood_Rizwan_CV,MedLingo: Resource-Efficient Hierarchical Multi-Agent Intelligence for Autonomous Clinical and Robotic Diagnostics,2026,2026 International Conference on Robotics and Automation in Industry (ICRAI),Robotics & Automation,Biomedical & Health Informatics,"robotics, autonomous"

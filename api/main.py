@@ -27,6 +27,27 @@ app = FastAPI(
     redoc_url="/redoc",
 )
 
+def ensure_seed_data():
+    """Ensure data/ has evaluation CSVs and rankings even if a volume is mounted."""
+    import shutil
+    seed_dir = Path("seed_data")
+    if not seed_dir.exists():
+        return
+    for folder in ["rankings", "extracted", "analysis"]:
+        src = seed_dir / folder
+        dst = Path("data") / folder
+        if src.exists():
+            dst.mkdir(parents=True, exist_ok=True)
+            for item in src.glob("*"):
+                if item.is_file() and not (dst / item.name).exists():
+                    try:
+                        shutil.copy2(item, dst / item.name)
+                    except Exception:
+                        pass
+
+ensure_seed_data()
+
+
 # CORS Setup
 app.add_middleware(
     CORSMiddleware,

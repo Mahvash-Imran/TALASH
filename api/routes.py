@@ -379,11 +379,11 @@ def list_candidates():
 
     comp_file = DATA_DIR / "composite_evaluations.csv"
     if not comp_file.exists():
-        pipeline = MasterPipeline(skip_llm=True)
-        pipeline.run_full_pipeline()
+        from .main import ensure_seed_data
+        ensure_seed_data()
 
     if not comp_file.exists():
-        raise HTTPException(status_code=404, detail="No candidate evaluations found.")
+        return []
 
     # Load missing info counts from email drafter analysis (if available)
     missing_counts: dict = {}
