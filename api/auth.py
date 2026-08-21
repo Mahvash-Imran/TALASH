@@ -10,6 +10,7 @@ import hashlib
 import os
 import shutil
 import logging
+import datetime
 from pathlib import Path
 from typing import Dict, Any, Optional
 from fastapi import APIRouter, HTTPException, Header, Depends
@@ -70,7 +71,7 @@ def _load_users() -> Dict[str, Dict[str, Any]]:
                 "email": DEFAULT_ADMIN_EMAIL,
                 "password_hash": _hash_password(DEFAULT_ADMIN_PASS),
                 "role": "admin",
-                "created_at": "2026-08-21T10:00:00"
+                "created_at": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S")
             }
         }
         _save_users(default_users)
@@ -114,6 +115,51 @@ def get_tenant_dir(user_email: Optional[str] = None) -> Path:
     return tenant_base
 
 
+def record_tenant_candidate(tenant_analysis_dir: Path, candidate_id: str):
+    """Record an uploaded candidate ID under this tenant."""
+    if str(tenant_analysis_dir) in ("data/analysis", "data\\analysis") or tenant_analysis_dir == Path("data/analysis"):
+        return
+    c_file = tenant_analysis_dir / "candidate_ids.json"
+    ids = []
+    if c_file.exists():
+        try:
+            with open(c_file, "r", encoding="utf-8") as f:
+                ids = json.load(f)
+        except Exception:
+            ids = []
+    if candidate_id not in ids:
+        ids.append(candidate_id)
+        with open(c_file, "w", encoding="utf-8") as f:
+            json.dump(ids, f, indent=2)
+
+
+def filter_tenant_analysis_files(tenant_analysis_dir: Path):
+    """
+    Ensures all CSVs in a non-admin tenant directory only contain rows
+    for candidates that this specific tenant has uploaded.
+    """
+    if str(tenant_analysis_dir) in ("data/analysis", "data\\analysis") or tenant_analysis_dir == Path("data/analysis"):
+        return
+    c_file = tenant_analysis_dir / "candidate_ids.json"
+    allowed_ids = set()
+    if c_file.exists():
+        try:
+            with open(c_file, "r", encoding="utf-8") as f:
+                allowed_ids = set(json.load(f))
+        except Exception:
+            allowed_ids = set()
+
+    import pandas as pd
+    for csv_file in tenant_analysis_dir.glob("*.csv"):
+        try:
+            df = pd.read_csv(csv_file, dtype=str)
+            if "candidate_id" in df.columns:
+                filtered_df = df[df["candidate_id"].isin(allowed_ids)]
+                filtered_df.to_csv(csv_file, index=False)
+        except Exception:
+            pass
+
+
 def get_current_user_email(x_user_email: Optional[str] = Header(None)) -> str:
     """FastAPI dependency to extract current logged-in user email."""
     if not x_user_email or x_user_email.strip() == "":
@@ -143,7 +189,7 @@ def register(req: UserRegisterRequest):
         "email": email,
         "password_hash": _hash_password(req.password),
         "role": "user",
-        "created_at": "2026-08-21T10:00:00"
+        "created_at": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S")
     }
     users[email] = user_data
     _save_users(users)

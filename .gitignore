@@ -14,11 +14,16 @@ env/
 .venv/
 
 # Heavy raw PDFs and logs
+*.pdf
 data/cvs/*.pdf
 data/cvs/split/*.pdf
 data/uploads/*.pdf
 data/logs/*
 !data/logs/.gitkeep
+data/tenants/
+data/users.json
+build_cv_pdf.py
+make_perfect_cv.py
 
 # Scratch and temp files
 scratch/

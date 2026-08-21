@@ -201,12 +201,14 @@ async def upload_resume(background_tasks: BackgroundTasks, file: UploadFile = Fi
 
 
 @router.get("/status/{candidate_id}")
-def get_processing_status(candidate_id: str):
+def get_processing_status(candidate_id: str, x_user_email: Optional[str] = Header(None)):
     """Returns the current processing status of an uploaded CV or bulk upload."""
     if candidate_id in _processing_status:
         return {"candidate_id": candidate_id, **_processing_status[candidate_id]}
-    # Pre-existing candidate — check composite evaluations
-    comp_file = DATA_DIR / "composite_evaluations.csv"
+    # Pre-existing candidate — check user's tenant composite evaluations
+    from .auth import get_tenant_dir, get_current_user_email
+    user_email = get_current_user_email(x_user_email)
+    comp_file = get_tenant_dir(user_email) / "composite_evaluations.csv"
     if comp_file.exists():
         df = pd.read_csv(comp_file, dtype=str)
         if candidate_id in df.get("candidate_id", pd.Series()).values:
@@ -245,6 +247,9 @@ def _process_uploaded_cv_background(pdf_path: str, candidate_id: str, tenant_ana
         _processing_status[candidate_id] = {"status": "processing", "message": "Step 3/3: Running analysis pipeline (Modules 2-10).", "is_bulk": False}
         logger.info("[Upload] Running Modules 2-10 for %s", candidate_id)
 
+        from .auth import record_tenant_candidate, filter_tenant_analysis_files
+        record_tenant_candidate(Path(tenant_analysis_dir), candidate_id)
+
         pipeline = MasterPipeline(
             api_key=api_key, model=model,
             base_url=base_url if base_url else None,
@@ -253,6 +258,9 @@ def _process_uploaded_cv_background(pdf_path: str, candidate_id: str, tenant_ana
         )
         pipeline.run_full_pipeline()
 
+        # Enforce tenant isolation — keep only this tenant's candidates
+        filter_tenant_analysis_files(Path(tenant_analysis_dir))
+
         _processing_status[candidate_id] = {"status": "done", "message": "Processing complete. Candidate added to evaluations.", "is_bulk": False}
         logger.info("[Upload] Full pipeline complete for %s", candidate_id)
 
@@ -260,6 +268,7 @@ def _process_uploaded_cv_background(pdf_path: str, candidate_id: str, tenant_ana
         error_msg = str(e)
         _processing_status[candidate_id] = {"status": "error", "message": f"Processing failed: {error_msg}", "is_bulk": False}
         logger.error("[Upload] Error for %s: %s", candidate_id, error_msg, exc_info=True)
+
 
 
 
@@ -333,6 +342,10 @@ def _process_bulk_cv_background(pdf_path: str, upload_id: str, expected_count: i
         })
         logger.info("[Bulk] Running Modules 2-10 for %d candidates", completed)
 
+        from .auth import record_tenant_candidate, filter_tenant_analysis_files
+        for cid in candidates_done:
+            record_tenant_candidate(Path(tenant_analysis_dir), cid)
+
         pipeline = MasterPipeline(
             api_key=api_key, model=model,
             base_url=base_url if base_url else None,
@@ -340,6 +353,9 @@ def _process_bulk_cv_background(pdf_path: str, upload_id: str, expected_count: i
             analysis_dir=tenant_analysis_dir,
         )
         pipeline.run_full_pipeline()
+
+        # Enforce tenant isolation — keep only this tenant's candidates
+        filter_tenant_analysis_files(Path(tenant_analysis_dir))
 
         final_msg = f"Done! {completed}/{len(split_pdfs)} candidates added to evaluations."
         if errors:
@@ -358,6 +374,7 @@ def _process_bulk_cv_background(pdf_path: str, upload_id: str, expected_count: i
         error_msg = str(e)
         _processing_status[upload_id].update({"status": "error", "message": f"Bulk processing failed: {error_msg}"})
         logger.error("[Bulk] Error for %s: %s", upload_id, error_msg, exc_info=True)
+
 
 
 
@@ -460,11 +477,16 @@ def list_candidates(x_user_email: Optional[str] = Header(None)):
 
 
 @router.get("/candidates/{candidate_id}")
-def get_candidate_details(candidate_id: str):
+def get_candidate_details(candidate_id: str, x_user_email: Optional[str] = Header(None)):
     """
     Returns detailed multi-module evaluation breakdown for a specific candidate.
+    Reads from the authenticated user's private tenant directory.
     """
-    comp_file = DATA_DIR / "composite_evaluations.csv"
+    from .auth import get_tenant_dir, get_current_user_email
+    user_email = get_current_user_email(x_user_email)
+    target_dir = get_tenant_dir(user_email)
+
+    comp_file = target_dir / "composite_evaluations.csv"
     if not comp_file.exists():
         raise HTTPException(status_code=404, detail="Evaluations dataset not found.")
 
@@ -477,7 +499,7 @@ def get_candidate_details(candidate_id: str):
 
     # Load module specific records if available
     for module_file in ["educational_profiles.csv", "research_aggregates.csv", "supervision_profiles.csv", "book_aggregates.csv", "patent_aggregates.csv", "research_breadth_profiles.csv", "collaboration_profiles.csv", "experience_profiles.csv"]:
-        mf = DATA_DIR / module_file
+        mf = target_dir / module_file
         if mf.exists():
             try:
                 mdf = pd.read_csv(mf, dtype=str).fillna("")
@@ -491,12 +513,18 @@ def get_candidate_details(candidate_id: str):
     return cand_data
 
 
+
 @router.post("/compare", response_model=CompareResponse)
-def compare_candidates(req: CompareRequest):
+def compare_candidates(req: CompareRequest, x_user_email: Optional[str] = Header(None)):
     """
     Compares two or more candidates side-by-side across all 10 modules.
+    Reads from the authenticated user's private tenant directory.
     """
-    comp_file = DATA_DIR / "composite_evaluations.csv"
+    from .auth import get_tenant_dir, get_current_user_email
+    user_email = get_current_user_email(x_user_email)
+    target_dir = get_tenant_dir(user_email)
+
+    comp_file = target_dir / "composite_evaluations.csv"
     if not comp_file.exists():
         raise HTTPException(status_code=404, detail="Evaluations dataset not found.")
 
@@ -520,6 +548,7 @@ def compare_candidates(req: CompareRequest):
         candidates=candidates_detail,
         ranking=ranking,
     )
+
 
 
 @router.get("/email/{candidate_id}", response_model=EmailDraftResponse)

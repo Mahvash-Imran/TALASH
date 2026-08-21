@@ -3027,7 +3027,7 @@ document.getElementById('email-sel').addEventListener('change',async function(){
   const c=allData.find(x=>x.candidate_id===id);
   document.getElementById('email-out').innerHTML='<div style="padding:32px;display:flex;align-items:center;gap:12px;color:var(--fg-3);font-size:13px"><div class="spinner"></div>AI is drafting a personalised email…</div>';
   let subject='',body='';
-  try{const r=await fetch(`${API_BASE}/api/v1/email/${id}`,{signal:AbortSignal.timeout(8000)});if(r.ok){const d=await r.json();subject=d.subject;body=d.body;}}catch{}
+  try{const r=await fetch(`${API_BASE}/api/v1/email/${id}`,{headers:{'X-User-Email':getAuthEmail()},signal:AbortSignal.timeout(8000)});if(r.ok){const d=await r.json();subject=d.subject;body=d.body;}}catch{}
   if(!subject){
     // Build a personalised fallback using the candidate's actual data
     subject=`Information Request: Faculty Application — ${c.candidate_name}`;
@@ -3473,7 +3473,7 @@ function handleFiles(files){
 
         const poll=setInterval(async()=>{
           try{
-            const sr=await fetch(`${API_BASE}/api/v1/status/${cid}`,{signal:AbortSignal.timeout(5000)});
+            const sr=await fetch(`${API_BASE}/api/v1/status/${cid}`,{headers:{'X-User-Email':getAuthEmail()},signal:AbortSignal.timeout(5000)});
             if(!sr.ok)return;
             const s=await sr.json();
             const msg=s.message||'Processing\u2026';
