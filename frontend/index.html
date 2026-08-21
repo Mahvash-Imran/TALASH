@@ -2461,7 +2461,12 @@ const API_BASE = (window.location.hostname === '127.0.0.1' || window.location.ho
 /* ═══════════════════════════════════
    STATE
 ═══════════════════════════════════ */
-let allData=[...RAW], currentPanel=null;
+/* allData seeds from RAW only for the admin account.
+   All other users start with an empty list — their candidates
+   are loaded exclusively from their private API tenant folder. */
+const _storedEmail = localStorage.getItem('talash_email') || '';
+let allData = (_storedEmail === '' || _storedEmail.toLowerCase() === 'admin@talash.pk') ? [...RAW] : [];
+let currentPanel=null;
 
 let suitChart=null, distChart=null, radarChart=null;
 const DEFAULT_WEIGHTS={research:25,education:20,experience:15,supervision:10,innovation:10,breadth:10,collab:10};
