@@ -249,7 +249,7 @@ def _process_uploaded_cv_background(pdf_path: str, candidate_id: str, tenant_ana
             api_key=api_key, model=model,
             base_url=base_url if base_url else None,
             skip_llm=True,
-            output_dir=tenant_analysis_dir,
+            analysis_dir=tenant_analysis_dir,
         )
         pipeline.run_full_pipeline()
 
@@ -337,7 +337,7 @@ def _process_bulk_cv_background(pdf_path: str, upload_id: str, expected_count: i
             api_key=api_key, model=model,
             base_url=base_url if base_url else None,
             skip_llm=True,
-            output_dir=tenant_analysis_dir,
+            analysis_dir=tenant_analysis_dir,
         )
         pipeline.run_full_pipeline()
 
