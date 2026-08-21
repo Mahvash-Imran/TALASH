@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import pandas as pd
-from fastapi import APIRouter, BackgroundTasks, File, HTTPException, UploadFile, Query
+from fastapi import APIRouter, BackgroundTasks, File, HTTPException, UploadFile, Query, Header
 
 from .schemas import (
     HealthResponse,
@@ -370,14 +370,17 @@ def analyze_candidate(candidate_id: str, background_tasks: BackgroundTasks):
 
 
 @router.get("/candidates", response_model=List[CandidateSummary])
-def list_candidates():
+def list_candidates(x_user_email: Optional[str] = Header(None)):
     """
-    Returns a summary list of all evaluated candidates with composite scores, tiers,
-    processing status, missing-info count, and upload timestamp.
+    Returns a summary list of all evaluated candidates for the active user account tenant.
     """
     import datetime
+    from .auth import get_tenant_dir, get_current_user_email
 
-    comp_file = DATA_DIR / "composite_evaluations.csv"
+    user_email = get_current_user_email(x_user_email)
+    target_data_dir = get_tenant_dir(user_email)
+
+    comp_file = target_data_dir / "composite_evaluations.csv"
     if not comp_file.exists():
         from .main import ensure_seed_data
         ensure_seed_data()
@@ -388,18 +391,18 @@ def list_candidates():
     # Load missing info counts from email drafter analysis (if available)
     missing_counts: dict = {}
     for module_csv in ["edu_gaps.csv", "supervision_profiles.csv"]:
-        mf = DATA_DIR / module_csv
+        mf = target_data_dir / module_csv
         if mf.exists():
             try:
                 mdf = pd.read_csv(mf, dtype=str).fillna("")
                 for _, mr in mdf.iterrows():
                     cid = str(mr.get("candidate_id", "")).strip()
                     if cid:
-                        # Count columns that look empty / flagged
                         empties = sum(1 for v in mr.values if str(v).strip() in ("", "nan", "N/A", "MISSING", "unknown"))
                         missing_counts[cid] = missing_counts.get(cid, 0) + max(0, empties - 3)
             except Exception:
                 pass
+
 
     # CV upload timestamps
     cv_dir = Path("data/cvs")

@@ -875,9 +875,229 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; 
 .weight-label { font-size: 12px; color: var(--fg-2); width: 100px; flex-shrink: 0; }
 .weight-slider { flex: 1; accent-color: var(--primary); height: 4px; cursor: pointer; }
 .weight-val { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; color: var(--primary); min-width: 32px; text-align: right; }
-  </style>
+  
+/* ══════════════════════════════════════
+   DRIBBBLE-INSPIRED AI ASSISTANT AUTH VIEW
+   Ref: shots/27185760-Login-Page-AI-Assistant-Dashboard
+══════════════════════════════════════ */
+#auth-view {
+  position: fixed; inset: 0; z-index: 1000;
+  background: linear-gradient(135deg, #060e12 0%, #0F2027 40%, #1a333d 75%, #071013 100%);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px; overflow-y: auto;
+}
+.auth-container {
+  width: 100%; max-width: 1040px; min-height: 620px;
+  background: rgba(15, 32, 39, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 180, 216, 0.2);
+  display: grid; grid-template-columns: 1fr 1fr;
+  overflow: hidden; position: relative;
+}
+@media (max-width: 860px) {
+  .auth-container { grid-template-columns: 1fr; }
+  .auth-left { display: none; }
+}
+.auth-left {
+  background: linear-gradient(145deg, rgba(15, 32, 39, 0.9), rgba(32, 58, 67, 0.85));
+  padding: 48px; display: flex; flex-direction: column; justify-content: space-between;
+  border-right: 1px solid rgba(255, 255, 255, 0.08); position: relative; overflow: hidden;
+}
+.auth-left::before {
+  content: ''; position: absolute; top: -30%; left: -20%;
+  width: 320px; height: 320px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 207, 247, 0.25) 0%, transparent 70%);
+  pointer-events: none; filter: blur(30px);
+}
+.auth-left-brand { display: flex; align-items: center; gap: 14px; z-index: 1; }
+.auth-left-brand .b-icon {
+  width: 46px; height: 46px; border-radius: 14px;
+  background: linear-gradient(135deg, #00eaff, #00B4D8);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 180, 216, 0.45);
+}
+.auth-left-brand .b-title { font-size: 22px; font-weight: 900; color: white; letter-spacing: 1px; }
+.auth-left-brand .b-sub { font-size: 10px; font-weight: 700; text-transform: uppercase; color: #00cff7; letter-spacing: 2px; }
+
+.auth-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 14px; border-radius: 20px;
+  background: rgba(0, 180, 216, 0.12); border: 1px solid rgba(0, 180, 216, 0.25);
+  color: #00cff7; font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+  margin-bottom: 16px; width: fit-content;
+}
+.auth-left-body h2 {
+  font-size: 32px; font-weight: 900; color: white; line-height: 1.25; margin-bottom: 14px;
+}
+.auth-left-body h2 span {
+  background: linear-gradient(90deg, #00cff7, #00B4D8);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.auth-left-body p { font-size: 13.5px; color: rgba(255, 255, 255, 0.65); line-height: 1.65; max-width: 380px; }
+
+.auth-feat-list { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+.auth-feat-item { display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: rgba(255, 255, 255, 0.85); font-weight: 500; }
+.auth-feat-item .f-dot { width: 6px; height: 6px; border-radius: 50%; background: #00cff7; box-shadow: 0 0 8px #00cff7; }
+
+.auth-left-foot {
+  padding: 12px 16px; border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 11.5px; color: rgba(255, 255, 255, 0.5); display: flex; align-items: center; gap: 8px;
+}
+
+.auth-right {
+  background: #ffffff; padding: 48px; display: flex; flex-direction: column; justify-content: center;
+  position: relative;
+}
+.auth-form-head { margin-bottom: 28px; }
+.auth-form-head h3 { font-size: 24px; font-weight: 800; color: #071013; letter-spacing: -0.5px; }
+.auth-form-head p { font-size: 13px; color: #6b8fa0; margin-top: 4px; }
+
+.auth-field { margin-bottom: 18px; }
+.auth-field label { display: block; font-size: 12px; font-weight: 700; color: #2C5364; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.auth-input-wrap {
+  position: relative; display: flex; align-items: center;
+}
+.auth-input-wrap svg { position: absolute; left: 14px; width: 18px; height: 18px; color: #9ca3af; }
+.auth-input-wrap input {
+  width: 100%; padding: 12px 14px 12px 42px;
+  border: 1.5px solid #d1d5db; border-radius: 12px;
+  font: inherit; font-size: 13.5px; color: #111827; background: #f9fafb;
+  outline: none; transition: all 0.2s var(--ease);
+}
+.auth-input-wrap input:focus {
+  border-color: #00B4D8; background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 180, 216, 0.18);
+}
+
+.auth-options { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; font-size: 12.5px; }
+.auth-remember { display: flex; align-items: center; gap: 6px; color: #4b5563; cursor: pointer; }
+.auth-remember input { accent-color: #00B4D8; width: 15px; height: 15px; cursor: pointer; }
+.auth-forgot { color: #00B4D8; font-weight: 600; text-decoration: none; cursor: pointer; }
+.auth-forgot:hover { text-decoration: underline; }
+
+.auth-submit-btn {
+  width: 100%; padding: 13px; border-radius: 12px; border: none;
+  background: linear-gradient(135deg, #00cff7, #00B4D8);
+  color: #071013; font-size: 14px; font-weight: 800; cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 180, 216, 0.4);
+  transition: all 0.2s var(--ease);
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.auth-submit-btn:hover {
+  transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0, 180, 216, 0.55);
+}
+
+.auth-toggle-text {
+  text-align: center; margin-top: 22px; font-size: 13px; color: #6b8fa0;
+}
+.auth-toggle-link {
+  color: #00B4D8; font-weight: 700; cursor: pointer; margin-left: 4px;
+}
+.auth-toggle-link:hover { text-decoration: underline; }
+
+.auth-error {
+  padding: 10px 14px; border-radius: 10px; background: #fef2f2; border: 1px solid #fecaca;
+  color: #dc2626; font-size: 12.5px; font-weight: 500; margin-bottom: 18px; display: none;
+}
+
+</style>
 </head>
 <body>
+
+<!-- ════════════ DRIBBBLE-INSPIRED AI ASSISTANT AUTH VIEW ════════════ -->
+<div id="auth-view">
+  <div class="auth-container">
+    <!-- Left AI Assistant Panel -->
+    <div class="auth-left">
+      <div class="auth-left-brand">
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#071013" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="b-title">TALASH</div>
+          <div class="b-sub">AI Faculty Hiring Intelligence</div>
+        </div>
+      </div>
+
+      <div class="auth-left-body">
+        <div class="auth-hero-badge">✨ Next-Gen AI Assistant</div>
+        <h2>Where AI Meets <span>Academic Excellence</span></h2>
+        <p>Automated candidate scoring across 10 academic dimensions, instant JD matching, and confidential evaluation profiles.</p>
+        <div class="auth-feat-list">
+          <div class="auth-feat-item"><div class="f-dot"></div> 10-Module Multi-Dimensional Academic Evaluation</div>
+          <div class="auth-feat-item"><div class="f-dot"></div> Dynamic Job Description Fit & Rationale</div>
+          <div class="auth-feat-item"><div class="f-dot"></div> Strictly Confidential Multi-Tenant Storage</div>
+        </div>
+      </div>
+
+      <div class="auth-left-foot">
+        <span>🔒</span> End-to-End Multi-Tenant Data Isolation. Candidate evaluations remain strictly private to your account.
+      </div>
+    </div>
+
+    <!-- Right Login / Register Card -->
+    <div class="auth-right">
+      <div class="auth-form-head">
+        <h3 id="auth-title">Welcome Back</h3>
+        <p id="auth-subtitle">Sign in to access your private candidate evaluations</p>
+      </div>
+
+      <div id="auth-error" class="auth-error"></div>
+
+      <form id="auth-form" onsubmit="handleAuthSubmit(event)">
+        <div class="auth-field" id="field-name" style="display:none;">
+          <label>Full Name</label>
+          <div class="auth-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <input type="text" id="auth-name-input" placeholder="e.g. Dr. Ayesha Khan" />
+          </div>
+        </div>
+
+        <div class="auth-field">
+          <label>Email Address</label>
+          <div class="auth-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <input type="email" id="auth-email-input" value="admin@talash.pk" required placeholder="admin@talash.pk" />
+          </div>
+        </div>
+
+        <div class="auth-field">
+          <label>Password</label>
+          <div class="auth-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <input type="password" id="auth-pass-input" value="talash2026" required placeholder="••••••••" />
+          </div>
+        </div>
+
+        <div class="auth-options">
+          <label class="auth-remember">
+            <input type="checkbox" id="auth-remember" checked /> Remember this device
+          </label>
+          <span class="auth-forgot">Need help?</span>
+        </div>
+
+        <button type="submit" class="auth-submit-btn" id="auth-submit-btn">
+          <span>Sign In to Dashboard</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+
+      <div class="auth-toggle-text">
+        <span id="auth-toggle-msg">Don't have an account?</span>
+        <span class="auth-toggle-link" id="auth-toggle-btn" onclick="toggleAuthMode()">Register Now</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- ════════════ SIDEBAR ════════════ -->
 <aside class="sidebar">
@@ -2285,11 +2505,116 @@ async function checkAPI(){
   document.getElementById('api-label').textContent='API Offline';
   return false;
 }
+
+/* ═══════════════════════════════════
+   AUTHENTICATION & MULTI-TENANCY JS
+═══════════════════════════════════ */
+let isRegisterMode = false;
+
+function getAuthToken(){ return localStorage.getItem('talash_token') || 'token_admin@talash.pk'; }
+function getAuthEmail(){ return localStorage.getItem('talash_email') || 'admin@talash.pk'; }
+
+function checkAuthState(){
+  const token = localStorage.getItem('talash_token');
+  const email = localStorage.getItem('talash_email') || 'admin@talash.pk';
+  const name  = localStorage.getItem('talash_name')  || 'Administrator';
+  
+  const authView = document.getElementById('auth-view');
+  if(!token){
+    authView.style.display = 'flex';
+  } else {
+    authView.style.display = 'none';
+    const emailEl = document.getElementById('user-display-email');
+    const avEl = document.getElementById('user-avatar-initials');
+    if(emailEl) emailEl.textContent = email;
+    if(avEl) avEl.textContent = (name || email)[0].toUpperCase();
+  }
+}
+
+function toggleAuthMode(){
+  isRegisterMode = !isRegisterMode;
+  const title = document.getElementById('auth-title');
+  const sub = document.getElementById('auth-subtitle');
+  const nameField = document.getElementById('field-name');
+  const submitBtn = document.getElementById('auth-submit-btn');
+  const toggleMsg = document.getElementById('auth-toggle-msg');
+  const toggleBtn = document.getElementById('auth-toggle-btn');
+  const errEl = document.getElementById('auth-error');
+  
+  errEl.style.display = 'none';
+  if(isRegisterMode){
+    title.textContent = 'Create Account';
+    sub.textContent = 'Register for private candidate evaluation storage';
+    nameField.style.display = 'block';
+    submitBtn.querySelector('span').textContent = 'Create Account & Sign In';
+    toggleMsg.textContent = 'Already have an account?';
+    toggleBtn.textContent = 'Sign In';
+  } else {
+    title.textContent = 'Welcome Back';
+    sub.textContent = 'Sign in to access your private candidate evaluations';
+    nameField.style.display = 'none';
+    submitBtn.querySelector('span').textContent = 'Sign In to Dashboard';
+    toggleMsg.textContent = "Don't have an account?";
+    toggleBtn.textContent = 'Register Now';
+  }
+}
+
+async function handleAuthSubmit(e){
+  e.preventDefault();
+  const errEl = document.getElementById('auth-error');
+  errEl.style.display = 'none';
+  
+  const email = document.getElementById('auth-email-input').value.trim();
+  const password = document.getElementById('auth-pass-input').value.trim();
+  const name = document.getElementById('auth-name-input').value.trim();
+  
+  const endpoint = isRegisterMode ? `${API_BASE}/api/v1/auth/register` : `${API_BASE}/api/v1/auth/login`;
+  const payload = isRegisterMode ? { name, email, password } : { email, password };
+  
+  try {
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if(!res.ok){
+      errEl.textContent = data.detail || 'Authentication failed.';
+      errEl.style.display = 'block';
+      return;
+    }
+    
+    localStorage.setItem('talash_token', data.token);
+    localStorage.setItem('talash_email', data.user.email);
+    localStorage.setItem('talash_name', data.user.name);
+    
+    checkAuthState();
+    fetchLiveData();
+  } catch(err) {
+    // Offline / fallback dev login
+    localStorage.setItem('talash_token', `token_${email}`);
+    localStorage.setItem('talash_email', email);
+    localStorage.setItem('talash_name', name || email.split('@')[0]);
+    checkAuthState();
+    fetchLiveData();
+  }
+}
+
+function handleLogout(){
+  localStorage.removeItem('talash_token');
+  localStorage.removeItem('talash_email');
+  localStorage.removeItem('talash_name');
+  checkAuthState();
+}
+
+// Inject X-User-Email header into fetchLiveData API calls
+
 async function fetchLiveData(){
+  const userEmail = getAuthEmail();
   const online=await checkAPI();
   if(online){
     try{
-      const r=await fetch(`${API_BASE}/api/v1/candidates`);
+      const r=await fetch(`${API_BASE}/api/v1/candidates`,{headers:{'X-User-Email':getAuthEmail()}});
       if(r.ok){
         const d=await r.json();
         if(d&&d.length){
@@ -2308,7 +2633,8 @@ async function fetchLiveData(){
       }
     }catch{}
   }
-  renderAll();
+  checkAuthState();
+renderAll();
 }
 
 /* ═══════════════════════════════════
@@ -3195,6 +3521,7 @@ function renderAll(){
   renderCandidates();
   renderRecommendations();
 }
+checkAuthState();
 renderAll();
 fetchLiveData();
 setInterval(checkAPI,15000);

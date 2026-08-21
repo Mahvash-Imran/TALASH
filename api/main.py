@@ -60,9 +60,12 @@ app.add_middleware(
 # Include API Routers
 from .routes import router
 from .jd_routes import router as jd_router
+from .auth import router as auth_router
 
+app.include_router(auth_router)
 app.include_router(router)
 app.include_router(jd_router)
+
 
 # Mount Data Analysis Directory for direct file access if needed
 data_dir = Path("data/analysis")
