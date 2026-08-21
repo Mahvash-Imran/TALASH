@@ -2289,7 +2289,7 @@ async function fetchLiveData(){
   const online=await checkAPI();
   if(online){
     try{
-      const r=await fetch(`${API_BASE}/api/v1/candidates');
+      const r=await fetch(`${API_BASE}/api/v1/candidates`);
       if(r.ok){
         const d=await r.json();
         if(d&&d.length){
@@ -2373,7 +2373,7 @@ function renderDashboard(){
   suitChart=new Chart(document.getElementById('suit-chart'),{
     type:'doughnut',
     data:{labels:sd.map(([k])=>k),datasets:[{data:sd.map(([,v])=>v),backgroundColor:sd.map(([k])=>scols[k]),borderColor:'#fff',borderWidth:3,hoverOffset:5}]},
-    options:{responsive:true,maintainAspectRatio:false,cutout:'70%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.parsed} candidate${c.parsed!==1?'s':''}`}}}}
+    options:{responsive:true,maintainAspectRatio:false,cutout:'70%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>(' ' + c.parsed + ' candidate' + (c.parsed !== 1 ? 's' : ''))}}}}
   });
   document.getElementById('suit-legend').innerHTML=sd.map(([k,v])=>`
     <div class="legend-row"><div class="legend-swatch" style="background:${scols[k]}"></div><span class="legend-lbl">${k}</span><span class="legend-cnt">${v}</span><span class="legend-pct">${Math.round(v/total*100)}%</span></div>`).join('');
@@ -2726,7 +2726,7 @@ async function loadJDHistory() {
   const sel = document.getElementById('jd-history-select');
   if (!sel) return;
   try {
-    const r = await fetch(`${API_BASE}/api/v1/jd/list');
+    const r = await fetch(`${API_BASE}/api/v1/jd/list`);
     if (r.ok) {
       const data = await r.json();
       const jds = data.jds || [];
@@ -2758,7 +2758,7 @@ async function parseAndSetActiveJD() {
   }
 
   try {
-    const r = await fetch(`${API_BASE}/api/v1/jd/upload', { method: 'POST', body: fd });
+    const r = await fetch(`${API_BASE}/api/v1/jd/upload`, { method: 'POST', body: fd });
     if (r.ok) {
       const d = await r.json();
       activeJDId = d.jd_id;
@@ -3091,7 +3091,7 @@ function handleFiles(files){
     li.appendChild(bulkBar);
 
     const fd=new FormData();fd.append('file',f);
-    fetch(`${API_BASE}/api/v1/upload',{method:'POST',body:fd,signal:AbortSignal.timeout(20000)})
+    fetch(`${API_BASE}/api/v1/upload`,{method:'POST',body:fd,signal:AbortSignal.timeout(20000)})
       .then(r=>r.ok?r.json():r.json().then(e=>Promise.reject(e.detail||'Upload failed')))
       .then(d=>{
         const cid=d.candidate_id;
