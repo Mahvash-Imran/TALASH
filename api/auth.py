@@ -101,16 +101,15 @@ def get_tenant_dir(user_email: Optional[str] = None) -> Path:
     tenant_base = TENANTS_DIR / clean_email / "analysis"
     tenant_base.mkdir(parents=True, exist_ok=True)
 
-    # Seed new tenant with baseline dataset structure if missing
+    # New user tenant — always start with an empty evaluations file (no pre-loaded candidates)
     comp_file = tenant_base / "composite_evaluations.csv"
     if not comp_file.exists():
-        seed_dir = Path("seed_data/analysis")
-        if seed_dir.exists():
-            for f in seed_dir.glob("*.csv"):
-                try:
-                    shutil.copy2(f, tenant_base / f.name)
-                except Exception:
-                    pass
+        # Create empty CSV with correct headers only — user starts fresh with 0 candidates
+        headers = "candidate_id,overall_composite_score,candidate_tier,education_score,research_score,supervision_score,innovation_score,breadth_score,collaboration_score,experience_score,candidate_name\n"
+        try:
+            comp_file.write_text(headers, encoding="utf-8")
+        except Exception:
+            pass
 
     return tenant_base
 

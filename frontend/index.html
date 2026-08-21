@@ -2565,6 +2565,9 @@ function toggleAuthMode(){
   const errEl = document.getElementById('auth-error');
   
   errEl.style.display = 'none';
+  const emailInput = document.getElementById('auth-email-input');
+  const passInput  = document.getElementById('auth-pass-input');
+
   if(isRegisterMode){
     title.textContent = 'Create Account';
     sub.textContent = 'Register for private candidate evaluation storage';
@@ -2572,6 +2575,8 @@ function toggleAuthMode(){
     submitBtn.querySelector('span').textContent = 'Create Account & Sign In';
     toggleMsg.textContent = 'Already have an account?';
     toggleBtn.textContent = 'Sign In';
+    emailInput.placeholder = 'Enter your email address';
+    passInput.placeholder  = 'Choose a password (min. 6 characters)';
   } else {
     title.textContent = 'Welcome Back';
     sub.textContent = 'Sign in to access your private candidate evaluations';
@@ -2579,6 +2584,8 @@ function toggleAuthMode(){
     submitBtn.querySelector('span').textContent = 'Sign In to Dashboard';
     toggleMsg.textContent = "Don't have an account?";
     toggleBtn.textContent = 'Register Now';
+    emailInput.placeholder = 'e.g. you@institution.edu.pk';
+    passInput.placeholder  = 'Enter your password';
   }
 }
 
