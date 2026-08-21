@@ -145,13 +145,17 @@ def health_check():
 
 
 @router.post("/upload", response_model=UploadResponse)
-async def upload_resume(background_tasks: BackgroundTasks, file: UploadFile = File(...)):
+async def upload_resume(background_tasks: BackgroundTasks, file: UploadFile = File(...), x_user_email: Optional[str] = Header(None)):
     """
     Upload a CV PDF (single candidate) or a bulk PDF (multiple candidates).
-    Auto-detects bulk PDFs by looking for the 'Candidate for the Post' marker.
+    Saves results into the authenticated user's private tenant directory.
     """
+    from .auth import get_tenant_dir, get_current_user_email
     if not file.filename.endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Only PDF resumes are supported.")
+
+    user_email = get_current_user_email(x_user_email)
+    tenant_analysis_dir = get_tenant_dir(user_email)
 
     dest_path = UPLOADS_DIR / file.filename
     with open(dest_path, "wb") as buffer:
@@ -173,7 +177,7 @@ async def upload_resume(background_tasks: BackgroundTasks, file: UploadFile = Fi
             "errors": [],
             "is_bulk": True,
         }
-        background_tasks.add_task(_process_bulk_cv_background, str(dest_path), upload_id, candidate_count)
+        background_tasks.add_task(_process_bulk_cv_background, str(dest_path), upload_id, candidate_count, str(tenant_analysis_dir))
         return UploadResponse(
             filename=file.filename,
             candidate_id=upload_id,
@@ -186,13 +190,14 @@ async def upload_resume(background_tasks: BackgroundTasks, file: UploadFile = Fi
             "message": "Queued for extraction and analysis.",
             "is_bulk": False,
         }
-        background_tasks.add_task(_process_uploaded_cv_background, str(dest_path), upload_id)
+        background_tasks.add_task(_process_uploaded_cv_background, str(dest_path), upload_id, str(tenant_analysis_dir))
         return UploadResponse(
             filename=file.filename,
             candidate_id=upload_id,
             status="processing",
             message="Resume uploaded. Full pipeline (extraction + analysis) started in background."
         )
+
 
 
 @router.get("/status/{candidate_id}")
@@ -213,12 +218,10 @@ def get_processing_status(candidate_id: str):
 # Background processing: single CV
 # ---------------------------------------------------------------------------
 
-def _process_uploaded_cv_background(pdf_path: str, candidate_id: str):
+def _process_uploaded_cv_background(pdf_path: str, candidate_id: str, tenant_analysis_dir: str = "data/analysis"):
     """
-    Full pipeline for a newly uploaded single CV:
-      Step 1 – Copy PDF into data/cvs/
-      Step 2 – Run Module 1 (LLM extraction) with retry/chunking
-      Step 3 – Run Modules 2-10 to compute composite scores
+    Full pipeline for a newly uploaded single CV.
+    Saves results into the user's private tenant analysis directory.
     """
     try:
         _processing_status[candidate_id] = {"status": "processing", "message": "Step 1/3: Copying PDF to CV folder.", "is_bulk": False}
@@ -245,7 +248,8 @@ def _process_uploaded_cv_background(pdf_path: str, candidate_id: str):
         pipeline = MasterPipeline(
             api_key=api_key, model=model,
             base_url=base_url if base_url else None,
-            skip_llm=True
+            skip_llm=True,
+            output_dir=tenant_analysis_dir,
         )
         pipeline.run_full_pipeline()
 
@@ -258,16 +262,15 @@ def _process_uploaded_cv_background(pdf_path: str, candidate_id: str):
         logger.error("[Upload] Error for %s: %s", candidate_id, error_msg, exc_info=True)
 
 
+
 # ---------------------------------------------------------------------------
 # Background processing: bulk PDF
 # ---------------------------------------------------------------------------
 
-def _process_bulk_cv_background(pdf_path: str, upload_id: str, expected_count: int):
+def _process_bulk_cv_background(pdf_path: str, upload_id: str, expected_count: int, tenant_analysis_dir: str = "data/analysis"):
     """
-    Full pipeline for a bulk (multi-candidate) PDF:
-      Step 1 – Split PDF into individual candidate PDFs
-      Step 2 – For each candidate: run Module 1 extraction
-      Step 3 – Run Modules 2-10 once for all candidates
+    Full pipeline for a bulk (multi-candidate) PDF.
+    Saves results into the uploading user's private tenant analysis directory.
     """
     try:
         _processing_status[upload_id].update({"status": "processing", "message": f"Step 1/3: Splitting bulk PDF into individual CVs..."})
@@ -333,7 +336,8 @@ def _process_bulk_cv_background(pdf_path: str, upload_id: str, expected_count: i
         pipeline = MasterPipeline(
             api_key=api_key, model=model,
             base_url=base_url if base_url else None,
-            skip_llm=True
+            skip_llm=True,
+            output_dir=tenant_analysis_dir,
         )
         pipeline.run_full_pipeline()
 
@@ -354,6 +358,7 @@ def _process_bulk_cv_background(pdf_path: str, upload_id: str, expected_count: i
         error_msg = str(e)
         _processing_status[upload_id].update({"status": "error", "message": f"Bulk processing failed: {error_msg}"})
         logger.error("[Bulk] Error for %s: %s", upload_id, error_msg, exc_info=True)
+
 
 
 @router.post("/analyze/{candidate_id}")

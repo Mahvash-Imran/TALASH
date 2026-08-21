@@ -3447,7 +3447,7 @@ function handleFiles(files){
     li.appendChild(bulkBar);
 
     const fd=new FormData();fd.append('file',f);
-    fetch(`${API_BASE}/api/v1/upload`,{method:'POST',body:fd,signal:AbortSignal.timeout(20000)})
+    fetch(`${API_BASE}/api/v1/upload`,{method:'POST',body:fd,headers:{'X-User-Email':getAuthEmail()},signal:AbortSignal.timeout(20000)})
       .then(r=>r.ok?r.json():r.json().then(e=>Promise.reject(e.detail||'Upload failed')))
       .then(d=>{
         const cid=d.candidate_id;
