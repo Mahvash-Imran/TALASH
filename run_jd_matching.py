@@ -36,14 +36,16 @@ def generate_jd_id(jd_title: str) -> str:
     return f"{slug[:30]}_{timestamp}"
 
 
-def load_candidate_profiles(candidate_ids: Optional[List[str]] = None) -> List[Dict[str, Any]]:
+def load_candidate_profiles(candidate_ids: Optional[List[str]] = None, target_data_dir: Optional[Path] = None) -> List[Dict[str, Any]]:
     """
     Loads candidate data from analysis & extracted CSVs (composite evaluations, experience, education, skills).
     Aggregates rich candidate-specific parameters for precise JD matching.
+    Supports tenant-isolated data directory resolution.
     """
-    comp_file = DATA_DIR / "composite_evaluations.csv"
+    analysis_path = Path(target_data_dir) if target_data_dir else DATA_DIR
+    comp_file = analysis_path / "composite_evaluations.csv"
     if not comp_file.exists():
-        logger.warning("composite_evaluations.csv not found.")
+        logger.warning(f"composite_evaluations.csv not found in {analysis_path}.")
         return []
 
     comp_df = pd.read_csv(comp_file, dtype=str).fillna("")
@@ -51,11 +53,11 @@ def load_candidate_profiles(candidate_ids: Optional[List[str]] = None) -> List[D
         comp_df = comp_df[comp_df["candidate_id"].isin(candidate_ids)]
 
     # Load supplementary tables for skills & detailed info
-    exp_df = _load_csv(DATA_DIR / "experience_profiles.csv")
-    edu_df = _load_csv(DATA_DIR / "educational_profiles.csv")
-    res_df = _load_csv(DATA_DIR / "research_aggregates.csv")
+    exp_df = _load_csv(analysis_path / "experience_profiles.csv")
+    edu_df = _load_csv(analysis_path / "educational_profiles.csv")
+    res_df = _load_csv(analysis_path / "research_aggregates.csv")
     skills_df = _load_csv(EXTRACTED_DIR / "skills.csv")
-    sk_ev_df = _load_csv(DATA_DIR / "skill_evidence.csv")
+    sk_ev_df = _load_csv(analysis_path / "skill_evidence.csv")
     edu_ext_df = _load_csv(EXTRACTED_DIR / "education.csv")
 
     exp_map = _to_map(exp_df)
@@ -128,15 +130,21 @@ def evaluate_jd_against_candidates(
     candidate_ids: Optional[List[str]] = None,
     custom_candidates: Optional[List[Dict[str, Any]]] = None,
     skip_llm: bool = False,
+    target_data_dir: Optional[Path] = None,
 ) -> Dict[str, Any]:
     """
     Main evaluation entry point. Parses JD, runs matching against candidates, and saves results.
+    Supports tenant-isolated data directory resolution.
     """
+    analysis_path = Path(target_data_dir) if target_data_dir else DATA_DIR
+    jd_matches_dir = analysis_path / "jd_matches"
+    jd_matches_dir.mkdir(parents=True, exist_ok=True)
+
     parsed_jd = parse_job_description(jd_text, skip_llm=skip_llm)
     if not jd_id:
         jd_id = generate_jd_id(parsed_jd.get("title", "Job Position"))
 
-    jd_dir = JD_MATCHES_DIR / jd_id
+    jd_dir = jd_matches_dir / jd_id
     jd_dir.mkdir(parents=True, exist_ok=True)
 
     # Save original JD text and parsed JSON
@@ -144,7 +152,7 @@ def evaluate_jd_against_candidates(
     (jd_dir / "jd_parsed.json").write_text(json.dumps(parsed_jd, indent=2), encoding="utf-8")
 
     # Load candidates
-    candidates = custom_candidates if custom_candidates is not None else load_candidate_profiles(candidate_ids)
+    candidates = custom_candidates if custom_candidates is not None else load_candidate_profiles(candidate_ids, target_data_dir=analysis_path)
 
     results = []
     for cand in candidates:

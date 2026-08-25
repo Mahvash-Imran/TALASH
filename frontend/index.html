@@ -2473,75 +2473,6 @@ const DEFAULT_WEIGHTS={research:25,education:20,experience:15,supervision:10,inn
 
 /* ═══════════════════════════════════
    HELPERS
-═══════════════════════════════════ */
-function initials(n){return(n||'').split(' ').slice(0,2).map(w=>w[0]||'').join('').toUpperCase();}
-function tierNum(t){const m=(t||'').match(/Tier (\d)/);return m?+m[1]:4;}
-function suitLabel(c){const n=tierNum(c.candidate_tier);return n===1?'Strong':n===2?'Strong':n===3?'Moderate':c.missing_info_count>2?'Needs Clarification':'Weak';}
-function suitClass(s){return{Strong:'success',Moderate:'warning',Weak:'danger','Needs Clarification':'info'}[s]||'neutral';}
-function tierClass(n){return['','success','info','warning','danger'][n]||'neutral';}
-function tierLabel(n){return['','Tier 1 · Exceptional','Tier 2 · Strong','Tier 3 · Moderate','Tier 4 · Needs Review'][n]||'Unknown';}
-function scoreColor(s){return s>=65?'#10b981':s>=50?'#f59e0b':s>=35?'#3b82f6':'#ef4444';}
-function fmtDate(s){try{return new Date(s).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});}catch{return s||'—';}}
-function toast(msg,icon='✓'){
-  const t=document.createElement('div');t.className='toast';
-  t.innerHTML=`<span>${icon}</span>${msg}`;
-  document.body.appendChild(t);
-  setTimeout(()=>t.remove(),2800);
-}
-
-/* Ring SVG */
-function ringHTML(pct,color,size=80,stroke=7){
-  const r=(size-stroke)/2,c=size/2,circ=2*Math.PI*r;
-  const dash=((pct/100)*circ).toFixed(2);
-  const numSize=size<50?10:size<70?14:20;
-  return `<svg width="${size}" height="${size}">
-    <circle cx="${c}" cy="${c}" r="${r}" fill="none" stroke="#e5e7eb" stroke-width="${stroke}"/>
-    <circle cx="${c}" cy="${c}" r="${r}" fill="none" stroke="${color}" stroke-width="${stroke}"
-      stroke-dasharray="${dash} ${circ}" stroke-linecap="round" transform="rotate(-90 ${c} ${c})"/>
-  </svg>
-  <div class="score-ring-inner"><div class="score-ring-num" style="color:${color};font-size:${numSize}px">${Math.round(pct)}</div><div class="score-ring-lbl">/100</div></div>`;
-}
-
-/* ═══════════════════════════════════
-   NAVIGATION
-═══════════════════════════════════ */
-const PAGE_TITLES={dashboard:'Dashboard',recommendations:'AI Recommendations',candidates:'All Candidates',compare:'Compare',email:'Email Center',jd:'Job Description Matching',upload:'Upload & Processing'};
-function navigate(page){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
-  document.getElementById('page-'+page).classList.add('active');
-  document.querySelector(`[data-page="${page}"]`).classList.add('active');
-  document.getElementById('tb-cur').textContent=PAGE_TITLES[page]||page;
-  if(page==='dashboard')renderDashboard();
-  if(page==='candidates')renderCandidates();
-  if(page==='recommendations')renderRecommendations();
-  if(page==='jd')initJDPage();
-}
-document.querySelectorAll('[data-page]').forEach(el=>el.addEventListener('click',()=>navigate(el.dataset.page)));
-
-/* ═══════════════════════════════════
-   API CHECK
-═══════════════════════════════════ */
-async function checkAPI(){
-  const hostEl=document.getElementById('api-host');
-  if(hostEl) hostEl.textContent=window.location.hostname+(window.location.port?':'+window.location.port:'');
-  try{
-    const r=await fetch(`${API_BASE}/api/v1/health`,{signal:AbortSignal.timeout(3000)});
-    if(r.ok){document.getElementById('api-dot').classList.remove('offline');document.getElementById('api-label').textContent='API Online';return true;}
-  }catch{}
-  document.getElementById('api-dot').classList.add('offline');
-  document.getElementById('api-label').textContent='API Offline';
-  return false;
-}
-
-/* ═══════════════════════════════════
-   AUTHENTICATION & MULTI-TENANCY JS
-═══════════════════════════════════ */
-let isRegisterMode = false;
-
-function getAuthToken(){ return localStorage.getItem('talash_token') || 'token_admin@talash.pk'; }
-function getAuthEmail(){ return localStorage.getItem('talash_email') || 'admin@talash.pk'; }
-
 function checkAuthState(){
   const token = localStorage.getItem('talash_token');
   const email = localStorage.getItem('talash_email') || 'admin@talash.pk';
@@ -2556,6 +2487,8 @@ function checkAuthState(){
     const avEl = document.getElementById('user-avatar-initials');
     if(emailEl) emailEl.textContent = email;
     if(avEl) avEl.textContent = (name || email)[0].toUpperCase();
+    allData = (email.toLowerCase() === 'admin@talash.pk') ? [...RAW] : [];
+    if (typeof renderJDCandidateCheckboxes === 'function') renderJDCandidateCheckboxes();
   }
 }
 
@@ -2613,7 +2546,7 @@ async function handleAuthSubmit(e){
       body: JSON.stringify(payload)
     });
     const data = await res.json();
-    if(!res.ok){
+    if (!res.ok) {
       errEl.textContent = data.detail || 'Authentication failed.';
       errEl.style.display = 'block';
       return;
@@ -2622,16 +2555,22 @@ async function handleAuthSubmit(e){
     localStorage.setItem('talash_token', data.token);
     localStorage.setItem('talash_email', data.user.email);
     localStorage.setItem('talash_name', data.user.name);
+    activeJDId = null;
+    activeJDParsed = null;
     
     checkAuthState();
     fetchLiveData();
+    if (typeof loadJDHistory === 'function') loadJDHistory();
   } catch(err) {
     // Offline / fallback dev login
     localStorage.setItem('talash_token', `token_${email}`);
     localStorage.setItem('talash_email', email);
     localStorage.setItem('talash_name', name || email.split('@')[0]);
+    activeJDId = null;
+    activeJDParsed = null;
     checkAuthState();
     fetchLiveData();
+    if (typeof loadJDHistory === 'function') loadJDHistory();
   }
 }
 
@@ -2639,7 +2578,11 @@ function handleLogout(){
   localStorage.removeItem('talash_token');
   localStorage.removeItem('talash_email');
   localStorage.removeItem('talash_name');
+  allData = [];
+  activeJDId = null;
+  activeJDParsed = null;
   checkAuthState();
+  if (typeof loadJDHistory === 'function') loadJDHistory();
 }
 
 // Inject X-User-Email header into fetchLiveData API calls
@@ -2652,24 +2595,22 @@ async function fetchLiveData(){
       const r=await fetch(`${API_BASE}/api/v1/candidates`,{headers:{'X-User-Email':getAuthEmail()}});
       if(r.ok){
         const d=await r.json();
-        if(d&&d.length){
-          allData=d.map(c=>({...c,
-            overall_composite_score:parseFloat(c.overall_composite_score)||0,
-            missing_info_count:parseInt(c.missing_info_count)||0,
-            education_score:c.education_score!==undefined?parseFloat(c.education_score):10,
-            research_score:c.research_score!==undefined?parseFloat(c.research_score):5,
-            supervision_score:c.supervision_score!==undefined?parseFloat(c.supervision_score):2,
-            innovation_score:c.innovation_score!==undefined?parseFloat(c.innovation_score):2,
-            breadth_score:c.breadth_score!==undefined?parseFloat(c.breadth_score):3,
-            collaboration_score:c.collaboration_score!==undefined?parseFloat(c.collaboration_score):5,
-            experience_score:c.experience_score!==undefined?parseFloat(c.experience_score):8,
-          }));
-        }
+        allData=(d||[]).map(c=>({...c,
+          overall_composite_score:parseFloat(c.overall_composite_score)||0,
+          missing_info_count:parseInt(c.missing_info_count)||0,
+          education_score:c.education_score!==undefined?parseFloat(c.education_score):10,
+          research_score:c.research_score!==undefined?parseFloat(c.research_score):5,
+          supervision_score:c.supervision_score!==undefined?parseFloat(c.supervision_score):2,
+          innovation_score:c.innovation_score!==undefined?parseFloat(c.innovation_score):2,
+          breadth_score:c.breadth_score!==undefined?parseFloat(c.breadth_score):3,
+          collaboration_score:c.collaboration_score!==undefined?parseFloat(c.collaboration_score):5,
+          experience_score:c.experience_score!==undefined?parseFloat(c.experience_score):8,
+        }));
+        if (typeof renderJDCandidateCheckboxes === 'function') renderJDCandidateCheckboxes();
+        if (typeof renderDashboard === 'function') renderDashboard();
       }
     }catch{}
   }
-  checkAuthState();
-renderAll();
 }
 
 /* ═══════════════════════════════════
@@ -3087,7 +3028,9 @@ async function loadJDHistory() {
   const sel = document.getElementById('jd-history-select');
   if (!sel) return;
   try {
-    const r = await fetch(`${API_BASE}/api/v1/jd/list`);
+    const r = await fetch(`${API_BASE}/api/v1/jd/list`, {
+      headers: { 'X-User-Email': getAuthEmail() }
+    });
     if (r.ok) {
       const data = await r.json();
       const jds = data.jds || [];
@@ -3119,7 +3062,11 @@ async function parseAndSetActiveJD() {
   }
 
   try {
-    const r = await fetch(`${API_BASE}/api/v1/jd/upload`, { method: 'POST', body: fd });
+    const r = await fetch(`${API_BASE}/api/v1/jd/upload`, {
+      method: 'POST',
+      body: fd,
+      headers: { 'X-User-Email': getAuthEmail() }
+    });
     if (r.ok) {
       const d = await r.json();
       activeJDId = d.jd_id;
@@ -3139,7 +3086,9 @@ async function loadSelectedJDFromHistory() {
   const jdId = document.getElementById('jd-history-select').value;
   if (!jdId) return;
   try {
-    const r = await fetch(`${API_BASE}/api/v1/jd/${jdId}/results`);
+    const r = await fetch(`${API_BASE}/api/v1/jd/${jdId}/results`, {
+      headers: { 'X-User-Email': getAuthEmail() }
+    });
     if (r.ok) {
       const d = await r.json();
       activeJDId = d.jd_id;
@@ -3235,7 +3184,11 @@ async function runJDEvaluation() {
   }
 
   try {
-    const r = await fetch(`${API_BASE}/api/v1/jd/${activeJDId}/evaluate`, { method: 'POST', body: fd });
+    const r = await fetch(`${API_BASE}/api/v1/jd/${activeJDId}/evaluate`, {
+      method: 'POST',
+      body: fd,
+      headers: { 'X-User-Email': getAuthEmail() }
+    });
     if (r.ok) {
       const d = await r.json();
       if (mode === 'new') {
