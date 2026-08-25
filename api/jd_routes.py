@@ -373,7 +373,25 @@ async def evaluate_candidates_against_jd(
 
     # Pass the user's tenant analysis directory so candidates load from the right folder
     from api.auth import get_tenant_dir
+    from run_jd_matching import load_candidate_profiles
     tenant_analysis_dir = get_tenant_dir(x_user_email)
+
+    # Pre-check: ensure the user actually has candidates to evaluate
+    profiles = load_candidate_profiles(cids_list, tenant_data_dir=tenant_analysis_dir)
+    if not profiles:
+        raise HTTPException(
+            status_code=422,
+            detail="No candidate profiles found. Please upload CV files first before running JD Match."
+        )
+
+    # If jd_text is empty (shouldn't normally happen), reconstruct from parsed_jd
+    if not jd_text.strip():
+        jd_text = " ".join([
+            parsed_jd.get("title", ""),
+            "Required degree: " + parsed_jd.get("required_degree_level", ""),
+            "Experience: " + str(parsed_jd.get("min_experience_years", 0)) + " years",
+            "Skills: " + ", ".join(parsed_jd.get("required_skills", [])),
+        ])
 
     eval_out = evaluate_jd_against_candidates(
         jd_text=jd_text,

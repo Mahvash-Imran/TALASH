@@ -3253,6 +3253,11 @@ async function runJDEvaluation() {
     fd.append('cv_file', jdNewCVFile);
   }
 
+  // Show loading state
+  const btn = document.getElementById('jd-run-btn');
+  const origText = btn ? btn.innerHTML : '';
+  if (btn) { btn.disabled = true; btn.innerHTML = '<span style="opacity:0.7">Running…</span>'; }
+
   try {
     const r = await fetch(`${API_BASE}/api/v1/jd/${activeJDId}/evaluate`, {
       method: 'POST', body: fd,
@@ -3268,13 +3273,17 @@ async function runJDEvaluation() {
         document.getElementById('jd-new-cv-prompt-banner').style.display = 'none';
         renderJDResults(d.results || []);
       }
-      toast('JD evaluation completed!');
+      toast('JD evaluation completed! ✓');
       loadJDHistory();
     } else {
-      toast('Evaluation failed', '⚠');
+      let detail = 'Evaluation failed';
+      try { const err = await r.json(); detail = err.detail || detail; } catch {}
+      toast('Error: ' + detail, '⚠');
     }
   } catch (e) {
-    toast('Error running evaluation: ' + e, '⚠');
+    toast('Network error: ' + e.message, '⚠');
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerHTML = origText; }
   }
 }
 
