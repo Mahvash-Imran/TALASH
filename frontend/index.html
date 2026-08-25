@@ -2465,7 +2465,7 @@ const API_BASE = (window.location.hostname === '127.0.0.1' || window.location.ho
    All other users start with an empty list — their candidates
    are loaded exclusively from their private API tenant folder. */
 const _storedEmail = localStorage.getItem('talash_email') || '';
-let allData = (_storedEmail === '' || _storedEmail.toLowerCase() === 'admin@talash.pk') ? [...RAW] : [];
+let allData = (_storedEmail.toLowerCase() === 'admin@talash.pk') ? [...RAW] : [];
 let currentPanel=null;
 
 let suitChart=null, distChart=null, radarChart=null;
@@ -2622,16 +2622,24 @@ async function handleAuthSubmit(e){
     localStorage.setItem('talash_token', data.token);
     localStorage.setItem('talash_email', data.user.email);
     localStorage.setItem('talash_name', data.user.name);
-    
+    // Reset candidate list — non-admin starts empty; fetchLiveData will populate from their tenant
+    if (data.user.email.toLowerCase() !== 'admin@talash.pk') allData = [];
+    activeJDId = null;
+    activeJDParsed = null;
     checkAuthState();
     fetchLiveData();
+    if (typeof loadJDHistory === 'function') loadJDHistory();
   } catch(err) {
     // Offline / fallback dev login
     localStorage.setItem('talash_token', `token_${email}`);
     localStorage.setItem('talash_email', email);
     localStorage.setItem('talash_name', name || email.split('@')[0]);
+    if (email.toLowerCase() !== 'admin@talash.pk') allData = [];
+    activeJDId = null;
+    activeJDParsed = null;
     checkAuthState();
     fetchLiveData();
+    if (typeof loadJDHistory === 'function') loadJDHistory();
   }
 }
 
@@ -2639,7 +2647,11 @@ function handleLogout(){
   localStorage.removeItem('talash_token');
   localStorage.removeItem('talash_email');
   localStorage.removeItem('talash_name');
+  allData = [];
+  activeJDId = null;
+  activeJDParsed = null;
   checkAuthState();
+  if (typeof loadJDHistory === 'function') loadJDHistory();
 }
 
 // Inject X-User-Email header into fetchLiveData API calls
@@ -2652,19 +2664,19 @@ async function fetchLiveData(){
       const r=await fetch(`${API_BASE}/api/v1/candidates`,{headers:{'X-User-Email':getAuthEmail()}});
       if(r.ok){
         const d=await r.json();
-        if(d&&d.length){
-          allData=d.map(c=>({...c,
-            overall_composite_score:parseFloat(c.overall_composite_score)||0,
-            missing_info_count:parseInt(c.missing_info_count)||0,
-            education_score:c.education_score!==undefined?parseFloat(c.education_score):10,
-            research_score:c.research_score!==undefined?parseFloat(c.research_score):5,
-            supervision_score:c.supervision_score!==undefined?parseFloat(c.supervision_score):2,
-            innovation_score:c.innovation_score!==undefined?parseFloat(c.innovation_score):2,
-            breadth_score:c.breadth_score!==undefined?parseFloat(c.breadth_score):3,
-            collaboration_score:c.collaboration_score!==undefined?parseFloat(c.collaboration_score):5,
-            experience_score:c.experience_score!==undefined?parseFloat(c.experience_score):8,
-          }));
-        }
+        // Always replace allData with API response (empty array = 0 candidates for new user)
+        allData=(d||[]).map(c=>({...c,
+          overall_composite_score:parseFloat(c.overall_composite_score)||0,
+          missing_info_count:parseInt(c.missing_info_count)||0,
+          education_score:c.education_score!==undefined?parseFloat(c.education_score):10,
+          research_score:c.research_score!==undefined?parseFloat(c.research_score):5,
+          supervision_score:c.supervision_score!==undefined?parseFloat(c.supervision_score):2,
+          innovation_score:c.innovation_score!==undefined?parseFloat(c.innovation_score):2,
+          breadth_score:c.breadth_score!==undefined?parseFloat(c.breadth_score):3,
+          collaboration_score:c.collaboration_score!==undefined?parseFloat(c.collaboration_score):5,
+          experience_score:c.experience_score!==undefined?parseFloat(c.experience_score):8,
+        }));
+        if (typeof renderJDCandidateCheckboxes === 'function') renderJDCandidateCheckboxes();
       }
     }catch{}
   }
@@ -3087,7 +3099,9 @@ async function loadJDHistory() {
   const sel = document.getElementById('jd-history-select');
   if (!sel) return;
   try {
-    const r = await fetch(`${API_BASE}/api/v1/jd/list`);
+    const r = await fetch(`${API_BASE}/api/v1/jd/list`, {
+      headers: { 'X-User-Email': getAuthEmail() }
+    });
     if (r.ok) {
       const data = await r.json();
       const jds = data.jds || [];
@@ -3119,7 +3133,10 @@ async function parseAndSetActiveJD() {
   }
 
   try {
-    const r = await fetch(`${API_BASE}/api/v1/jd/upload`, { method: 'POST', body: fd });
+    const r = await fetch(`${API_BASE}/api/v1/jd/upload`, {
+      method: 'POST', body: fd,
+      headers: { 'X-User-Email': getAuthEmail() }
+    });
     if (r.ok) {
       const d = await r.json();
       activeJDId = d.jd_id;
@@ -3139,7 +3156,9 @@ async function loadSelectedJDFromHistory() {
   const jdId = document.getElementById('jd-history-select').value;
   if (!jdId) return;
   try {
-    const r = await fetch(`${API_BASE}/api/v1/jd/${jdId}/results`);
+    const r = await fetch(`${API_BASE}/api/v1/jd/${jdId}/results`, {
+      headers: { 'X-User-Email': getAuthEmail() }
+    });
     if (r.ok) {
       const d = await r.json();
       activeJDId = d.jd_id;
@@ -3235,7 +3254,10 @@ async function runJDEvaluation() {
   }
 
   try {
-    const r = await fetch(`${API_BASE}/api/v1/jd/${activeJDId}/evaluate`, { method: 'POST', body: fd });
+    const r = await fetch(`${API_BASE}/api/v1/jd/${activeJDId}/evaluate`, {
+      method: 'POST', body: fd,
+      headers: { 'X-User-Email': getAuthEmail() }
+    });
     if (r.ok) {
       const d = await r.json();
       if (mode === 'new') {
