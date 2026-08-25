@@ -27,6 +27,14 @@ EXTRACTED_DIR = Path("data/extracted")
 JD_MATCHES_DIR = DATA_DIR / "jd_matches"
 
 
+def _load_csv_fallback(primary: Path, fallback: Path) -> Optional[pd.DataFrame]:
+    """Load CSV from primary path; if not found or empty, try fallback path."""
+    df = _load_csv(primary)
+    if df is None:
+        df = _load_csv(fallback)
+    return df
+
+
 def generate_jd_id(jd_title: str) -> str:
     """Generates a unique, URL-safe slugified ID for a JD."""
     slug = re.sub(r'[^a-zA-Z0-9]+', '_', jd_title.strip()).strip('_').lower()
@@ -56,11 +64,11 @@ def load_candidate_profiles(
         comp_df = comp_df[comp_df["candidate_id"].isin(candidate_ids)]
 
     # Load supplementary tables — fall back to global if tenant doesn't have them
-    exp_df = _load_csv(base / "experience_profiles.csv") or _load_csv(DATA_DIR / "experience_profiles.csv")
-    edu_df = _load_csv(base / "educational_profiles.csv") or _load_csv(DATA_DIR / "educational_profiles.csv")
-    res_df = _load_csv(base / "research_aggregates.csv") or _load_csv(DATA_DIR / "research_aggregates.csv")
+    exp_df = _load_csv_fallback(base / "experience_profiles.csv", DATA_DIR / "experience_profiles.csv")
+    edu_df = _load_csv_fallback(base / "educational_profiles.csv", DATA_DIR / "educational_profiles.csv")
+    res_df = _load_csv_fallback(base / "research_aggregates.csv", DATA_DIR / "research_aggregates.csv")
     skills_df = _load_csv(EXTRACTED_DIR / "skills.csv")
-    sk_ev_df = _load_csv(base / "skill_evidence.csv") or _load_csv(DATA_DIR / "skill_evidence.csv")
+    sk_ev_df = _load_csv_fallback(base / "skill_evidence.csv", DATA_DIR / "skill_evidence.csv")
     edu_ext_df = _load_csv(EXTRACTED_DIR / "education.csv")
 
     exp_map = _to_map(exp_df)
