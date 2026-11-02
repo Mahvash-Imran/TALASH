@@ -1,0 +1,216 @@
+{
+  "slug": "medicine",
+  "department_name": "Medicine & Clinical Health Sciences",
+  "version": "1.0.0",
+  "status": "active",
+  "created_at": null,
+  "updated_at": null,
+  "description": "Profile for Clinical Medicine, Surgery, Medical Education, and Biomedical Sciences.",
+  "base_weights": {
+    "academic_foundation": 0.18,
+    "domain_competence": 0.17,
+    "professional_experience": 0.18,
+    "evidence_of_output": 0.15,
+    "credentials_licensure": 0.15,
+    "impact_recognition": 0.07,
+    "leadership_teaching_service": 0.05,
+    "trajectory_growth": 0.05
+  },
+  "role_modifiers": {
+    "faculty": {
+      "evidence_of_output": 1.4,
+      "leadership_teaching_service": 1.5,
+      "credentials_licensure": 1.3
+    },
+    "industry_professional": {
+      "professional_experience": 1.6,
+      "credentials_licensure": 1.5,
+      "evidence_of_output": 0.7
+    }
+  },
+  "hard_gates": [
+    {
+      "gate_id": "gate_med_license",
+      "name": "PMDC/PMC Medical License",
+      "dimension": "credentials_licensure",
+      "field_path": "credentials.has_pmdc",
+      "operator": "eq",
+      "expected_value": true,
+      "failure_status": "needs_verification",
+      "failure_message": "Active PMDC/PMC medical registration is mandatory for clinical appointments."
+    },
+    {
+      "gate_id": "gate_med_mbbs",
+      "name": "Primary Medical Degree (MBBS/MD)",
+      "dimension": "academic_foundation",
+      "field_path": "education.highest_degree",
+      "operator": "in",
+      "expected_value": [
+        "mbbs",
+        "md",
+        "fcps",
+        "mrcp",
+        "frcs",
+        "phd",
+        "bds"
+      ],
+      "failure_status": "not_eligible",
+      "failure_message": "Candidate must hold a recognized primary medical qualification (MBBS, MD, BDS) or higher postgraduate fellowship."
+    }
+  ],
+  "field_baselines": {
+    "scholarly_publications": {
+      "median": 5.0,
+      "p75": 14.0,
+      "p90": 30.0,
+      "max_cap": 90.0,
+      "unit": "count"
+    },
+    "clinical_experience_years": {
+      "median": 5.0,
+      "p75": 10.0,
+      "p90": 18.0,
+      "max_cap": 35.0,
+      "unit": "years"
+    },
+    "clinical_cases_trials": {
+      "median": 3.0,
+      "p75": 8.0,
+      "p90": 20.0,
+      "max_cap": 50.0,
+      "unit": "cases"
+    }
+  },
+  "artifact_taxonomy": {
+    "clinical_case": {
+      "weight": 1.0,
+      "quality_indicators": [
+        "High surgical volume",
+        "Complex diagnostic panel",
+        "Board approved trial"
+      ],
+      "max_score_contribution": 100.0,
+      "baseline": null
+    },
+    "journal": {
+      "weight": 1.0,
+      "quality_indicators": [
+        "PubMed indexed",
+        "NEJM",
+        "Lancet",
+        "JAMA",
+        "BMJ",
+        "Q1",
+        "HEC W"
+      ],
+      "max_score_contribution": 100.0,
+      "baseline": null
+    },
+    "clinical_trial": {
+      "weight": 1.2,
+      "quality_indicators": [
+        "Phase II/III Trial",
+        "FDA/DRAP approved",
+        "Principal Investigator",
+        "GCP certified"
+      ],
+      "max_score_contribution": 100.0,
+      "baseline": null
+    },
+    "guidelines": {
+      "weight": 0.9,
+      "quality_indicators": [
+        "Clinical Practice Guideline",
+        "WHO Technical Report",
+        "Cochrane Review"
+      ],
+      "max_score_contribution": 100.0,
+      "baseline": null
+    }
+  },
+  "credentials_taxonomy": [
+    {
+      "code": "PMDC_LICENSE",
+      "name": "Pakistan Medical & Dental Council (PMDC) Registration",
+      "is_mandatory": true,
+      "verification_authority": null,
+      "acceptable_equivalents": [
+        "GMC Full Registration",
+        "USMLE State Medical Board License",
+        "MOH License"
+      ]
+    },
+    {
+      "code": "FCPS_MRCP",
+      "name": "FCPS, MRCP, FRCS, or US Board Certification",
+      "is_mandatory": false,
+      "verification_authority": null,
+      "acceptable_equivalents": []
+    },
+    {
+      "code": "BLS_ACLS",
+      "name": "Basic Life Support / Advanced Cardiac Life Support (BLS/ACLS)",
+      "is_mandatory": false,
+      "verification_authority": null,
+      "acceptable_equivalents": []
+    }
+  ],
+  "skill_taxonomy": {
+    "core_skills": [
+      "clinical diagnosis",
+      "patient care",
+      "evidence-based medicine",
+      "pharmacology",
+      "internal medicine",
+      "surgical procedures",
+      "medical research",
+      "patient safety",
+      "pathology"
+    ],
+    "secondary_skills": [
+      "epidemiology",
+      "biostatistics",
+      "gcp compliance",
+      "icu management",
+      "diagnostic imaging",
+      "telemedicine",
+      "medical ethics"
+    ],
+    "sub_branches": {
+      "clinical": [
+        "patient management",
+        "differential diagnosis",
+        "emergency care",
+        "inpatient rounds"
+      ],
+      "surgical": [
+        "preoperative planning",
+        "intraoperative technique",
+        "laparoscopy",
+        "wound care"
+      ],
+      "research": [
+        "epidemiological studies",
+        "randomized controlled trials",
+        "systematic reviews",
+        "bioethics"
+      ]
+    }
+  },
+  "institution_tiers": {
+    "Tier 1": [
+      "Aga Khan University (AKU)",
+      "King Edward Medical University (KEMU)",
+      "Dow University of Health Sciences (DUHS)",
+      "Johns Hopkins",
+      "Oxford Medical School"
+    ],
+    "Tier 2": [
+      "Fatima Jinnah Medical University",
+      "Rawalpindi Medical University",
+      "Nishtar Medical University",
+      "Shaheed Zulfiqar Ali Bhutto Medical University (PIMS)"
+    ]
+  },
+  "notes": null
+}

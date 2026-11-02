@@ -165,3 +165,7 @@ row_id,candidate_id,job_title,organization,start_date,end_date,employment_type,d
 164,Muhammad_Dawood_Rizwan_CV,AI Researcher,"Machine Vision & Intelligent Systems Lab, Pakistan",03/2025,present,,,
 165,Muhammad_Dawood_Rizwan_CV,Trainee Data Science and AI,"Descon, Pakistan",10/2024,01/2025,,,
 166,Muhammad_Dawood_Rizwan_CV,AI Engineering,"Kryptomind LLC, Pakistan",07/2024,10/2024,,,
+167,Dr_Tariq_Mahmood_Comprehensive_CV,Full Professor (Tenured) & Research Chair,"NUST SEECS, Islamabad",2019-01,present,Full-time,"Directing AI Research Center, securing $2.5M+ competitive grants, leading 15+ research associates, teaching Advanced Deep Learning and Computer Vision to PhD/MS scholars.",
+168,Dr_Tariq_Mahmood_Comprehensive_CV,Associate Professor,"NUST, Department of Computer Science, Islamabad",2015-01,2018-12,Full-time,Head of Visual Computing Group. Taught graduate Algorithms and Artificial Intelligence. Spearheaded industry collaborations with healthcare organizations.,
+169,Dr_Tariq_Mahmood_Comprehensive_CV,Postdoctoral Research Fellow,"University of Cambridge, Department of Engineering, UK",2014-09,2014-12,Postdoctoral,Collaborated on EU Horizon 2020 project for privacy-preserving federated deep learning systems in clinical diagnostics.,
+170,Dr_Tariq_Mahmood_Comprehensive_CV,Assistant Professor,"COMSATS University, Islamabad",2010-06,2014-08,Full-time,"Taught undergraduate Data Structures, Machine Learning, and Computer Graphics. Supervised 8 MS thesis students.",

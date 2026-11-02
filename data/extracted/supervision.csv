@@ -3,3 +3,9 @@ row_id,candidate_id,student_name,level,role,year,thesis_title
 2,08_TAYYABA_GULL,,,,,
 3,15_M_USMAN_ABBASI,,,,,
 4,28_IDRIS_KHAN,,,,,
+5,Dr_Tariq_Mahmood_Comprehensive_CV,Dr. Farhan Ali,PHD,supervisor,2023,Explainable AI for Cardiac Segmentation
+6,Dr_Tariq_Mahmood_Comprehensive_CV,Dr. Sana Rizvi,PHD,supervisor,2022,Federated Learning in Edge Medical Systems
+7,Dr_Tariq_Mahmood_Comprehensive_CV,Dr. Hamza Shahzad,PHD,supervisor,2021,Self-Supervised Representation Learning
+8,Dr_Tariq_Mahmood_Comprehensive_CV,Dr. Ayesha Siddiqui,PHD,supervisor,2020,Deep Vision Models for Retinal Imaging
+9,Dr_Tariq_Mahmood_Comprehensive_CV,Dr. Bilal Ahmed,PHD,supervisor,2019,3D Point Cloud Processing using Graph Neural Networks
+10,Dr_Tariq_Mahmood_Comprehensive_CV,Dr. Maria Khan,PHD,supervisor,2018,Cross-Modal Medical Image Fusion

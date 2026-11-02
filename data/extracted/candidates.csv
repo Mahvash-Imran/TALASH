@@ -44,3 +44,4 @@ candidate_id,name,email,phone,address,cnic,source_filename,processed_at
 43_AMMARA_NASIM,Ammara Nasim,,,,,43_AMMARA_NASIM.pdf,2026-07-13T07:08:46Z
 09_SANA_FATIMA_RIZVI,Sana Fatima Rizvi,,,,,09_SANA_FATIMA_RIZVI.pdf,2026-08-19T08:07:24Z
 Muhammad_Dawood_Rizwan_CV,,,,,,Muhammad_Dawood_Rizwan_CV.pdf,2026-08-19T08:30:55Z
+Dr_Tariq_Mahmood_Comprehensive_CV,Dr. Tariq Mahmood Khan,tariq.mahmood@nust.edu.pk,+92-51-90852001,"Department of Computer Science, NUST School of Electrical Engineering & Computer Science (SEECS), H-12 Campus, Islamabad, Pakistan",61101-1234567-8,Dr_Tariq_Mahmood_Comprehensive_CV.pdf,2026-08-25T15:43:01Z

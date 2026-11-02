@@ -3,3 +3,5 @@ row_id,candidate_id,title,authors,isbn,publisher,year,link
 2,08_TAYYABA_GULL,,,,,,
 3,15_M_USMAN_ABBASI,,,,,,
 4,28_IDRIS_KHAN,,,,,,
+5,Dr_Tariq_Mahmood_Comprehensive_CV,Applied Deep Learning for Medical Image Analysis,"Mahmood, T.; Cambridge, J.",978-3-030-91234-5,Springer Nature,2022.0,
+6,Dr_Tariq_Mahmood_Comprehensive_CV,Fundamentals of Computer Vision and Pattern Recognition,"Mahmood, T.",978-0-12-819876-0,Elsevier Academic Press,2020.0,

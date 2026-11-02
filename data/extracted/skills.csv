@@ -41,3 +41,24 @@ row_id,candidate_id,skill_name,category
 40,Muhammad_Dawood_Rizwan_CV,Decision-Making,Soft Skills & Leadership
 41,Muhammad_Dawood_Rizwan_CV,Team Management,Soft Skills & Leadership
 42,Muhammad_Dawood_Rizwan_CV,Communication,Communication
+43,Dr_Tariq_Mahmood_Comprehensive_CV,Computer Vision,Research Domain
+44,Dr_Tariq_Mahmood_Comprehensive_CV,Medical Image Analysis,Research Domain
+45,Dr_Tariq_Mahmood_Comprehensive_CV,Deep Learning,Research Domain
+46,Dr_Tariq_Mahmood_Comprehensive_CV,Generative AI & Diffusion Models,Research Domain
+47,Dr_Tariq_Mahmood_Comprehensive_CV,Federated Learning,Research Domain
+48,Dr_Tariq_Mahmood_Comprehensive_CV,Explainable AI (XAI),Research Domain
+49,Dr_Tariq_Mahmood_Comprehensive_CV,Edge AI Systems,Research Domain
+50,Dr_Tariq_Mahmood_Comprehensive_CV,Python,Programming & Tools
+51,Dr_Tariq_Mahmood_Comprehensive_CV,PyTorch,Programming & Tools
+52,Dr_Tariq_Mahmood_Comprehensive_CV,TensorFlow,Programming & Tools
+53,Dr_Tariq_Mahmood_Comprehensive_CV,OpenCV,Programming & Tools
+54,Dr_Tariq_Mahmood_Comprehensive_CV,CUDA,Programming & Tools
+55,Dr_Tariq_Mahmood_Comprehensive_CV,C++,Programming & Tools
+56,Dr_Tariq_Mahmood_Comprehensive_CV,Docker,Programming & Tools
+57,Dr_Tariq_Mahmood_Comprehensive_CV,Kubernetes,Programming & Tools
+58,Dr_Tariq_Mahmood_Comprehensive_CV,MLOps,Programming & Tools
+59,Dr_Tariq_Mahmood_Comprehensive_CV,Linux,Programming & Tools
+60,Dr_Tariq_Mahmood_Comprehensive_CV,HuggingFace,Programming & Tools
+61,Dr_Tariq_Mahmood_Comprehensive_CV,ONNX,Programming & Tools
+62,Dr_Tariq_Mahmood_Comprehensive_CV,Git,Programming & Tools
+63,Dr_Tariq_Mahmood_Comprehensive_CV,Scikit-Learn,Programming & Tools

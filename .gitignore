@@ -27,6 +27,10 @@ make_perfect_cv.py
 
 # Scratch and temp files
 scratch/
+generate_perfect_cv.py
+data/test_eval_tmp/
+data/analysis/jd_matches/test_*/
+data/extracted/*.xlsx
 
 # OS specific files
 .DS_Store

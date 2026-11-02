@@ -1,0 +1,210 @@
+{
+  "slug": "electrical_engineering",
+  "department_name": "Electrical & Electronics Engineering",
+  "version": "1.0.0",
+  "status": "active",
+  "created_at": null,
+  "updated_at": null,
+  "description": "Profile for Electrical, Electronics, Telecommunication, and Power Engineering.",
+  "base_weights": {
+    "academic_foundation": 0.15,
+    "domain_competence": 0.2,
+    "professional_experience": 0.15,
+    "evidence_of_output": 0.2,
+    "credentials_licensure": 0.1,
+    "impact_recognition": 0.08,
+    "leadership_teaching_service": 0.07,
+    "trajectory_growth": 0.05
+  },
+  "role_modifiers": {
+    "faculty": {
+      "evidence_of_output": 1.4,
+      "leadership_teaching_service": 1.4,
+      "academic_foundation": 1.2
+    },
+    "researcher": {
+      "evidence_of_output": 1.6,
+      "impact_recognition": 1.3
+    },
+    "industry_professional": {
+      "professional_experience": 1.6,
+      "credentials_licensure": 1.4
+    },
+    "fresh_graduate": {
+      "academic_foundation": 1.8,
+      "domain_competence": 1.5
+    },
+    "executive": {
+      "leadership_teaching_service": 1.7,
+      "professional_experience": 1.5
+    }
+  },
+  "hard_gates": [
+    {
+      "gate_id": "gate_ee_pec",
+      "name": "PEC Professional Registration",
+      "dimension": "credentials_licensure",
+      "field_path": "credentials.has_pec",
+      "operator": "eq",
+      "expected_value": true,
+      "failure_status": "needs_verification",
+      "failure_message": "PEC (Pakistan Engineering Council) registration requires verification for engineering appointment."
+    }
+  ],
+  "field_baselines": {
+    "scholarly_publications": {
+      "median": 5.0,
+      "p75": 12.0,
+      "p90": 25.0,
+      "max_cap": 70.0,
+      "unit": "count"
+    },
+    "patents": {
+      "median": 1.0,
+      "p75": 3.0,
+      "p90": 6.0,
+      "max_cap": 20.0,
+      "unit": "patents"
+    },
+    "experience_years": {
+      "median": 5.0,
+      "p75": 10.0,
+      "p90": 16.0,
+      "max_cap": 30.0,
+      "unit": "years"
+    }
+  },
+  "artifact_taxonomy": {
+    "journal": {
+      "weight": 1.0,
+      "quality_indicators": [
+        "IEEE Transactions",
+        "IET",
+        "Elsevier",
+        "Q1",
+        "Q2"
+      ],
+      "max_score_contribution": 100.0,
+      "baseline": null
+    },
+    "patent": {
+      "weight": 1.2,
+      "quality_indicators": [
+        "Granted",
+        "US Patent",
+        "EPO",
+        "WIPO"
+      ],
+      "max_score_contribution": 100.0,
+      "baseline": null
+    },
+    "conference": {
+      "weight": 0.8,
+      "quality_indicators": [
+        "IEEE Flagship",
+        "Globecom",
+        "ICC",
+        "ISCAS"
+      ],
+      "max_score_contribution": 100.0,
+      "baseline": null
+    },
+    "hardware_prototype": {
+      "weight": 0.9,
+      "quality_indicators": [
+        "PCB Design",
+        "FPGA Implementation",
+        "Silicon Tapeout"
+      ],
+      "max_score_contribution": 100.0,
+      "baseline": null
+    }
+  },
+  "credentials_taxonomy": [
+    {
+      "code": "PEC",
+      "name": "Pakistan Engineering Council (PEC) Registration",
+      "is_mandatory": true,
+      "verification_authority": null,
+      "acceptable_equivalents": [
+        "State Board PE License",
+        "Chartered Engineer (CEng)"
+      ]
+    },
+    {
+      "code": "IEEE_SENIOR",
+      "name": "IEEE Senior Member / Fellow",
+      "is_mandatory": false,
+      "verification_authority": null,
+      "acceptable_equivalents": []
+    }
+  ],
+  "skill_taxonomy": {
+    "core_skills": [
+      "circuit design",
+      "signal processing",
+      "power systems",
+      "embedded systems",
+      "vlsi",
+      "telecommunications",
+      "control systems",
+      "matlab",
+      "fpga",
+      "pcb design"
+    ],
+    "secondary_skills": [
+      "verilog",
+      "vhdl",
+      "rf engineering",
+      "microcontrollers",
+      "plc",
+      "iot",
+      "scada",
+      "labview",
+      "c/c++"
+    ],
+    "sub_branches": {
+      "power": [
+        "smart grid",
+        "high voltage",
+        "power electronics",
+        "renewable energy",
+        "electrical machines"
+      ],
+      "electronics": [
+        "vlsi",
+        "microelectronics",
+        "analog circuits",
+        "digital circuits",
+        "asic",
+        "fpga"
+      ],
+      "telecom": [
+        "wireless communication",
+        "5g",
+        "rf design",
+        "digital signal processing",
+        "antenna design"
+      ]
+    }
+  },
+  "institution_tiers": {
+    "Tier 1": [
+      "UET Lahore",
+      "NUST",
+      "GIKI",
+      "FAST NUCES",
+      "UET Taxila",
+      "MIT",
+      "Stanford",
+      "Imperial College London"
+    ],
+    "Tier 2": [
+      "NED UET",
+      "Air University",
+      "COMSATS",
+      "PIEAS"
+    ]
+  },
+  "notes": null
+}
