@@ -162,7 +162,7 @@ def filter_tenant_analysis_files(tenant_analysis_dir: Path):
 
 def get_current_user_email(x_user_email: Optional[str] = Header(None)) -> str:
     """FastAPI dependency to extract current logged-in user email."""
-    if not x_user_email or x_user_email.strip() == "":
+    if not x_user_email or not isinstance(x_user_email, str) or x_user_email.strip() == "":
         return DEFAULT_ADMIN_EMAIL
     return x_user_email.strip().lower()
 

@@ -186,17 +186,37 @@ def compute_candidate_composite_score(
 class CompositeEvaluator:
     """
     Orchestrates Part 10 for all candidates.
-    Reads previous module outputs in data/analysis and computes candidate overall scores.
+    Supports both Universal 8-Dimension Evaluation and legacy scoring fallback.
+    Guarantees zero regression for composite_evaluations.csv and composite_evaluations.xlsx.
     """
 
-    def __init__(self, output_dir: str = "data/analysis"):
+    def __init__(self, output_dir: str = "data/analysis", use_universal_engine: bool = True):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.use_universal_engine = use_universal_engine
 
     def run(self) -> Dict[str, Path]:
-        logger.info("Executing Module 10 Candidate Composite Evaluation...")
+        logger.info("Executing Module 10 Candidate Composite Evaluation (universal_engine=%s)...", self.use_universal_engine)
 
-        # Load CSVs from analysis directory
+        if self.use_universal_engine:
+            try:
+                from universal_pipeline import UniversalPipeline
+                pipe = UniversalPipeline(
+                    extracted_dir=Path("data/extracted"),
+                    analysis_dir=self.output_dir,
+                )
+                out = pipe.evaluate_all(save=True)
+                if out.get("count", 0) > 0:
+                    logger.info("Successfully executed Universal Candidate Evaluation across %d candidates.", out["count"])
+                    return {
+                        "composite_csv": Path(out["composite_csv"]),
+                        "composite_xlsx": Path(out["composite_xlsx"]),
+                        "universal_json": Path(out["universal_json"]),
+                    }
+            except Exception as u_err:
+                logger.warning("UniversalPipeline encountered issue: %s. Falling back to legacy composite evaluator...", u_err)
+
+        # Load CSVs from analysis directory (Legacy Fallback)
         edu_df  = self._load_csv("educational_profiles.csv")
         res_df  = self._load_csv("research_aggregates.csv")
         sup_df  = self._load_csv("supervision_profiles.csv")

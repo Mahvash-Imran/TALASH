@@ -587,6 +587,138 @@ def get_candidate_report(candidate_id: str):
     return {"candidate_id": candidate_id, "report": content}
 
 
+# ============================================================================
+# UNIVERSAL SCORING & DEPARTMENT PROFILE ENDPOINTS
+# ============================================================================
+
+@router.get("/departments")
+def list_departments():
+    """
+    Returns a catalog of all active and draft department profiles available in the system.
+    """
+    import profile_loader
+    profiles = profile_loader.list_profiles()
+    return {
+        "count": len(profiles),
+        "departments": profiles,
+    }
+
+
+@router.get("/departments/{slug}")
+def get_department_profile(slug: str):
+    """
+    Retrieves full configuration details of a specific department profile.
+    """
+    import profile_loader
+    profile = profile_loader.get_profile(slug)
+    if not profile:
+        raise HTTPException(status_code=404, detail=f"Department profile '{slug}' not found.")
+    return profile.model_dump()
+
+
+@router.post("/departments/generate")
+def generate_department(
+    department_name: str = Query(..., description="Name of the department to generate"),
+    sample_jd_text: Optional[str] = Query(None, description="Optional JD text for context"),
+):
+    """
+    Generates a draft department profile using Claude (Anthropic SDK) or fallback synthesizer.
+    """
+    import profile_generator
+    try:
+        prof = profile_generator.generate_department_profile(
+            department_name=department_name,
+            sample_jd_text=sample_jd_text,
+            save=True,
+        )
+        return {
+            "status": "success",
+            "message": f"Successfully drafted profile for '{department_name}'.",
+            "profile": prof.model_dump(),
+        }
+    except Exception as exc:
+        logger.error("Error generating department profile: %s", exc)
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.get("/candidates/{candidate_id}/universal")
+def get_candidate_universal_evaluation(
+    candidate_id: str,
+    department: Optional[str] = Query(None, description="Target department profile slug"),
+    role_preset: Optional[str] = Query("faculty", description="faculty | researcher | industry_professional | fresh_graduate | executive"),
+    x_user_email: Optional[str] = Header(None),
+):
+    """
+    Evaluates a candidate across all 8 Universal Dimensions with hard gate checks,
+    statistical percentile baselines, and complete explainability rationales.
+    """
+    from .auth import get_tenant_dir, get_current_user_email
+    from universal_pipeline import UniversalPipeline
+    from models import RolePreset
+
+    user_email = get_current_user_email(x_user_email)
+    target_analysis_dir = get_tenant_dir(user_email)
+
+    try:
+        r_preset = RolePreset(role_preset.lower())
+    except ValueError:
+        r_preset = RolePreset.FACULTY
+
+    pipeline = UniversalPipeline(
+        extracted_dir=EXTRACTED_DIR,
+        analysis_dir=target_analysis_dir,
+    )
+    res = pipeline.evaluate_single(
+        candidate_id=candidate_id,
+        department_slug=department,
+        role_preset=r_preset,
+    )
+    if not res:
+        raise HTTPException(status_code=404, detail=f"Candidate '{candidate_id}' not found in extracted records.")
+
+    return res.model_dump()
+
+
+@router.post("/candidates/evaluate-universal")
+def run_universal_batch_evaluation(
+    department: Optional[str] = Query(None, description="Target department profile slug (optional, auto-inferred if omitted)"),
+    role_preset: Optional[str] = Query("faculty", description="faculty | researcher | industry_professional | fresh_graduate | executive"),
+    x_user_email: Optional[str] = Header(None),
+):
+    """
+    Executes the Universal Scoring Engine across all extracted candidates.
+    Updates both universal_evaluations.json/csv AND composite_evaluations.csv/xlsx (zero regression).
+    """
+    from .auth import get_tenant_dir, get_current_user_email
+    from universal_pipeline import UniversalPipeline
+    from models import RolePreset
+
+    user_email = get_current_user_email(x_user_email)
+    target_analysis_dir = get_tenant_dir(user_email)
+
+    try:
+        r_preset = RolePreset(role_preset.lower())
+    except ValueError:
+        r_preset = RolePreset.FACULTY
+
+    pipeline = UniversalPipeline(
+        extracted_dir=EXTRACTED_DIR,
+        analysis_dir=target_analysis_dir,
+    )
+    out = pipeline.evaluate_all(
+        department_slug=department,
+        role_preset=r_preset,
+        save=True,
+    )
+    return {
+        "status": "success",
+        "evaluated_count": out.get("count", 0),
+        "target_directory": str(target_analysis_dir),
+        "composite_csv": out.get("composite_csv"),
+        "universal_json": out.get("universal_json"),
+    }
+
+
 def _load_csv(path: Path) -> Optional[pd.DataFrame]:
     if path.exists():
         try:
