@@ -10,6 +10,7 @@ The system is designed to eliminate manual screening bottlenecks in large-scale 
 
 ## Table of Contents
 
+0. [How to Run (Quick Start)](#how-to-run-quick-start)
 1. [Architecture Overview](#architecture-overview)
 2. [Module Pipeline](#module-pipeline)
 3. [Module 11: Job Description Matching](#module-11-job-description-matching)
@@ -24,6 +25,37 @@ The system is designed to eliminate manual screening bottlenecks in large-scale 
 12. [Technology Stack](#technology-stack)
 13. [Deployment](#deployment)
 14. [Development Status](#development-status)
+
+---
+
+## How to Run (Quick Start)
+
+**Requirements:** Python 3.11+ and a Groq (or OpenAI-compatible) API key for CV extraction.
+
+```bash
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Configure (copy the template, then edit .env)
+cp .env.example .env
+#    - OPENAI_API_KEY          your Groq/OpenAI key
+#    - TALASH_ADMIN_PASSWORD   admin password (if left empty, a random one is
+#                              generated into data/ADMIN_PASSWORD.txt)
+
+# 3. Start the server (port 8080 is what the dashboard expects locally)
+python run_backend.py --port 8080
+```
+
+Then open **http://127.0.0.1:8080** and sign in:
+
+- **Admin:** `admin@talash.pk` with the password from step 2.
+- **Other users:** click *Register Now*; each account gets a private workspace (min. 8-character password).
+
+Interactive API docs are at `http://127.0.0.1:8080/docs`. All endpoints except `/api/v1/health` require an `Authorization: Bearer <token>` header; get the token from `POST /api/v1/auth/login`.
+
+**Docker:** `docker build -t talash . && docker run -p 8080:8080 -e TALASH_ADMIN_PASSWORD=... -e OPENAI_API_KEY=... talash`
+
+**Tests:** `pip install -r requirements-dev.txt && python -m pytest`
 
 ---
 
