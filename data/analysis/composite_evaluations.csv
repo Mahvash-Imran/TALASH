@@ -1,47 +1,47 @@
 candidate_id,candidate_name,overall_composite_score,candidate_tier,education_score,research_score,supervision_score,innovation_score,breadth_score,collaboration_score,experience_score,gate_status,confidence_multiplier,evidence_coverage,evaluated_at
-Dr_Tariq_Mahmood_Comprehensive_CV,Dr. Tariq Mahmood Khan,77.0,Tier 2: Strong Candidate,18.1,22.2,9.7,1.8,6.1,9.3,14.0,eligible,0.981,0.88,2026-11-13 11:35:56
-23_WAQAS_TARIQ_TOOR,Waqas Tariq Toor,60.7,Tier 3: Moderate Candidate,18.0,22.9,4.5,0.0,3.5,9.3,10.1,eligible,0.963,0.75,2026-11-13 11:35:56
-13_MANZOOR_ELLAHI,Manzoor Ellahi,60.0,Tier 3: Moderate Candidate,18.6,19.4,4.5,0.0,3.5,9.3,13.1,eligible,0.963,0.75,2026-11-13 11:35:56
-43_AMMARA_NASIM,Ammara Nasim,59.5,Tier 3: Moderate Candidate,19.5,20.7,4.6,0.0,3.5,9.3,9.5,eligible,0.963,0.75,2026-11-13 11:35:56
-37_SANIA_GUL,Sania Gul,57.7,Tier 3: Moderate Candidate,19.5,19.5,2.2,0.0,3.5,9.3,13.0,eligible,0.963,0.75,2026-11-13 11:35:56
-04_MUHAMMAD_FARRUKH,Muhammad Farrukh Qureshi,57.5,Tier 3: Moderate Candidate,17.4,23.4,3.4,0.0,3.5,8.2,8.0,eligible,0.963,0.75,2026-11-13 11:35:56
-11_WAQAS_AMIN,Waqas Amin,56.2,Tier 3: Moderate Candidate,17.5,21.9,4.5,0.0,0.0,9.3,12.5,eligible,0.981,0.88,2026-11-13 11:35:56
-07_FIZA_MURTAZA,Fiza Murtaza,55.8,Tier 3: Moderate Candidate,19.4,15.5,4.5,0.0,3.5,7.6,12.7,eligible,0.963,0.75,2026-11-13 11:35:56
-24_AHMED_NAEEM,Ahmed Naeem,54.1,Tier 3: Moderate Candidate,16.0,25.0,1.0,0.0,3.5,8.2,8.5,eligible,0.944,0.62,2026-11-13 11:35:56
-09_MUHAMMAD_ABUBAKAR,Muhammad Abubakar,53.9,Tier 3: Moderate Candidate,17.7,21.0,4.5,0.0,0.0,9.3,11.9,eligible,0.963,0.75,2026-11-13 11:35:56
-14_SAROSH_TAHIR,Sarosh Tahir,52.9,Tier 3: Moderate Candidate,18.3,16.1,2.2,0.0,3.5,7.6,13.0,eligible,0.963,0.75,2026-11-13 11:35:56
-34_SHAHZAD,Shahzad,51.4,Tier 3: Moderate Candidate,18.9,14.3,2.2,0.0,3.5,9.0,11.8,eligible,0.963,0.75,2026-11-13 11:35:56
-18_MUHAMMAD_AMJAD,Muhammad Amjad,50.3,Tier 3: Moderate Candidate,17.8,18.1,1.0,0.0,3.5,9.3,9.8,eligible,0.944,0.62,2026-11-13 11:35:56
-33_QAMAR_ABBAS,Qamar Abbas,50.3,Tier 3: Moderate Candidate,19.1,11.9,3.4,0.0,3.5,8.2,11.6,eligible,0.963,0.75,2026-11-13 11:35:56
-30_FAHD_SIKANDAR_KHAN,Fahd Sikandar Khan,49.9,Tier 4: Needs Clarification/Weak,17.9,13.7,2.2,0.0,3.5,8.2,12.3,eligible,0.963,0.75,2026-11-13 11:35:56
-41_MUHAMMAD_AQEEL,Muhammad Aqeel,49.9,Tier 4: Needs Clarification/Weak,17.3,17.3,2.2,0.0,3.5,8.2,7.7,eligible,0.963,0.75,2026-11-13 11:35:56
-01_MUHAMMAD_SALMAN,MUHAMMAD SALMAN,49.0,Tier 4: Needs Clarification/Weak,18.8,8.6,5.7,0.0,3.5,9.0,10.1,eligible,0.963,0.75,2026-11-13 11:35:56
-19_ASIM_MASOOD,Asim Masood,49.0,Tier 4: Needs Clarification/Weak,19.2,11.8,4.5,0.0,1.8,7.6,12.3,eligible,0.963,0.75,2026-11-13 11:35:56
-32_QAISAR_HUSSAIN_ALVI,Qaisar Hussain Alvi,47.6,Tier 4: Needs Clarification/Weak,17.3,8.3,4.5,0.0,3.5,7.4,13.2,eligible,0.963,0.75,2026-11-13 11:35:56
-08_TAYYABA_GULL,Tayyaba Gull,47.3,Tier 4: Needs Clarification/Weak,17.5,10.4,3.4,0.0,3.5,7.4,11.6,eligible,0.963,0.75,2026-11-13 11:35:56
-31_USMAN_MASUD,Usman Masud,46.6,Tier 4: Needs Clarification/Weak,18.0,6.8,4.5,0.0,3.5,8.2,12.5,eligible,0.963,0.75,2026-11-13 11:35:56
-39_MUHAMMAD_SAQIB,Muhammad Saqib,45.8,Tier 4: Needs Clarification/Weak,17.4,19.2,1.0,0.0,3.5,8.5,3.8,eligible,0.925,0.5,2026-11-13 11:35:56
-17_SUHAIL_ASGHAR,Suhail Asghar Qureshi,45.4,Tier 4: Needs Clarification/Weak,17.7,14.3,2.2,0.0,3.5,8.2,4.9,eligible,0.963,0.75,2026-11-13 11:35:56
-36_SAMANA_BATOOL,Samana Batool,45.3,Tier 4: Needs Clarification/Weak,19.6,6.2,3.4,0.0,3.5,8.2,11.6,eligible,0.963,0.75,2026-11-13 11:35:56
-10_MUHAMMAD_EHATISHAM,Muhammad Ehatisham,45.0,Tier 4: Needs Clarification/Weak,18.0,7.5,4.5,0.0,3.5,5.8,12.1,eligible,0.944,0.62,2026-11-13 11:35:56
-12_SYED_TAMOORULHASSAN,SYED TAMOORULHASSAN,45.0,Tier 4: Needs Clarification/Weak,18.0,11.4,1.0,0.0,3.5,7.6,12.0,eligible,0.944,0.62,2026-11-13 11:35:56
-22_ZEESHAN,Zeeshan,44.9,Tier 4: Needs Clarification/Weak,19.6,14.8,1.0,0.0,3.5,8.2,4.9,eligible,0.944,0.62,2026-11-13 11:35:56
-38_MUHAMMAD_MUSADIQ,Muhammad Musadiq Ahmed,44.2,Tier 4: Needs Clarification/Weak,19.5,9.6,2.2,0.0,3.5,8.2,7.7,eligible,0.963,0.75,2026-11-13 11:35:56
-27_SHAHEER,Shaheer,44.0,Tier 4: Needs Clarification/Weak,18.0,7.5,4.5,0.0,3.5,5.8,10.6,eligible,0.944,0.62,2026-11-13 11:35:56
-09_SANA_FATIMA_RIZVI,Sana Fatima Rizvi,43.5,Tier 4: Needs Clarification/Weak,17.1,6.8,3.4,0.0,3.5,8.2,11.1,eligible,0.963,0.75,2026-11-13 11:35:56
-20_SYED_FASIH_ALI,Syed Fasih Ali,41.1,Tier 4: Needs Clarification/Weak,17.8,7.1,3.4,0.0,3.5,6.3,7.6,eligible,0.963,0.75,2026-11-13 11:35:56
-25_MUHAMMAD_ADEEL_ALTAF,MUHAMMAD ADEEL ALTAF,40.7,Tier 4: Needs Clarification/Weak,17.8,7.2,2.2,0.0,3.5,9.3,7.2,eligible,0.963,0.75,2026-11-13 11:35:56
-03_NASIR_ALI_SHAH,Nasir Ali Shah,40.5,Tier 4: Needs Clarification/Weak,18.0,9.4,1.0,0.0,3.5,9.0,7.2,eligible,0.944,0.62,2026-11-13 11:35:56
-40_ABDUR_REHMAN,Abdur Rehman,40.5,Tier 4: Needs Clarification/Weak,17.3,7.9,2.2,0.0,3.5,8.2,7.2,eligible,0.963,0.75,2026-11-13 11:35:56
-06_FARMAN_ALI,Farman Ali,40.4,Tier 4: Needs Clarification/Weak,16.3,7.5,2.2,0.0,3.5,5.8,12.5,eligible,0.925,0.5,2026-11-13 11:35:56
-15_M_USMAN_ABBASI,M. Usman Abbasi,39.9,Tier 4: Needs Clarification/Weak,17.5,7.3,2.2,0.0,3.5,6.5,8.0,eligible,0.963,0.75,2026-11-13 11:35:56
-Muhammad_Dawood_Rizwan_CV,Muhammad_Dawood_Rizwan_CV,39.8,Tier 4: Needs Clarification/Weak,13.6,12.5,1.0,0.0,2.5,9.3,8.1,eligible,0.963,0.75,2026-11-13 11:35:56
-26_AAMINA_AKBAR,Aamina Akbar,39.7,Tier 4: Needs Clarification/Weak,19.5,6.5,2.2,0.0,3.5,7.1,6.2,eligible,0.963,0.75,2026-11-13 11:35:56
-42_SAQIB_JAMIL,Saqib Jamil,38.6,Tier 4: Needs Clarification/Weak,17.4,7.5,1.0,0.0,3.5,4.7,11.6,eligible,0.925,0.5,2026-11-13 11:35:56
-28_IDRIS_KHAN,Idris Khan,38.1,Tier 4: Needs Clarification/Weak,15.4,11.7,1.0,0.0,3.5,6.5,4.9,eligible,0.944,0.62,2026-11-13 11:35:56
-16_MUZZAMIL_GHAFFAR,Muzzamil Ghaffar,38.0,Tier 4: Needs Clarification/Weak,17.7,7.5,2.2,0.0,0.0,7.4,12.9,eligible,0.963,0.75,2026-11-13 11:35:56
-35_MATIULLAH_AHSAN,Matiullah Ahsan,37.8,Tier 4: Needs Clarification/Weak,17.2,8.6,1.0,0.0,3.5,7.9,5.9,eligible,0.944,0.62,2026-11-13 11:35:56
-21_SAMAN_FATIMA,Saman Fatima,37.7,Tier 4: Needs Clarification/Weak,17.0,2.6,3.4,0.0,3.5,7.6,10.1,eligible,0.944,0.62,2026-11-13 11:35:56
-29_MUHAMMAD_SARMAD_TARIQ,Muhammad Sarmad Tariq,37.6,Tier 4: Needs Clarification/Weak,17.1,9.6,1.0,0.0,3.5,7.1,4.9,eligible,0.944,0.62,2026-11-13 11:35:56
-02_MUHAMMAD_SHAHWAZ,MUHAMMAD SHAHWAZ,33.6,Tier 4: Needs Clarification/Weak,15.4,7.5,1.0,0.0,3.5,5.8,5.4,eligible,0.925,0.5,2026-11-13 11:35:56
-05_MUHAMMAD_MAJID,MUHAMMAD MAJID,33.5,Tier 4: Needs Clarification/Weak,17.5,4.4,1.0,0.0,3.5,6.3,5.9,eligible,0.944,0.62,2026-11-13 11:35:56
+Dr_Tariq_Mahmood_Comprehensive_CV,Dr. Tariq Mahmood Khan,77.0,Tier 2: Strong Candidate,18.1,22.2,9.7,1.8,6.1,9.3,14.0,eligible,0.981,0.88,2026-11-15 16:26:37
+23_WAQAS_TARIQ_TOOR,Waqas Tariq Toor,60.7,Tier 3: Moderate Candidate,18.0,22.9,4.5,0.0,3.5,9.3,10.1,eligible,0.963,0.75,2026-11-15 16:26:37
+13_MANZOOR_ELLAHI,Manzoor Ellahi,60.0,Tier 3: Moderate Candidate,18.6,19.4,4.5,0.0,3.5,9.3,13.1,eligible,0.963,0.75,2026-11-15 16:26:37
+43_AMMARA_NASIM,Ammara Nasim,59.5,Tier 3: Moderate Candidate,19.5,20.7,4.6,0.0,3.5,9.3,9.5,eligible,0.963,0.75,2026-11-15 16:26:37
+37_SANIA_GUL,Sania Gul,57.7,Tier 3: Moderate Candidate,19.5,19.5,2.2,0.0,3.5,9.3,13.0,eligible,0.963,0.75,2026-11-15 16:26:37
+04_MUHAMMAD_FARRUKH,Muhammad Farrukh Qureshi,57.5,Tier 3: Moderate Candidate,17.4,23.4,3.4,0.0,3.5,8.2,8.0,eligible,0.963,0.75,2026-11-15 16:26:37
+11_WAQAS_AMIN,Waqas Amin,56.2,Tier 3: Moderate Candidate,17.5,21.9,4.5,0.0,0.0,9.3,12.5,eligible,0.981,0.88,2026-11-15 16:26:37
+07_FIZA_MURTAZA,Fiza Murtaza,55.8,Tier 3: Moderate Candidate,19.4,15.5,4.5,0.0,3.5,7.6,12.7,eligible,0.963,0.75,2026-11-15 16:26:37
+24_AHMED_NAEEM,Ahmed Naeem,54.1,Tier 3: Moderate Candidate,16.0,25.0,1.0,0.0,3.5,8.2,8.5,eligible,0.944,0.62,2026-11-15 16:26:37
+09_MUHAMMAD_ABUBAKAR,Muhammad Abubakar,53.9,Tier 3: Moderate Candidate,17.7,21.0,4.5,0.0,0.0,9.3,11.9,eligible,0.963,0.75,2026-11-15 16:26:37
+14_SAROSH_TAHIR,Sarosh Tahir,52.9,Tier 3: Moderate Candidate,18.3,16.1,2.2,0.0,3.5,7.6,13.0,eligible,0.963,0.75,2026-11-15 16:26:37
+34_SHAHZAD,Shahzad,51.4,Tier 3: Moderate Candidate,18.9,14.3,2.2,0.0,3.5,9.0,11.8,eligible,0.963,0.75,2026-11-15 16:26:37
+18_MUHAMMAD_AMJAD,Muhammad Amjad,50.3,Tier 3: Moderate Candidate,17.8,18.1,1.0,0.0,3.5,9.3,9.8,eligible,0.944,0.62,2026-11-15 16:26:37
+33_QAMAR_ABBAS,Qamar Abbas,50.3,Tier 3: Moderate Candidate,19.1,11.9,3.4,0.0,3.5,8.2,11.6,eligible,0.963,0.75,2026-11-15 16:26:37
+30_FAHD_SIKANDAR_KHAN,Fahd Sikandar Khan,49.9,Tier 4: Needs Clarification/Weak,17.9,13.7,2.2,0.0,3.5,8.2,12.3,eligible,0.963,0.75,2026-11-15 16:26:37
+41_MUHAMMAD_AQEEL,Muhammad Aqeel,49.9,Tier 4: Needs Clarification/Weak,17.3,17.3,2.2,0.0,3.5,8.2,7.7,eligible,0.963,0.75,2026-11-15 16:26:37
+01_MUHAMMAD_SALMAN,MUHAMMAD SALMAN,49.0,Tier 4: Needs Clarification/Weak,18.8,8.6,5.7,0.0,3.5,9.0,10.1,eligible,0.963,0.75,2026-11-15 16:26:37
+19_ASIM_MASOOD,Asim Masood,49.0,Tier 4: Needs Clarification/Weak,19.2,11.8,4.5,0.0,1.8,7.6,12.3,eligible,0.963,0.75,2026-11-15 16:26:37
+32_QAISAR_HUSSAIN_ALVI,Qaisar Hussain Alvi,47.6,Tier 4: Needs Clarification/Weak,17.3,8.3,4.5,0.0,3.5,7.4,13.2,eligible,0.963,0.75,2026-11-15 16:26:37
+08_TAYYABA_GULL,Tayyaba Gull,47.3,Tier 4: Needs Clarification/Weak,17.5,10.4,3.4,0.0,3.5,7.4,11.6,eligible,0.963,0.75,2026-11-15 16:26:37
+31_USMAN_MASUD,Usman Masud,46.6,Tier 4: Needs Clarification/Weak,18.0,6.8,4.5,0.0,3.5,8.2,12.5,eligible,0.963,0.75,2026-11-15 16:26:37
+39_MUHAMMAD_SAQIB,Muhammad Saqib,45.8,Tier 4: Needs Clarification/Weak,17.4,19.2,1.0,0.0,3.5,8.5,3.8,eligible,0.925,0.5,2026-11-15 16:26:37
+17_SUHAIL_ASGHAR,Suhail Asghar Qureshi,45.4,Tier 4: Needs Clarification/Weak,17.7,14.3,2.2,0.0,3.5,8.2,4.9,eligible,0.963,0.75,2026-11-15 16:26:37
+36_SAMANA_BATOOL,Samana Batool,45.3,Tier 4: Needs Clarification/Weak,19.6,6.2,3.4,0.0,3.5,8.2,11.6,eligible,0.963,0.75,2026-11-15 16:26:37
+10_MUHAMMAD_EHATISHAM,Muhammad Ehatisham,45.0,Tier 4: Needs Clarification/Weak,18.0,7.5,4.5,0.0,3.5,5.8,12.1,eligible,0.944,0.62,2026-11-15 16:26:37
+12_SYED_TAMOORULHASSAN,SYED TAMOORULHASSAN,45.0,Tier 4: Needs Clarification/Weak,18.0,11.4,1.0,0.0,3.5,7.6,12.0,eligible,0.944,0.62,2026-11-15 16:26:37
+22_ZEESHAN,Zeeshan,44.9,Tier 4: Needs Clarification/Weak,19.6,14.8,1.0,0.0,3.5,8.2,4.9,eligible,0.944,0.62,2026-11-15 16:26:37
+38_MUHAMMAD_MUSADIQ,Muhammad Musadiq Ahmed,44.2,Tier 4: Needs Clarification/Weak,19.5,9.6,2.2,0.0,3.5,8.2,7.7,eligible,0.963,0.75,2026-11-15 16:26:37
+27_SHAHEER,Shaheer,44.0,Tier 4: Needs Clarification/Weak,18.0,7.5,4.5,0.0,3.5,5.8,10.6,eligible,0.944,0.62,2026-11-15 16:26:37
+09_SANA_FATIMA_RIZVI,Sana Fatima Rizvi,43.5,Tier 4: Needs Clarification/Weak,17.1,6.8,3.4,0.0,3.5,8.2,11.1,eligible,0.963,0.75,2026-11-15 16:26:37
+20_SYED_FASIH_ALI,Syed Fasih Ali,41.1,Tier 4: Needs Clarification/Weak,17.8,7.1,3.4,0.0,3.5,6.3,7.6,eligible,0.963,0.75,2026-11-15 16:26:37
+25_MUHAMMAD_ADEEL_ALTAF,MUHAMMAD ADEEL ALTAF,40.7,Tier 4: Needs Clarification/Weak,17.8,7.2,2.2,0.0,3.5,9.3,7.2,eligible,0.963,0.75,2026-11-15 16:26:37
+03_NASIR_ALI_SHAH,Nasir Ali Shah,40.5,Tier 4: Needs Clarification/Weak,18.0,9.4,1.0,0.0,3.5,9.0,7.2,eligible,0.944,0.62,2026-11-15 16:26:37
+40_ABDUR_REHMAN,Abdur Rehman,40.5,Tier 4: Needs Clarification/Weak,17.3,7.9,2.2,0.0,3.5,8.2,7.2,eligible,0.963,0.75,2026-11-15 16:26:37
+06_FARMAN_ALI,Farman Ali,40.4,Tier 4: Needs Clarification/Weak,16.3,7.5,2.2,0.0,3.5,5.8,12.5,eligible,0.925,0.5,2026-11-15 16:26:37
+15_M_USMAN_ABBASI,M. Usman Abbasi,39.9,Tier 4: Needs Clarification/Weak,17.5,7.3,2.2,0.0,3.5,6.5,8.0,eligible,0.963,0.75,2026-11-15 16:26:37
+Muhammad_Dawood_Rizwan_CV,Muhammad_Dawood_Rizwan_CV,39.8,Tier 4: Needs Clarification/Weak,13.6,12.5,1.0,0.0,2.5,9.3,8.1,eligible,0.963,0.75,2026-11-15 16:26:37
+26_AAMINA_AKBAR,Aamina Akbar,39.7,Tier 4: Needs Clarification/Weak,19.5,6.5,2.2,0.0,3.5,7.1,6.2,eligible,0.963,0.75,2026-11-15 16:26:37
+42_SAQIB_JAMIL,Saqib Jamil,38.6,Tier 4: Needs Clarification/Weak,17.4,7.5,1.0,0.0,3.5,4.7,11.6,eligible,0.925,0.5,2026-11-15 16:26:37
+28_IDRIS_KHAN,Idris Khan,38.1,Tier 4: Needs Clarification/Weak,15.4,11.7,1.0,0.0,3.5,6.5,4.9,eligible,0.944,0.62,2026-11-15 16:26:37
+16_MUZZAMIL_GHAFFAR,Muzzamil Ghaffar,38.0,Tier 4: Needs Clarification/Weak,17.7,7.5,2.2,0.0,0.0,7.4,12.9,eligible,0.963,0.75,2026-11-15 16:26:37
+35_MATIULLAH_AHSAN,Matiullah Ahsan,37.8,Tier 4: Needs Clarification/Weak,17.2,8.6,1.0,0.0,3.5,7.9,5.9,eligible,0.944,0.62,2026-11-15 16:26:37
+21_SAMAN_FATIMA,Saman Fatima,37.7,Tier 4: Needs Clarification/Weak,17.0,2.6,3.4,0.0,3.5,7.6,10.1,eligible,0.944,0.62,2026-11-15 16:26:37
+29_MUHAMMAD_SARMAD_TARIQ,Muhammad Sarmad Tariq,37.6,Tier 4: Needs Clarification/Weak,17.1,9.6,1.0,0.0,3.5,7.1,4.9,eligible,0.944,0.62,2026-11-15 16:26:37
+02_MUHAMMAD_SHAHWAZ,MUHAMMAD SHAHWAZ,33.6,Tier 4: Needs Clarification/Weak,15.4,7.5,1.0,0.0,3.5,5.8,5.4,eligible,0.925,0.5,2026-11-15 16:26:37
+05_MUHAMMAD_MAJID,MUHAMMAD MAJID,33.5,Tier 4: Needs Clarification/Weak,17.5,4.4,1.0,0.0,3.5,6.3,5.9,eligible,0.944,0.62,2026-11-15 16:26:37
