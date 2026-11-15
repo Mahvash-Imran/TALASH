@@ -2539,7 +2539,31 @@ async function checkAPI(){
 ═══════════════════════════════════ */
 let isRegisterMode = false;
 
-function getAuthToken(){ return localStorage.getItem('talash_token') || 'token_admin@talash.pk'; }
+function getAuthToken(){ return localStorage.getItem('talash_token') || ''; }
+
+/* Attach the bearer token to every TALASH API call and sign out on 401. */
+(function(){
+  const _origFetch = window.fetch.bind(window);
+  window.fetch = function(input, init){
+    try{
+      const url = (typeof input === 'string') ? input : (input && input.url) || '';
+      const isApi = url.indexOf('/api/') !== -1;
+      const isPublic = /\/api\/v1\/(health|auth\/login|auth\/register)/.test(url);
+      if(isApi && !isPublic){
+        init = init || {};
+        const h = new Headers(init.headers || {});
+        const t = getAuthToken();
+        if(t) h.set('Authorization', 'Bearer ' + t);
+        init.headers = h;
+        return _origFetch(input, init).then(function(res){
+          if(res.status === 401 && t && getAuthToken() === t && url.indexOf('/auth/logout') === -1){ try{ handleLogout(); }catch(e){} }
+          return res;
+        });
+      }
+    }catch(e){}
+    return _origFetch(input, init);
+  };
+})();
 function getAuthEmail(){ return localStorage.getItem('talash_email') || 'admin@talash.pk'; }
 
 function checkAuthState(){
@@ -2581,7 +2605,7 @@ function toggleAuthMode(){
     toggleMsg.textContent = 'Already have an account?';
     toggleBtn.textContent = 'Sign In';
     emailInput.placeholder = 'Enter your email address';
-    passInput.placeholder  = 'Choose a password (min. 6 characters)';
+    passInput.placeholder  = 'Choose a password (min. 8 characters)';
   } else {
     title.textContent = 'Welcome Back';
     sub.textContent = 'Sign in to access your private candidate evaluations';
@@ -2630,20 +2654,13 @@ async function handleAuthSubmit(e){
     fetchLiveData();
     if (typeof loadJDHistory === 'function') loadJDHistory();
   } catch(err) {
-    // Offline / fallback dev login
-    localStorage.setItem('talash_token', `token_${email}`);
-    localStorage.setItem('talash_email', email);
-    localStorage.setItem('talash_name', name || email.split('@')[0]);
-    if (email.toLowerCase() !== 'admin@talash.pk') allData = [];
-    activeJDId = null;
-    activeJDParsed = null;
-    checkAuthState();
-    fetchLiveData();
-    if (typeof loadJDHistory === 'function') loadJDHistory();
+    errEl.textContent = 'Cannot reach the TALASH server. Please make sure the backend is running and try again.';
+    errEl.style.display = 'block';
   }
 }
 
 function handleLogout(){
+  try{ fetch(`${API_BASE}/api/v1/auth/logout`,{method:'POST'}).catch(()=>{}); }catch(e){}
   localStorage.removeItem('talash_token');
   localStorage.removeItem('talash_email');
   localStorage.removeItem('talash_name');

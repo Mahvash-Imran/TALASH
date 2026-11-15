@@ -1,0 +1,17 @@
+.git
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.pdf
+venv/
+.venv/
+scratch/
+tests/
+data/tenants/
+data/users.json
+data/sessions.json
+data/ADMIN_PASSWORD.txt
+data/uploads/
+data/cvs/

@@ -11,6 +11,8 @@ try:
 except ImportError:
     pass
 
+import os
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
@@ -49,28 +51,27 @@ ensure_seed_data()
 
 
 # CORS Setup
+# Bearer-token auth (no cookies), so credentials are not needed. Restrict origins via
+# TALASH_CORS_ORIGINS="https://app.example.com,https://other.example.com" (default: same-origin only).
+_origins = [o.strip() for o in os.environ.get("TALASH_CORS_ORIGINS", "").split(",") if o.strip()]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=_origins,
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type"],
 )
 
 # Include API Routers
-from .routes import router
+from .routes import router, public_router
 from .jd_routes import router as jd_router
 from .auth import router as auth_router
 
 app.include_router(auth_router)
+app.include_router(public_router)
 app.include_router(router)
 app.include_router(jd_router)
 
-
-# Mount Data Analysis Directory for direct file access if needed
-data_dir = Path("data/analysis")
-if data_dir.exists():
-    app.mount("/static/analysis", StaticFiles(directory=str(data_dir)), name="analysis_static")
 
 # Mount Frontend Dashboard
 frontend_dir = Path("frontend")

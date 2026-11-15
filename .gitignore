@@ -35,3 +35,8 @@ data/extracted/*.xlsx
 # OS specific files
 .DS_Store
 Thumbs.db
+
+# Auth/session secrets (never commit)
+data/sessions.json
+data/ADMIN_PASSWORD.txt
+data/*.tmp

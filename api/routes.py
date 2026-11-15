@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import pandas as pd
-from fastapi import APIRouter, BackgroundTasks, File, HTTPException, UploadFile, Query, Header
+from fastapi import APIRouter, BackgroundTasks, Depends, File, HTTPException, UploadFile, Query
 
 from .schemas import (
     HealthResponse,
@@ -20,13 +20,17 @@ from .schemas import (
     CompareResponse,
     EmailDraftResponse,
 )
+from .auth import get_current_user_email, get_tenant_dir, tenant_slug
+from .uploads import save_pdf_upload
 from pipeline_orchestrator import MasterPipeline
 from analysis.email_drafter import extract_missing_candidate_info, draft_followup_email
 from analysis.composite_evaluator import compute_candidate_composite_score
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/api/v1", tags=["TALASH Candidates & Evaluation API"])
+router = APIRouter(prefix="/api/v1", tags=["TALASH Candidates & Evaluation API"],
+                   dependencies=[Depends(get_current_user_email)])
+public_router = APIRouter(prefix="/api/v1", tags=["Health"])
 
 DATA_DIR = Path("data/analysis")
 EXTRACTED_DIR = Path("data/extracted")
@@ -139,29 +143,22 @@ def _extract_one_cv(pdf_path: Path, api_key: str, model: str, base_url: str) -> 
 # Endpoints
 # ---------------------------------------------------------------------------
 
-@router.get("/health", response_model=HealthResponse)
+@public_router.get("/health", response_model=HealthResponse)
 def health_check():
     return HealthResponse(status="ok", version="1.0.0", service="TALASH Backend API")
 
 
 @router.post("/upload", response_model=UploadResponse)
-async def upload_resume(background_tasks: BackgroundTasks, file: UploadFile = File(...), x_user_email: Optional[str] = Header(None)):
+async def upload_resume(background_tasks: BackgroundTasks, file: UploadFile = File(...), user_email: str = Depends(get_current_user_email)):
     """
     Upload a CV PDF (single candidate) or a bulk PDF (multiple candidates).
     Saves results into the authenticated user's private tenant directory.
     """
-    from .auth import get_tenant_dir, get_current_user_email
-    if not file.filename.endswith(".pdf"):
-        raise HTTPException(status_code=400, detail="Only PDF resumes are supported.")
-
-    user_email = get_current_user_email(x_user_email)
     tenant_analysis_dir = get_tenant_dir(user_email)
 
-    dest_path = UPLOADS_DIR / file.filename
-    with open(dest_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
-
-    upload_id = file.filename.replace(".pdf", "").replace(" ", "_")
+    # Validated, size-capped, per-user, traversal-safe save
+    dest_path, upload_id = await save_pdf_upload(file, UPLOADS_DIR / tenant_slug(user_email))
+    filename = dest_path.name
 
     # Detect bulk vs single
     candidate_count = _detect_bulk_pdf(str(dest_path))
@@ -179,7 +176,7 @@ async def upload_resume(background_tasks: BackgroundTasks, file: UploadFile = Fi
         }
         background_tasks.add_task(_process_bulk_cv_background, str(dest_path), upload_id, candidate_count, str(tenant_analysis_dir))
         return UploadResponse(
-            filename=file.filename,
+            filename=filename,
             candidate_id=upload_id,
             status="processing",
             message=f"Bulk PDF detected with {candidate_count} candidates. Splitting and processing in background."
@@ -192,7 +189,7 @@ async def upload_resume(background_tasks: BackgroundTasks, file: UploadFile = Fi
         }
         background_tasks.add_task(_process_uploaded_cv_background, str(dest_path), upload_id, str(tenant_analysis_dir))
         return UploadResponse(
-            filename=file.filename,
+            filename=filename,
             candidate_id=upload_id,
             status="processing",
             message="Resume uploaded. Full pipeline (extraction + analysis) started in background."
@@ -201,13 +198,11 @@ async def upload_resume(background_tasks: BackgroundTasks, file: UploadFile = Fi
 
 
 @router.get("/status/{candidate_id}")
-def get_processing_status(candidate_id: str, x_user_email: Optional[str] = Header(None)):
+def get_processing_status(candidate_id: str, user_email: str = Depends(get_current_user_email)):
     """Returns the current processing status of an uploaded CV or bulk upload."""
     if candidate_id in _processing_status:
         return {"candidate_id": candidate_id, **_processing_status[candidate_id]}
     # Pre-existing candidate — check user's tenant composite evaluations
-    from .auth import get_tenant_dir, get_current_user_email
-    user_email = get_current_user_email(x_user_email)
     comp_file = get_tenant_dir(user_email) / "composite_evaluations.csv"
     if comp_file.exists():
         df = pd.read_csv(comp_file, dtype=str)
@@ -246,7 +241,6 @@ def _process_uploaded_cv_background(pdf_path: str, candidate_id: str, tenant_ana
 
         _processing_status[candidate_id] = {"status": "processing", "message": "Step 3/3: Running analysis pipeline (Modules 2-10).", "is_bulk": False}
         logger.info("[Upload] Running Modules 2-10 for %s", candidate_id)
-
         from .auth import record_tenant_candidate, filter_tenant_analysis_files
         record_tenant_candidate(Path(tenant_analysis_dir), candidate_id)
 
@@ -341,7 +335,6 @@ def _process_bulk_cv_background(pdf_path: str, upload_id: str, expected_count: i
             "message": f"Step 3/3: Running analysis pipeline for all {completed} candidates...",
         })
         logger.info("[Bulk] Running Modules 2-10 for %d candidates", completed)
-
         from .auth import record_tenant_candidate, filter_tenant_analysis_files
         for cid in candidates_done:
             record_tenant_candidate(Path(tenant_analysis_dir), cid)
@@ -379,11 +372,12 @@ def _process_bulk_cv_background(pdf_path: str, upload_id: str, expected_count: i
 
 
 @router.post("/analyze/{candidate_id}")
-def analyze_candidate(candidate_id: str, background_tasks: BackgroundTasks):
+def analyze_candidate(candidate_id: str, background_tasks: BackgroundTasks,
+                      user_email: str = Depends(get_current_user_email)):
     """
     Triggers full pipeline execution (Parts 1-10) for a candidate as a background task.
     """
-    background_tasks.add_task(_process_uploaded_cv_background, "", candidate_id)
+    background_tasks.add_task(_process_uploaded_cv_background, "", candidate_id, str(get_tenant_dir(user_email)))
     return {
         "candidate_id": candidate_id,
         "status": "queued",
@@ -392,14 +386,11 @@ def analyze_candidate(candidate_id: str, background_tasks: BackgroundTasks):
 
 
 @router.get("/candidates", response_model=List[CandidateSummary])
-def list_candidates(x_user_email: Optional[str] = Header(None)):
+def list_candidates(user_email: str = Depends(get_current_user_email)):
     """
     Returns a summary list of all evaluated candidates for the active user account tenant.
     """
     import datetime
-    from .auth import get_tenant_dir, get_current_user_email
-
-    user_email = get_current_user_email(x_user_email)
     target_data_dir = get_tenant_dir(user_email)
 
     comp_file = target_data_dir / "composite_evaluations.csv"
@@ -477,13 +468,11 @@ def list_candidates(x_user_email: Optional[str] = Header(None)):
 
 
 @router.get("/candidates/{candidate_id}")
-def get_candidate_details(candidate_id: str, x_user_email: Optional[str] = Header(None)):
+def get_candidate_details(candidate_id: str, user_email: str = Depends(get_current_user_email)):
     """
     Returns detailed multi-module evaluation breakdown for a specific candidate.
     Reads from the authenticated user's private tenant directory.
     """
-    from .auth import get_tenant_dir, get_current_user_email
-    user_email = get_current_user_email(x_user_email)
     target_dir = get_tenant_dir(user_email)
 
     comp_file = target_dir / "composite_evaluations.csv"
@@ -515,13 +504,11 @@ def get_candidate_details(candidate_id: str, x_user_email: Optional[str] = Heade
 
 
 @router.post("/compare", response_model=CompareResponse)
-def compare_candidates(req: CompareRequest, x_user_email: Optional[str] = Header(None)):
+def compare_candidates(req: CompareRequest, user_email: str = Depends(get_current_user_email)):
     """
     Compares two or more candidates side-by-side across all 10 modules.
     Reads from the authenticated user's private tenant directory.
     """
-    from .auth import get_tenant_dir, get_current_user_email
-    user_email = get_current_user_email(x_user_email)
     target_dir = get_tenant_dir(user_email)
 
     comp_file = target_dir / "composite_evaluations.csv"
@@ -575,16 +562,19 @@ def get_candidate_email_draft(candidate_id: str):
 
 
 @router.get("/reports/{candidate_id}")
-def get_candidate_report(candidate_id: str):
+def get_candidate_report(candidate_id: str, user_email: str = Depends(get_current_user_email)):
     """
     Returns full text report summary for a candidate.
     """
-    rep_file = DATA_DIR / "experience_report.txt"
-    if not rep_file.exists():
+    comp_file = get_tenant_dir(user_email) / "composite_evaluations.csv"
+    if not comp_file.exists():
         raise HTTPException(status_code=404, detail="Reports not found.")
-
-    content = rep_file.read_text(encoding="utf-8")
-    return {"candidate_id": candidate_id, "report": content}
+    df = pd.read_csv(comp_file, dtype=str).fillna("")
+    row = df[df["candidate_id"] == candidate_id]
+    if row.empty:
+        raise HTTPException(status_code=404, detail=f"Candidate {candidate_id} not found.")
+    lines = [f"{k}: {v}" for k, v in row.iloc[0].to_dict().items()]
+    return {"candidate_id": candidate_id, "report": "\n".join(lines)}
 
 
 # ============================================================================
@@ -646,17 +636,14 @@ def get_candidate_universal_evaluation(
     candidate_id: str,
     department: Optional[str] = Query(None, description="Target department profile slug"),
     role_preset: Optional[str] = Query("faculty", description="faculty | researcher | industry_professional | fresh_graduate | executive"),
-    x_user_email: Optional[str] = Header(None),
+    user_email: str = Depends(get_current_user_email),
 ):
     """
     Evaluates a candidate across all 8 Universal Dimensions with hard gate checks,
     statistical percentile baselines, and complete explainability rationales.
     """
-    from .auth import get_tenant_dir, get_current_user_email
     from universal_pipeline import UniversalPipeline
     from models import RolePreset
-
-    user_email = get_current_user_email(x_user_email)
     target_analysis_dir = get_tenant_dir(user_email)
 
     try:
@@ -683,17 +670,14 @@ def get_candidate_universal_evaluation(
 def run_universal_batch_evaluation(
     department: Optional[str] = Query(None, description="Target department profile slug (optional, auto-inferred if omitted)"),
     role_preset: Optional[str] = Query("faculty", description="faculty | researcher | industry_professional | fresh_graduate | executive"),
-    x_user_email: Optional[str] = Header(None),
+    user_email: str = Depends(get_current_user_email),
 ):
     """
     Executes the Universal Scoring Engine across all extracted candidates.
     Updates both universal_evaluations.json/csv AND composite_evaluations.csv/xlsx (zero regression).
     """
-    from .auth import get_tenant_dir, get_current_user_email
     from universal_pipeline import UniversalPipeline
     from models import RolePreset
-
-    user_email = get_current_user_email(x_user_email)
     target_analysis_dir = get_tenant_dir(user_email)
 
     try:

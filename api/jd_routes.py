@@ -11,15 +11,17 @@ import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from fastapi import APIRouter, File, Form, Header, HTTPException, UploadFile
+from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile
 import pandas as pd
 
 from analysis.jd_parser import parse_job_description
 from analysis.jd_matcher import compute_match_score
 from run_jd_matching import evaluate_jd_against_candidates, generate_jd_id, load_candidate_profiles
-from api.auth import get_tenant_dir
+from api.auth import get_tenant_dir, get_current_user_email, tenant_slug
+from api.uploads import save_pdf_upload, validate_identifier, MAX_TEXT_UPLOAD_BYTES
 
-router = APIRouter(prefix="/api/v1/jd", tags=["Job Description Matching API"])
+router = APIRouter(prefix="/api/v1/jd", tags=["Job Description Matching API"],
+                   dependencies=[Depends(get_current_user_email)])
 
 DATA_DIR = Path("data/analysis")
 JD_MATCHES_DIR = DATA_DIR / "jd_matches"
@@ -28,9 +30,9 @@ UPLOADS_DIR = Path("data/uploads")
 UPLOADS_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def _resolve_jd_dir(x_user_email: Optional[str]) -> Path:
+def _resolve_jd_dir(user_email: str) -> Path:
     """Returns the per-tenant jd_matches directory, creating it if needed."""
-    tenant_analysis_dir = get_tenant_dir(x_user_email)
+    tenant_analysis_dir = get_tenant_dir(user_email)
     jd_dir = tenant_analysis_dir / "jd_matches"
     jd_dir.mkdir(parents=True, exist_ok=True)
     return jd_dir
@@ -166,16 +168,18 @@ def _extract_skills_from_cv(cv_text: str, jd_required_skills: List[str]) -> List
 async def upload_job_description(
     jd_text: Optional[str] = Form(None),
     jd_file: Optional[UploadFile] = File(None),
-    x_user_email: Optional[str] = Header(None),
+    user_email: str = Depends(get_current_user_email),
 ):
     """
     Accepts raw JD text or uploaded file (PDF/DOCX/TXT). Parses requirements and saves JD record.
     """
-    user_jd_dir = _resolve_jd_dir(x_user_email)
+    user_jd_dir = _resolve_jd_dir(user_email)
 
     raw_text = ""
     if jd_file and jd_file.filename:
-        content_bytes = await jd_file.read()
+        content_bytes = await jd_file.read(MAX_TEXT_UPLOAD_BYTES + 1)
+        if len(content_bytes) > MAX_TEXT_UPLOAD_BYTES:
+            raise HTTPException(status_code=413, detail='Job description file too large (limit 5 MB).')
         filename = jd_file.filename.lower()
         if filename.endswith(".pdf"):
             try:
@@ -229,12 +233,12 @@ async def upload_job_description(
 
 @router.get("/list")
 def list_job_descriptions(
-    x_user_email: Optional[str] = Header(None),
+    user_email: str = Depends(get_current_user_email),
 ):
     """
     Returns list of all historically uploaded and saved JDs for this user.
     """
-    user_jd_dir = _resolve_jd_dir(x_user_email)
+    user_jd_dir = _resolve_jd_dir(user_email)
     jds = []
     if user_jd_dir.exists():
         for d in user_jd_dir.iterdir():
@@ -279,13 +283,14 @@ async def evaluate_candidates_against_jd(
     jd_id: str,
     candidate_ids: Optional[str] = Form(None),
     cv_file: Optional[UploadFile] = File(None),
-    x_user_email: Optional[str] = Header(None),
+    user_email: str = Depends(get_current_user_email),
 ):
     """
     Evaluates candidate(s) against a saved JD ID.
     Supports Workflow B (existing candidates by candidate_ids) and Workflow A (brand-new CV PDF file).
     """
-    user_jd_dir = _resolve_jd_dir(x_user_email)
+    validate_identifier(jd_id, "JD id")
+    user_jd_dir = _resolve_jd_dir(user_email)
     jd_dir = user_jd_dir / jd_id
     if not jd_dir.exists() or not (jd_dir / "jd_parsed.json").exists():
         raise HTTPException(status_code=404, detail=f"JD '{jd_id}' not found.")
@@ -297,14 +302,7 @@ async def evaluate_candidates_against_jd(
 
     # Workflow A: New CV File Upload
     if cv_file and cv_file.filename:
-        if not cv_file.filename.endswith(".pdf"):
-            raise HTTPException(status_code=400, detail="Only PDF resumes are supported.")
-
-        dest_path = UPLOADS_DIR / cv_file.filename
-        with open(dest_path, "wb") as buffer:
-            shutil.copyfileobj(cv_file.file, buffer)
-
-        cid = cv_file.filename.replace(".pdf", "").replace(" ", "_")
+        dest_path, cid = await save_pdf_upload(cv_file, UPLOADS_DIR / tenant_slug(user_email))
 
         # Fast text extraction
         cv_text = ""
@@ -320,7 +318,7 @@ async def evaluate_candidates_against_jd(
         highest_degree = _extract_degree_from_cv(cv_text)
         specializations = _extract_specializations_from_cv(cv_text)
         skills_found = _extract_skills_from_cv(cv_text, parsed_jd.get("required_skills", []))
-        cand_display_name = cv_file.filename.replace(".pdf", "").replace("_", " ")
+        cand_display_name = cid.replace("_", " ")
 
         custom_cand = [{
             "candidate_id": cid,
@@ -374,7 +372,7 @@ async def evaluate_candidates_against_jd(
     # Pass the user's tenant analysis directory so candidates load from the right folder
     from api.auth import get_tenant_dir
     from run_jd_matching import load_candidate_profiles
-    tenant_analysis_dir = get_tenant_dir(x_user_email)
+    tenant_analysis_dir = get_tenant_dir(user_email)
 
     # Pre-check: ensure the user actually has candidates to evaluate
     profiles = load_candidate_profiles(cids_list, tenant_data_dir=tenant_analysis_dir)
@@ -413,12 +411,13 @@ async def evaluate_candidates_against_jd(
 @router.get("/{jd_id}/results")
 def get_jd_results(
     jd_id: str,
-    x_user_email: Optional[str] = Header(None),
+    user_email: str = Depends(get_current_user_email),
 ):
     """
     Returns saved match results and parsed details for a specific JD.
     """
-    user_jd_dir = _resolve_jd_dir(x_user_email)
+    validate_identifier(jd_id, "JD id")
+    user_jd_dir = _resolve_jd_dir(user_email)
     jd_dir = user_jd_dir / jd_id
     if not jd_dir.exists():
         raise HTTPException(status_code=404, detail=f"JD '{jd_id}' not found.")

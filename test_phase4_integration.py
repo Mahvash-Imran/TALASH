@@ -166,7 +166,7 @@ def test_04_fastapi_endpoints():
     print("  [PASS] GET /api/v1/departments/computer_science -> 200 OK (Weights validated)")
 
     # 4. Candidates list (Existing legacy route)
-    cands_list = routes.list_candidates()
+    cands_list = routes.list_candidates(user_email="admin@talash.pk")
     assert len(cands_list) > 0
     assert hasattr(cands_list[0], "overall_composite_score")
     print(f"  [PASS] GET /api/v1/candidates -> 200 OK ({len(cands_list)} candidates retrieved)")
@@ -177,6 +177,7 @@ def test_04_fastapi_endpoints():
         candidate_id=cid,
         department="electrical_engineering",
         role_preset="faculty",
+        user_email="admin@talash.pk",
     )
     assert u_eval["candidate_id"] == cid
     assert "dimension_scores" in u_eval
@@ -186,7 +187,8 @@ def test_04_fastapi_endpoints():
 
     # 6. Candidate Compare (Existing legacy route)
     comp_json = routes.compare_candidates(
-        CompareRequest(candidate_ids=["01_MUHAMMAD_SALMAN", "04_MUHAMMAD_FARRUKH"])
+        CompareRequest(candidate_ids=["01_MUHAMMAD_SALMAN", "04_MUHAMMAD_FARRUKH"]),
+        user_email="admin@talash.pk",
     )
     assert comp_json.comparison_count == 2
     assert len(comp_json.ranking) == 2
@@ -196,6 +198,7 @@ def test_04_fastapi_endpoints():
     batch_json = routes.run_universal_batch_evaluation(
         department="computer_science",
         role_preset="faculty",
+        user_email="admin@talash.pk",
     )
     assert batch_json["status"] == "success"
     assert batch_json["evaluated_count"] > 0
